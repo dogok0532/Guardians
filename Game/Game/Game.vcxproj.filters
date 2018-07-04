@@ -1,0 +1,138 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="소스 파일">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="헤더 파일">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="리소스 파일">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="99.Default">
+      <UniqueIdentifier>{9cb91b1a-8580-4539-b9ef-b9d26329a546}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="00.Scene">
+      <UniqueIdentifier>{906088fc-c81c-4281-a87d-162bec677ca1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="00.Scene\01.MainGame">
+      <UniqueIdentifier>{51dee856-46eb-422f-9884-7d16e5508fd8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="00.Scene\00.MainMenu">
+      <UniqueIdentifier>{fda6fa0e-0a90-4e59-ab5a-98f8a1d5c32e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="00.Scene\02.Setting">
+      <UniqueIdentifier>{5a3a0e1b-791c-49be-a1c0-e65bf84d0a54}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="99.Default\00.Main">
+      <UniqueIdentifier>{479d98ea-afe1-4f64-9cde-9ef560e760cd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="99.Default\01.DirectX">
+      <UniqueIdentifier>{170de124-158b-4f08-b428-dd800377b1c6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="99.Default\02.Clock">
+      <UniqueIdentifier>{42710f21-ca05-4a5f-9f45-15b99c8db0d9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="99.Default\03.SpirteResource">
+      <UniqueIdentifier>{c625f279-9950-4605-9912-17d9f0ca4025}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="99.Default\04.MusicResource">
+      <UniqueIdentifier>{4816ec79-4b83-43f4-ae2c-4a660f74df83}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="01.GameObject">
+      <UniqueIdentifier>{0965a04f-adf1-4d11-9d4d-f7b2cb797b57}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="01.GameObject\00.Player">
+      <UniqueIdentifier>{88fc8a59-03d7-446a-b21d-69cfc5ff4d11}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="01.GameObject\01.Enemey">
+      <UniqueIdentifier>{7f983fdd-b50c-407e-b685-23f2daae433a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="01.GameObject\00.1.PlayerBullet">
+      <UniqueIdentifier>{0d7b71ea-9725-43e6-9440-ded456bb2e90}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="01.GameObject\01.1.EnemyBullet">
+      <UniqueIdentifier>{45c1f819-bd7e-409e-8c29-beeac9c3d7b5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="01.GameObject\02.Boss">
+      <UniqueIdentifier>{41478fc9-7ac4-48d3-908e-ff5bf814e00c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="01.GameObject\02.1.BossBullet">
+      <UniqueIdentifier>{9fc0766f-b6c2-491a-bd90-074288143055}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="01.1.HitRange">
+      <UniqueIdentifier>{5f302234-a556-4973-ab8f-fe0a5041e0db}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="MainGame.cpp">
+      <Filter>00.Scene\01.MainGame</Filter>
+    </ClCompile>
+    <ClCompile Include="Scene.cpp">
+      <Filter>00.Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="Direct.cpp">
+      <Filter>99.Default\01.DirectX</Filter>
+    </ClCompile>
+    <ClCompile Include="Clock.cpp">
+      <Filter>99.Default\02.Clock</Filter>
+    </ClCompile>
+    <ClCompile Include="CMusicResource.cpp">
+      <Filter>99.Default\04.MusicResource</Filter>
+    </ClCompile>
+    <ClCompile Include="GameObject.cpp">
+      <Filter>01.GameObject</Filter>
+    </ClCompile>
+    <ClCompile Include="Player.cpp">
+      <Filter>01.GameObject\00.Player</Filter>
+    </ClCompile>
+    <ClCompile Include="HitRange.cpp">
+      <Filter>01.1.HitRange</Filter>
+    </ClCompile>
+    <ClCompile Include="SpriteResource.cpp">
+      <Filter>99.Default\03.SpirteResource</Filter>
+    </ClCompile>
+    <ClCompile Include="Main.cpp">
+      <Filter>99.Default\02.Clock</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="MainGame.h">
+      <Filter>00.Scene\01.MainGame</Filter>
+    </ClInclude>
+    <ClInclude Include="Scene.h">
+      <Filter>00.Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="stdafx.h">
+      <Filter>99.Default\00.Main</Filter>
+    </ClInclude>
+    <ClInclude Include="direct.h">
+      <Filter>99.Default\01.DirectX</Filter>
+    </ClInclude>
+    <ClInclude Include="Clock.h">
+      <Filter>99.Default\02.Clock</Filter>
+    </ClInclude>
+    <ClInclude Include="CMusicResource.h">
+      <Filter>99.Default\04.MusicResource</Filter>
+    </ClInclude>
+    <ClInclude Include="GameObject.h">
+      <Filter>01.GameObject</Filter>
+    </ClInclude>
+    <ClInclude Include="Player.h">
+      <Filter>01.GameObject\00.Player</Filter>
+    </ClInclude>
+    <ClInclude Include="HitRange.h">
+      <Filter>01.1.HitRange</Filter>
+    </ClInclude>
+    <ClInclude Include="SpriteResource.h">
+      <Filter>99.Default\03.SpirteResource</Filter>
+    </ClInclude>
+    <ClInclude Include="Defines.h">
+      <Filter>99.Default\00.Main</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
