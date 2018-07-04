@@ -100,7 +100,7 @@
       <Filter>99.Default\03.SpirteResource</Filter>
     </ClCompile>
     <ClCompile Include="Main.cpp">
-      <Filter>99.Default\02.Clock</Filter>
+      <Filter>99.Default\00.Main</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

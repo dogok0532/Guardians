@@ -1,7 +1,8 @@
 
 #include "stdafx.h"
 #include "Direct.h"
-
+#include<d3d9.h>
+#include<d3dx9core.h>
 
 IMPLEMENT_SINGLETON(CDirect)
 

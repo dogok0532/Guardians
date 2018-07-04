@@ -1,6 +1,6 @@
 #pragma once
-#include<d3d9.h>
-#include<d3dx9core.h>
+
+
 class CDraw;
 class CDirect
 {
@@ -13,6 +13,7 @@ private:
 
 public:
 	HRESULT InitD3D(HWND hWnd);
+
 	void Render_Begin();
 	void Render_End();
 	void CleanUp();
