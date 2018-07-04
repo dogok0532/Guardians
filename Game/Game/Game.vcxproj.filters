@@ -67,6 +67,9 @@
     <Filter Include="01.1.HitRange">
       <UniqueIdentifier>{5f302234-a556-4973-ab8f-fe0a5041e0db}</UniqueIdentifier>
     </Filter>
+    <Filter Include="99.Default\05.TextManager">
+      <UniqueIdentifier>{69e45625-5b82-4e0a-a0ee-0092037e44a8}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="MainGame.cpp">

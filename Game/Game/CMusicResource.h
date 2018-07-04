@@ -3,8 +3,10 @@
 
 class CMusicResource
 {
-	DEFINE_SINGLETON(CMusicResource)
 
-	~CMusicResource();
+
+	DECLARE_SINGLETON(CMusicResource)
+
+	
 };
 

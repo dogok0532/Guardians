@@ -3,6 +3,7 @@
 class CMainGame
 {
 private:
+	CGameObject 
 
 public:
 	void Update();
@@ -10,7 +11,7 @@ public:
 
 
 public:
-	CMainGame(HDC hdc, HINSTANCE Instance);
+	CMainGame();
 	virtual ~CMainGame();
 };
 

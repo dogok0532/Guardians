@@ -9,9 +9,11 @@
 #define B_KEY 0x00000020
 
 
-#define DEFINE_SINGLETON(X)\
-private: X();\
+#define DECLARE_SINGLETON(X)\
+private: X();~X();\
 static X* pInstance;\
 public: static X* GetInstance();\
 
-#define IMPLEMENT_SINGLETON(x) 
+#define IMPLEMENT_SINGLETON(X)\
+X* X::pInstance = NULL;\
+X* X::GetInstance(){if(pInstance == NULL){ pInstance = new X();} return pInstance; }

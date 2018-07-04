@@ -1,18 +1,16 @@
 
-
+#include "stdafx.h"
 #include "Direct.h"
 
-#include "stdafx.h"
 
-
-
-
-
-
-
+IMPLEMENT_SINGLETON(CDirect)
 
 HRESULT CDirect::InitD3D(HWND hWnd)
 {
+
+	pD3D = NULL;
+	pDevice = NULL;
+
 	pD3D = Direct3DCreate9(D3D_SDK_VERSION);
 
 	if (pD3D == NULL)
@@ -58,7 +56,7 @@ HRESULT CDirect::InitD3D(HWND hWnd)
 
 void CDirect::Render_Begin()
 {
-	pDevice->Clear(0, NULL, D3DCLEAR_TARGET, D3DCOLOR_XRGB(0, 0, 0), 1.f, 0);
+	pDevice->Clear(0, NULL, D3DCLEAR_TARGET, D3DCOLOR_XRGB(255, 255, 255), 1.f, 0);
 
 	pDevice->BeginScene();
 
@@ -89,13 +87,17 @@ void CDirect::CleanUp()
 		delete pD3D;
 }
 
+LPDIRECT3DDEVICE9 CDirect::GetDevice()
+{
+	return pDevice;
+}
+
+
 CDirect::CDirect()
 {
-	pD3D = NULL;
-	pDevice = NULL;
+
 }
 
 CDirect::~CDirect()
 {
-	
 }

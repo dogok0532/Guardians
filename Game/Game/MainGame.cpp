@@ -15,7 +15,7 @@ void CMainGame::Render()
 
 
 
-CMainGame::CMainGame(HDC hdc,HINSTANCE instance)
+CMainGame::CMainGame()
 {
 	
 

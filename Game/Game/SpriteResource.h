@@ -1,8 +1,13 @@
 #pragma once
+#include "Defines.h"
 class CSpriteResource
 {
+private:
+	map<string,LPDIRECT3DTEXTURE9> mapTexture;
+
 public:
-	CSpriteResource();
-	~CSpriteResource();
+	void AddImageFile(wstring);
+
+	DECLARE_SINGLETON(CSpriteResource)
 };
 

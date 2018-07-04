@@ -1,6 +1,6 @@
 #pragma once
-#include <d3d9.h>
-#include <d3dx9core.h>
+#include<d3d9.h>
+#include<d3dx9core.h>
 class CDraw;
 class CDirect
 {
@@ -17,7 +17,8 @@ public:
 	void Render_End();
 	void CleanUp();
 
-	CDirect();
-	~CDirect();
+	LPDIRECT3DDEVICE9 GetDevice();
+
+	DECLARE_SINGLETON(CDirect)
 
 };
