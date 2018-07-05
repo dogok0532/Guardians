@@ -8,6 +8,8 @@ private:
 	LPDIRECT3D9 pD3D;
 	LPDIRECT3DDEVICE9 pDevice;
 	CDraw* Draw;
+
+
 	LPD3DXSPRITE pSprite;
 	LPDIRECT3DTEXTURE9 pTexture;;
 
@@ -19,6 +21,7 @@ public:
 	void CleanUp();
 
 	LPDIRECT3DDEVICE9 GetDevice();
+	LPD3DXSPRITE GetSprite();
 
 	DECLARE_SINGLETON(CDirect)
 

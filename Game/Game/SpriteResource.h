@@ -3,10 +3,11 @@
 class CSpriteResource
 {
 private:
-	map<string,LPDIRECT3DTEXTURE9> mapTexture;
+	map<wstring,LPDIRECT3DTEXTURE9> mapTexture;
 
 public:
 	void AddImageFile(wstring);
+	LPDIRECT3DTEXTURE9 GetImage(wstring);
 
 	DECLARE_SINGLETON(CSpriteResource)
 };

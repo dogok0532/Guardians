@@ -8,7 +8,7 @@ private:
 	list<CGameObject*> m_pUIList;
 
 public:
-	virtual void Update()=0;
+	virtual void Update(float fDeltaTime)=0;
 	virtual void Render()=0;
 
 public:

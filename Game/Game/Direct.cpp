@@ -60,21 +60,14 @@ void CDirect::Render_Begin()
 	pDevice->Clear(0, NULL, D3DCLEAR_TARGET, D3DCOLOR_XRGB(255, 255, 255), 1.f, 0);
 
 	pDevice->BeginScene();
-
-
-	{
-		RECT rect = { 0,0,100,100 };
-		D3DXVECTOR3 vecPos = { 400,400,0 };
-		pSprite->Begin(D3DXSPRITE_ALPHABLEND);
-		pSprite->Draw(pTexture, NULL, NULL, &vecPos, D3DCOLOR_ARGB(255, 255, 255, 255));
-		pSprite->End();
-	}
+	pSprite->Begin(D3DXSPRITE_ALPHABLEND);
 }
 	
 
 
 void CDirect::Render_End()
 {
+	pSprite->End();
 	pDevice->EndScene();
 
 	pDevice->Present(NULL, NULL, NULL, NULL);
@@ -93,6 +86,11 @@ LPDIRECT3DDEVICE9 CDirect::GetDevice()
 	return pDevice;
 }
 
+
+LPD3DXSPRITE CDirect::GetSprite()
+{
+	return pSprite;
+}
 
 CDirect::CDirect()
 {

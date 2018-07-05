@@ -102,6 +102,9 @@
     <ClCompile Include="Main.cpp">
       <Filter>99.Default\00.Main</Filter>
     </ClCompile>
+    <ClCompile Include="TextManager.cpp">
+      <Filter>99.Default\05.TextManager</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="MainGame.h">
@@ -135,6 +138,12 @@
       <Filter>99.Default\03.SpirteResource</Filter>
     </ClInclude>
     <ClInclude Include="Defines.h">
+      <Filter>99.Default\00.Main</Filter>
+    </ClInclude>
+    <ClInclude Include="TextManager.h">
+      <Filter>99.Default\05.TextManager</Filter>
+    </ClInclude>
+    <ClInclude Include="UserFunction.h">
       <Filter>99.Default\00.Main</Filter>
     </ClInclude>
   </ItemGroup>

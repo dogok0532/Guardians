@@ -1,13 +1,15 @@
 #pragma once
 class CGameObject
 {
-private:
-	float m_fX;
-	float m_fY;
-	
+protected:
+	D3DXVECTOR3 vecPos;	//좌표
+	D3DXVECTOR3 vecDir;	//방향
+
+	vector<LPDIRECT3DTEXTURE9> vecImage;	//이미지파일
+	LPD3DXSPRITE pSprite;
 	
 public:
-	virtual void Update();
+	virtual void Update(float deltaTime);
 	virtual void Render();
 
 public:

@@ -2,7 +2,7 @@
 #include "GameObject.h"
 
 
-void CGameObject::Update()
+void CGameObject::Update(float deltaTime)
 {
 
 }

@@ -15,7 +15,12 @@ float CClock::UpdateGame()
 
 		m_dDeltaTime = 0;
 		m_iPrevTime = m_iCurrentTime;
-		printf("%f", DeltaTime);
+
+
+		int fps = (int)1.f / DeltaTime;
+		printf("%d\n", fps);
+
+
 		return DeltaTime;
 	}
 	else
