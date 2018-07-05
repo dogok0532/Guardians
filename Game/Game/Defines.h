@@ -22,11 +22,9 @@
 #define DECLARE_SINGLETON(X)\
 private: X();~X();\
 static X* pInstance;\
-public: static X* GetInstance();\		
-
-//싱글톤 헤더파일 간략화 
-
+public: static X* GetInstance();\
+//싱글톤 헤더파일 간략화
 #define IMPLEMENT_SINGLETON(X)\
 X* X::pInstance = NULL;\
-X* X::GetInstance(){if(pInstance == NULL){ pInstance = new X();} return pInstance; }
+X* X::GetInstance(){if(pInstance == NULL){ pInstance = new X();} return pInstance; }\
 //싱글톤 c++파일 간략화 

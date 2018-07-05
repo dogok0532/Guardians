@@ -6,6 +6,5 @@ class CTextManager
 
 
 	DECLARE_SINGLETON(CTextManager)
-	~CTextManager();
 };
 

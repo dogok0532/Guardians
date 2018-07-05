@@ -1,5 +1,13 @@
 ﻿  Clock.cpp
 d:\github\game\game\clock.cpp(20): warning C4244: '초기화 중': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
 d:\github\game\game\clock.cpp(24): warning C4244: 'return': 'double'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  CMusicResource.cpp
+  Direct.cpp
+  GameObject.cpp
+  HitRange.cpp
   Main.cpp
+  MainGame.cpp
+  Player.cpp
+  Scene.cpp
+  SpriteResource.cpp
   Game.vcxproj -> D:\GitHub\Game\Debug\Game.exe
