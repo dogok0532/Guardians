@@ -2,6 +2,9 @@
 
 void SafeDelete(void** ptr)
 {
-	delete *ptr;
+	if(*ptr != nullptr)
+		delete *ptr;
+
 	*ptr = nullptr;
 }
+

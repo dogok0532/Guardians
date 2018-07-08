@@ -49,26 +49,32 @@
     <Filter Include="01.GameObject\00.Player">
       <UniqueIdentifier>{88fc8a59-03d7-446a-b21d-69cfc5ff4d11}</UniqueIdentifier>
     </Filter>
-    <Filter Include="01.GameObject\01.Enemey">
-      <UniqueIdentifier>{7f983fdd-b50c-407e-b685-23f2daae433a}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="01.GameObject\00.1.PlayerBullet">
-      <UniqueIdentifier>{0d7b71ea-9725-43e6-9440-ded456bb2e90}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="01.GameObject\01.1.EnemyBullet">
-      <UniqueIdentifier>{45c1f819-bd7e-409e-8c29-beeac9c3d7b5}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="01.GameObject\02.Boss">
-      <UniqueIdentifier>{41478fc9-7ac4-48d3-908e-ff5bf814e00c}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="01.GameObject\02.1.BossBullet">
-      <UniqueIdentifier>{9fc0766f-b6c2-491a-bd90-074288143055}</UniqueIdentifier>
-    </Filter>
     <Filter Include="01.1.HitRange">
       <UniqueIdentifier>{5f302234-a556-4973-ab8f-fe0a5041e0db}</UniqueIdentifier>
     </Filter>
     <Filter Include="99.Default\05.TextManager">
       <UniqueIdentifier>{69e45625-5b82-4e0a-a0ee-0092037e44a8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="01.GameObject\01..PlayerBullet">
+      <UniqueIdentifier>{0d7b71ea-9725-43e6-9440-ded456bb2e90}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="01.GameObject\03.EnemyBullet">
+      <UniqueIdentifier>{45c1f819-bd7e-409e-8c29-beeac9c3d7b5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="01.GameObject\02.Enemey">
+      <UniqueIdentifier>{7f983fdd-b50c-407e-b685-23f2daae433a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="01.GameObject\04.Boss">
+      <UniqueIdentifier>{41478fc9-7ac4-48d3-908e-ff5bf814e00c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="01.GameObject\05.UI">
+      <UniqueIdentifier>{d363a8b6-5d9d-48b6-9553-5a96e4430f2c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="01.GameObject\05.UI\01.Button">
+      <UniqueIdentifier>{d61282d7-a291-4d15-8edb-75d9600b83f5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="01.GameObject\05.UI\02.GameInfo">
+      <UniqueIdentifier>{067ee2df-c8e3-4917-825a-d1094bbeb26c}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -83,9 +89,6 @@
     </ClCompile>
     <ClCompile Include="Clock.cpp">
       <Filter>99.Default\02.Clock</Filter>
-    </ClCompile>
-    <ClCompile Include="CMusicResource.cpp">
-      <Filter>99.Default\04.MusicResource</Filter>
     </ClCompile>
     <ClCompile Include="GameObject.cpp">
       <Filter>01.GameObject</Filter>
@@ -105,6 +108,18 @@
     <ClCompile Include="TextManager.cpp">
       <Filter>99.Default\05.TextManager</Filter>
     </ClCompile>
+    <ClCompile Include="UI.cpp">
+      <Filter>01.GameObject\05.UI</Filter>
+    </ClCompile>
+    <ClCompile Include="GameInfo.cpp">
+      <Filter>01.GameObject\05.UI\02.GameInfo</Filter>
+    </ClCompile>
+    <ClCompile Include="CPlayerBullet.cpp">
+      <Filter>01.GameObject\01..PlayerBullet</Filter>
+    </ClCompile>
+    <ClCompile Include="SoundResource.cpp">
+      <Filter>99.Default\04.MusicResource</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="MainGame.h">
@@ -113,17 +128,11 @@
     <ClInclude Include="Scene.h">
       <Filter>00.Scene</Filter>
     </ClInclude>
-    <ClInclude Include="stdafx.h">
-      <Filter>99.Default\00.Main</Filter>
-    </ClInclude>
     <ClInclude Include="direct.h">
       <Filter>99.Default\01.DirectX</Filter>
     </ClInclude>
     <ClInclude Include="Clock.h">
       <Filter>99.Default\02.Clock</Filter>
-    </ClInclude>
-    <ClInclude Include="CMusicResource.h">
-      <Filter>99.Default\04.MusicResource</Filter>
     </ClInclude>
     <ClInclude Include="GameObject.h">
       <Filter>01.GameObject</Filter>
@@ -145,6 +154,21 @@
     </ClInclude>
     <ClInclude Include="UserFunction.h">
       <Filter>99.Default\00.Main</Filter>
+    </ClInclude>
+    <ClInclude Include="UI.h">
+      <Filter>01.GameObject\05.UI</Filter>
+    </ClInclude>
+    <ClInclude Include="GameInfo.h">
+      <Filter>01.GameObject\05.UI\02.GameInfo</Filter>
+    </ClInclude>
+    <ClInclude Include="DirectHeader.h">
+      <Filter>99.Default\00.Main</Filter>
+    </ClInclude>
+    <ClInclude Include="CPlayerBullet.h">
+      <Filter>01.GameObject\01..PlayerBullet</Filter>
+    </ClInclude>
+    <ClInclude Include="SoundResource.h">
+      <Filter>99.Default\04.MusicResource</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

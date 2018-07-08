@@ -97,7 +97,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <PrecompiledHeader>Create</PrecompiledHeader>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
@@ -159,8 +159,10 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Clock.cpp" />
-    <ClCompile Include="CMusicResource.cpp" />
+    <ClCompile Include="SoundResource.cpp" />
+    <ClCompile Include="CPlayerBullet.cpp" />
     <ClCompile Include="Direct.cpp" />
+    <ClCompile Include="GameInfo.cpp" />
     <ClCompile Include="GameObject.cpp" />
     <ClCompile Include="HitRange.cpp" />
     <ClCompile Include="Main.cpp" />
@@ -169,20 +171,24 @@
     <ClCompile Include="Scene.cpp" />
     <ClCompile Include="SpriteResource.cpp" />
     <ClCompile Include="TextManager.cpp" />
+    <ClCompile Include="UI.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Clock.h" />
-    <ClInclude Include="CMusicResource.h" />
+    <ClInclude Include="SoundResource.h" />
+    <ClInclude Include="CPlayerBullet.h" />
     <ClInclude Include="Defines.h" />
+    <ClInclude Include="DirectHeader.h" />
+    <ClInclude Include="GameInfo.h" />
     <ClInclude Include="GameObject.h" />
     <ClInclude Include="HitRange.h" />
     <ClInclude Include="MainGame.h" />
     <ClInclude Include="Player.h" />
     <ClInclude Include="Scene.h" />
     <ClInclude Include="SpriteResource.h" />
-    <ClInclude Include="stdafx.h" />
     <ClInclude Include="direct.h" />
     <ClInclude Include="TextManager.h" />
+    <ClInclude Include="UI.h" />
     <ClInclude Include="UserFunction.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

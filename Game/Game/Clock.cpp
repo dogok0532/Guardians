@@ -1,6 +1,7 @@
-#include "stdafx.h"
-#include "Clock.h"
 
+#include "Clock.h"
+#include <windows.h>
+#include <stdio.h>
 
 float CClock::UpdateGame()
 {

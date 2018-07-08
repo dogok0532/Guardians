@@ -1,47 +1,91 @@
-#include "stdafx.h"
+
 #include "Player.h"
 #include "SpriteResource.h"
 #include "direct.h"
 
+
 void CPlayer::Update(float deltaTime)
 {
-	if (GetAsyncKeyState(VK_LEFT))
-		vecPos.x -= 500*deltaTime;
+	Move(deltaTime);
 
-	if (GetAsyncKeyState(VK_RIGHT))
-		vecPos.x += 500* deltaTime;
-
-	if (GetAsyncKeyState(VK_UP))
-		vecPos.y -= 500* deltaTime;
-
-	if (GetAsyncKeyState(VK_DOWN))
-		vecPos.y += 500* deltaTime;
-	
 
 }
 
 void CPlayer::Render()
 {
-
+	D3DXVECTOR3 vecCenter = {m_vecSize.x/2,m_vecSize.y/2,0};
+	
 		
+	m_pSprite->Draw(m_vecImage[0], NULL, &vecCenter, &m_vecPos, D3DCOLOR_ARGB(255, 255, 255, 255));
 		
-		pSprite->Draw(vecImage[0], NULL, NULL, &vecPos, D3DCOLOR_ARGB(255, 255, 255, 255));
 		
 	
 }
 
+bool CPlayer::Fire(float deltaTime)
+{
+	if (GetAsyncKeyState(VK_SPACE))
+	{
+		if (bFired == false)
+		{
+			bFired = true;
+			return true;
+		}
+  		if (fCurrentCycle >= fFireCycle)
+		{
+			fCurrentCycle =0;
+			bFired = true;
+          	return true;
+		}
+
+
+		fCurrentCycle += deltaTime;
+
+   		return false;
+		
+	}
+	else
+	{
+		bFired = false;
+	}
+
+
+	fCurrentCycle = 0;
+	return false;
+}
+
+void CPlayer::Move(float deltaTime)
+{
+	{		//이동관련 알고리즘
+		if (GetAsyncKeyState(VK_LEFT))
+			m_vecPos.x -= 500 * deltaTime;
+		if (GetAsyncKeyState(VK_RIGHT))
+			m_vecPos.x += 500 * deltaTime;
+		if (GetAsyncKeyState(VK_UP))
+			m_vecPos.y -= 500 * deltaTime;
+		if (GetAsyncKeyState(VK_DOWN))
+			m_vecPos.y += 500 * deltaTime;
+	}
+}
+
 CPlayer::CPlayer()
 {
-	vecImage.push_back(CSpriteResource::GetInstance()->GetImage(L"User_Center"));
-	vecImage.push_back(CSpriteResource::GetInstance()->GetImage(L"User_Left"));
-	vecImage.push_back(CSpriteResource::GetInstance()->GetImage(L"User_Right"));
+	m_vecImage.push_back(CSpriteResource::GetInstance()->GetImage(L"User_Center"));
+	m_vecImage.push_back(CSpriteResource::GetInstance()->GetImage(L"User_Left"));
+	m_vecImage.push_back(CSpriteResource::GetInstance()->GetImage(L"User_Right"));
 
-	pSprite = CDirect::GetInstance()->GetSprite();
+	if(m_vecImage.size()!=0)
+		SetObjectSizeToTextureSize();
+	
+	m_vecPos = { 400,400,0 };
 
-	vecPos = { 400,400,0 };
+	fFireCycle = 0.1f;
+	fCurrentCycle = 0;
+	bFired = false;
 }
 
 
 CPlayer::~CPlayer()
 {
+	
 }

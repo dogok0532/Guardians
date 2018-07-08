@@ -1,27 +1,25 @@
 
-#include "stdafx.h"
+
 #include "Direct.h"
-#include<d3d9.h>
-#include<d3dx9core.h>
 
 IMPLEMENT_SINGLETON(CDirect)
 
 HRESULT CDirect::InitD3D(HWND hWnd)
 {
 
-	pD3D = NULL;
-	pDevice = NULL;
+	m_pD3D = NULL;
+	m_pDevice = NULL;
 
-	pD3D = Direct3DCreate9(D3D_SDK_VERSION);
+	m_pD3D = Direct3DCreate9(D3D_SDK_VERSION);
 
-	if (pD3D == NULL)
+	if (m_pD3D == NULL)
 	{
 		return E_FAIL;
 	}
 
 
 	D3DDISPLAYMODE d3ddm;
-	if (FAILED(pD3D->GetAdapterDisplayMode(D3DADAPTER_DEFAULT, &d3ddm)))
+	if (FAILED(m_pD3D->GetAdapterDisplayMode(D3DADAPTER_DEFAULT, &d3ddm)))
 		return E_FAIL;
 
 
@@ -31,21 +29,21 @@ HRESULT CDirect::InitD3D(HWND hWnd)
 	d3dpp.SwapEffect=D3DSWAPEFFECT_DISCARD;
 	d3dpp.BackBufferFormat = d3ddm.Format;
 
-	if (FAILED(pD3D->CreateDevice(D3DADAPTER_DEFAULT,
+	if (FAILED(m_pD3D->CreateDevice(D3DADAPTER_DEFAULT,
 		D3DDEVTYPE_HAL,
 		hWnd,
 		D3DCREATE_SOFTWARE_VERTEXPROCESSING,
 		&d3dpp,
-		&pDevice)))
+		&m_pDevice)))
 		return E_FAIL;
 	
 
 	
 	
-	if(FAILED(D3DXCreateSprite(pDevice, &pSprite)))
+	if(FAILED(D3DXCreateSprite(m_pDevice, &m_pSprite)))
 		return E_FAIL;
 
-	if (FAILED(D3DXCreateTextureFromFile(pDevice, L"../\\Sprite\\User_center.png", &pTexture)))
+	if (FAILED(D3DXCreateTextureFromFile(m_pDevice, L"../\\Sprite\\User_center.png", &m_pTexture)))
 		return E_FAIL;
 
 	
@@ -57,39 +55,64 @@ HRESULT CDirect::InitD3D(HWND hWnd)
 
 void CDirect::Render_Begin()
 {
-	pDevice->Clear(0, NULL, D3DCLEAR_TARGET, D3DCOLOR_XRGB(255, 255, 255), 1.f, 0);
+	m_pDevice->Clear(0, NULL, D3DCLEAR_TARGET, D3DCOLOR_XRGB(255, 255, 255), 1.f, 0);
 
-	pDevice->BeginScene();
-	pSprite->Begin(D3DXSPRITE_ALPHABLEND);
+	m_pDevice->BeginScene();
+	m_pSprite->Begin(D3DXSPRITE_ALPHABLEND);
 }
 	
 
 
 void CDirect::Render_End()
 {
-	pSprite->End();
-	pDevice->EndScene();
+	m_pSprite->End();
+	m_pDevice->EndScene();
 
-	pDevice->Present(NULL, NULL, NULL, NULL);
+	m_pDevice->Present(NULL, NULL, NULL, NULL);
 }
 
 void CDirect::CleanUp()
 {
-	if (pDevice != NULL)
-		delete pDevice;
-	if (pD3D != NULL)
-		delete pD3D;
+	if (m_pDevice != NULL)
+		delete m_pDevice;
+	if (m_pD3D != NULL)
+		delete m_pD3D;
+}
+
+void CDirect::DrawRectangle(RECT rc)
+{
+	m_pSprite->End();
+
+	HRESULT hr = CDirect::GetInstance()->GetDevice()->SetFVF(D3DFVF_XYZRHW | D3DFVF_DIFFUSE);
+	struct Vertex {
+		float x, y, z, w; // D3DFVF_XYZRHW 위치정보
+		D3DCOLOR color = D3DCOLOR_ARGB(255,0,0,0); // D3DFVF_DIFFUSE 색깔
+	};
+	Vertex v[4] = { { rc.left, rc.top, 1.f},
+	{ rc.right, rc.top, 1.f },
+	{ rc.left, rc.bottom, 1.f },
+	{ rc.right, rc.bottom, 1.f}
+	};
+	hr = CDirect::GetInstance()->GetDevice()->DrawPrimitiveUP(D3DPT_TRIANGLESTRIP, 2, v, 20);
+	if (FAILED(hr))
+	{
+		return;
+	}
+	m_pSprite->Begin(D3DXSPRITE_ALPHABLEND);
+
+
+		
 }
 
 LPDIRECT3DDEVICE9 CDirect::GetDevice()
 {
-	return pDevice;
+	return m_pDevice;
 }
 
 
 LPD3DXSPRITE CDirect::GetSprite()
 {
-	return pSprite;
+	return m_pSprite;
 }
 
 CDirect::CDirect()
@@ -99,4 +122,6 @@ CDirect::CDirect()
 
 CDirect::~CDirect()
 {
+	m_pD3D->Release();
+	m_pDevice->Release();
 }

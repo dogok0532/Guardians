@@ -1,10 +1,13 @@
 #pragma once
-#include "stdafx.h"
+
+#include <list>
+using namespace std;
+
 
 class CGameObject;
 class CScene
 {
-private:
+protected:
 	list<CGameObject*> m_pUIList;
 
 public:

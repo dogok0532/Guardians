@@ -1,4 +1,4 @@
-#include "stdafx.h"
+
 #include "SpriteResource.h"
 #include "direct.h"
 
@@ -16,6 +16,8 @@ void CSpriteResource::AddImageFile(wstring fileName)
 		&pTexture);
 
 	mapTexture.insert(make_pair(fileName, pTexture));
+
+
 }
 
 LPDIRECT3DTEXTURE9 CSpriteResource::GetImage(wstring fileName)
@@ -27,6 +29,8 @@ LPDIRECT3DTEXTURE9 CSpriteResource::GetImage(wstring fileName)
 
 CSpriteResource::CSpriteResource()
 {
+	//json 스크립트 파일로 다시 만들것
+
 	AddImageFile(L"Enemy_Bullet");
 	AddImageFile(L"Enemy_Helicpoter_Clear");
 	AddImageFile(L"Enemy_Helicpoter_Crushed");

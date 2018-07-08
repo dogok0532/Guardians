@@ -1,50 +1,69 @@
-#include "stdafx.h"
+
 #include "TextManager.h"
+#include "direct.h"
+
+using namespace std;
 
 IMPLEMENT_SINGLETON(CTextManager)
 
-CTextManager::CTextManager()
+
+
+void CTextManager::Init()
 {
-	HRESULT hr = D2D1CreateFactory(
-		D2D1_FACTORY_TYPE_SINGLE_THREADED,
-		&m_pD2DFactory
-	);
+	D3DXFONT_DESC DXFont_DESC;
+	ZeroMemory(&DXFont_DESC, sizeof(DXFont_DESC));
 
-	if (SUCCEEDED(hr))
+	DXFont_DESC.Height = 40;
+	DXFont_DESC.Width = 20;
+	DXFont_DESC.Weight = FW_NORMAL;
+	DXFont_DESC.MipLevels = D3DX_DEFAULT;
+	DXFont_DESC.Italic = false;
+	DXFont_DESC.CharSet = DEFAULT_CHARSET;
+	DXFont_DESC.OutputPrecision=OUT_DEFAULT_PRECIS;
+	DXFont_DESC.Quality= ANTIALIASED_QUALITY;
+	DXFont_DESC.PitchAndFamily = DEFAULT_PITCH;
+	wcscpy_s(DXFont_DESC.FaceName, sizeof(L"µ¸¿òÃ¼"), L"µ¸¿òÃ¼");
+	
+
+	HRESULT hr;
+	hr = D3DXCreateFontIndirect(CDirect::GetInstance()->GetDevice(),
+		&DXFont_DESC,
+		&m_pFont);
+
+	if (FAILED(hr))
 	{
-		hr = DWriteCreateFactory(
-			DWRITE_FACTORY_TYPE_SHARED,
-			__uuidof(IDWriteFactory),
-			reinterpret_cast<IUnknown**>( &m_pDWriteFactory)
-		);
-	}
-
-	HRESULT hr = m_pDWriteFactory->CreateTextFormat(
-		L"Gabriola",                // Font family name.
-		NULL,                       // Font collection (NULL sets it to use the system font collection).
-		DWRITE_FONT_WEIGHT_REGULAR,
-		DWRITE_FONT_STYLE_NORMAL,
-		DWRITE_FONT_STRETCH_NORMAL,
-		72.0f,
-		L"en-us",
-		&m_pTextFormat
-	);
-
-	if (SUCCEEDED(hr))
-	{
-		hr = m_pTextFormat->SetTextAlignment(DWRITE_TEXT_ALIGNMENT_CENTER);
-	}
-
-	if (SUCCEEDED(hr))
-	{
-		hr = m_pTextFormat->SetParagraphAlignment(DWRITE_PARAGRAPH_ALIGNMENT_CENTER);
+		return;
 	}
 
 }
 
-
-CTextManager::~CTextManager()
+void CTextManager::Release()
 {
+	
+}
+
+
+
+void CTextManager::Render()
+{
+
+	m_pFont->DrawTextW(NULL,
+		m_strText.c_str(), m_iTextLength, &m_rcTextRange, DT_LEFT|DT_TOP, D3DCOLOR_ARGB(255, 255, 255, 255));
+
+}
+
+
+void CTextManager::SetTextRange(RECT rc)
+{
+	m_rcTextRange = rc;
+}
+
+void CTextManager::SetTextRange(int left, int top, int right, int bottom)
+{
+	m_rcTextRange.left=left;
+	m_rcTextRange.top=top;
+	m_rcTextRange.right=right;
+	m_rcTextRange.bottom=bottom;
 }
 
 void CTextManager::SetText(wstring strText)
@@ -58,3 +77,12 @@ void CTextManager::SetFormat()
 
 }
 
+CTextManager::CTextManager()
+{
+
+}
+
+
+CTextManager::~CTextManager()
+{
+}

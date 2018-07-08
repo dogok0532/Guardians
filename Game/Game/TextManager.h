@@ -1,24 +1,34 @@
 #pragma once
 #include "Defines.h"
-#include <DWrite.h>
-#include <d2d1.h>
+#include "DirectHeader.h"
+#include <string>
+using namespace std;
 
 class CTextManager
 {
 private:
-	IDWriteFactory* m_pDWriteFactory;
-	IDWriteTextFormat* m_pTextFormat;
-	
-	
-	wstring m_strText;
-	UINT32 m_iTextLength;
+	wstring m_strText = L"";
+	UINT32 m_iTextLength = 0;
 
-	ID2D1Factory* m_pD2DFactory;
-	ID2D1HwndRenderTarget* m_pRT;
-	ID2D1SolidColorBrush* m_pBlackBrush;
+	ID3DXFont* m_pFont;
 
+
+	RECT m_rcTextRange;
 
 public:
+	void Init();
+	void Release();
+
+public:
+
+
+	void Render();
+
+
+
+	void SetTextRange(RECT rc);
+	void SetTextRange(int left, int top, int right, int bottom);
+
 	void SetText(wstring);
 	void SetFormat();
 

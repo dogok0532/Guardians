@@ -1,5 +1,9 @@
 #pragma once
 #include "Defines.h"
+#include <Map>
+#include "DirectHeader.h"
+using namespace std;
+
 class CSpriteResource
 {
 private:
