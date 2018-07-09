@@ -43,9 +43,6 @@ HRESULT CDirect::InitD3D(HWND hWnd)
 	if(FAILED(D3DXCreateSprite(m_pDevice, &m_pSprite)))
 		return E_FAIL;
 
-	if (FAILED(D3DXCreateTextureFromFile(m_pDevice, L"../\\Sprite\\User_center.png", &m_pTexture)))
-		return E_FAIL;
-
 	
 
 

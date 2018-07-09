@@ -19,7 +19,9 @@
 
 //가로 세로 크기 정의
 
-#define NULL nullptr
+#define STR_MAX 256
+
+
 
 #define SAFE_DELETE(x)   if(x != nullptr) {delete x; x=nullptr; }
 #define SAFE_RELEASE(x)  if(x != nullptr) { x->Release(); }

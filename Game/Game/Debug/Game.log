@@ -1,4 +1,2 @@
-﻿  Main.cpp
-d:\학업\git\game\game\defines.h(22): warning C4005: 'NULL': 매크로 재정의
-  c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.14.26428\include\vcruntime.h(220): note: 'NULL'의 이전 정의를 참조하십시오.
+﻿  SoundResource.cpp
   Game.vcxproj -> D:\학업\Git\Game\Debug\Game.exe

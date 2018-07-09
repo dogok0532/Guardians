@@ -6,6 +6,7 @@
 #include "GameInfo.h"
 #include "TextManager.h"
 #include "CPlayerBullet.h"
+#include "SoundResource.h"
 
 void CMainGame::Update(float deltaTime)
 {
@@ -20,6 +21,9 @@ void CMainGame::Update(float deltaTime)
 	}
 
 	PlayerFire(deltaTime);
+
+	
+	
 }
 
 void CMainGame::Render()
@@ -67,6 +71,8 @@ CMainGame::CMainGame()
 	
 	m_pUIList.push_back(UI);
 
+	CSoundResource::GetInstance()->Init();
+	CSoundResource::GetInstance()->Play(L"../bell.wav");
 }
 
 

@@ -10,43 +10,29 @@
 #include <windows.h>
 #include <mmsystem.h>
 #include <dsound.h>
-#include <stdio.h>
+#include <iostream>
 
 #include <map>
+
+#include <irrKlang.h>
+
+
+using namespace irrklang;
 using namespace std;
 
 
+#pragma comment(lib,"irrKlang.lib")
 
 class CSoundResource
 {
+
 	DECLARE_SINGLETON(CSoundResource)
 
 private:
-	IDirectSound8 * m_pDirectSound=NULL;
-	IDirectSoundBuffer* m_pMainBuffer=NULL;
-	map<wstring,IDirectSoundBuffer8*> m_mapSubBuffer;
+	ISoundEngine* m_pEngine;
 
 public:
-	bool Init(HWND hWnd, wstring fileName);
-	void Release();
-	bool InsertFile(wstring fileName);
-
-	void PlayBuffer(wstring fileName);
-
-private:
-	bool InitSoundEngine(HWND);
-	
-};
-
-struct sOGGFormat
-{
-	__int32 CapturePattern; //4πŸ¿Ã∆Æ
-	__int8 Version;
-	__int8 HeaderType;
-	__int64 GranulePosition;
-	__int32 BitstreamSerialNum;
-	__int32 PageSequenceNum;
-	__int32 CheckSum;
-	__int8 PageSegments;
+	void Init();
+	void Play(wstring fileName);
 
 };

@@ -72,8 +72,8 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
-    <IncludePath>../\DirectX\include;$(IncludePath)</IncludePath>
-    <LibraryPath>../\DirectX/\Lib\x86;$(LibraryPath)</LibraryPath>
+    <IncludePath>../\Sound\include;../\DirectX\include;$(IncludePath)</IncludePath>
+    <LibraryPath>../\Sound\lib;../\DirectX/\Lib\x86;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
