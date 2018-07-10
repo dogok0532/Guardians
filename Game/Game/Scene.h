@@ -1,6 +1,6 @@
 #pragma once
 
-#include <list>
+#include <vector>
 using namespace std;
 
 
@@ -8,7 +8,7 @@ class CGameObject;
 class CScene
 {
 protected:
-	list<CGameObject*> m_pUIList;
+	vector<CGameObject*> m_pVecUI;
 
 public:
 	virtual void Update(float fDeltaTime)=0;

@@ -95,6 +95,10 @@ void CDirect::DrawRectangle(RECT rc)
 	{
 		return;
 	}
+
+
+	
+
 	m_pSprite->Begin(D3DXSPRITE_ALPHABLEND);
 
 

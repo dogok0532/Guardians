@@ -9,6 +9,7 @@ void CGameInfo::Update(float deltaTime)
 
 void CGameInfo::Render()
 {
+
 	RECT rc ={0,0, WINCX / 2 - GAMESIZE_X / 2 ,WINCY +200};
 	CDirect::GetInstance()->DrawRectangle(rc);
 

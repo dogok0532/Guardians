@@ -1,7 +1,6 @@
 
 #include "GameObject.h"
 #include "direct.h"
-#include "SpriteResource.h"
 
 LPD3DXSPRITE CGameObject::m_pSprite = NULL;
 
@@ -11,14 +10,19 @@ void CGameObject::SetSprite(LPD3DXSPRITE pSprite)
 }
 
 
-void CGameObject::SetObjectSizeToTextureSize()
+void CGameObject::SetSizeToTextureSize()	//게임오브젝트의 크기를 텍스처 크기에 맞춘다.
 {
-	D3DSURFACE_DESC desc;
-	m_vecImage[0]->GetLevelDesc(0,&desc);
+	
+	
 
+	m_vecSize.x = m_vecImage[0].ImageInfo.Width;
+	m_vecSize.y = m_vecImage[0].ImageInfo.Height;
 
-	m_vecSize.x = desc.Height;
-	m_vecSize.y = desc.Width;
+	
+
+	m_vecCenter = m_vecSize / 2;
+	
+	
 }
 
 void CGameObject::SetPos(D3DXVECTOR3 vecPos)
@@ -41,7 +45,6 @@ D3DXVECTOR3 CGameObject::GetPos()
 
 CGameObject::CGameObject()
 {
-
 	SetSprite(CDirect::GetInstance()->GetSprite());
 }
 
@@ -50,7 +53,7 @@ CGameObject::~CGameObject()
 {
 	for (int i = 0; i < m_vecImage.size(); i++)
 	{
-		SAFE_RELEASE(m_vecImage[i]);		
+		SAFE_RELEASE(m_vecImage[i].pTexture);		
 	}
 	
 	m_vecImage.clear();

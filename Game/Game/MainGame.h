@@ -1,27 +1,24 @@
 #pragma once
-#include <list>
-#include "Scene.h"
-
+#include <vector>
 using namespace std;
 
+class CScene;
 class CGameObject;
-class CMainGame :public CScene
+class CMainGame
 {
 private:
-	CGameObject * m_pPlayer[2] = { NULL, NULL};
-	list<CGameObject*> m_pEnemyList;
-	list<CGameObject*> m_pPlayerBulletList;
-	list<CGameObject*> m_pEnmeyBulletList;
+	CScene* m_pCurrentScene=NULL;
+
+	CGameObject* m_pMouse;
+	
+	
 
 public:
-	virtual void Update(float deltaTime);
-	virtual void Render();
-
-	void PlayerFire(float deltaTime);
-
+	void Update(float deltaTime);
+	void Render();
 
 public:
 	CMainGame();
-	virtual ~CMainGame();
+	~CMainGame();
 };
 

@@ -158,7 +158,11 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="GameButton.cpp" />
     <ClCompile Include="Clock.cpp" />
+    <ClCompile Include="MainGame.cpp" />
+    <ClCompile Include="MainMenu.cpp" />
+    <ClCompile Include="Mouse.cpp" />
     <ClCompile Include="SoundResource.cpp" />
     <ClCompile Include="CPlayerBullet.cpp" />
     <ClCompile Include="Direct.cpp" />
@@ -166,7 +170,7 @@
     <ClCompile Include="GameObject.cpp" />
     <ClCompile Include="HitRange.cpp" />
     <ClCompile Include="Main.cpp" />
-    <ClCompile Include="MainGame.cpp" />
+    <ClCompile Include="Stage.cpp" />
     <ClCompile Include="Player.cpp" />
     <ClCompile Include="Scene.cpp" />
     <ClCompile Include="SpriteResource.cpp" />
@@ -174,7 +178,11 @@
     <ClCompile Include="UI.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="GameButton.h" />
     <ClInclude Include="Clock.h" />
+    <ClInclude Include="MainGame.h" />
+    <ClInclude Include="MainMenu.h" />
+    <ClInclude Include="Mouse.h" />
     <ClInclude Include="SoundResource.h" />
     <ClInclude Include="CPlayerBullet.h" />
     <ClInclude Include="Defines.h" />
@@ -182,7 +190,7 @@
     <ClInclude Include="GameInfo.h" />
     <ClInclude Include="GameObject.h" />
     <ClInclude Include="HitRange.h" />
-    <ClInclude Include="MainGame.h" />
+    <ClInclude Include="Stage.h" />
     <ClInclude Include="Player.h" />
     <ClInclude Include="Scene.h" />
     <ClInclude Include="SpriteResource.h" />

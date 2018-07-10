@@ -13,10 +13,10 @@ void CPlayer::Update(float deltaTime)
 
 void CPlayer::Render()
 {
-	D3DXVECTOR3 vecCenter = {m_vecSize.x/2,m_vecSize.y/2,0};
+	
 	
 		
-	m_pSprite->Draw(m_vecImage[0], NULL, &vecCenter, &m_vecPos, D3DCOLOR_ARGB(255, 255, 255, 255));
+	m_pSprite->Draw(m_vecImage[0].pTexture, NULL, &m_vecCenter, &m_vecPos, D3DCOLOR_ARGB(255, 255, 255, 255));
 		
 		
 	
@@ -50,6 +50,7 @@ bool CPlayer::Fire(float deltaTime)
 	}
 
 
+
 	fCurrentCycle = 0;
 	return false;
 }
@@ -70,12 +71,12 @@ void CPlayer::Move(float deltaTime)
 
 CPlayer::CPlayer()
 {
-	m_vecImage.push_back(CSpriteResource::GetInstance()->GetImage(L"User_Center"));
-	m_vecImage.push_back(CSpriteResource::GetInstance()->GetImage(L"User_Left"));
-	m_vecImage.push_back(CSpriteResource::GetInstance()->GetImage(L"User_Right"));
+	m_vecImage.push_back(CSpriteResource::GetInstance()->GetTextureInfo(L"User_Center"));
+	m_vecImage.push_back(CSpriteResource::GetInstance()->GetTextureInfo(L"User_Left"));
+	m_vecImage.push_back(CSpriteResource::GetInstance()->GetTextureInfo(L"User_Right"));
 
 	if(m_vecImage.size()!=0)
-		SetObjectSizeToTextureSize();
+		SetSizeToTextureSize();
 	
 	m_vecPos = { 400,400,0 };
 

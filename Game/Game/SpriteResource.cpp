@@ -7,25 +7,37 @@ IMPLEMENT_SINGLETON(CSpriteResource)
 void CSpriteResource::AddImageFile(wstring fileName)
 {
 	LPDIRECT3DTEXTURE9 pTexture=NULL;
-
+	D3DXIMAGE_INFO ImageInfo;
+	
+	
 
 	wstring strPath= L"../\\Resource\\Sprite\\" + fileName + L".png";
+	D3DXGetImageInfoFromFile(strPath.c_str(), &ImageInfo);
+
 
 	D3DXCreateTextureFromFile(CDirect::GetInstance()->GetDevice(),
 		strPath.c_str(),
 		&pTexture);
 
-	mapTexture.insert(make_pair(fileName, pTexture));
+	TextureInfo textureInfo;
+	textureInfo.pTexture = pTexture;
+	textureInfo.ImageInfo = ImageInfo;
 
+	mapTexture.insert(make_pair(fileName, textureInfo));
 
+	
 }
 
-LPDIRECT3DTEXTURE9 CSpriteResource::GetImage(wstring fileName)
+TextureInfo CSpriteResource::GetTextureInfo(wstring fileName)
 {
-	map<wstring, LPDIRECT3DTEXTURE9>::iterator iter;
+	map<wstring, TextureInfo>::iterator iter;
 	iter = mapTexture.find(fileName);
 	return iter->second;
 }
+
+
+
+
 
 CSpriteResource::CSpriteResource()
 {
@@ -45,6 +57,11 @@ CSpriteResource::CSpriteResource()
 	AddImageFile(L"User_Left");
 	AddImageFile(L"User_Missile");
 	AddImageFile(L"User_Right");
+
+
+	AddImageFile(L"Button");
+	AddImageFile(L"Button2");
+
 
 }
 
