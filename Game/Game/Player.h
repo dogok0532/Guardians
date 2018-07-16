@@ -12,6 +12,7 @@ private:
 public:
 	virtual void Update(float deltaTime);
 	virtual void Render();
+	virtual bool Destroy();
 
 
 	bool Fire(float deltaTim);

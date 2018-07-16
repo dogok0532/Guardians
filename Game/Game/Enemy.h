@@ -1,17 +1,14 @@
 #pragma once
-#include "UI.h"
-class CGameInfo :
-	public CUI
+#include "GameObject.h"
+class CEnemy :
+	public CGameObject
 {
-public:
 	virtual void Update(float deltaTime);
 	virtual void Render();
 	virtual bool Destroy();
 
-
-
 public:
-	CGameInfo();
-	virtual ~CGameInfo();
+	CEnemy();
+	virtual ~CEnemy();
 };
 

@@ -158,6 +158,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Enemy.cpp" />
     <ClCompile Include="GameButton.cpp" />
     <ClCompile Include="Clock.cpp" />
     <ClCompile Include="MainGame.cpp" />
@@ -175,9 +176,11 @@
     <ClCompile Include="Scene.cpp" />
     <ClCompile Include="SpriteResource.cpp" />
     <ClCompile Include="TextManager.cpp" />
+    <ClCompile Include="Texture.cpp" />
     <ClCompile Include="UI.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Enemy.h" />
     <ClInclude Include="GameButton.h" />
     <ClInclude Include="Clock.h" />
     <ClInclude Include="MainGame.h" />
@@ -196,6 +199,7 @@
     <ClInclude Include="SpriteResource.h" />
     <ClInclude Include="direct.h" />
     <ClInclude Include="TextManager.h" />
+    <ClInclude Include="Texture.h" />
     <ClInclude Include="UI.h" />
     <ClInclude Include="UserFunction.h" />
   </ItemGroup>

@@ -19,8 +19,14 @@ void CGameInfo::Render()
 	
 
 	CTextManager::GetInstance()->SetText(L"Ã¼·Â:");
-	CTextManager::GetInstance()->SetTextRange(0, 0, WINCX, WINCY);
+	CTextManager::GetInstance()->SetColor(D3DCOLOR_ARGB(255, 255, 255, 255));
+	CTextManager::GetInstance()->SetTextRange(0, 0, WINCX / 2 - GAMESIZE_X / 2, WINCY);
 	CTextManager::GetInstance()->Render();
+}
+
+bool CGameInfo::Destroy()
+{
+	return false;
 }
 
 CGameInfo::CGameInfo()

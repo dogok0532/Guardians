@@ -7,6 +7,8 @@ public:
 	virtual void Update(float deltaTime);
 	virtual void Render();
 
+	
+
 public:
 	CMainMenu();
 	virtual ~CMainMenu();

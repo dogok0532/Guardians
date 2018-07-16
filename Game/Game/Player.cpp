@@ -6,8 +6,9 @@
 
 void CPlayer::Update(float deltaTime)
 {
+	
 	Move(deltaTime);
-
+	
 
 }
 
@@ -15,11 +16,14 @@ void CPlayer::Render()
 {
 	
 	
-		
-	m_pSprite->Draw(m_vecImage[0].pTexture, NULL, &m_vecCenter, &m_vecPos, D3DCOLOR_ARGB(255, 255, 255, 255));
-		
-		
+	UpdatePos();
+	m_vecImage[0]->Render();
 	
+}
+
+bool CPlayer::Destroy()
+{
+	return false;
 }
 
 bool CPlayer::Fire(float deltaTime)
@@ -67,6 +71,19 @@ void CPlayer::Move(float deltaTime)
 		if (GetAsyncKeyState(VK_DOWN))
 			m_vecPos.y += 500 * deltaTime;
 	}
+
+	//범위 넘지 못하게 막기
+	if (m_vecPos.x > WINCX/2 + GAMESIZE_X/2)
+		m_vecPos.x = WINCX / 2 + GAMESIZE_X / 2;
+
+	if (m_vecPos.y > GAMESIZE_Y)
+		m_vecPos.y = GAMESIZE_Y;
+
+	if (m_vecPos.x <  WINCX / 2 - GAMESIZE_X / 2)
+		m_vecPos.x = WINCX / 2 - GAMESIZE_X / 2;
+
+	if (m_vecPos.y < 0)
+		m_vecPos.y = 0;
 }
 
 CPlayer::CPlayer()
@@ -83,6 +100,8 @@ CPlayer::CPlayer()
 	fFireCycle = 0.1f;
 	fCurrentCycle = 0;
 	bFired = false;
+
+	UpdateTextureInfo();
 }
 
 

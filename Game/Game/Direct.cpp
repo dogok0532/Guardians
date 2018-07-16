@@ -78,7 +78,7 @@ void CDirect::CleanUp()
 
 void CDirect::DrawRectangle(RECT rc)
 {
-	m_pSprite->End();
+     m_pSprite->End();
 
 	HRESULT hr = CDirect::GetInstance()->GetDevice()->SetFVF(D3DFVF_XYZRHW | D3DFVF_DIFFUSE);
 	struct Vertex {

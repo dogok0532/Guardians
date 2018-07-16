@@ -1,36 +1,25 @@
 
 #include "SpriteResource.h"
 #include "direct.h"
+#include "Texture.h"
 
 IMPLEMENT_SINGLETON(CSpriteResource)
 
 void CSpriteResource::AddImageFile(wstring fileName)
 {
-	LPDIRECT3DTEXTURE9 pTexture=NULL;
-	D3DXIMAGE_INFO ImageInfo;
+
+	wstring strPath = L"../\\Resource\\Sprite\\" + fileName + L".png";
+	CTexture* pTexture = new CTexture(strPath.c_str());
 	
-	
-
-	wstring strPath= L"../\\Resource\\Sprite\\" + fileName + L".png";
-	D3DXGetImageInfoFromFile(strPath.c_str(), &ImageInfo);
-
-
-	D3DXCreateTextureFromFile(CDirect::GetInstance()->GetDevice(),
-		strPath.c_str(),
-		&pTexture);
-
-	TextureInfo textureInfo;
-	textureInfo.pTexture = pTexture;
-	textureInfo.ImageInfo = ImageInfo;
-
-	mapTexture.insert(make_pair(fileName, textureInfo));
+	mapTexture.insert(make_pair(fileName, pTexture));
 
 	
 }
 
-TextureInfo CSpriteResource::GetTextureInfo(wstring fileName)
+CTexture* CSpriteResource::GetTextureInfo(wstring fileName)
 {
-	map<wstring, TextureInfo>::iterator iter;
+	
+	map<wstring, CTexture*>::iterator iter;
 	iter = mapTexture.find(fileName);
 	return iter->second;
 }

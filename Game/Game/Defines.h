@@ -21,6 +21,10 @@
 
 #define STR_MAX 256
 
+#define DEFAULT_COLOR D3DCOLOR_ARGB(255,255,255,255)
+
+
+
 
 
 #define SAFE_DELETE(x)   if(x != nullptr) {delete x; x=nullptr; }
@@ -40,6 +44,5 @@ public: static X* GetInstance();\
 X* X::pInstance = NULL;\
 X* X::GetInstance(){if(pInstance == nullptr){ pInstance = new X();} return pInstance; }\
 //½Ì±ÛÅæ c++ÆÄÀÏ °£·«È­ 
-
 
 

@@ -9,11 +9,14 @@ class CMainGame
 private:
 	CScene* m_pCurrentScene=NULL;
 
-	CGameObject* m_pMouse;
 	
 	
 
+
 public:
+	void ChangeScene(int Scene);
+
+
 	void Update(float deltaTime);
 	void Render();
 

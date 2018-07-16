@@ -15,6 +15,8 @@ private:
 
 	RECT m_rcTextRange;
 
+	D3DCOLOR m_Color = DEFAULT_COLOR;
+
 public:
 	void Init();
 	void Release();
@@ -31,6 +33,7 @@ public:
 
 	void SetText(wstring);
 	void SetFormat();
+	void SetColor(D3DCOLOR color);
 
 
 	DECLARE_SINGLETON(CTextManager)

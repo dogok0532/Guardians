@@ -47,8 +47,8 @@ void CTextManager::Release()
 void CTextManager::Render()
 {
 
-	m_pFont->DrawTextW(NULL,
-		m_strText.c_str(), m_iTextLength, &m_rcTextRange, DT_LEFT|DT_TOP, D3DCOLOR_ARGB(255, 255, 255, 255));
+	m_pFont->DrawTextW(CDirect::GetInstance()->GetSprite(),
+		m_strText.c_str(), m_iTextLength, &m_rcTextRange, DT_CENTER | DT_VCENTER, m_Color);
 
 }
 
@@ -75,6 +75,11 @@ void CTextManager::SetText(wstring strText)
 void CTextManager::SetFormat()
 {
 
+}
+
+void CTextManager::SetColor(D3DCOLOR color)
+{
+	m_Color = color;
 }
 
 CTextManager::CTextManager()

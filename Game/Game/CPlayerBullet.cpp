@@ -4,19 +4,22 @@
 
 void CPlayerBullet::Update(float deltaTime)
 {
+	
 	m_vecPos += vecSpeed*deltaTime;
+
+	
 }
 
 void CPlayerBullet::Render()
 {
-	m_pSprite->Draw(m_vecImage[0].pTexture, NULL, NULL, &m_vecPos, D3DCOLOR_ARGB(255, 255, 255, 255));
-
+	UpdatePos();
+	m_vecImage[0]->Render();
 }
 
 
 bool CPlayerBullet::Destroy()
 {
-	if (m_vecPos.x < -200 || m_vecPos.y <-200 || m_vecPos.x > WINCX +200 || m_vecPos.y > WINCY +200)
+	if (m_vecPos.x < -200 || m_vecPos.y <-200 || m_vecPos.x > WINCX + 200 || m_vecPos.y > WINCY + 200)
 		return true;
 
 	else
@@ -28,6 +31,10 @@ CPlayerBullet::CPlayerBullet()
 
 	m_vecImage.push_back(CSpriteResource::GetInstance()->GetTextureInfo(L"User_Missile"));
 	vecSpeed = { 0,-500,0 };
+
+	UpdateTextureInfo();
+	
+	SetSizeToTextureSize();
 }
 
 

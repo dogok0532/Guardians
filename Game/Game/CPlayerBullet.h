@@ -7,13 +7,13 @@ class CPlayerBullet :
 
 	virtual void Update(float deltaTime);
 	virtual void Render();
-
+	virtual bool Destroy();
 
 
 public:
 
 
-	bool Destroy();	//메모리에서 제거해야할떄 true 값 반환
+		//메모리에서 제거해야할떄 true 값 반환
 
 public:
 	CPlayerBullet();

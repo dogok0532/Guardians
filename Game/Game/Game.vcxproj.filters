@@ -138,6 +138,12 @@
     <ClCompile Include="Mouse.cpp">
       <Filter>03.GameObject\05.UI\03.Mouse</Filter>
     </ClCompile>
+    <ClCompile Include="Texture.cpp">
+      <Filter>99.Default\05.TextManager</Filter>
+    </ClCompile>
+    <ClCompile Include="Enemy.cpp">
+      <Filter>03.GameObject\02.Enemey</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Scene.h">
@@ -199,6 +205,12 @@
     </ClInclude>
     <ClInclude Include="Mouse.h">
       <Filter>03.GameObject\05.UI\03.Mouse</Filter>
+    </ClInclude>
+    <ClInclude Include="Texture.h">
+      <Filter>99.Default\05.TextManager</Filter>
+    </ClInclude>
+    <ClInclude Include="Enemy.h">
+      <Filter>03.GameObject\02.Enemey</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
