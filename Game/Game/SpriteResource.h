@@ -3,20 +3,23 @@
 #include <Map>
 #include "DirectHeader.h"
 #include "Texture.h"
-
+#include "Sprite.h"
 using namespace std;
 
 
 class CSpriteResource
 {
 private:
-	map<wstring, CTexture*> mapTexture;
+	map<wstring, Texture*> mapTexture;
 
 public:
-	void AddImageFile(wstring);
-	CTexture* GetTextureInfo(wstring);
+	void AddImageFile(wstring, int FrameX,int FrameY);
+	Texture* GetTextureInfo(wstring);
 	
+	void Draw(wstring, wstring,int);
 
-	DECLARE_SINGLETON(CSpriteResource)
+public:
+	CSpriteResource();
+	~CSpriteResource();
 };
 

@@ -4,11 +4,12 @@
 #include "Player.h"
 #include "Defines.h"
 #include "GameInfo.h"
-#include "TextManager.h"
-#include "CPlayerBullet.h"
+#include "Text.h"
+#include "PlayerBullet.h"
 #include "SoundResource.h"
 #include "UserFunction.h"
 #include "Enemy.h"
+#include "EnemyPlane.h"
 
 void CStage::DestroyCheck()
 {
@@ -20,7 +21,7 @@ void CStage::DestroyCheck()
 	{
 		bool bAdded=false;
 
-		for (list<CGameObject*>::iterator iter_Enemy = m_pEnemyList.begin();
+		for (list<CEnemy*>::iterator iter_Enemy = m_pEnemyList.begin();
 			iter_Enemy != m_pEnemyList.end(); )
 
 		{
@@ -83,13 +84,14 @@ void CStage::Update(float deltaTime)
 		(*iter)->Update(deltaTime);
 	}
 
-	for (list<CGameObject*>::iterator iter = m_pEnemyList.begin();		//적 업데이트
+	for (list<CEnemy*>::iterator iter = m_pEnemyList.begin();		//적 업데이트
 		iter != m_pEnemyList.end();)
 	{
 		if ((*iter)->Destroy() == true)
 		{
 			delete (*iter);
 			m_pEnemyList.erase(iter++);
+			continue;
 		}
 		else
 			(*iter)->Update(deltaTime);
@@ -126,7 +128,7 @@ void CStage::Render()
 		(*iter)->Render();
 	}
 
-	for (list<CGameObject*>::iterator iter = m_pEnemyList.begin();
+	for (list<CEnemy*>::iterator iter = m_pEnemyList.begin();
 		iter != m_pEnemyList.end(); iter++)
 	{
 		(*iter)->Render();
@@ -144,11 +146,17 @@ bool CStage::Destroy()
 
 void CStage::PlayerFire(float deltaTime)
 {
-	if ((dynamic_cast<CPlayer*>(m_pPlayer[0]))->Fire(deltaTime) == true)	//발사가능한지 확인
+	if (int BulletState =(dynamic_cast<CPlayer*>(m_pPlayer[0]))->Fire(deltaTime))	//발사가능한지 확인
 	{
-		CGameObject* pPlayerBullet = new CPlayerBullet;		//플레이어 Bullet리스트에 삽입
-		pPlayerBullet->SetPos(m_pPlayer[0]->GetPos());			//Bullet 좌표 설정
-		m_pPlayerBulletList.push_back(pPlayerBullet);			//플레이어 Bullet리스트에 삽입
+		for (int i = 0; i < BulletState; i++)						//탄약상태(파워업)에 따라 한번에 단발/여러발을 쏨
+		{
+			CGameObject* pPlayerBullet = 
+			(dynamic_cast<CPlayer*>(m_pPlayer[0]))->MakeBullet(
+				-15 + i * 30.f / (BulletState - 1)
+			);		
+			m_pPlayerBulletList.push_back(pPlayerBullet);		
+		}
+		
 	}
 
 	
@@ -167,13 +175,13 @@ CStage::CStage()
 
 
 	
-	CGameObject* Enemy = new CEnemy;
+	CEnemy* Enemy = new CEnemyPlane;
 	Enemy->SetPos(rand()%GAMESIZE_X  + (WINCX - GAMESIZE_X)/2,0);
 	m_pEnemyList.push_back(Enemy);
 
 
 
-	CSoundResource::GetInstance()->Init();
+
 
 
 	//CSoundResource::GetInstance()->Play(L"../bell.wav");
@@ -186,7 +194,7 @@ CStage::~CStage()
 	SAFE_DELETE(m_pPlayer[1]);
 
 
-	for (list<CGameObject*>::iterator iter = m_pEnemyList.begin();
+	for (list<CEnemy*>::iterator iter = m_pEnemyList.begin();
 		iter != m_pEnemyList.end(); iter++)
 	{
 		SAFE_DELETE(*iter);

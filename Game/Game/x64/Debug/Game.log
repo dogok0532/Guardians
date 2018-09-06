@@ -1,0 +1,103 @@
+﻿  Sprite.cpp
+d:\github\game\game\sprite.cpp(16): error C2857: /Ycstdafx.h 명령줄 옵션과 함께 지정한 '#include' 문이 소스 파일에 없습니다.
+  Enemy.cpp
+d:\github\game\game\gameobject.h(10): warning C4099: 'ObjectInfo': 처음에는 'class'을(를) 사용하여 형식 이름을 표시했는데 이제는 'struct'을(를) 사용하여 표시합니다.
+  d:\github\game\game\gameobject.h(9): note: 'ObjectInfo' 선언을 참조하십시오.
+d:\github\game\game\enemy.cpp(24): error C2857: /Ycstdafx.h 명령줄 옵션과 함께 지정한 '#include' 문이 소스 파일에 없습니다.
+  EnemyPlane.cpp
+d:\github\game\game\gameobject.h(10): warning C4099: 'ObjectInfo': 처음에는 'class'을(를) 사용하여 형식 이름을 표시했는데 이제는 'struct'을(를) 사용하여 표시합니다.
+  d:\github\game\game\gameobject.h(9): note: 'ObjectInfo' 선언을 참조하십시오.
+d:\github\game\game\enemyplane.cpp(46): error C2857: /Ycstdafx.h 명령줄 옵션과 함께 지정한 '#include' 문이 소스 파일에 없습니다.
+  GameButton.cpp
+d:\github\game\game\gameobject.h(10): warning C4099: 'ObjectInfo': 처음에는 'class'을(를) 사용하여 형식 이름을 표시했는데 이제는 'struct'을(를) 사용하여 표시합니다.
+  d:\github\game\game\gameobject.h(9): note: 'ObjectInfo' 선언을 참조하십시오.
+d:\github\game\game\gamebutton.cpp(23): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\github\game\game\gamebutton.cpp(22): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\github\game\game\gamebutton.cpp(21): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\github\game\game\gamebutton.cpp(20): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\github\game\game\gamebutton.cpp(46): warning C4244: '=': 'float'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\github\game\game\gamebutton.cpp(47): warning C4244: '=': 'float'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\github\game\game\gamebutton.cpp(48): warning C4244: '=': 'float'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\github\game\game\gamebutton.cpp(49): warning C4244: '=': 'float'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\github\game\game\gamebutton.cpp(100): error C2857: /Ycstdafx.h 명령줄 옵션과 함께 지정한 '#include' 문이 소스 파일에 없습니다.
+  Clock.cpp
+d:\github\game\game\clock.cpp(21): warning C4244: '초기화 중': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\github\game\game\clock.cpp(25): warning C4244: 'return': 'double'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\github\game\game\clock.cpp(47): error C2857: /Ycstdafx.h 명령줄 옵션과 함께 지정한 '#include' 문이 소스 파일에 없습니다.
+  MainGame.cpp
+d:\github\game\game\gameobject.h(10): warning C4099: 'ObjectInfo': 처음에는 'class'을(를) 사용하여 형식 이름을 표시했는데 이제는 'struct'을(를) 사용하여 표시합니다.
+  d:\github\game\game\gameobject.h(9): note: 'ObjectInfo' 선언을 참조하십시오.
+d:\github\game\game\soundresource.h(17): fatal error C1083: 포함 파일을 열 수 없습니다. 'irrKlang.h': No such file or directory
+  MainMenu.cpp
+d:\github\game\game\gameobject.h(10): warning C4099: 'ObjectInfo': 처음에는 'class'을(를) 사용하여 형식 이름을 표시했는데 이제는 'struct'을(를) 사용하여 표시합니다.
+  d:\github\game\game\gameobject.h(9): note: 'ObjectInfo' 선언을 참조하십시오.
+d:\github\game\game\mainmenu.cpp(74): error C2857: /Ycstdafx.h 명령줄 옵션과 함께 지정한 '#include' 문이 소스 파일에 없습니다.
+  Mouse.cpp
+d:\github\game\game\gameobject.h(10): warning C4099: 'ObjectInfo': 처음에는 'class'을(를) 사용하여 형식 이름을 표시했는데 이제는 'struct'을(를) 사용하여 표시합니다.
+  d:\github\game\game\gameobject.h(9): note: 'ObjectInfo' 선언을 참조하십시오.
+d:\github\game\game\mouse.cpp(14): warning C4244: '=': 'LONG'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\github\game\game\mouse.cpp(15): warning C4244: '=': 'LONG'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\github\game\game\mouse.cpp(65): error C2857: /Ycstdafx.h 명령줄 옵션과 함께 지정한 '#include' 문이 소스 파일에 없습니다.
+  Observer.cpp
+d:\github\game\game\observer.cpp(12): error C2857: /Ycstdafx.h 명령줄 옵션과 함께 지정한 '#include' 문이 소스 파일에 없습니다.
+  SceneOb.cpp
+d:\github\game\game\gameobject.h(10): warning C4099: 'ObjectInfo': 처음에는 'class'을(를) 사용하여 형식 이름을 표시했는데 이제는 'struct'을(를) 사용하여 표시합니다.
+  d:\github\game\game\gameobject.h(9): note: 'ObjectInfo' 선언을 참조하십시오.
+d:\github\game\game\sceneob.cpp(19): error C2857: /Ycstdafx.h 명령줄 옵션과 함께 지정한 '#include' 문이 소스 파일에 없습니다.
+  SoundResource.cpp
+d:\github\game\game\soundresource.h(17): fatal error C1083: 포함 파일을 열 수 없습니다. 'irrKlang.h': No such file or directory
+  PlayerBullet.cpp
+d:\github\game\game\gameobject.h(10): warning C4099: 'ObjectInfo': 처음에는 'class'을(를) 사용하여 형식 이름을 표시했는데 이제는 'struct'을(를) 사용하여 표시합니다.
+  d:\github\game\game\gameobject.h(9): note: 'ObjectInfo' 선언을 참조하십시오.
+d:\github\game\game\playerbullet.cpp(12): warning C4244: '인수': 'double'에서 'FLOAT'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\github\game\game\playerbullet.cpp(58): error C2857: /Ycstdafx.h 명령줄 옵션과 함께 지정한 '#include' 문이 소스 파일에 없습니다.
+  Direct.cpp
+d:\github\game\game\direct.cpp(92): warning C4838: 'LONG'에서 'float'(으)로의 변환에는 축소 변환이 필요합니다.
+d:\github\game\game\direct.cpp(88): warning C4244: '초기화 중': 'LONG'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\github\game\game\direct.cpp(89): warning C4244: '초기화 중': 'LONG'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\github\game\game\direct.cpp(90): warning C4244: '초기화 중': 'LONG'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\github\game\game\direct.cpp(91): warning C4244: '초기화 중': 'LONG'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\github\game\game\direct.cpp(129): error C2857: /Ycstdafx.h 명령줄 옵션과 함께 지정한 '#include' 문이 소스 파일에 없습니다.
+  GameInfo.cpp
+d:\github\game\game\gameobject.h(10): warning C4099: 'ObjectInfo': 처음에는 'class'을(를) 사용하여 형식 이름을 표시했는데 이제는 'struct'을(를) 사용하여 표시합니다.
+  d:\github\game\game\gameobject.h(9): note: 'ObjectInfo' 선언을 참조하십시오.
+d:\github\game\game\gameinfo.cpp(76): error C2857: /Ycstdafx.h 명령줄 옵션과 함께 지정한 '#include' 문이 소스 파일에 없습니다.
+  GameObject.cpp
+d:\github\game\game\gameobject.h(10): warning C4099: 'ObjectInfo': 처음에는 'class'을(를) 사용하여 형식 이름을 표시했는데 이제는 'struct'을(를) 사용하여 표시합니다.
+  d:\github\game\game\gameobject.h(9): note: 'ObjectInfo' 선언을 참조하십시오.
+d:\github\game\game\gameobject.cpp(61): warning C4838: 'float'에서 'LONG'(으)로의 변환에는 축소 변환이 필요합니다.
+d:\github\game\game\gameobject.cpp(58): warning C4244: '초기화 중': 'float'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\github\game\game\gameobject.cpp(59): warning C4244: '초기화 중': 'float'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\github\game\game\gameobject.cpp(60): warning C4244: '초기화 중': 'float'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\github\game\game\gameobject.cpp(61): warning C4244: '초기화 중': 'float'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\github\game\game\gameobject.cpp(84): error C2857: /Ycstdafx.h 명령줄 옵션과 함께 지정한 '#include' 문이 소스 파일에 없습니다.
+  HitRange.cpp
+d:\github\game\game\hitrange.cpp(13): error C2857: /Ycstdafx.h 명령줄 옵션과 함께 지정한 '#include' 문이 소스 파일에 없습니다.
+  Main.cpp
+d:\github\game\game\soundresource.h(17): fatal error C1083: 포함 파일을 열 수 없습니다. 'irrKlang.h': No such file or directory
+  Stage.cpp
+d:\github\game\game\gameobject.h(10): warning C4099: 'ObjectInfo': 처음에는 'class'을(를) 사용하여 형식 이름을 표시했는데 이제는 'struct'을(를) 사용하여 표시합니다.
+  d:\github\game\game\gameobject.h(9): note: 'ObjectInfo' 선언을 참조하십시오.
+d:\github\game\game\soundresource.h(17): fatal error C1083: 포함 파일을 열 수 없습니다. 'irrKlang.h': No such file or directory
+  Player.cpp
+d:\github\game\game\gameobject.h(10): warning C4099: 'ObjectInfo': 처음에는 'class'을(를) 사용하여 형식 이름을 표시했는데 이제는 'struct'을(를) 사용하여 표시합니다.
+  d:\github\game\game\gameobject.h(9): note: 'ObjectInfo' 선언을 참조하십시오.
+d:\github\game\game\player.cpp(143): error C2857: /Ycstdafx.h 명령줄 옵션과 함께 지정한 '#include' 문이 소스 파일에 없습니다.
+  Scene.cpp
+d:\github\game\game\gameobject.h(10): warning C4099: 'ObjectInfo': 처음에는 'class'을(를) 사용하여 형식 이름을 표시했는데 이제는 'struct'을(를) 사용하여 표시합니다.
+  d:\github\game\game\gameobject.h(9): note: 'ObjectInfo' 선언을 참조하십시오.
+d:\github\game\game\scene.cpp(39): error C2857: /Ycstdafx.h 명령줄 옵션과 함께 지정한 '#include' 문이 소스 파일에 없습니다.
+  SpriteResource.cpp
+d:\github\game\game\spriteresource.cpp(95): error C2857: /Ycstdafx.h 명령줄 옵션과 함께 지정한 '#include' 문이 소스 파일에 없습니다.
+  Text.cpp
+d:\github\game\game\text.cpp(74): warning C4267: '=': 'size_t'에서 'UINT32'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\github\game\game\text.cpp(108): error C2857: /Ycstdafx.h 명령줄 옵션과 함께 지정한 '#include' 문이 소스 파일에 없습니다.
+  Texture.cpp
+d:\github\game\game\gameobject.h(10): warning C4099: 'ObjectInfo': 처음에는 'class'을(를) 사용하여 형식 이름을 표시했는데 이제는 'struct'을(를) 사용하여 표시합니다.
+  d:\github\game\game\gameobject.h(9): note: 'ObjectInfo' 선언을 참조하십시오.
+d:\github\game\game\texture.cpp(43): warning C4244: '인수': 'double'에서 'FLOAT'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\github\game\game\texture.cpp(143): error C2857: /Ycstdafx.h 명령줄 옵션과 함께 지정한 '#include' 문이 소스 파일에 없습니다.
+  UI.cpp
+d:\github\game\game\gameobject.h(10): warning C4099: 'ObjectInfo': 처음에는 'class'을(를) 사용하여 형식 이름을 표시했는데 이제는 'struct'을(를) 사용하여 표시합니다.
+  d:\github\game\game\gameobject.h(9): note: 'ObjectInfo' 선언을 참조하십시오.
+d:\github\game\game\ui.cpp(13): error C2857: /Ycstdafx.h 명령줄 옵션과 함께 지정한 '#include' 문이 소스 파일에 없습니다.

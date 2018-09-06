@@ -25,8 +25,9 @@ using namespace std;
 
 class CSoundResource
 {
-
-	DECLARE_SINGLETON(CSoundResource)
+public:
+	CSoundResource();
+	~CSoundResource();
 
 private:
 	ISoundEngine* m_pEngine;

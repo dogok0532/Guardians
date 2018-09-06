@@ -64,12 +64,6 @@
     <Filter Include="03.GameObject\03.EnemyBullet">
       <UniqueIdentifier>{45c1f819-bd7e-409e-8c29-beeac9c3d7b5}</UniqueIdentifier>
     </Filter>
-    <Filter Include="03.GameObject\02.Enemey">
-      <UniqueIdentifier>{7f983fdd-b50c-407e-b685-23f2daae433a}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="03.GameObject\04.Boss">
-      <UniqueIdentifier>{41478fc9-7ac4-48d3-908e-ff5bf814e00c}</UniqueIdentifier>
-    </Filter>
     <Filter Include="03.GameObject\05.UI">
       <UniqueIdentifier>{d363a8b6-5d9d-48b6-9553-5a96e4430f2c}</UniqueIdentifier>
     </Filter>
@@ -81,6 +75,27 @@
     </Filter>
     <Filter Include="03.GameObject\05.UI\03.Mouse">
       <UniqueIdentifier>{fb85cf56-5697-4e46-b906-44aaa5310628}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="03.GameObject\02.Enemey%28데코레이터패턴쓸것%29">
+      <UniqueIdentifier>{7f983fdd-b50c-407e-b685-23f2daae433a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="03.GameObject\02.Enemey%28데코레이터패턴쓸것%29\02-2.Boss%28Decorate%29">
+      <UniqueIdentifier>{41478fc9-7ac4-48d3-908e-ff5bf814e00c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="03.GameObject\02.Enemey%28데코레이터패턴쓸것%29\02-1. NormalMob">
+      <UniqueIdentifier>{43d7dbc3-5bdb-4ce2-9c78-6567f495ad8d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="03.GameObject\02.Enemey%28데코레이터패턴쓸것%29\02-1. NormalMob\Plane">
+      <UniqueIdentifier>{52a766a2-3260-43df-ac85-428f29ba34e1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="03.GameObject\04.BackGround">
+      <UniqueIdentifier>{9967c749-c5d0-4d34-ae0b-1e263db0889e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="99.Default\05.TextManager\Sprite">
+      <UniqueIdentifier>{fe13d826-2ab7-416d-a428-e4a5bc78aff5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="99.Default\06.Parser">
+      <UniqueIdentifier>{998bc8c2-9ede-414f-a51d-13453e17da64}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -108,17 +123,11 @@
     <ClCompile Include="Main.cpp">
       <Filter>99.Default\00.Main</Filter>
     </ClCompile>
-    <ClCompile Include="TextManager.cpp">
-      <Filter>99.Default\05.TextManager</Filter>
-    </ClCompile>
     <ClCompile Include="UI.cpp">
       <Filter>03.GameObject\05.UI</Filter>
     </ClCompile>
     <ClCompile Include="GameInfo.cpp">
       <Filter>03.GameObject\05.UI\02.GameInfo</Filter>
-    </ClCompile>
-    <ClCompile Include="CPlayerBullet.cpp">
-      <Filter>03.GameObject\01..PlayerBullet</Filter>
     </ClCompile>
     <ClCompile Include="SoundResource.cpp">
       <Filter>99.Default\04.MusicResource</Filter>
@@ -138,11 +147,35 @@
     <ClCompile Include="Mouse.cpp">
       <Filter>03.GameObject\05.UI\03.Mouse</Filter>
     </ClCompile>
+    <ClCompile Include="PlayerBullet.cpp">
+      <Filter>03.GameObject\01..PlayerBullet</Filter>
+    </ClCompile>
+    <ClCompile Include="EnemyPlane.cpp">
+      <Filter>03.GameObject\02.Enemey%28데코레이터패턴쓸것%29\02-1. NormalMob\Plane</Filter>
+    </ClCompile>
+    <ClCompile Include="Enemy.cpp">
+      <Filter>03.GameObject\02.Enemey%28데코레이터패턴쓸것%29</Filter>
+    </ClCompile>
+    <ClCompile Include="Text.cpp">
+      <Filter>99.Default\05.TextManager</Filter>
+    </ClCompile>
     <ClCompile Include="Texture.cpp">
       <Filter>99.Default\05.TextManager</Filter>
     </ClCompile>
-    <ClCompile Include="Enemy.cpp">
-      <Filter>03.GameObject\02.Enemey</Filter>
+    <ClCompile Include="Sprite.cpp">
+      <Filter>99.Default\05.TextManager\Sprite</Filter>
+    </ClCompile>
+    <ClCompile Include="tinystr.cpp">
+      <Filter>99.Default\06.Parser</Filter>
+    </ClCompile>
+    <ClCompile Include="tinyxml.cpp">
+      <Filter>99.Default\06.Parser</Filter>
+    </ClCompile>
+    <ClCompile Include="tinyxmlerror.cpp">
+      <Filter>99.Default\06.Parser</Filter>
+    </ClCompile>
+    <ClCompile Include="tinyxmlparser.cpp">
+      <Filter>99.Default\06.Parser</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -170,9 +203,6 @@
     <ClInclude Include="Defines.h">
       <Filter>99.Default\00.Main</Filter>
     </ClInclude>
-    <ClInclude Include="TextManager.h">
-      <Filter>99.Default\05.TextManager</Filter>
-    </ClInclude>
     <ClInclude Include="UserFunction.h">
       <Filter>99.Default\00.Main</Filter>
     </ClInclude>
@@ -184,9 +214,6 @@
     </ClInclude>
     <ClInclude Include="DirectHeader.h">
       <Filter>99.Default\00.Main</Filter>
-    </ClInclude>
-    <ClInclude Include="CPlayerBullet.h">
-      <Filter>03.GameObject\01..PlayerBullet</Filter>
     </ClInclude>
     <ClInclude Include="SoundResource.h">
       <Filter>99.Default\04.MusicResource</Filter>
@@ -206,11 +233,39 @@
     <ClInclude Include="Mouse.h">
       <Filter>03.GameObject\05.UI\03.Mouse</Filter>
     </ClInclude>
+    <ClInclude Include="PlayerBullet.h">
+      <Filter>03.GameObject\01..PlayerBullet</Filter>
+    </ClInclude>
+    <ClInclude Include="EnemyPlane.h">
+      <Filter>03.GameObject\02.Enemey%28데코레이터패턴쓸것%29\02-1. NormalMob\Plane</Filter>
+    </ClInclude>
+    <ClInclude Include="Enemy.h">
+      <Filter>03.GameObject\02.Enemey%28데코레이터패턴쓸것%29</Filter>
+    </ClInclude>
+    <ClInclude Include="Text.h">
+      <Filter>99.Default\05.TextManager</Filter>
+    </ClInclude>
     <ClInclude Include="Texture.h">
       <Filter>99.Default\05.TextManager</Filter>
     </ClInclude>
-    <ClInclude Include="Enemy.h">
-      <Filter>03.GameObject\02.Enemey</Filter>
+    <ClInclude Include="Sprite.h">
+      <Filter>99.Default\05.TextManager\Sprite</Filter>
     </ClInclude>
+    <ClInclude Include="tinystr.h">
+      <Filter>99.Default\06.Parser</Filter>
+    </ClInclude>
+    <ClInclude Include="tinyxml.h">
+      <Filter>99.Default\06.Parser</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Xml Include="..\Script\TextureList.xml">
+      <Filter>소스 파일</Filter>
+    </Xml>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="Text.txt">
+      <Filter>소스 파일</Filter>
+    </Text>
   </ItemGroup>
 </Project>

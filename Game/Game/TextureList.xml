@@ -1,0 +1,226 @@
+<?xml version="1.0"?>
+
+<TextureList>
+
+
+  <Texture>
+
+    <Name>Background_Ocean</Name>
+
+    <Path>..\Resource\Sprite\새폴더\Background_Ocean.png</Path>
+
+    <BackgroundRGB/>
+
+    <!--배경RGB값,없을경우 투명-->
+
+
+    <Sprite/>
+
+    <!--Sprite가 빈값일경우 Texture = Sprite = Frame -->
+
+
+  </Texture>
+
+
+  <Texture>
+
+    <Name>Background_Space</Name>
+
+    <Path>..\Resource\Sprite\새폴더\Background_Space.png</Path>
+
+    <BackgroundRGB/>
+
+    <Sprite/>
+
+  </Texture>
+
+
+  <Texture>
+
+    <Name>Enemy_BattleShip</Name>
+
+    <Path>..\Resource\Sprite\새폴더\Enemy_BattleShip.png</Path>
+
+
+    <Sprite>
+      <!--SetSprite-->
+      <Name>Body</Name>
+      <XBegin>13</XBegin>
+      <YBegin>26</YBegin>
+      <isLine>0</isLine>
+      <FrameCount>1</FrameCount>
+      <XFrame>1</XFrame>
+      <YFrame>1</YFrame>
+      <XSize>162</XSize>
+      <YSize>678</YSize>
+      
+    </Sprite>
+
+
+    <Sprite>
+
+      <Name>DestroyedBody</Name>
+
+      <XBegin>649</XBegin>
+
+      <YBegin>323</YBegin>
+
+
+      <FrameDivide>
+
+        <isLine>0</isLine>
+
+        <FrameCount>1</FrameCount>
+
+        <XFrame>1</XFrame>
+
+        <YFrame>1</YFrame>
+
+        <XSize>162</XSize>
+
+        <YSize>381</YSize>
+
+      </FrameDivide>
+
+    </Sprite>
+
+  </Texture>
+
+  <!--텍스쳐 구분 -->
+
+
+
+  <Texture>
+
+    <Name>Effect</Name>
+
+    <Path>..\Resource\Sprite\새폴더\Effect.png</Path>
+
+
+    <Sprite>
+
+      <XBegin>0</XBegin>
+
+      <YBegin>0</YBegin>
+
+
+      <FrameDivide>
+
+        <isLine>1</isLine>
+
+        <FrameCount>17</FrameCount>
+
+        <XFrame>17</XFrame>
+
+        <YFrame>1</YFrame>
+
+        <XSize>16</XSize>
+
+        <YSize>48</YSize>
+
+      </FrameDivide>
+
+    </Sprite>
+
+  </Texture>
+
+
+  <Texture>
+
+    <Name>Enemy_Tank</Name>
+
+    <Path>..\Resource\Sprite\새폴더\Enemy_Tank.png</Path>
+
+  </Texture>
+
+
+  <Texture>
+
+    <Name>Enemy_BattleShip</Name>
+
+    <Path>..\Resource\Sprite\새폴더\Enemy_BattleShip.png</Path>
+
+  </Texture>
+
+
+  <Texture>
+
+    <Name>Enemy_Bomber</Name>
+
+    <Path>..\Resource\Sprite\새폴더\Enemy_Bomber.png</Path>
+
+  </Texture>
+
+
+  -<Texture>
+
+    <Name>Enemy_Bullet</Name>
+
+    <Path>..\Resource\Sprite\새폴더\Enemy_Bullet.png</Path>
+
+  </Texture>
+
+
+  <Texture>
+
+    <Name>Enemy_Fighter</Name>
+
+    <Path>..\Resource\Sprite\새폴더\Enemy_Fighter.png</Path>
+
+  </Texture>
+
+
+  <Texture>
+
+    <Name>Enemy_Helicopter</Name>
+
+    <Path>..\Resource\Sprite\새폴더\Enemy_Helicopter.png</Path>
+
+  </Texture>
+
+
+  <Texture>
+
+    <Name>Enemy_Missile</Name>
+
+    <Path>..\Resource\Sprite\새폴더\Enemy_Missile.png</Path>
+
+  </Texture>
+
+
+  <Texture>
+
+    <Name>Enemy_Stealth</Name>
+
+    <Path>..\Resource\Sprite\새폴더\Enemy_Stealth.png</Path>
+
+  </Texture>
+
+
+  <Texture>
+
+    <Name>Player_1</Name>
+
+    <Path>..\Resource\Sprite\새폴더\Player_1.png</Path>
+
+  </Texture>
+
+
+  <Texture>
+
+    <Name>Player_2</Name>
+
+    <Path>..\Resource\Sprite\새폴더\Player_2.png</Path>
+
+  </Texture>
+
+
+  <Texture>
+
+    <Name>Player_3</Name>
+
+    <Path>..\Resource\Sprite\새폴더\Player_3.png</Path>
+
+  </Texture>
+
+</TextureList>

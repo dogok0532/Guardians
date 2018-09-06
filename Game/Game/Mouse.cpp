@@ -11,8 +11,8 @@ void CMouse::Update(float deltaTime)
 	GetCursorPos(&Point);
 	ScreenToClient(g_hWnd, &Point);
 
-	m_vecPos.x = Point.x;
-	m_vecPos.y = Point.y;
+	m_GameInfo.vecPos.x = Point.x;
+	m_GameInfo.vecPos.y = Point.y;
 
 	if(GetAsyncKeyState(VK_LBUTTON))
 	{
@@ -31,6 +31,7 @@ void CMouse::Update(float deltaTime)
 
 		m_bDown = false;
 	}
+	CGameObject::Update(deltaTime);
 }
 
 
@@ -48,7 +49,10 @@ bool CMouse::Destroy()
 bool CMouse::bClicked()
 {
 	return m_bClicked;
+
 }
+
+
 
 CMouse::CMouse()
 {

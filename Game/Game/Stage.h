@@ -5,12 +5,13 @@
 
 using namespace std;
 
+class CEnemy;
 class CGameObject;
 class CStage :public CScene
 {
 private:
 	CGameObject * m_pPlayer[2] = { NULL, NULL};
-	list<CGameObject*> m_pEnemyList;
+	list<CEnemy*> m_pEnemyList;
 	list<CGameObject*> m_pPlayerBulletList;
 	list<CGameObject*> m_pEnmeyBulletList;
 

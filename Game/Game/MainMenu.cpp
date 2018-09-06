@@ -2,6 +2,7 @@
 #include "GameButton.h"
 #include "Defines.h"
 #include "Mouse.h"
+#include "SceneOb.h"
 
 void CMainMenu::Update(float deltaTime)
 {
@@ -14,7 +15,8 @@ void CMainMenu::Update(float deltaTime)
 
 		if (dynamic_cast<CGameButton*>(m_pVecUI[i])->ButtonClicked())
 		{
-			m_iStageChange = i;		// 0 Start 1.Option
+			m_iStageChange = i;	
+			
 		}
 	}
 	
@@ -62,6 +64,10 @@ CMainMenu::CMainMenu()
 
 CMainMenu::~CMainMenu()
 {
-	
+	for (int i = 0; i < m_pVecUI.size(); i++)
+		delete m_pVecUI[i];
+		
+		
+	delete m_pMouse;
 
 }

@@ -2,7 +2,7 @@
 #include "SoundResource.h"
 
 
-IMPLEMENT_SINGLETON(CSoundResource)
+
 
 void CSoundResource::Init()
 {

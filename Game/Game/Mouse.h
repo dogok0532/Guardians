@@ -17,6 +17,8 @@ public:
 	virtual bool Destroy();
 
 	bool bClicked();
+
+
 public:
 	CMouse();
 	virtual ~CMouse();

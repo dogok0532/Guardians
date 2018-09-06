@@ -1,3 +1,4 @@
-﻿  Stage.cpp
-d:\학업\git\game\game\stage.cpp(160): warning C4244: '인수': 'int'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-  Game.vcxproj -> D:\학업\Git\Game\Debug\Game.exe
+﻿  SpriteResource.cpp
+d:\github\game\game\gameobject.h(10): warning C4099: 'ObjectInfo': 처음에는 'class'을(를) 사용하여 형식 이름을 표시했는데 이제는 'struct'을(를) 사용하여 표시합니다.
+  d:\github\game\game\gameobject.h(9): note: 'ObjectInfo' 선언을 참조하십시오.
+  Game.vcxproj -> D:\GitHub\Game\Debug\Game.exe

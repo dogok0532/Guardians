@@ -1,6 +1,7 @@
 #pragma once
 #include "UI.h"
 
+class CText;
 class CMouse;
 class CGameButton :
 	public CUI
@@ -12,7 +13,7 @@ private:
 	bool m_iButtonClicked = 0;
 
 	
-	
+	CText* pText;
 
 public:
 	virtual void Update(float deltaTime);
@@ -26,5 +27,6 @@ public:
 public:
 	CGameButton();
 	virtual ~CGameButton();
+
 };
 

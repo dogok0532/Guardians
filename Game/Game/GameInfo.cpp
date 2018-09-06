@@ -1,10 +1,11 @@
 #include "GameInfo.h"
-#include "TextManager.h"
+#include "Text.h"
 #include "direct.h"
+#include "MainGame.h"
 
 void CGameInfo::Update(float deltaTime)
 {
-
+	CGameObject::Update(deltaTime);
 }
 
 void CGameInfo::Render()
@@ -17,11 +18,37 @@ void CGameInfo::Render()
 	CDirect::GetInstance()->DrawRectangle(rc);
 
 	
+	
 
-	CTextManager::GetInstance()->SetText(L"체력:");
-	CTextManager::GetInstance()->SetColor(D3DCOLOR_ARGB(255, 255, 255, 255));
-	CTextManager::GetInstance()->SetTextRange(0, 0, WINCX / 2 - GAMESIZE_X / 2, WINCY);
-	CTextManager::GetInstance()->Render();
+	if (GetAsyncKeyState(VK_SPACE))
+	{
+		pText->SetText(L"Fire");
+		pText->Render();
+	}
+	if (GetAsyncKeyState(VK_UP))
+	{
+
+		pText->SetText(L"↑");
+		pText->Render();
+	}
+	if (GetAsyncKeyState(VK_DOWN))
+	{
+
+		pText->SetText(L"↓");
+		pText->Render();
+	}
+	if (GetAsyncKeyState(VK_RIGHT))
+	{
+
+		pText->SetText(L"→");
+		pText->Render();
+	}
+	if (GetAsyncKeyState(VK_LEFT))
+	{
+		pText->SetText(L"←");
+		pText->Render();
+	}
+	
 }
 
 bool CGameInfo::Destroy()
@@ -29,11 +56,25 @@ bool CGameInfo::Destroy()
 	return false;
 }
 
+
+
 CGameInfo::CGameInfo()
 {
+	pText = new CText();
+
+	pText->Init();
+	pText->SetText(L"체력:");
+	pText->SetColor(D3DCOLOR_ARGB(255, 255, 255, 255));
+	pText->SetTextRange(0, 0, WINCX / 2 - GAMESIZE_X / 2, WINCY);
+	pText->Render();
+	pText->SetTextRange(0, 0, 50, 50);
 }
 
 
 CGameInfo::~CGameInfo()
 {
+	if (pText)
+	{
+		pText->Release();
+	}
 }

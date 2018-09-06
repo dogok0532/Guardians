@@ -1,48 +1,55 @@
 #pragma once
 #include "DirectHeader.h"
 #include <string>
+#include <d3dx9math.h>
+#include <map>
 
 using namespace std;
-class CTexture
+
+class ObjectInfo;
+class CSprite;
+class Texture
 {
 private:
 	LPDIRECT3DTEXTURE9 m_pTexture;
-	
 	D3DXVECTOR3 m_vecSize;	//가로세로 크기
-	D3DXVECTOR3 m_vecPos;		//좌표
-
-	D3DXVECTOR3 m_vecRenderSizeRatio = { 1,1,1 }; //배율
-	float m_fTurn=0;	//각도
-
-	D3DXMATRIX m_matRender;
-
+	ObjectInfo* m_pGameInfo;
 	static LPD3DXSPRITE m_pSprite;
+	D3DXMATRIX matWorld;
+	map<wstring,CSprite*>  mapSprite;
+
+	D3DCOLOR m_ColorKey = D3DCOLOR_ARGB(255,255,255,255);
+
 
 public:
-	void SetPos(D3DXVECTOR3 vecPos);
-	void SetPos(float x,float y, float z=0);
-
-	void SetRenderSizeRatio(D3DXVECTOR3 vecPos);
-	void SetRenderSizeRatio(float x, float y, float z = 0);
-
-	void SetRenderSize(D3DXVECTOR3 vecPos);
-	void SetRenderSize(float x, float y, float z = 0);
-
+	
 
 public:
 	D3DXVECTOR3 GetSize();
+	void SetInfo(ObjectInfo* pObjectInfo);
+	void SetColorKey(D3DCOLOR color);
 
 public:
-	void Render();
 	
+	void Update();
+	void Render();
+
+	//-----차후 아랫걸로 교체-----//
+	void Draw(wstring spriteName, int frame);
 
 public:
 	void Release();
 
 public:
-	CTexture(wstring fileName);
-	~CTexture();
-
+	Texture(wstring fileName);
+	Texture(wstring fileName, int frameX,int frameY); // 한장에 가로세로별로 몇장씩 있는지 정의
+	~Texture();
+private:
+	void SetDevice(wstring fileName);
 	
+private:
+	int iFrameX;
+	int iFrameY;
+	bool bMultiFrame;
 };
 

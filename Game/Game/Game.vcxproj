@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup Label="ProjectConfigurations">
     <ProjectConfiguration Include="Debug|Win32">
@@ -23,7 +23,7 @@
     <ProjectGuid>{5D50D534-FF27-425F-AB81-35B7EB1B3DA0}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
     <RootNamespace>Game</RootNamespace>
-    <WindowsTargetPlatformVersion>10.0.16299.0</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformVersion>10.0.17134.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -72,7 +72,7 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
-    <IncludePath>../\Sound\include;../\DirectX\include;$(IncludePath)</IncludePath>
+    <IncludePath>D:\GitHub\Game\Parser;../\Sound\include;../\DirectX\include;$(IncludePath)</IncludePath>
     <LibraryPath>../\Sound\lib;../\DirectX/\Lib\x86;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -158,14 +158,16 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Sprite.cpp" />
     <ClCompile Include="Enemy.cpp" />
+    <ClCompile Include="EnemyPlane.cpp" />
     <ClCompile Include="GameButton.cpp" />
     <ClCompile Include="Clock.cpp" />
     <ClCompile Include="MainGame.cpp" />
     <ClCompile Include="MainMenu.cpp" />
     <ClCompile Include="Mouse.cpp" />
     <ClCompile Include="SoundResource.cpp" />
-    <ClCompile Include="CPlayerBullet.cpp" />
+    <ClCompile Include="PlayerBullet.cpp" />
     <ClCompile Include="Direct.cpp" />
     <ClCompile Include="GameInfo.cpp" />
     <ClCompile Include="GameObject.cpp" />
@@ -175,19 +177,25 @@
     <ClCompile Include="Player.cpp" />
     <ClCompile Include="Scene.cpp" />
     <ClCompile Include="SpriteResource.cpp" />
-    <ClCompile Include="TextManager.cpp" />
+    <ClCompile Include="Text.cpp" />
     <ClCompile Include="Texture.cpp" />
+    <ClCompile Include="tinystr.cpp" />
+    <ClCompile Include="tinyxml.cpp" />
+    <ClCompile Include="tinyxmlerror.cpp" />
+    <ClCompile Include="tinyxmlparser.cpp" />
     <ClCompile Include="UI.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Sprite.h" />
     <ClInclude Include="Enemy.h" />
+    <ClInclude Include="EnemyPlane.h" />
     <ClInclude Include="GameButton.h" />
     <ClInclude Include="Clock.h" />
     <ClInclude Include="MainGame.h" />
     <ClInclude Include="MainMenu.h" />
     <ClInclude Include="Mouse.h" />
     <ClInclude Include="SoundResource.h" />
-    <ClInclude Include="CPlayerBullet.h" />
+    <ClInclude Include="PlayerBullet.h" />
     <ClInclude Include="Defines.h" />
     <ClInclude Include="DirectHeader.h" />
     <ClInclude Include="GameInfo.h" />
@@ -198,10 +206,20 @@
     <ClInclude Include="Scene.h" />
     <ClInclude Include="SpriteResource.h" />
     <ClInclude Include="direct.h" />
-    <ClInclude Include="TextManager.h" />
+    <ClInclude Include="Text.h" />
     <ClInclude Include="Texture.h" />
+    <ClInclude Include="tinystr.h" />
+    <ClInclude Include="tinyxml.h" />
     <ClInclude Include="UI.h" />
     <ClInclude Include="UserFunction.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Xml Include="..\Script\TextureList.xml">
+      <SubType>Designer</SubType>
+    </Xml>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="Text.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

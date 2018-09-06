@@ -8,6 +8,8 @@ private:
 	float fCurrentCycle;
 
 	bool bFired;
+
+	int iBulletState;
 	
 public:
 	virtual void Update(float deltaTime);
@@ -15,10 +17,12 @@ public:
 	virtual bool Destroy();
 
 
-	bool Fire(float deltaTim);
+	int Fire(float deltaTim);
 	void Move(float deltaTime);
 
+	CGameObject* MakeBullet(float fAngle);
 
+	
 public:
 	CPlayer();
 	virtual ~CPlayer();

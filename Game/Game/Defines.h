@@ -32,7 +32,8 @@
 //
 
 #define DECLARE_SINGLETON(X)\
-private: X();~X();\
+private: X();\
+public: ~X();\
 static X* pInstance;\
 public: static X* GetInstance();\
 //싱글톤 헤더파일 간략화
@@ -42,7 +43,11 @@ public: static X* GetInstance();\
 
 #define IMPLEMENT_SINGLETON(X)\
 X* X::pInstance = NULL;\
-X* X::GetInstance(){if(pInstance == nullptr){ pInstance = new X();} return pInstance; }\
+X* X::GetInstance(){if(pInstance == nullptr){ pInstance = new X();} return pInstance;}\
 //싱글톤 c++파일 간략화 
 
+#define DEGREE_TO_RADIAN 3.141592 / 180
 
+#include <windows.h>
+
+extern HWND g_hWnd;

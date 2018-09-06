@@ -3,6 +3,13 @@
 #include "MainMenu.h"
 #include "Defines.h"
 #include "Stage.h"
+#include <windows.h>
+#include "Observer.h"
+#include "Text.h"
+#include "SoundResource.h"
+
+IMPLEMENT_SINGLETON(CMainGame)
+
 
 void CMainGame::ChangeScene(int Scene)
 {
@@ -13,32 +20,44 @@ void CMainGame::ChangeScene(int Scene)
 		m_pCurrentScene = new CStage;
 		break;
 	
-	
-	/*		//Change after adding CSetting, CScore, ...etc
-	case 3:
-		SAFE_DELETE(m_pCurrentScene);
-		m_pCurrentScene = new CSetting;
-		break;
-	case 4:
-		SAFE_DELETE(m_pCurrentScene);
-		m_pCurrentScene = new CMainMenu;
-		break;
-	case 5:
-		SAFE_DELETE(m_pCurrentScene);
-		m_pCurrentScene = new CMainMenu;
+	case 1:
+	//	SAFE_DELETE(m_pCurrentScene);
+	//	m_pCurrentScene = new CSetting;
 		break;
 
-	*/
+	case 2:
+
+
+
+	if (MessageBox(g_hWnd, L"게임을 종료하시겠습니까?", L"", MB_OKCANCEL)== IDOK)
+		ExitProcess(0);
+
+		break;
+
 	default:
 		break;
 	}
+}
+
+void CMainGame::Init()
+{
+
+	pSoundResource = new CSoundResource;
+	pSoundResource->Init();
+
+	pSpriteResource = new CSpriteResource;
+
+
+	m_pCurrentScene = new CMainMenu;
+	
+	
 }
 
 void CMainGame::Update(float deltaTime)
 {
 	m_pCurrentScene->Update(deltaTime);
 
-	ChangeScene(m_pCurrentScene->StageChangeMessage());
+	ChangeScene(m_pCurrentScene->GetSceneChange());
 }
 
 void CMainGame::Render()
@@ -48,10 +67,18 @@ void CMainGame::Render()
 
 CMainGame::CMainGame()
 {
-	m_pCurrentScene = new CMainMenu;
+	
+
 }
 
 
 CMainGame::~CMainGame()
 {
+	
+	;
+	delete pSoundResource;
+
+	delete pSpriteResource;
+	
+	delete m_pCurrentScene;
 }
