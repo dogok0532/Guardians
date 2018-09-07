@@ -97,6 +97,9 @@
     <Filter Include="99.Default\06.Parser">
       <UniqueIdentifier>{998bc8c2-9ede-414f-a51d-13453e17da64}</UniqueIdentifier>
     </Filter>
+    <Filter Include="99.Default\06.Parser\00.Default">
+      <UniqueIdentifier>{0363c6db-2f95-40e2-a744-941ad508ab18}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Scene.cpp">
@@ -159,23 +162,26 @@
     <ClCompile Include="Text.cpp">
       <Filter>99.Default\05.TextManager</Filter>
     </ClCompile>
-    <ClCompile Include="Texture.cpp">
-      <Filter>99.Default\05.TextManager</Filter>
-    </ClCompile>
     <ClCompile Include="Sprite.cpp">
       <Filter>99.Default\05.TextManager\Sprite</Filter>
     </ClCompile>
     <ClCompile Include="tinystr.cpp">
-      <Filter>99.Default\06.Parser</Filter>
+      <Filter>99.Default\06.Parser\00.Default</Filter>
     </ClCompile>
     <ClCompile Include="tinyxml.cpp">
-      <Filter>99.Default\06.Parser</Filter>
+      <Filter>99.Default\06.Parser\00.Default</Filter>
     </ClCompile>
     <ClCompile Include="tinyxmlerror.cpp">
-      <Filter>99.Default\06.Parser</Filter>
+      <Filter>99.Default\06.Parser\00.Default</Filter>
     </ClCompile>
     <ClCompile Include="tinyxmlparser.cpp">
+      <Filter>99.Default\06.Parser\00.Default</Filter>
+    </ClCompile>
+    <ClCompile Include="Parser.cpp">
       <Filter>99.Default\06.Parser</Filter>
+    </ClCompile>
+    <ClCompile Include="CTexture.cpp">
+      <Filter>99.Default\05.TextManager</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -245,17 +251,20 @@
     <ClInclude Include="Text.h">
       <Filter>99.Default\05.TextManager</Filter>
     </ClInclude>
-    <ClInclude Include="Texture.h">
-      <Filter>99.Default\05.TextManager</Filter>
-    </ClInclude>
     <ClInclude Include="Sprite.h">
       <Filter>99.Default\05.TextManager\Sprite</Filter>
     </ClInclude>
     <ClInclude Include="tinystr.h">
-      <Filter>99.Default\06.Parser</Filter>
+      <Filter>99.Default\06.Parser\00.Default</Filter>
     </ClInclude>
     <ClInclude Include="tinyxml.h">
+      <Filter>99.Default\06.Parser\00.Default</Filter>
+    </ClInclude>
+    <ClInclude Include="Parser.h">
       <Filter>99.Default\06.Parser</Filter>
+    </ClInclude>
+    <ClInclude Include="CTexture.h">
+      <Filter>99.Default\05.TextManager</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

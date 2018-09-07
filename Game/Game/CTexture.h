@@ -3,12 +3,12 @@
 #include <string>
 #include <d3dx9math.h>
 #include <map>
-
+#include "Sprite.h"
 using namespace std;
 
 class ObjectInfo;
 class CSprite;
-class Texture
+class CTexture
 {
 private:
 	LPDIRECT3DTEXTURE9 m_pTexture;
@@ -22,7 +22,9 @@ private:
 
 
 public:
-	
+	void SetTexture(wstring path, D3DCOLOR ColorKey);	//path가 곧 이름
+	void SetSprite(wstring name, CSprite* pSprite);
+	void SetSprite(wstring name, spriteInfo* SpriteInfo );
 
 public:
 	D3DXVECTOR3 GetSize();
@@ -41,9 +43,12 @@ public:
 	void Release();
 
 public:
-	Texture(wstring fileName);
-	Texture(wstring fileName, int frameX,int frameY); // 한장에 가로세로별로 몇장씩 있는지 정의
-	~Texture();
+	CTexture();
+	CTexture(wstring fileName);
+	CTexture(wstring fileName, int frameX,int frameY); // 한장에 가로세로별로 몇장씩 있는지 정의
+
+	
+	~CTexture();
 private:
 	void SetDevice(wstring fileName);
 	

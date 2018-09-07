@@ -1,4 +1,4 @@
-#include "Texture.h"
+#include "CTexture.h"
 
 #include "direct.h"
 #include "GameObject.h"
@@ -6,31 +6,52 @@
 
 
 
-LPD3DXSPRITE Texture::m_pSprite;
+LPD3DXSPRITE CTexture::m_pSprite;
 
-void Texture::Draw(wstring spriteName, int frame)
+void CTexture::Draw(wstring spriteName, int frame)
 {
-	m_pSprite->Draw(m_pTexture, mapSprite[spriteName]->GetRect(frame), mapSprite[spriteName]->GetCenter(), &(m_pGameInfo->vecPos), DEFAULT_COLOR);
+	m_pSprite->Draw(m_pTexture, mapSprite[spriteName]->GetFrameRect(frame), mapSprite[spriteName]->GetCenter(), &(m_pGameInfo->vecPos), DEFAULT_COLOR);
 
 }
 
 
-D3DXVECTOR3 Texture::GetSize()
+
+void CTexture::SetTexture(wstring path, D3DCOLOR ColorKey)
+{
+
+}
+
+
+void CTexture::SetSprite(wstring name,CSprite* pSprite)
+{
+	mapSprite.insert(make_pair(name, pSprite));
+}
+
+void CTexture::SetSprite(wstring name, spriteInfo* SpriteInfo)
+{
+	CSprite* pSprite;
+	pSprite = new CSprite();
+	pSprite->SetSpriteInfo(SpriteInfo);
+
+	mapSprite.insert(make_pair(name, pSprite));
+}
+
+D3DXVECTOR3 CTexture::GetSize()
 {
 	return m_vecSize;
 }
 
-void Texture::SetInfo(ObjectInfo* pObjectInfo)
+void CTexture::SetInfo(ObjectInfo* pObjectInfo)
 {
 	m_pGameInfo = pObjectInfo;
 }
 
-void Texture::SetColorKey(D3DCOLOR color)
+void CTexture::SetColorKey(D3DCOLOR color)
 {
 	m_ColorKey = color;
 }
 
-void Texture::Update()
+void CTexture::Update()
 {
 	D3DXMatrixIdentity(&matWorld);
 
@@ -71,7 +92,7 @@ void Texture::Update()
 	
 }
 
-void Texture::Render()
+void CTexture::Render()
 {
 	Update();
 	m_pSprite->SetTransform(&matWorld);
@@ -81,13 +102,13 @@ void Texture::Render()
 }
 
 
-void Texture::Release()
+void CTexture::Release()
 {
 	if(m_pTexture)
 		m_pTexture->Release();
 }
 
-Texture::Texture(wstring fileName)
+CTexture::CTexture(wstring fileName)
 {
 
 	SetDevice(fileName);
@@ -95,7 +116,7 @@ Texture::Texture(wstring fileName)
 	bMultiFrame = false;
 }
 
-Texture::Texture(wstring fileName, int frameX, int frameY)
+CTexture::CTexture(wstring fileName, int frameX, int frameY)
 {
 	SetDevice(fileName);
 
@@ -108,7 +129,12 @@ Texture::Texture(wstring fileName, int frameX, int frameY)
 	iFrameY = frameY;
 }
 
-Texture::~Texture()
+CTexture::CTexture()
+{
+
+}
+
+CTexture::~CTexture()
 {
 	map<wstring, CSprite*>::iterator iter= mapSprite.begin();
 	for (; iter != mapSprite.end(); iter++)
@@ -121,7 +147,7 @@ Texture::~Texture()
 	mapSprite.clear();
 }
 
-void Texture::SetDevice(wstring fileName)
+void CTexture::SetDevice(wstring fileName)
 {
 	HRESULT hr;
 

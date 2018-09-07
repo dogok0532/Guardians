@@ -77,8 +77,8 @@
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
-    <IncludePath>../\DirectX\include;$(IncludePath)</IncludePath>
-    <LibraryPath>../\DirectX/\Lib\x86;$(LibraryPath)</LibraryPath>
+    <IncludePath>../\Sound\include;../\DirectX\include;$(IncludePath)</IncludePath>
+    <LibraryPath>../\Sound\lib;../\DirectX/\Lib\x86;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
@@ -112,7 +112,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <PrecompiledHeader>Create</PrecompiledHeader>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
@@ -158,6 +158,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Parser.cpp" />
     <ClCompile Include="Sprite.cpp" />
     <ClCompile Include="Enemy.cpp" />
     <ClCompile Include="EnemyPlane.cpp" />
@@ -178,7 +179,7 @@
     <ClCompile Include="Scene.cpp" />
     <ClCompile Include="SpriteResource.cpp" />
     <ClCompile Include="Text.cpp" />
-    <ClCompile Include="Texture.cpp" />
+    <ClCompile Include="CTexture.cpp" />
     <ClCompile Include="tinystr.cpp" />
     <ClCompile Include="tinyxml.cpp" />
     <ClCompile Include="tinyxmlerror.cpp" />
@@ -186,6 +187,7 @@
     <ClCompile Include="UI.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Parser.h" />
     <ClInclude Include="Sprite.h" />
     <ClInclude Include="Enemy.h" />
     <ClInclude Include="EnemyPlane.h" />
@@ -207,7 +209,7 @@
     <ClInclude Include="SpriteResource.h" />
     <ClInclude Include="direct.h" />
     <ClInclude Include="Text.h" />
-    <ClInclude Include="Texture.h" />
+    <ClInclude Include="CTexture.h" />
     <ClInclude Include="tinystr.h" />
     <ClInclude Include="tinyxml.h" />
     <ClInclude Include="UI.h" />

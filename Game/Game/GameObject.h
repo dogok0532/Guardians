@@ -6,25 +6,25 @@
 #include "Sprite.h"
 
 using namespace std;
+
 struct ObjectInfo
 {
-public:
 	D3DXVECTOR3 vecPos;	//좌표
 	D3DXVECTOR3 vecSize; //크기
-	//D3DXVECTOR3 vecCenter; //중앙좌표
 	D3DXVECTOR3 vecRenderRatio = { 1,1,1 };
 
 	float fDirection = 0;
+	
 };
-
 
 class CGameObject
 {
 protected:
 	ObjectInfo m_GameInfo;
+
 	
 
-	vector <Texture*> m_vecImage;	//이미지파일
+	vector <CTexture*> m_vecImage;	//이미지파일
 	
 
 	int m_iFrame = 0;
