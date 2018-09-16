@@ -27,11 +27,12 @@ protected:
 	vector <CTexture*> m_vecImage;	//이미지파일
 	
 
+	wstring m_strTextureName;
+	wstring m_strSpriteName;
 	int m_iFrame = 0;
 
-
-
 	void Draw(wstring textureName, wstring spriteName, int iFrame);
+	void Draw(wstring textureName, wstring spriteName);
 
 public:
 	

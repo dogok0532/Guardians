@@ -31,7 +31,7 @@ public:
 	virtual bool Destroy();
 
 	void PlayerFire(float deltaTime);
-	
+	void EnemyFire(float deltaTime);
 
 public:
 	CStage();

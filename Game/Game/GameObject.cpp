@@ -10,7 +10,13 @@
 
 void CGameObject::Draw(wstring textureName, wstring spriteName, int Frame)
 {
-	CMainGame::GetInstance()->GetSpriteResource()->Draw(textureName,spriteName, Frame);
+	CMainGame::GetInstance()->GetSpriteResource()->Render(textureName,spriteName, Frame,&m_GameInfo);
+}
+
+void CGameObject::Draw(wstring textureName, wstring spriteName)
+{
+	CMainGame::GetInstance()->GetSpriteResource()->Render(textureName, spriteName, m_iFrame, &m_GameInfo);
+
 }
 
 void CGameObject::Update(float deltaTime)
@@ -27,7 +33,8 @@ void CGameObject::Render()
 		m_vecImage[m_iFrame]->SetInfo(&m_GameInfo);
 		m_vecImage[m_iFrame]->Render();
 	}
-		
+
+	
 }
 
 void CGameObject::SetInfoToTexture()	//게임오브젝트의 크기를 텍스처 크기에 맞춘다.

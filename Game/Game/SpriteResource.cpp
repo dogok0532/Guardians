@@ -34,13 +34,14 @@ CTexture* CSpriteResource::GetTextureInfo(wstring fileName)
 	return iter->second;
 }
 
-
-
-
-
-void CSpriteResource::Draw(wstring Texture, wstring Sprite,int Frame)
+void CSpriteResource::Render(wstring Texture, wstring Sprite, int Frame, ObjectInfo* pGameInfo)
 {
-	mapTexture[Texture]->Draw(Sprite,Frame);
+	mapTextureFix[Texture]->Draw(Sprite, Frame,pGameInfo);
+}
+
+void CSpriteResource::RenderWholeTexture(wstring Texture, ObjectInfo* pGameInfo)
+{
+	mapTextureFix[Texture]->DrawWholeTexture(pGameInfo);
 }
 
 CSpriteResource::CSpriteResource()
@@ -56,6 +57,7 @@ CSpriteResource::CSpriteResource()
 			break;
 
 		CTexture* pTexture = parser.GetTexture();
+		
 
 		mapTextureFix.insert(make_pair(textureName, pTexture));
 	}
@@ -80,7 +82,7 @@ CSpriteResource::CSpriteResource()
 	AddImageFile(L"Button2");
 
 
-
+	
 }
 
 CSpriteResource::~CSpriteResource()

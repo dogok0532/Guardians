@@ -18,10 +18,30 @@
     <Sprite/>
   </Texture>
 
+  <Texture>
+    <Name>Button</Name>
+    <Path>../\Resource\Sprite\Button.png</Path>
+    <BackgroundRGB/>
+    <Sprite/>
+  </Texture>
+
+  <Texture>
+    <Name>Button2</Name>
+    <Path>../\Resource\Sprite\Button2.png</Path>
+    <BackgroundRGB/>
+    <Sprite/>
+  </Texture>
+
+
 
   <Texture>
     <Name>Enemy_BattleShip</Name>
     <Path>../\Resource\Sprite\Enemy_BattleShip.png</Path>
+    <BackgroundRGB>  
+      <R>255</R>
+      <G>255</G>
+      <B>255</B>
+    </BackgroundRGB>
     <Sprite>
       <!--SetSprite-->
       <Name>Body</Name>
@@ -34,10 +54,9 @@
       <XSize>162</XSize>
       <YSize>678</YSize> 
     </Sprite>
-    
     <Sprite>
       <Name>DestroyedBody</Name>
-      <XBegin>649</XBegin>
+      <XBegin>172</XBegin>
       <YBegin>323</YBegin>
       <isLine>0</isLine>
       <FrameCount>1</FrameCount>
@@ -51,6 +70,11 @@
   <Texture>
     <Name>Effect</Name>
     <Path>../\Resource\Sprite\Effect.png</Path>
+    <BackgroundRGB>
+      <R>0</R>
+      <G>248</G>
+      <B>0</B>
+    </BackgroundRGB>
     <Sprite>
       <Name>Effect1</Name>
       <XBegin>0</XBegin>
@@ -72,12 +96,6 @@
 
 
   <Texture>
-    <Name>Enemy_BattleShip</Name>
-    <Path>../\Resource\Sprite\Enemy_BattleShip.png</Path>
-  </Texture>
-
-
-  <Texture>
     <Name>Enemy_Bomber</Name>
     <Path>../\Resource\Sprite\Enemy_Bomber.png</Path>
   </Texture>
@@ -92,12 +110,44 @@
   <Texture>
     <Name>Enemy_Fighter</Name>
     <Path>../\Resource\Sprite\Enemy_Fighter.png</Path>
+    <BackgroundRGB>
+      <R>0</R>
+      <G>57</G>
+      <B>74</B>
+    </BackgroundRGB>
   </Texture>
 
 
   <Texture>
     <Name>Enemy_Helicopter</Name>
     <Path>../\Resource\Sprite\Enemy_Helicopter.png</Path>
+    <BackgroundRGB>
+      <R>156</R>
+      <G>140</G>
+      <B>107</B>
+    </BackgroundRGB>
+    <Sprite>
+      <Name>Body</Name>
+      <XBegin>0</XBegin>
+      <YBegin>0</YBegin>
+      <isLine>0</isLine>
+      <FrameCount>5</FrameCount>
+      <XFrame>5</XFrame>
+      <YFrame>0</YFrame>
+      <XSize>32</XSize>
+      <YSize>36</YSize>
+    </Sprite>
+    <Sprite>
+      <Name>Rotor</Name>
+      <XBegin>160</XBegin>
+      <YBegin>0</YBegin>
+      <isLine>0</isLine>
+      <FrameCount>3</FrameCount>
+      <XFrame>3</XFrame>
+      <YFrame>1</YFrame>
+      <XSize>30</XSize>
+      <YSize>36</YSize>
+    </Sprite>
   </Texture>
 
 
@@ -114,14 +164,132 @@
 
 
   <Texture>
-    <Name>플레이어</Name>
-    <Path>../\Resource\Sprite\플레이어.png</Path>
+    <Name>Player</Name>
+    <Path>../\Resource\Sprite\Player.png</Path>
+    <BackgroundRGB>
+      <R>248</R>
+      <G>0</G>
+      <B>248</B>
+    </BackgroundRGB>
+    <Sprite>
+      <Name>Boost</Name>
+      <XBegin>0</XBegin>
+      <YBegin>0</YBegin>
+      <isLine>0</isLine>
+      <FrameCount>7</FrameCount>
+      <XFrame>7</XFrame>
+      <YFrame>1</YFrame>
+      <XSize>31</XSize>
+      <YSize>48</YSize>
+    </Sprite>
+    <Sprite>
+      <Name>Normal</Name>
+      <XBegin>0</XBegin>
+      <YBegin>51</YBegin>
+      <isLine>0</isLine>
+      <FrameCount>7</FrameCount>
+      <XFrame>7</XFrame>
+      <YFrame>1</YFrame>
+      <XSize>31</XSize>
+      <YSize>48</YSize>
+    </Sprite>
+
+    <Sprite>
+      <Name>Bullet_1</Name>
+      <XBegin>0</XBegin>
+      <YBegin>2226</YBegin>
+      <isLine>0</isLine>
+      <FrameCount>4</FrameCount>
+      <XFrame>4</XFrame>
+      <YFrame>1</YFrame>
+      <XSize>23</XSize>
+      <YSize>39</YSize>
+    </Sprite>
+    <Sprite>
+      <Name>Bullet_2</Name>
+      <XBegin>93</XBegin>
+      <YBegin>2226</YBegin>
+      <isLine>0</isLine>
+      <FrameCount>4</FrameCount>
+      <XFrame>4</XFrame>
+      <YFrame>1</YFrame>
+      <XSize>23</XSize>
+      <YSize>39</YSize>
+    </Sprite>
+    <Sprite>
+      <Name>Bullet_3</Name>
+      <XBegin>186</XBegin>
+      <YBegin>2226</YBegin>
+      <isLine>0</isLine>
+      <FrameCount>4</FrameCount>
+      <XFrame>4</XFrame>
+      <YFrame>1</YFrame>
+      <XSize>23</XSize>
+      <YSize>39</YSize>
+    </Sprite>
+    <Sprite>
+      <Name>Bullet_4</Name>
+      <XBegin>279</XBegin>
+      <YBegin>2226</YBegin>
+      <isLine>0</isLine>
+      <FrameCount>4</FrameCount>
+      <XFrame>4</XFrame>
+      <YFrame>1</YFrame>
+      <XSize>23</XSize>
+      <YSize>39</YSize>
+    </Sprite>
+
+    <Sprite>
+      <Name>Bullet_5</Name>
+      <XBegin>0</XBegin>
+      <YBegin>2268</YBegin>
+      <isLine>0</isLine>
+      <FrameCount>4</FrameCount>
+      <XFrame>4</XFrame>
+      <YFrame>1</YFrame>
+      <XSize>23</XSize>
+      <YSize>39</YSize>
+    </Sprite>
+    <Sprite>
+      <Name>Bullet_6</Name>
+      <XBegin>93</XBegin>
+      <YBegin>2268</YBegin>
+      <isLine>0</isLine>
+      <FrameCount>4</FrameCount>
+      <XFrame>4</XFrame>
+      <YFrame>1</YFrame>
+      <XSize>23</XSize>
+      <YSize>39</YSize>
+    </Sprite>
+    
+    <Sprite>
+      <Name>Bullet_7</Name>
+      <XBegin>186</XBegin>
+      <YBegin>2268</YBegin>
+      <isLine>0</isLine>
+      <FrameCount>4</FrameCount>
+      <XFrame>4</XFrame>
+      <YFrame>1</YFrame>
+      <XSize>23</XSize>
+      <YSize>39</YSize>
+    </Sprite>
+    <Sprite>
+      <Name>Bullet_8</Name>
+      <XBegin>279</XBegin>
+      <YBegin>2268</YBegin>
+      <isLine>0</isLine>
+      <FrameCount>4</FrameCount>
+      <XFrame>4</XFrame>
+      <YFrame>1</YFrame>
+      <XSize>23</XSize>
+      <YSize>39</YSize>
+    </Sprite>
   </Texture>
 
 
   <Texture>
-    <Name>플레이어2</Name>
-    <Path>../\Resource\Sprite\플레이어2.png</Path>
+    <Name>Player2</Name>
+    <Path>../\Resource\Sprite\Player2.png</Path>
   </Texture>
 
 </TextureList>

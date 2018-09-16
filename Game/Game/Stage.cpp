@@ -113,8 +113,12 @@ void CStage::Render()
 {
 	m_pPlayer[0]->Render();
 
+	for (list<CEnemy*>::iterator iter = m_pEnemyList.begin();
+		iter != m_pEnemyList.end(); iter++)
+	{
+		(*iter)->Render();
+	}
 	
-
 
 	for (list<CGameObject*>::iterator iter = m_pPlayerBulletList.begin();
 		iter != m_pPlayerBulletList.end(); iter++)
@@ -128,11 +132,7 @@ void CStage::Render()
 		(*iter)->Render();
 	}
 
-	for (list<CEnemy*>::iterator iter = m_pEnemyList.begin();
-		iter != m_pEnemyList.end(); iter++)
-	{
-		(*iter)->Render();
-	}
+	
 
 	
 }
@@ -160,6 +160,11 @@ void CStage::PlayerFire(float deltaTime)
 	}
 
 	
+}
+
+void CStage::EnemyFire(float deltaTime)
+{
+
 }
 
 CStage::CStage()

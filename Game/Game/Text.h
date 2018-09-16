@@ -4,9 +4,14 @@
 #include <string>
 using namespace std;
 
+class IDWriteTextLayout;
 class CText
 {
 private:
+	IDWriteTextLayout* pTextLayout_;
+
+
+
 	wstring m_strText = L"";
 	UINT32 m_iTextLength = 0;
 

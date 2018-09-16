@@ -6,12 +6,14 @@
 
 void CPlayerBullet::Update(float deltaTime)
 {
-	D3DXVECTOR3 MoveMent = {0,-1000,0};
+	D3DXVECTOR3 MoveMent = {0,-100,0};
 	
+	//--MoveMent의 기본속도를 100으로 맞추고 각도에 따라 이동벡터 변환
 	D3DXMATRIX mat;
 	D3DXMatrixRotationZ(&mat, m_GameInfo.fDirection * DEGREE_TO_RADIAN);
-
 	D3DXVec3TransformCoord(&MoveMent, &MoveMent, &mat);
+
+
 
 	m_GameInfo.vecPos += MoveMent *deltaTime;
 
@@ -20,7 +22,8 @@ void CPlayerBullet::Update(float deltaTime)
 
 void CPlayerBullet::Render()
 {
-	CGameObject::Render();
+	CMainGame::GetInstance()->GetSpriteResource()->Render(L"Player", L"Bullet_1",0,&m_GameInfo );
+	//m_vecImage[0]->Draw();
 }
 
 

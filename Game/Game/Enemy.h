@@ -14,5 +14,7 @@ public:
 
 	virtual bool Destroy() =0;
 
+	//virtual void Attack()=0;
+
 };
 

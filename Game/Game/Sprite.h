@@ -5,6 +5,7 @@
 
 using namespace std;
 
+
 struct spriteInfo
 {
 	int iXBegin;	//Sprite의 텍스쳐내 시발점X
@@ -13,8 +14,8 @@ struct spriteInfo
 	int iFrameCount; // 총 프레임 개수
 	int iXFrame;	//수평 프레임 개수
 	int iYFrame;	//수직 프레임 개수
-	int iXSize;		// Sprite의 X크기
-	int iYSize;		// Sprite의 Y크기
+	int iXSize;		// SpriteFrame의 X크기
+	int iYSize;		// SpriteFrame의 Y크기
 };
 
 class CTexture;

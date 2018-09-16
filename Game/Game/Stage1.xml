@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<EnemyList>
+  <Enemy>
+    <Type></Type>
+    <Time></Time>
+    <Coordinate>
+      <X></X>
+      <Y></Y>
+    </Coordinate>
+    <Pattern></Pattern>
+    
+  </Enemy>
+</EnemyList>

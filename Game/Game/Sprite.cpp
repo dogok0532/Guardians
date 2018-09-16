@@ -4,7 +4,19 @@
 
 const RECT* CSprite::GetFrameRect(int Frame)
 {
-	RECT rc = { 0,0,0,0 };	//프레임, 좌표값에 따라 출력할 범위 설정
+	RECT rc ;	//프레임, 좌표값에 따라 출력할 범위 설정
+
+	int StartX = m_SpriteInfo.iXBegin
+		+ (Frame%m_SpriteInfo.iXSize);
+
+	int StartY = m_SpriteInfo.iYBegin
+		+ (Frame / m_SpriteInfo.iYSize);
+
+	int EndX = StartX + m_SpriteInfo.iXSize;
+
+	int EndY = StartY + m_SpriteInfo.iYSize;
+
+	rc = { StartX,StartY,EndX,EndY };
 
 	return &rc;
 }

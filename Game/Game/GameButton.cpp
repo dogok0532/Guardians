@@ -20,8 +20,10 @@ void CGameButton::Update(float deltaTime)
 void CGameButton::Render()
 {
 	
-	CGameObject::Render();
-	
+	if (m_iFrame == 0)
+		CMainGame::GetInstance()->GetSpriteResource()->RenderWholeTexture(L"Button", &m_GameInfo);
+	else
+		CMainGame::GetInstance()->GetSpriteResource()->RenderWholeTexture(L"Button2", &m_GameInfo);
 
 
 	pText->Render();

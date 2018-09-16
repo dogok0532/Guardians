@@ -6,8 +6,9 @@ CTexture* CParser::GetTexture()
 {
 
 	wstring path = GetTexturePath();
-	CTexture* pTexture = new CTexture(path);
-	pTexture->SetColorKey(GetBackgroundRGB());
+	D3DCOLOR color = GetBackgroundRGB();
+	CTexture* pTexture = new CTexture();
+	pTexture->SetDevice(path, color);
 	
 	while (XmlSprite !=NULL && !XmlSprite->NoChildren())
 	{
@@ -43,7 +44,6 @@ std::wstring CParser::GetTextureName()
 		return L"";
 	}
 
-
 	wstring returnName;
 	returnName.assign(name.begin(), name.end());
 	return returnName;
@@ -67,47 +67,69 @@ DWORD CParser::GetBackgroundRGB()
 {
 	if (XmlBackground == NULL || XmlBackground->NoChildren())
 	{
-		return D3DCOLOR_ARGB(255, 255, 255, 255);
+		return D3DCOLOR_XRGB( 0, 0, 0);
 	}
+	string r = XmlBackground->FirstChildElement("R")->GetText();
+	string g = XmlBackground->FirstChildElement("G")->GetText();
+	string b = XmlBackground->FirstChildElement("B")->GetText();
 
+	int iR=atoi(r.c_str());
+	int iG=atoi(g.c_str());
+	int iB=atoi(b.c_str());
 
 	
+	return D3DCOLOR_ARGB(255,iR, iG, iB);
 
-	return 0;
+
 }
 
 spriteInfo CParser::GetSpriteInfo()
 {
+	spriteInfo SpriteInfo;
 	
+
+	CSprite* pSprite = new CSprite;
+
 	char strValue[32];
+	int iValue;
+
 	strcpy_s(strValue, XmlSprite->FirstChildElement("XBegin")->GetText());
+	iValue =atoi(strValue);
+	SpriteInfo.iXBegin = iValue;
 
 	strcpy_s(strValue, XmlSprite->FirstChildElement("YBegin")->GetText());
+	iValue = atoi(strValue);
+	SpriteInfo.iYBegin = iValue;
+
 
 	strcpy_s(strValue, XmlSprite->FirstChildElement("isLine")->GetText());
+	iValue = atoi(strValue);
+	SpriteInfo.iIsLine = iValue;
+
 
 	strcpy_s(strValue, XmlSprite->FirstChildElement("FrameCount")->GetText());
+	iValue = atoi(strValue);
+	SpriteInfo.iFrameCount = iValue;
 
 	strcpy_s(strValue, XmlSprite->FirstChildElement("XFrame")->GetText());
+	iValue = atoi(strValue);
+	SpriteInfo.iXFrame = iValue;
 
 	strcpy_s(strValue, XmlSprite->FirstChildElement("YFrame")->GetText());
+	iValue = atoi(strValue);
+	SpriteInfo.iYFrame = iValue;
 
 	strcpy_s(strValue, XmlSprite->FirstChildElement("XSize")->GetText());
+	iValue = atoi(strValue);
+	SpriteInfo.iXSize = iValue;
 
 	strcpy_s(strValue, XmlSprite->FirstChildElement("YSize")->GetText());
+	iValue = atoi(strValue);
+	SpriteInfo.iYSize = iValue;
 
+	pSprite->SetSpriteInfo(&SpriteInfo);
 
-
-	spriteInfo SpriteInfo;
-	SpriteInfo.iFrameCount = 0;
-	SpriteInfo.iIsLine = 0;
-	SpriteInfo.iXBegin = 0;
-	SpriteInfo.iXFrame = 0;
-	SpriteInfo.iXSize = 0;
-	SpriteInfo.iYBegin = 0;
-	SpriteInfo.iYFrame = 0;
-	SpriteInfo.iYSize = 0;
-
+	
 	return SpriteInfo;
 }
 
@@ -133,7 +155,7 @@ CParser::CParser()
 	XmlBackground = XmlTexture->FirstChildElement("BackgroundRGB");
 	XmlSprite = XmlTexture->FirstChildElement("Sprite");
 
-
+	
 	
 }
 

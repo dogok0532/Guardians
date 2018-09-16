@@ -20,10 +20,9 @@ void CPlayer::Update(float deltaTime)
 }
 
 void CPlayer::Render()
-{
-	
-	CGameObject::Render();
-	
+{	
+	Draw(L"Enemy_BattleShip", L"DestroyedBody", 0);
+	CMainGame::GetInstance()->GetSpriteResource()->RenderWholeTexture(L"Enemy_Fighter", &m_GameInfo);
 }
 
 bool CPlayer::Destroy()
@@ -46,10 +45,7 @@ int CPlayer::Fire(float deltaTime)
 			bFired = true;
           	return iBulletState;
 		}
-
-
 		fCurrentCycle += deltaTime;
-
    		return false;
 		
 	}

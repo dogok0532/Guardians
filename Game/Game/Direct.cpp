@@ -52,7 +52,7 @@ HRESULT CDirect::InitD3D(HWND hWnd)
 
 void CDirect::Render_Begin()
 {
-	m_pDevice->Clear(0, NULL, D3DCLEAR_TARGET, D3DCOLOR_XRGB(255, 255, 255), 1.f, 0);
+	m_pDevice->Clear(0, NULL, D3DCLEAR_TARGET, D3DCOLOR_ARGB(255,255, 255, 255), 1.f, 0);
 
 	m_pDevice->BeginScene();
 	m_pSprite->Begin(D3DXSPRITE_ALPHABLEND);

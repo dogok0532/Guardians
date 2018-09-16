@@ -14,16 +14,19 @@ private:
 
 	map<wstring, CTexture*> mapTextureFix;//수정된 텍스처 맵
 
+
 public:
 	void AddImageFile(wstring, int FrameX,int FrameY);
 
 
 	CTexture* GetTextureInfo(wstring);
 	
-	void Draw(wstring, wstring,int);
+	void Render(wstring Texture, wstring Sprite, int Frame, ObjectInfo* pGameInfo);
 
+	void RenderWholeTexture(wstring Texture, ObjectInfo* pGameInfo);
 public:
 	CSpriteResource();
 	~CSpriteResource();
+
 };
 

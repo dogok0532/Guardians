@@ -3,16 +3,11 @@
 #include "direct.h"
 #include "GameObject.h"
 
+#define D3D_DEBUG_INFO
 
 
 
 LPD3DXSPRITE CTexture::m_pSprite;
-
-void CTexture::Draw(wstring spriteName, int frame)
-{
-	m_pSprite->Draw(m_pTexture, mapSprite[spriteName]->GetFrameRect(frame), mapSprite[spriteName]->GetCenter(), &(m_pGameInfo->vecPos), DEFAULT_COLOR);
-
-}
 
 
 
@@ -46,12 +41,8 @@ void CTexture::SetInfo(ObjectInfo* pObjectInfo)
 	m_pGameInfo = pObjectInfo;
 }
 
-void CTexture::SetColorKey(D3DCOLOR color)
-{
-	m_ColorKey = color;
-}
 
-void CTexture::Update()
+void CTexture::UpdateMat()	//행렬 정보 업데이트
 {
 	D3DXMatrixIdentity(&matWorld);
 
@@ -92,9 +83,9 @@ void CTexture::Update()
 	
 }
 
-void CTexture::Render()
+void CTexture::Render()	//현재 사용중
 {
-	Update();
+	UpdateMat();
 	m_pSprite->SetTransform(&matWorld);
 	m_pSprite->Draw(m_pTexture, NULL, &(m_vecSize / 2), &(m_pGameInfo->vecPos), DEFAULT_COLOR);
 	D3DXMatrixIdentity(&matWorld);
@@ -102,37 +93,56 @@ void CTexture::Render()
 }
 
 
+void CTexture::Draw(wstring spriteName, int frame, ObjectInfo* pGameInfo)	//차후바꿀것
+{
+	m_pGameInfo = pGameInfo;
+	UpdateMat();
+	m_pSprite->SetTransform(&matWorld);
+
+	RECT rcSrc =  *(mapSprite[spriteName]->GetFrameRect(frame));
+
+	D3DXVECTOR3 vecCenter = *(mapSprite[spriteName]->GetCenter());
+	m_pSprite->Draw(m_pTexture, &rcSrc, &vecCenter,
+		&(m_pGameInfo->vecPos), DEFAULT_COLOR);
+
+	m_pSprite->SetTransform(&matWorld);
+	
+}
+
+void CTexture::DrawWholeTexture(ObjectInfo* pGameInfo)
+{
+	m_pGameInfo = pGameInfo;
+	UpdateMat();
+	m_pSprite->SetTransform(&matWorld);
+
+	m_pSprite->Draw(m_pTexture, NULL, &(m_vecSize / 2), &(m_pGameInfo->vecPos), DEFAULT_COLOR);
+	D3DXMatrixIdentity(&matWorld);
+
+	m_pSprite->SetTransform(&matWorld);
+}
+
 void CTexture::Release()
 {
 	if(m_pTexture)
 		m_pTexture->Release();
 }
 
-CTexture::CTexture(wstring fileName)
+CTexture::CTexture()
 {
-
-	SetDevice(fileName);
+	
+	
 
 	bMultiFrame = false;
 }
 
-CTexture::CTexture(wstring fileName, int frameX, int frameY)
+
+CTexture::CTexture(wstring path)
 {
-	SetDevice(fileName);
-
-	if (frameX == 1 && frameY == 1)
-		bMultiFrame = false;
-	else
-		bMultiFrame = true;
-
-	iFrameX = frameX;
-	iFrameY = frameY;
+	SetDevice(path,D3DCOLOR_ARGB(255,255,255,255));
+	bMultiFrame = false;
 }
 
-CTexture::CTexture()
-{
 
-}
 
 CTexture::~CTexture()
 {
@@ -147,8 +157,14 @@ CTexture::~CTexture()
 	mapSprite.clear();
 }
 
-void CTexture::SetDevice(wstring fileName)
+void CTexture::SetDevice(wstring fileName, D3DCOLOR color)
 {
+	if (m_pTexture)
+	{
+		MessageBox(g_hWnd, L"이미 텍스쳐가 설정되어있습니다!", fileName.c_str(), MB_OK);
+		return;
+	}
+
 	HRESULT hr;
 
 	D3DXIMAGE_INFO ImageInfo;
@@ -171,10 +187,13 @@ void CTexture::SetDevice(wstring fileName)
 		D3DPOOL_DEFAULT,
 		D3DX_DEFAULT,
 		D3DX_DEFAULT,
-		m_ColorKey,
+		color,
 		NULL,
 		NULL,
 		&m_pTexture);
+
+	m_ColorKey = color;
+	
 
 	if (FAILED(hr))
 	{

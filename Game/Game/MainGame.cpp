@@ -7,6 +7,7 @@
 #include "Observer.h"
 #include "Text.h"
 #include "SoundResource.h"
+#include "Setting.h"
 
 IMPLEMENT_SINGLETON(CMainGame)
 
@@ -21,8 +22,8 @@ void CMainGame::ChangeScene(int Scene)
 		break;
 	
 	case 1:
-	//	SAFE_DELETE(m_pCurrentScene);
-	//	m_pCurrentScene = new CSetting;
+	SAFE_DELETE(m_pCurrentScene);
+	m_pCurrentScene = new CSetting;
 		break;
 
 	case 2:
@@ -31,7 +32,10 @@ void CMainGame::ChangeScene(int Scene)
 
 	if (MessageBox(g_hWnd, L"게임을 종료하시겠습니까?", L"", MB_OKCANCEL)== IDOK)
 		ExitProcess(0);
-
+	else
+	{
+		Scene = -1;
+	}
 		break;
 
 	default:
@@ -49,8 +53,8 @@ void CMainGame::Init()
 
 
 	m_pCurrentScene = new CMainMenu;
-	
-	
+
+
 }
 
 void CMainGame::Update(float deltaTime)

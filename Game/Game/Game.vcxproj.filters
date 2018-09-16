@@ -100,6 +100,9 @@
     <Filter Include="99.Default\06.Parser\00.Default">
       <UniqueIdentifier>{0363c6db-2f95-40e2-a744-941ad508ab18}</UniqueIdentifier>
     </Filter>
+    <Filter Include="99.Default\07.GUI">
+      <UniqueIdentifier>{23785bfe-c1e9-436c-af6c-0a7259ae7ab1}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Scene.cpp">
@@ -182,6 +185,18 @@
     </ClCompile>
     <ClCompile Include="CTexture.cpp">
       <Filter>99.Default\05.TextManager</Filter>
+    </ClCompile>
+    <ClCompile Include="CBackground.cpp">
+      <Filter>03.GameObject\04.BackGround</Filter>
+    </ClCompile>
+    <ClCompile Include="Setting.cpp">
+      <Filter>01.Scene\02.Setting</Filter>
+    </ClCompile>
+    <ClCompile Include="TextBox.cpp">
+      <Filter>99.Default\07.GUI</Filter>
+    </ClCompile>
+    <ClCompile Include="CDirectInput.cpp">
+      <Filter>99.Default\01.DirectX</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -266,15 +281,30 @@
     <ClInclude Include="CTexture.h">
       <Filter>99.Default\05.TextManager</Filter>
     </ClInclude>
-  </ItemGroup>
-  <ItemGroup>
-    <Xml Include="..\Script\TextureList.xml">
-      <Filter>소스 파일</Filter>
-    </Xml>
+    <ClInclude Include="CBackground.h">
+      <Filter>03.GameObject\04.BackGround</Filter>
+    </ClInclude>
+    <ClInclude Include="Setting.h">
+      <Filter>01.Scene\02.Setting</Filter>
+    </ClInclude>
+    <ClInclude Include="TextBox.h">
+      <Filter>99.Default\07.GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="CDirectInput.h">
+      <Filter>99.Default\01.DirectX</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Text Include="Text.txt">
       <Filter>소스 파일</Filter>
     </Text>
+  </ItemGroup>
+  <ItemGroup>
+    <Xml Include="..\Script\TextureList.xml">
+      <Filter>소스 파일</Filter>
+    </Xml>
+    <Xml Include="Stage1.xml">
+      <Filter>소스 파일</Filter>
+    </Xml>
   </ItemGroup>
 </Project>

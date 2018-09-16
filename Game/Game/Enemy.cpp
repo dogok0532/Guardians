@@ -1,5 +1,5 @@
 #include "Enemy.h"
-
+#include "MainGame.h"
 
 
 CEnemy::CEnemy()
