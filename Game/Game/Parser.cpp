@@ -1,6 +1,7 @@
 
 #include "Parser.h"
 #include "CTexture.h"
+#include "Defines.h"
 
 CTexture* CParser::GetTexture()
 {
@@ -162,4 +163,11 @@ CParser::CParser()
 
 CParser::~CParser()
 {
+	SAFE_DELETE(XmlRoot);
+	delete XmlTexture;
+	delete XmlName;
+	delete XmlPath;
+	delete XmlBackground;
+	delete XmlSprite;
+	XmlFile.Clear();
 }

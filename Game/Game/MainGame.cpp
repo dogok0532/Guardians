@@ -8,6 +8,7 @@
 #include "Text.h"
 #include "SoundResource.h"
 #include "Setting.h"
+#include "SpriteResource.h"
 
 IMPLEMENT_SINGLETON(CMainGame)
 

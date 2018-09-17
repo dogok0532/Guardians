@@ -21,9 +21,9 @@ void CGameButton::Render()
 {
 	
 	if (m_iFrame == 0)
-		CMainGame::GetInstance()->GetSpriteResource()->RenderWholeTexture(L"Button", &m_GameInfo);
+		DrawWholeTexture(L"Button");
 	else
-		CMainGame::GetInstance()->GetSpriteResource()->RenderWholeTexture(L"Button2", &m_GameInfo);
+		DrawWholeTexture(L"Button2");
 
 
 	pText->Render();

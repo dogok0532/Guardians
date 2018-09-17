@@ -2,13 +2,17 @@
 
 <EnemyList>
   <Enemy>
-    <Type></Type>
-    <Time></Time>
+    <Type></Type>       <!--생성되는 적 타입-->
+    <Time>30</Time>     <!--생성시간 시간단위:0.1초 -->
     <Coordinate>
       <X></X>
       <Y></Y>
     </Coordinate>
-    <Pattern></Pattern>
-    
+    <Direction></Direction>         <!-- 시작할때 진행방향 -->
+    <Pattern></Pattern> <!--인트값에 따라 클래스에서 결정-->
   </Enemy>
+  
+  
+  
+  
 </EnemyList>

@@ -34,6 +34,7 @@ protected:
 	void Draw(wstring textureName, wstring spriteName, int iFrame);
 	void Draw(wstring textureName, wstring spriteName);
 
+	void DrawWholeTexture(wstring textureName);
 public:
 	
 

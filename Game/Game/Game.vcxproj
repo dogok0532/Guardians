@@ -103,7 +103,7 @@
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <SubSystem>Windows</SubSystem>
-      <AdditionalDependencies>d2d1.lib;Dwrite.lib;D3d9.lib;D3dx9.lib;DXUT.lib;DXUTOpt.lib;D3d10.lib;D3dx10.lib;dxerr.lib;Comctl32.lib;legacy_stdio_definitions.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>d2d1.lib;Dwrite.lib;D3d9.lib;D3dx9.lib;D3d10.lib;D3dx10.lib;dxerr.lib;Comctl32.lib;legacy_stdio_definitions.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
     <Bscmake>
       <PreserveSbr>true</PreserveSbr>
@@ -187,7 +187,6 @@
     <ClCompile Include="SpriteResource.cpp" />
     <ClCompile Include="Text.cpp" />
     <ClCompile Include="CTexture.cpp" />
-    <ClCompile Include="TextBox.cpp" />
     <ClCompile Include="tinystr.cpp" />
     <ClCompile Include="tinyxml.cpp" />
     <ClCompile Include="tinyxmlerror.cpp" />
@@ -198,6 +197,7 @@
     <ClInclude Include="CBackground.h" />
     <ClInclude Include="CDirectInput.h" />
     <ClInclude Include="Parser.h" />
+    <ClInclude Include="Scene.h" />
     <ClInclude Include="Setting.h" />
     <ClInclude Include="Sprite.h" />
     <ClInclude Include="Enemy.h" />
@@ -216,12 +216,10 @@
     <ClInclude Include="HitRange.h" />
     <ClInclude Include="Stage.h" />
     <ClInclude Include="Player.h" />
-    <ClInclude Include="Scene.h" />
     <ClInclude Include="SpriteResource.h" />
     <ClInclude Include="direct.h" />
     <ClInclude Include="Text.h" />
     <ClInclude Include="CTexture.h" />
-    <ClInclude Include="TextBox.h" />
     <ClInclude Include="tinystr.h" />
     <ClInclude Include="tinyxml.h" />
     <ClInclude Include="UI.h" />

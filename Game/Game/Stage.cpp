@@ -107,6 +107,11 @@ void CStage::Update(float deltaTime)
 	
 
 	fTimePassed += deltaTime;
+
+	if (fTimePassed >= 100  /*Stage파싱에 따라 몬스터 생성 시간*/)
+	{
+
+	}
 }
 
 void CStage::Render()
