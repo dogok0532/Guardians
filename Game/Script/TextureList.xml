@@ -1,8 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 
 <TextureList>
-
-
   <Texture>
     <Name>Background_Ocean</Name>
     <Path>../\Resource\Sprite\Background_Ocean.png</Path>
@@ -51,7 +49,7 @@
       <FrameCount>1</FrameCount>
       <XFrame>1</XFrame>
       <YFrame>1</YFrame>
-      <XSize>162</XSize>
+      <XSize>150</XSize>
       <YSize>678</YSize> 
     </Sprite>
     <Sprite>
@@ -62,7 +60,7 @@
       <FrameCount>1</FrameCount>
       <XFrame>1</XFrame>
       <YFrame>1</YFrame>
-      <XSize>162</XSize> 
+      <XSize>150</XSize> 
       <YSize>381</YSize>
     </Sprite>
   </Texture>
