@@ -8,6 +8,9 @@ class CSetting :
 private:
 	CTextBox* pTextBox;
 
+	float DeltaTime=0;
+	int Frame=0;
+
 public:
 	CSetting();
 	virtual ~CSetting();

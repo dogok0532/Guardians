@@ -14,14 +14,14 @@ private:
 
 
 
-	TiXmlElement* XmlRoot;
-	TiXmlElement* XmlTexture;
+	TiXmlElement* XmlRoot=NULL;
+	TiXmlElement* XmlTexture = NULL;
 
 
-	TiXmlElement* XmlName;
-	TiXmlElement* XmlPath;
-	TiXmlElement* XmlBackground;
-	TiXmlElement* XmlSprite;
+	TiXmlElement* XmlName = NULL;
+	TiXmlElement* XmlPath = NULL;
+	TiXmlElement* XmlBackground = NULL;
+	TiXmlElement* XmlSprite = NULL;
 
 public:
 	CTexture* GetTexture();
