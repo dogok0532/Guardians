@@ -35,10 +35,10 @@ void CMainGame::ChangeScene(int Scene)
 		ExitProcess(0);
 	else
 	{
-		Scene = -1;
+		SAFE_DELETE(m_pCurrentScene);
+		m_pCurrentScene = new CMainMenu;
 	}
-		break;
-
+		 break;
 	default:
 		break;
 	}

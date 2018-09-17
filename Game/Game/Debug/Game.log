@@ -1,4 +1,2 @@
-﻿  Setting.cpp
-d:\졸프\리포지토리\guardians\game\game\gameobject.h(11): warning C4099: 'ObjectInfo': 처음에는 'class'을(를) 사용하여 형식 이름을 표시했는데 이제는 'struct'을(를) 사용하여 표시합니다.
-  d:\졸프\리포지토리\guardians\game\game\gameobject.h(10): note: 'ObjectInfo' 선언을 참조하십시오.
+﻿  MainGame.cpp
   Game.vcxproj -> D:\졸프\리포지토리\Guardians\Game\Debug\Game.exe

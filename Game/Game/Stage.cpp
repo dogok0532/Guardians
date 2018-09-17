@@ -110,6 +110,23 @@ void CStage::Update(float deltaTime)
 
 	if (fTimePassed >= 100  /*Stage파싱에 따라 몬스터 생성 시간*/)
 	{
+		/* Stage파싱에따라 새로 생성 */
+
+		CGameObject* pGameObject;
+		switch (1) // 파싱 타입에 따라 적 생성
+		{
+		case 1:
+			pGameObject = new CEnemyPlane;
+			break;
+		case 2:
+
+		}
+
+
+
+		pGameObject->SetPos(500,500 ); // 파싱에 따라 좌표 설정
+		pGameObject->SetAngle(0); //파싱에따라 방향 설정
+		//pGameObject->SetPattern(0);  //세팅에 따라 패턴 설정
 
 	}
 }
