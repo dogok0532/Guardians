@@ -41,7 +41,7 @@ public:
 	void Init();
 	void Update(float deltaTime);
 	void Render();
-
+	void ResetSprite();
 
 	DECLARE_SINGLETON(CMainGame)
 };

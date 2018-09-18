@@ -51,7 +51,7 @@
       <FrameCount>1</FrameCount>
       <XFrame>1</XFrame>
       <YFrame>1</YFrame>
-      <XSize>162</XSize>
+      <XSize>160</XSize>
       <YSize>678</YSize> 
     </Sprite>
     <Sprite>
@@ -62,7 +62,7 @@
       <FrameCount>1</FrameCount>
       <XFrame>1</XFrame>
       <YFrame>1</YFrame>
-      <XSize>162</XSize> 
+      <XSize>160</XSize> 
       <YSize>381</YSize>
     </Sprite>
   </Texture>

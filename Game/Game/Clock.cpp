@@ -19,7 +19,7 @@ float CClock::UpdateGame()
 
 
 		int fps = (int)1.f / DeltaTime;
-		printf("%d\n", fps);
+		//printf("%d\n", fps);
 
 
 		return DeltaTime;

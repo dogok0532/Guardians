@@ -1,6 +1,6 @@
 
 #include "Scene.h"
-
+#include <string>
 class CTextBox;
 class CSetting :
 	public CScene
@@ -10,6 +10,12 @@ private:
 
 	float DeltaTime=0;
 	int Frame=0;
+
+	std::wstring strTexture;
+	std::wstring strSprite;
+
+
+	bool bEditTextModePressed=false;
 
 public:
 	CSetting();
