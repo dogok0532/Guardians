@@ -226,9 +226,7 @@
     <ClInclude Include="UserFunction.h" />
   </ItemGroup>
   <ItemGroup>
-    <Xml Include="..\Script\TextureList.xml">
-      <SubType>Designer</SubType>
-    </Xml>
+    <Xml Include="..\Script\TextureList.xml" />
     <Xml Include="Stage1.xml" />
   </ItemGroup>
   <ItemGroup>

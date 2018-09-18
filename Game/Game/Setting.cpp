@@ -33,5 +33,5 @@ void CSetting::Render()
 	m_GameInfo.vecRenderRatio = { 1,1,1 };
 	m_GameInfo.vecSize = { 32,32,0 };
 
-	CMainGame::GetInstance()->GetSpriteResource()->Render(L"Effect",L"Effect1",Frame, &m_GameInfo);
+	CMainGame::GetInstance()->GetSpriteResource()->Render(L"Effect",L"Effect32",Frame, &m_GameInfo);
 }

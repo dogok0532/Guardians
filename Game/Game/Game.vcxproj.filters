@@ -303,10 +303,10 @@
     </Text>
   </ItemGroup>
   <ItemGroup>
-    <Xml Include="..\Script\TextureList.xml">
+    <Xml Include="Stage1.xml">
       <Filter>소스 파일</Filter>
     </Xml>
-    <Xml Include="Stage1.xml">
+    <Xml Include="..\Script\TextureList.xml">
       <Filter>소스 파일</Filter>
     </Xml>
   </ItemGroup>
