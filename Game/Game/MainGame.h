@@ -8,7 +8,7 @@ using namespace std;
 class CText;
 class CScene;
 class CGameObject;
-class CObserver;
+
 class CSoundResource;
 class CSpriteResource;
 
@@ -20,7 +20,7 @@ class CMainGame
 private:
 	CScene * m_pCurrentScene = NULL;
 
-	CObserver* pSceneObserver;
+
 	
 
 

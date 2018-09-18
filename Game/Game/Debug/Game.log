@@ -1,1 +1,4 @@
-﻿  Game.vcxproj -> D:\GitHub\Game\Debug\Game.exe
+﻿  Setting.cpp
+c:\users\신성용\desktop\ipp\team\guardians\game\game\gameobject.h(11): warning C4099: 'ObjectInfo': 처음에는 'class'을(를) 사용하여 형식 이름을 표시했는데 이제는 'struct'을(를) 사용하여 표시합니다.
+  c:\users\신성용\desktop\ipp\team\guardians\game\game\gameobject.h(10): note: 'ObjectInfo' 선언을 참조하십시오.
+  Game.vcxproj -> C:\Users\신성용\Desktop\IPP\team\Guardians\Game\Debug\Game.exe

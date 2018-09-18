@@ -2,7 +2,7 @@
 #include "GameButton.h"
 #include "Defines.h"
 #include "Mouse.h"
-#include "SceneOb.h"
+#include "Scene.h"
 
 void CMainMenu::Update(float deltaTime)
 {

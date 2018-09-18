@@ -4,13 +4,16 @@
 
 const RECT* CSprite::GetFrameRect(int Frame)
 {
+	Frame %= m_SpriteInfo.iFrameCount;
+
+
 	RECT rc ;	//프레임, 좌표값에 따라 출력할 범위 설정
 
 	int StartX = m_SpriteInfo.iXBegin
-		+ (Frame%m_SpriteInfo.iXSize);
+		+ (m_SpriteInfo.iXSize+m_SpriteInfo.iIsLine) *(Frame%m_SpriteInfo.iXFrame);
 
 	int StartY = m_SpriteInfo.iYBegin
-		+ (Frame / m_SpriteInfo.iYSize);
+		+ (m_SpriteInfo.iYSize + m_SpriteInfo.iIsLine)*(Frame/m_SpriteInfo.iXFrame);
 
 	int EndX = StartX + m_SpriteInfo.iXSize;
 

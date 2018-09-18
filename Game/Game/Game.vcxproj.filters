@@ -103,6 +103,15 @@
     <Filter Include="99.Default\07.GUI">
       <UniqueIdentifier>{23785bfe-c1e9-436c-af6c-0a7259ae7ab1}</UniqueIdentifier>
     </Filter>
+    <Filter Include="99.Default\06.Parser\01.SpriteParser">
+      <UniqueIdentifier>{944c0969-e94e-4068-8fba-f332307baadf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="99.Default\06.Parser\02.SoundParser">
+      <UniqueIdentifier>{80f844e0-c8f7-46c3-a8ea-8abd17aaa2ae}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="99.Default\06.Parser\03.GameFlowParser">
+      <UniqueIdentifier>{170d08fe-e5ff-43d8-9ac0-9ec827dd2efd}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Scene.cpp">
@@ -192,17 +201,11 @@
     <ClCompile Include="Setting.cpp">
       <Filter>01.Scene\02.Setting</Filter>
     </ClCompile>
-    <ClCompile Include="TextBox.cpp">
-      <Filter>99.Default\07.GUI</Filter>
-    </ClCompile>
     <ClCompile Include="CDirectInput.cpp">
       <Filter>99.Default\01.DirectX</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Scene.h">
-      <Filter>01.Scene</Filter>
-    </ClInclude>
     <ClInclude Include="direct.h">
       <Filter>99.Default\01.DirectX</Filter>
     </ClInclude>
@@ -287,11 +290,11 @@
     <ClInclude Include="Setting.h">
       <Filter>01.Scene\02.Setting</Filter>
     </ClInclude>
-    <ClInclude Include="TextBox.h">
-      <Filter>99.Default\07.GUI</Filter>
-    </ClInclude>
     <ClInclude Include="CDirectInput.h">
       <Filter>99.Default\01.DirectX</Filter>
+    </ClInclude>
+    <ClInclude Include="Scene.h">
+      <Filter>01.Scene</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -300,10 +303,10 @@
     </Text>
   </ItemGroup>
   <ItemGroup>
-    <Xml Include="..\Script\TextureList.xml">
+    <Xml Include="Stage1.xml">
       <Filter>소스 파일</Filter>
     </Xml>
-    <Xml Include="Stage1.xml">
+    <Xml Include="..\Script\TextureList.xml">
       <Filter>소스 파일</Filter>
     </Xml>
   </ItemGroup>

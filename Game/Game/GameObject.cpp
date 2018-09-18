@@ -19,6 +19,12 @@ void CGameObject::Draw(wstring textureName, wstring spriteName)
 
 }
 
+void CGameObject::DrawWholeTexture(wstring textureName)
+{
+	CMainGame::GetInstance()->GetSpriteResource()->RenderWholeTexture(textureName, &m_GameInfo);
+}
+
+
 void CGameObject::Update(float deltaTime)
 {
 	
@@ -34,7 +40,7 @@ void CGameObject::Render()
 		m_vecImage[m_iFrame]->Render();
 	}
 
-	
+
 }
 
 void CGameObject::SetInfoToTexture()	//게임오브젝트의 크기를 텍스처 크기에 맞춘다.
