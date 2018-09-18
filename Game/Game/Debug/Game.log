@@ -1,4 +1,43 @@
-﻿  Setting.cpp
-c:\users\신성용\desktop\ipp\team\guardians\game\game\gameobject.h(11): warning C4099: 'ObjectInfo': 처음에는 'class'을(를) 사용하여 형식 이름을 표시했는데 이제는 'struct'을(를) 사용하여 표시합니다.
-  c:\users\신성용\desktop\ipp\team\guardians\game\game\gameobject.h(10): note: 'ObjectInfo' 선언을 참조하십시오.
-  Game.vcxproj -> C:\Users\신성용\Desktop\IPP\team\Guardians\Game\Debug\Game.exe
+﻿  Enemy.cpp
+d:\졸프\리포지토리\guardians\game\game\gameobject.h(11): warning C4099: 'ObjectInfo': 처음에는 'class'을(를) 사용하여 형식 이름을 표시했는데 이제는 'struct'을(를) 사용하여 표시합니다.
+  d:\졸프\리포지토리\guardians\game\game\gameobject.h(10): note: 'ObjectInfo' 선언을 참조하십시오.
+  EnemyPlane.cpp
+d:\졸프\리포지토리\guardians\game\game\gameobject.h(11): warning C4099: 'ObjectInfo': 처음에는 'class'을(를) 사용하여 형식 이름을 표시했는데 이제는 'struct'을(를) 사용하여 표시합니다.
+  d:\졸프\리포지토리\guardians\game\game\gameobject.h(10): note: 'ObjectInfo' 선언을 참조하십시오.
+  GameButton.cpp
+d:\졸프\리포지토리\guardians\game\game\gameobject.h(11): warning C4099: 'ObjectInfo': 처음에는 'class'을(를) 사용하여 형식 이름을 표시했는데 이제는 'struct'을(를) 사용하여 표시합니다.
+  d:\졸프\리포지토리\guardians\game\game\gameobject.h(10): note: 'ObjectInfo' 선언을 참조하십시오.
+d:\졸프\리포지토리\guardians\game\game\gamebutton.cpp(14): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\졸프\리포지토리\guardians\game\game\gamebutton.cpp(13): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\졸프\리포지토리\guardians\game\game\gamebutton.cpp(12): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\졸프\리포지토리\guardians\game\game\gamebutton.cpp(11): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\졸프\리포지토리\guardians\game\game\gamebutton.cpp(50): warning C4244: '=': 'float'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\졸프\리포지토리\guardians\game\game\gamebutton.cpp(51): warning C4244: '=': 'float'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\졸프\리포지토리\guardians\game\game\gamebutton.cpp(52): warning C4244: '=': 'float'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\졸프\리포지토리\guardians\game\game\gamebutton.cpp(53): warning C4244: '=': 'float'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  GameInfo.cpp
+d:\졸프\리포지토리\guardians\game\game\gameobject.h(11): warning C4099: 'ObjectInfo': 처음에는 'class'을(를) 사용하여 형식 이름을 표시했는데 이제는 'struct'을(를) 사용하여 표시합니다.
+  d:\졸프\리포지토리\guardians\game\game\gameobject.h(10): note: 'ObjectInfo' 선언을 참조하십시오.
+  GameObject.cpp
+d:\졸프\리포지토리\guardians\game\game\gameobject.h(11): warning C4099: 'ObjectInfo': 처음에는 'class'을(를) 사용하여 형식 이름을 표시했는데 이제는 'struct'을(를) 사용하여 표시합니다.
+  d:\졸프\리포지토리\guardians\game\game\gameobject.h(10): note: 'ObjectInfo' 선언을 참조하십시오.
+d:\졸프\리포지토리\guardians\game\game\gameobject.cpp(79): warning C4838: 'float'에서 'LONG'(으)로의 변환에는 축소 변환이 필요합니다.
+d:\졸프\리포지토리\guardians\game\game\gameobject.cpp(76): warning C4244: '초기화 중': 'float'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\졸프\리포지토리\guardians\game\game\gameobject.cpp(77): warning C4244: '초기화 중': 'float'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\졸프\리포지토리\guardians\game\game\gameobject.cpp(78): warning C4244: '초기화 중': 'float'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\졸프\리포지토리\guardians\game\game\gameobject.cpp(79): warning C4244: '초기화 중': 'float'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  Main.cpp
+  d:\졸프\리포지토리\guardians\game\directx\include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+  MainGame.cpp
+  Player.cpp
+d:\졸프\리포지토리\guardians\game\game\gameobject.h(11): warning C4099: 'ObjectInfo': 처음에는 'class'을(를) 사용하여 형식 이름을 표시했는데 이제는 'struct'을(를) 사용하여 표시합니다.
+  d:\졸프\리포지토리\guardians\game\game\gameobject.h(10): note: 'ObjectInfo' 선언을 참조하십시오.
+  PlayerBullet.cpp
+d:\졸프\리포지토리\guardians\game\game\gameobject.h(11): warning C4099: 'ObjectInfo': 처음에는 'class'을(를) 사용하여 형식 이름을 표시했는데 이제는 'struct'을(를) 사용하여 표시합니다.
+  d:\졸프\리포지토리\guardians\game\game\gameobject.h(10): note: 'ObjectInfo' 선언을 참조하십시오.
+d:\졸프\리포지토리\guardians\game\game\playerbullet.cpp(13): warning C4244: '인수': 'double'에서 'FLOAT'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  Setting.cpp
+d:\졸프\리포지토리\guardians\game\game\gameobject.h(11): warning C4099: 'ObjectInfo': 처음에는 'class'을(를) 사용하여 형식 이름을 표시했는데 이제는 'struct'을(를) 사용하여 표시합니다.
+  d:\졸프\리포지토리\guardians\game\game\gameobject.h(10): note: 'ObjectInfo' 선언을 참조하십시오.
+  코드를 생성하고 있습니다...
+  Game.vcxproj -> D:\졸프\리포지토리\Guardians\Game\Debug\Game.exe

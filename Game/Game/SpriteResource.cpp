@@ -36,7 +36,8 @@ CTexture* CSpriteResource::GetTextureInfo(wstring fileName)
 
 void CSpriteResource::Render(wstring Texture, wstring Sprite, int Frame, ObjectInfo* pGameInfo)
 {
-	mapTextureFix[Texture]->Draw(Sprite, Frame,pGameInfo);
+	if(mapTextureFix[Texture] !=NULL)
+		mapTextureFix[Texture]->Draw(Sprite, Frame,pGameInfo);
 }
 
 void CSpriteResource::RenderWholeTexture(wstring Texture, ObjectInfo* pGameInfo)

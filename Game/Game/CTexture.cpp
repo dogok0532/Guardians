@@ -95,9 +95,14 @@ void CTexture::Render()	//현재 사용중
 
 void CTexture::Draw(wstring spriteName, int frame, ObjectInfo* pGameInfo)	//차후바꿀것
 {
+	if (mapSprite[spriteName] == NULL)
+		return;
+
 	m_pGameInfo = pGameInfo;
 	UpdateMat();
 	m_pSprite->SetTransform(&matWorld);
+
+	
 
 	RECT rcSrc =  *(mapSprite[spriteName]->GetFrameRect(frame));
 

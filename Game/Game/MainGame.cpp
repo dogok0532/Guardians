@@ -9,6 +9,7 @@
 #include "SoundResource.h"
 #include "Setting.h"
 #include "SpriteResource.h"
+#include <stdio.h>
 
 IMPLEMENT_SINGLETON(CMainGame)
 
@@ -35,10 +36,10 @@ void CMainGame::ChangeScene(int Scene)
 		ExitProcess(0);
 	else
 	{
-		Scene = -1;
+		SAFE_DELETE(m_pCurrentScene);
+		m_pCurrentScene = new CMainMenu;
 	}
-		break;
-
+		 break;
 	default:
 		break;
 	}
@@ -70,9 +71,28 @@ void CMainGame::Render()
 	m_pCurrentScene->Render();
 }
 
+void CMainGame::ResetSprite()
+{
+	SAFE_DELETE(pSpriteResource);
+	pSpriteResource = new CSpriteResource;
+}
+
 CMainGame::CMainGame()
 {
-	
+	AllocConsole();                 
+
+	FILE* pFile;
+
+	freopen_s(&pFile,"CONOUT$", "a", stderr); 
+
+	freopen_s(&pFile, "CONOUT$", "a", stdout);
+
+	freopen_s(&pFile, "CONIN$", "r", stdin);
+
+	SetConsoleTitleA("Test v.1.0");
+
+
+
 
 }
 
