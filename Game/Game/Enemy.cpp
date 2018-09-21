@@ -16,8 +16,3 @@ void CEnemy::Update(float deltaTime)
 	CGameObject::Update(deltaTime);
 }
 
-void CEnemy::Render()
-{
-	CGameObject::Render();
-}
-

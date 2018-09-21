@@ -25,7 +25,7 @@ void CSetting::Update(float fDeltaTime)
 		Frame++;;
 	}
 	
-	if (GetAsyncKeyState(VK_F5))
+	if (GetAsyncKeyState(VK_F5))	//F5키 누를경우 Texture, Sprite값을 콘솔에서 변경
 	{
 		bEditTextModePressed = true;
 
@@ -47,7 +47,7 @@ void CSetting::Update(float fDeltaTime)
 		bEditTextModePressed = false;
 	}
 
-	if (GetAsyncKeyState(VK_F6) && !bEditTextModePressed)
+	if (GetAsyncKeyState(VK_F6) && !bEditTextModePressed)	//F6 누를경우 XML 최신화
 	{
 		bEditTextModePressed = true;
 
@@ -64,8 +64,8 @@ void CSetting::Update(float fDeltaTime)
 
 void CSetting::Render()
 {
-	ObjectInfo m_GameInfo;
-	m_GameInfo.fDirection = 0;
+	RenderInfo m_GameInfo;
+	m_GameInfo.fRenderDirection = 0;
 	m_GameInfo.vecPos = { 600,300,0 };
 	m_GameInfo.vecRenderRatio = { 1,1,1 };
 	m_GameInfo.vecSize = { 32,32,0 };

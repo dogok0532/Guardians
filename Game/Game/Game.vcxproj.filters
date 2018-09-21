@@ -49,9 +49,6 @@
     <Filter Include="01.Scene\02.Setting">
       <UniqueIdentifier>{5a3a0e1b-791c-49be-a1c0-e65bf84d0a54}</UniqueIdentifier>
     </Filter>
-    <Filter Include="02.HitRange">
-      <UniqueIdentifier>{5f302234-a556-4973-ab8f-fe0a5041e0db}</UniqueIdentifier>
-    </Filter>
     <Filter Include="03.GameObject">
       <UniqueIdentifier>{0965a04f-adf1-4d11-9d4d-f7b2cb797b57}</UniqueIdentifier>
     </Filter>
@@ -85,9 +82,6 @@
     <Filter Include="03.GameObject\02.Enemey%28데코레이터패턴쓸것%29\02-1. NormalMob">
       <UniqueIdentifier>{43d7dbc3-5bdb-4ce2-9c78-6567f495ad8d}</UniqueIdentifier>
     </Filter>
-    <Filter Include="03.GameObject\02.Enemey%28데코레이터패턴쓸것%29\02-1. NormalMob\Plane">
-      <UniqueIdentifier>{52a766a2-3260-43df-ac85-428f29ba34e1}</UniqueIdentifier>
-    </Filter>
     <Filter Include="03.GameObject\04.BackGround">
       <UniqueIdentifier>{9967c749-c5d0-4d34-ae0b-1e263db0889e}</UniqueIdentifier>
     </Filter>
@@ -112,6 +106,27 @@
     <Filter Include="99.Default\06.Parser\03.GameFlowParser">
       <UniqueIdentifier>{170d08fe-e5ff-43d8-9ac0-9ec827dd2efd}</UniqueIdentifier>
     </Filter>
+    <Filter Include="03.GameObject\02.Enemey%28데코레이터패턴쓸것%29\02-1. NormalMob\AA">
+      <UniqueIdentifier>{759a9df8-d013-4f2e-a02e-67e7c5c79ad6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="03.GameObject\02.Enemey%28데코레이터패턴쓸것%29\02-1. NormalMob\Bomber">
+      <UniqueIdentifier>{6dd80304-16a2-4f4d-9e5f-eff57dcfd9a7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="03.GameObject\02.Enemey%28데코레이터패턴쓸것%29\02-1. NormalMob\Fighter">
+      <UniqueIdentifier>{52a766a2-3260-43df-ac85-428f29ba34e1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="03.GameObject\06.Item">
+      <UniqueIdentifier>{3fb09075-2266-4009-bdaa-4b4d4e488c73}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="03.GameObject\06.Item\01.PowerUp">
+      <UniqueIdentifier>{d53edee8-fa51-434d-a202-4c14505e175b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="03.GameObject\06.Item\03.Bomb">
+      <UniqueIdentifier>{9998f43b-f9df-4fe6-9d74-56104b0669ff}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="03.GameObject\06.Item\02.GoldBar">
+      <UniqueIdentifier>{15111646-273c-49d0-92a4-60b75165f0c2}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Scene.cpp">
@@ -128,9 +143,6 @@
     </ClCompile>
     <ClCompile Include="Player.cpp">
       <Filter>03.GameObject\00.Player</Filter>
-    </ClCompile>
-    <ClCompile Include="HitRange.cpp">
-      <Filter>02.HitRange</Filter>
     </ClCompile>
     <ClCompile Include="SpriteResource.cpp">
       <Filter>99.Default\03.SpirteResource</Filter>
@@ -165,9 +177,6 @@
     <ClCompile Include="PlayerBullet.cpp">
       <Filter>03.GameObject\01..PlayerBullet</Filter>
     </ClCompile>
-    <ClCompile Include="EnemyPlane.cpp">
-      <Filter>03.GameObject\02.Enemey%28데코레이터패턴쓸것%29\02-1. NormalMob\Plane</Filter>
-    </ClCompile>
     <ClCompile Include="Enemy.cpp">
       <Filter>03.GameObject\02.Enemey%28데코레이터패턴쓸것%29</Filter>
     </ClCompile>
@@ -189,9 +198,6 @@
     <ClCompile Include="tinyxmlparser.cpp">
       <Filter>99.Default\06.Parser\00.Default</Filter>
     </ClCompile>
-    <ClCompile Include="Parser.cpp">
-      <Filter>99.Default\06.Parser</Filter>
-    </ClCompile>
     <ClCompile Include="CTexture.cpp">
       <Filter>99.Default\05.TextManager</Filter>
     </ClCompile>
@@ -203,6 +209,36 @@
     </ClCompile>
     <ClCompile Include="CDirectInput.cpp">
       <Filter>99.Default\01.DirectX</Filter>
+    </ClCompile>
+    <ClCompile Include="EnemyFighter.cpp">
+      <Filter>03.GameObject\02.Enemey%28데코레이터패턴쓸것%29\02-1. NormalMob\Fighter</Filter>
+    </ClCompile>
+    <ClCompile Include="AntiAir.cpp">
+      <Filter>03.GameObject\02.Enemey%28데코레이터패턴쓸것%29\02-1. NormalMob\AA</Filter>
+    </ClCompile>
+    <ClCompile Include="CEnemyBomber.cpp">
+      <Filter>03.GameObject\02.Enemey%28데코레이터패턴쓸것%29\02-1. NormalMob\Bomber</Filter>
+    </ClCompile>
+    <ClCompile Include="SpriteParser.cpp">
+      <Filter>99.Default\06.Parser\01.SpriteParser</Filter>
+    </ClCompile>
+    <ClCompile Include="GameFlowParser.cpp">
+      <Filter>99.Default\06.Parser\03.GameFlowParser</Filter>
+    </ClCompile>
+    <ClCompile Include="EnemyBullet.cpp">
+      <Filter>03.GameObject\03.EnemyBullet</Filter>
+    </ClCompile>
+    <ClCompile Include="Item.cpp">
+      <Filter>03.GameObject\06.Item</Filter>
+    </ClCompile>
+    <ClCompile Include="PowerUp.cpp">
+      <Filter>03.GameObject\06.Item\01.PowerUp</Filter>
+    </ClCompile>
+    <ClCompile Include="Bomb.cpp">
+      <Filter>03.GameObject\06.Item\03.Bomb</Filter>
+    </ClCompile>
+    <ClCompile Include="GoldBar.cpp">
+      <Filter>03.GameObject\06.Item\02.GoldBar</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -217,9 +253,6 @@
     </ClInclude>
     <ClInclude Include="Player.h">
       <Filter>03.GameObject\00.Player</Filter>
-    </ClInclude>
-    <ClInclude Include="HitRange.h">
-      <Filter>02.HitRange</Filter>
     </ClInclude>
     <ClInclude Include="SpriteResource.h">
       <Filter>99.Default\03.SpirteResource</Filter>
@@ -260,9 +293,6 @@
     <ClInclude Include="PlayerBullet.h">
       <Filter>03.GameObject\01..PlayerBullet</Filter>
     </ClInclude>
-    <ClInclude Include="EnemyPlane.h">
-      <Filter>03.GameObject\02.Enemey%28데코레이터패턴쓸것%29\02-1. NormalMob\Plane</Filter>
-    </ClInclude>
     <ClInclude Include="Enemy.h">
       <Filter>03.GameObject\02.Enemey%28데코레이터패턴쓸것%29</Filter>
     </ClInclude>
@@ -277,9 +307,6 @@
     </ClInclude>
     <ClInclude Include="tinyxml.h">
       <Filter>99.Default\06.Parser\00.Default</Filter>
-    </ClInclude>
-    <ClInclude Include="Parser.h">
-      <Filter>99.Default\06.Parser</Filter>
     </ClInclude>
     <ClInclude Include="CTexture.h">
       <Filter>99.Default\05.TextManager</Filter>
@@ -296,6 +323,36 @@
     <ClInclude Include="Scene.h">
       <Filter>01.Scene</Filter>
     </ClInclude>
+    <ClInclude Include="EnemyFighter.h">
+      <Filter>03.GameObject\02.Enemey%28데코레이터패턴쓸것%29\02-1. NormalMob\Fighter</Filter>
+    </ClInclude>
+    <ClInclude Include="AntiAir.h">
+      <Filter>03.GameObject\02.Enemey%28데코레이터패턴쓸것%29\02-1. NormalMob\AA</Filter>
+    </ClInclude>
+    <ClInclude Include="CEnemyBomber.h">
+      <Filter>03.GameObject\02.Enemey%28데코레이터패턴쓸것%29\02-1. NormalMob\Bomber</Filter>
+    </ClInclude>
+    <ClInclude Include="SpriteParser.h">
+      <Filter>99.Default\06.Parser\01.SpriteParser</Filter>
+    </ClInclude>
+    <ClInclude Include="GameFlowParser.h">
+      <Filter>99.Default\06.Parser\03.GameFlowParser</Filter>
+    </ClInclude>
+    <ClInclude Include="EnemyBullet.h">
+      <Filter>03.GameObject\03.EnemyBullet</Filter>
+    </ClInclude>
+    <ClInclude Include="Item.h">
+      <Filter>03.GameObject\06.Item</Filter>
+    </ClInclude>
+    <ClInclude Include="PowerUp.h">
+      <Filter>03.GameObject\06.Item\01.PowerUp</Filter>
+    </ClInclude>
+    <ClInclude Include="Bomb.h">
+      <Filter>03.GameObject\06.Item\03.Bomb</Filter>
+    </ClInclude>
+    <ClInclude Include="GoldBar.h">
+      <Filter>03.GameObject\06.Item\02.GoldBar</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Text Include="Text.txt">
@@ -306,8 +363,12 @@
     <Xml Include="..\Script\TextureList.xml">
       <Filter>소스 파일</Filter>
     </Xml>
-    <Xml Include="Stage1.xml">
+    <Xml Include="..\Script\Stage1.xml">
       <Filter>소스 파일</Filter>
     </Xml>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ClassDiagram.cd" />
+    <None Include="ClassDiagram1.cd" />
   </ItemGroup>
 </Project>

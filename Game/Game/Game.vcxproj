@@ -162,13 +162,21 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="AntiAir.cpp" />
     <ClCompile Include="CBackground.cpp" />
+    <ClCompile Include="Bomb.cpp" />
+    <ClCompile Include="CEnemyBomber.cpp" />
     <ClCompile Include="CDirectInput.cpp" />
-    <ClCompile Include="Parser.cpp" />
+    <ClCompile Include="GoldBar.cpp" />
+    <ClCompile Include="EnemyBullet.cpp" />
+    <ClCompile Include="GameFlowParser.cpp" />
+    <ClCompile Include="Item.cpp" />
+    <ClCompile Include="PowerUp.cpp" />
+    <ClCompile Include="SpriteParser.cpp" />
     <ClCompile Include="Setting.cpp" />
     <ClCompile Include="Sprite.cpp" />
     <ClCompile Include="Enemy.cpp" />
-    <ClCompile Include="EnemyPlane.cpp" />
+    <ClCompile Include="EnemyFighter.cpp" />
     <ClCompile Include="GameButton.cpp" />
     <ClCompile Include="Clock.cpp" />
     <ClCompile Include="MainGame.cpp" />
@@ -179,7 +187,6 @@
     <ClCompile Include="Direct.cpp" />
     <ClCompile Include="GameInfo.cpp" />
     <ClCompile Include="GameObject.cpp" />
-    <ClCompile Include="HitRange.cpp" />
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="Stage.cpp" />
     <ClCompile Include="Player.cpp" />
@@ -194,14 +201,22 @@
     <ClCompile Include="UI.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="AntiAir.h" />
     <ClInclude Include="CBackground.h" />
+    <ClInclude Include="Bomb.h" />
+    <ClInclude Include="CEnemyBomber.h" />
     <ClInclude Include="CDirectInput.h" />
-    <ClInclude Include="Parser.h" />
+    <ClInclude Include="GoldBar.h" />
+    <ClInclude Include="EnemyBullet.h" />
+    <ClInclude Include="GameFlowParser.h" />
+    <ClInclude Include="Item.h" />
+    <ClInclude Include="PowerUp.h" />
+    <ClInclude Include="SpriteParser.h" />
     <ClInclude Include="Scene.h" />
     <ClInclude Include="Setting.h" />
     <ClInclude Include="Sprite.h" />
     <ClInclude Include="Enemy.h" />
-    <ClInclude Include="EnemyPlane.h" />
+    <ClInclude Include="EnemyFighter.h" />
     <ClInclude Include="GameButton.h" />
     <ClInclude Include="Clock.h" />
     <ClInclude Include="MainGame.h" />
@@ -213,7 +228,6 @@
     <ClInclude Include="DirectHeader.h" />
     <ClInclude Include="GameInfo.h" />
     <ClInclude Include="GameObject.h" />
-    <ClInclude Include="HitRange.h" />
     <ClInclude Include="Stage.h" />
     <ClInclude Include="Player.h" />
     <ClInclude Include="SpriteResource.h" />
@@ -226,13 +240,19 @@
     <ClInclude Include="UserFunction.h" />
   </ItemGroup>
   <ItemGroup>
+    <Xml Include="..\Script\Stage1.xml">
+      <SubType>Designer</SubType>
+    </Xml>
     <Xml Include="..\Script\TextureList.xml">
       <SubType>Designer</SubType>
     </Xml>
-    <Xml Include="Stage1.xml" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="Text.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ClassDiagram.cd" />
+    <None Include="ClassDiagram1.cd" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

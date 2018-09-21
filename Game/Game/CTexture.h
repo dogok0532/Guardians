@@ -6,40 +6,43 @@
 #include "Sprite.h"
 using namespace std;
 
-class ObjectInfo;
+
 class CSprite;
 class CTexture
 {
 private:
 	LPDIRECT3DTEXTURE9 m_pTexture=NULL;
 	D3DXVECTOR3 m_vecSize;	//가로세로 크기
-	ObjectInfo* m_pGameInfo=NULL;
 	static LPD3DXSPRITE m_pSprite;
-	D3DXMATRIX matWorld;
+	D3DXMATRIX m_matWorld;
 	map<wstring,CSprite*>  mapSprite;
 
 	D3DCOLOR m_ColorKey;
 
+
+
+private:
+	LPD3DXLINE JudgeLine;
+
 public:
-	void SetTexture(wstring path, D3DCOLOR ColorKey);	//path가 곧 이름
 	void SetSprite(wstring name, CSprite* pSprite);
 	void SetSprite(wstring name, spriteInfo* SpriteInfo );
 
 public:
 	D3DXVECTOR3 GetSize();
-	void SetInfo(ObjectInfo* pObjectInfo);
+	D3DXVECTOR3 GetSpriteSize(wstring name);
+
 
 public:
 	
-	
-	void Render();
 
 	//-----차후 아랫걸로 교체-----//
-	void Draw(wstring spriteName, int frame, ObjectInfo* pGameInfo);
-	void DrawWholeTexture(ObjectInfo* pGameInfo);
+	void Draw(wstring spriteName, int frame, RenderInfo* pGameInfo);
+	void DrawWholeTexture(RenderInfo* pGameInfo);
+	void DrawJudgeLine(wstring spriteName, RenderInfo* pGameInfo,D3DXMATRIX* pMatrix);
 
 private:
-	void UpdateMat();
+	void UpdateMat(RenderInfo* pGameInfo);
 	
 public:
 	void Release();
@@ -52,6 +55,9 @@ public:
 	~CTexture();
 public:
 	void SetDevice(wstring fileName,D3DCOLOR color);
+
+
+
 	
 private:
 	int iFrameX;

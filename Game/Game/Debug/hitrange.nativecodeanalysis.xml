@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DEFECTS>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>d:\졸프\리포지토리\guardians\game\game\</FILEPATH>
+      <FILENAME>hitrange.cpp</FILENAME>
+      <LINE>5</LINE>
+      <COLUMN>11</COLUMN>
+    </SFA>
+    <DEFECTCODE>26495</DEFECTCODE>
+    <DESCRIPTION>Variable 'CHitRange::m_fY' is uninitialized. Always initialize a member variable (type.6).</DESCRIPTION>
+    <FUNCTION>CHitRange::{ctor}</FUNCTION>
+    <DECORATED>??0CHitRange@@QAE@XZ</DECORATED>
+    <FUNCLINE>5</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>d:\졸프\리포지토리\guardians\game\game\</FILEPATH>
+      <FILENAME>hitrange.cpp</FILENAME>
+      <LINE>5</LINE>
+      <COLUMN>11</COLUMN>
+    </SFA>
+    <DEFECTCODE>26495</DEFECTCODE>
+    <DESCRIPTION>Variable 'CHitRange::m_fX' is uninitialized. Always initialize a member variable (type.6).</DESCRIPTION>
+    <FUNCTION>CHitRange::{ctor}</FUNCTION>
+    <DECORATED>??0CHitRange@@QAE@XZ</DECORATED>
+    <FUNCLINE>5</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+</DEFECTS>

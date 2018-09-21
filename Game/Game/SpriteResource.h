@@ -10,20 +10,18 @@ using namespace std;
 class CSpriteResource
 {
 private:
-	map<wstring, CTexture*> mapTexture;
 
 	map<wstring, CTexture*> mapTextureFix;//수정된 텍스처 맵
 
 
 public:
-	void AddImageFile(wstring, int FrameX,int FrameY);
 
+	void Render(wstring Texture, wstring Sprite, int Frame, RenderInfo* pGameInfo);
+	void RenderWholeTexture(wstring Texture, RenderInfo* pGameInfo);
 
-	CTexture* GetTextureInfo(wstring);
-	
-	void Render(wstring Texture, wstring Sprite, int Frame, ObjectInfo* pGameInfo);
+	D3DXVECTOR3 GetTextureSize(wstring Texture);
+	D3DXVECTOR3 GetSpriteSize(wstring Texture, wstring Sprite);
 
-	void RenderWholeTexture(wstring Texture, ObjectInfo* pGameInfo);
 public:
 	CSpriteResource();
 	~CSpriteResource();

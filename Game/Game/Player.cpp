@@ -21,8 +21,7 @@ void CPlayer::Update(float deltaTime)
 
 void CPlayer::Render()
 {	
-	Draw(L"Enemy_BattleShip", L"DestroyedBody", 0);
-	CMainGame::GetInstance()->GetSpriteResource()->RenderWholeTexture(L"Enemy_Fighter", &m_GameInfo);
+	Draw();
 }
 
 bool CPlayer::Destroy()
@@ -81,14 +80,14 @@ void CPlayer::Move(float deltaTime)
 	}
 
 	//범위 넘지 못하게 막기
-	if (m_GameInfo.vecPos.x > WINCX/2 + GAMESIZE_X/2)
-		m_GameInfo.vecPos.x = WINCX / 2 + GAMESIZE_X / 2;
+	if (m_GameInfo.vecPos.x > GAMESIZE_X)
+		m_GameInfo.vecPos.x = GAMESIZE_X;
 
 	if (m_GameInfo.vecPos.y > GAMESIZE_Y)
 		m_GameInfo.vecPos.y = GAMESIZE_Y;
 
-	if (m_GameInfo.vecPos.x <  WINCX / 2 - GAMESIZE_X / 2)
-		m_GameInfo.vecPos.x = WINCX / 2 - GAMESIZE_X / 2;
+	if (m_GameInfo.vecPos.x <  0)
+		m_GameInfo.vecPos.x = 0;
 
 	if (m_GameInfo.vecPos.y < 0)
 		m_GameInfo.vecPos.y = 0;
@@ -109,16 +108,12 @@ CGameObject* CPlayer::MakeBullet(float fAngle)	//팩토리 메서드를 통해 Player의 �
 
 CPlayer::CPlayer()
 {
-	m_vecImage.push_back(CMainGame::GetInstance()->
-		GetSpriteResource()->GetTextureInfo(L"User_Center"));
-	m_vecImage.push_back(CMainGame::GetInstance()->
-		GetSpriteResource()->GetTextureInfo(L"User_Left"));
-	m_vecImage.push_back(CMainGame::GetInstance()->
-		GetSpriteResource()->GetTextureInfo(L"User_Right"));
-
-	if(m_vecImage.size()!=0)
-		SetInfoToTexture();
+	m_strTextureName = L"Player";
+	m_strSpriteName = L"Normal";
 	
+
+	SetSizeAsSprite();
+
 	m_GameInfo.vecPos = { 400,400,0 };
 
 	fFireCycle = 0.1f;

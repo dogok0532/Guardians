@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DEFECTS>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>d:\졸프\리포지토리\guardians\game\directx\include\</FILEPATH>
+      <FILENAME>dinput.h</FILENAME>
+      <LINE>4321</LINE>
+      <COLUMN>25</COLUMN>
+    </SFA>
+    <DEFECTCODE>28251</DEFECTCODE>
+    <DESCRIPTION>'joyConfigChanged'에 대한 주석이 일치하지 않습니다. 이 인스턴스에는 주석 없음이(가) 있습니다. c:\program files (x86)\windows kits\10\include\10.0.17134.0\um\joystickapi.h(431)을(를) 참조하십시오. </DESCRIPTION>
+    <FUNCTION>joyConfigChanged</FUNCTION>
+    <DECORATED>joyConfigChanged@4</DECORATED>
+    <FUNCLINE>4321</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>d:\졸프\리포지토리\guardians\game\game\</FILEPATH>
+      <FILENAME>cdirectinput.cpp</FILENAME>
+      <LINE>70</LINE>
+      <COLUMN>14</COLUMN>
+    </SFA>
+    <DEFECTCODE>26495</DEFECTCODE>
+    <DESCRIPTION>Variable 'CDirectInput::m_keyboard' is uninitialized. Always initialize a member variable (type.6).</DESCRIPTION>
+    <FUNCTION>CDirectInput::{ctor}</FUNCTION>
+    <DECORATED>??0CDirectInput@@QAE@XZ</DECORATED>
+    <FUNCLINE>70</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>d:\졸프\리포지토리\guardians\game\game\</FILEPATH>
+      <FILENAME>cdirectinput.cpp</FILENAME>
+      <LINE>70</LINE>
+      <COLUMN>14</COLUMN>
+    </SFA>
+    <DEFECTCODE>26495</DEFECTCODE>
+    <DESCRIPTION>Variable 'CDirectInput::m_directInput' is uninitialized. Always initialize a member variable (type.6).</DESCRIPTION>
+    <FUNCTION>CDirectInput::{ctor}</FUNCTION>
+    <DECORATED>??0CDirectInput@@QAE@XZ</DECORATED>
+    <FUNCLINE>70</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>d:\졸프\리포지토리\guardians\game\game\</FILEPATH>
+      <FILENAME>cdirectinput.cpp</FILENAME>
+      <LINE>70</LINE>
+      <COLUMN>14</COLUMN>
+    </SFA>
+    <DEFECTCODE>26495</DEFECTCODE>
+    <DESCRIPTION>Variable 'CDirectInput::m_mouse' is uninitialized. Always initialize a member variable (type.6).</DESCRIPTION>
+    <FUNCTION>CDirectInput::{ctor}</FUNCTION>
+    <DECORATED>??0CDirectInput@@QAE@XZ</DECORATED>
+    <FUNCLINE>70</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>d:\졸프\리포지토리\guardians\game\game\</FILEPATH>
+      <FILENAME>cdirectinput.cpp</FILENAME>
+      <LINE>70</LINE>
+      <COLUMN>14</COLUMN>
+    </SFA>
+    <DEFECTCODE>26495</DEFECTCODE>
+    <DESCRIPTION>Variable 'CDirectInput::m_keyboardState' is uninitialized. Always initialize a member variable (type.6).</DESCRIPTION>
+    <FUNCTION>CDirectInput::{ctor}</FUNCTION>
+    <DECORATED>??0CDirectInput@@QAE@XZ</DECORATED>
+    <FUNCLINE>70</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+</DEFECTS>

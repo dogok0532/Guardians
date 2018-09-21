@@ -7,47 +7,41 @@
 
 using namespace std;
 
-struct ObjectInfo
-{
-	D3DXVECTOR3 vecPos;	//좌표
-	D3DXVECTOR3 vecSize; //크기
-	D3DXVECTOR3 vecRenderRatio = { 1,1,1 };
 
-	float fDirection = 0;
-	
-};
 
 class CGameObject
 {
+
 protected:
-	ObjectInfo m_GameInfo;
+	RenderInfo m_GameInfo;
 
-	
-
-	vector <CTexture*> m_vecImage;	//이미지파일
 	
 
 	wstring m_strTextureName;
 	wstring m_strSpriteName;
 	int m_iFrame = 0;
 
+	float m_fSpeed=0;
+	float m_fMovingDirection=0;
+
+
 	void Draw(wstring textureName, wstring spriteName, int iFrame);
 	void Draw(wstring textureName, wstring spriteName);
-
+	void Draw(int iFrame);
+	void Draw();
 	void DrawWholeTexture(wstring textureName);
 public:
-	
+	void SetSizeAsSprite(wstring textureName, wstring spriteName);
+	void SetSizeAsSprite();
 
 
 public:
 
 
 	virtual void Update(float deltaTime);
-	virtual void Render();
+	virtual void Render()=0;
 
-	virtual bool Destroy()=0;
 
-	void SetInfoToTexture();	// 객체의 크기(vecSize)를 텍스처의 사이즈로 지정, 여기서 m_vecImage[0] 기준으로 한다.
 
 	void SetPos(D3DXVECTOR3 vecPos);	//Bullet이 생성될때 좌표지정
 	void SetPos(float x, float y, float z=0);
@@ -58,6 +52,30 @@ public:
 
 
 	void SetAngle(float Angle);
+
+
+	bool isOutOfScreen();	//화면에서 벗어났는지 판정
+
+	void SetAdjustIngame();
+	void ResetAdjustIngame();
+
+
+
+
+
+
+
+
+
+private:
+	float m_fSpawnTime;
+	bool m_bMoveByBackground;
+	int iPattern;
+
+public:
+	bool Spawn(float fTimePassed);
+	void SetSpawnInformation(float fX, float fY, float SpawnTime,float fRenderDirection, float fMoveDirection, int iPattern, float fSpeed, bool bMoveByGround);
+
 
 
 public:

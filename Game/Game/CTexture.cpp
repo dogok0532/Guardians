@@ -11,11 +11,6 @@ LPD3DXSPRITE CTexture::m_pSprite;
 
 
 
-void CTexture::SetTexture(wstring path, D3DCOLOR ColorKey)
-{
-
-}
-
 
 void CTexture::SetSprite(wstring name,CSprite* pSprite)
 {
@@ -36,105 +31,155 @@ D3DXVECTOR3 CTexture::GetSize()
 	return m_vecSize;
 }
 
-void CTexture::SetInfo(ObjectInfo* pObjectInfo)
+D3DXVECTOR3 CTexture::GetSpriteSize(wstring name)
 {
-	m_pGameInfo = pObjectInfo;
+	
+	if(NULL!=mapSprite[name])
+		return mapSprite[name]->GetSize();
+
+	return D3DXVECTOR3(0, 0, 0);
 }
 
 
-void CTexture::UpdateMat()	//행렬 정보 업데이트
+
+void CTexture::UpdateMat(RenderInfo* pGameInfo)	//행렬 정보 업데이트
 {
-	D3DXMatrixIdentity(&matWorld);
+	D3DXMatrixIdentity(&m_matWorld);
 
 	D3DXMATRIX matScale;
 	D3DXMatrixScaling(&matScale,
-		m_pGameInfo->vecRenderRatio.x,
-		m_pGameInfo->vecRenderRatio.y,
-		m_pGameInfo->vecRenderRatio.z);
+		pGameInfo->vecRenderRatio.x,
+		pGameInfo->vecRenderRatio.y,
+		pGameInfo->vecRenderRatio.z);
 
 
 	D3DXMATRIX matRotate;
 
 	D3DXMATRIX matTempMove;
 	D3DXMatrixTranslation(&matTempMove,
-		-m_pGameInfo->vecPos.x,
-		-m_pGameInfo->vecPos.y,
-		-m_pGameInfo->vecPos.z);
+		-pGameInfo->vecPos.x,
+		-pGameInfo->vecPos.y,
+		-pGameInfo->vecPos.z);
 
 	matRotate = matTempMove;
 
 	D3DXMATRIX matTempRotate;
-	D3DXMatrixRotationZ(&matTempRotate, m_pGameInfo->fDirection * DEGREE_TO_RADIAN);
+	D3DXMatrixRotationZ(&matTempRotate, pGameInfo->fRenderDirection * DEGREE_TO_RADIAN);
 
 	matRotate *= matTempRotate;
 	D3DXMatrixTranslation(&matTempMove,
-		m_pGameInfo->vecPos.x,
-		m_pGameInfo->vecPos.y,
-		m_pGameInfo->vecPos.z);
+		pGameInfo->vecPos.x,
+		pGameInfo->vecPos.y,
+		pGameInfo->vecPos.z);
 
 	matRotate *= matTempMove;
 
 	D3DXMATRIX matMove;
 	D3DXMatrixTranslation(&matMove, 0, 0, 0);
 
-	matWorld = matRotate * matMove * matScale;
+	m_matWorld = matRotate * matMove * matScale;
+
+	
 
 
 	
 }
 
-void CTexture::Render()	//현재 사용중
-{
-	UpdateMat();
-	m_pSprite->SetTransform(&matWorld);
-	m_pSprite->Draw(m_pTexture, NULL, &(m_vecSize / 2), &(m_pGameInfo->vecPos), DEFAULT_COLOR);
-	D3DXMatrixIdentity(&matWorld);
-	m_pSprite->SetTransform(&matWorld);
-}
 
 
-void CTexture::Draw(wstring spriteName, int frame, ObjectInfo* pGameInfo)	//차후바꿀것
+
+void CTexture::Draw(wstring spriteName, int frame, RenderInfo* pGameInfo)	//차후바꿀것
 {
+	if (spriteName == L"")
+	{
+		DrawWholeTexture(pGameInfo);
+	}
+
 	if (mapSprite[spriteName] == NULL)
+	{
+		printf("Invalid Sprite");
 		return;
+	}
+	pGameInfo;
+	UpdateMat(pGameInfo);
+	m_pSprite->SetTransform(&m_matWorld);
 
-	m_pGameInfo = pGameInfo;
-	UpdateMat();
-	m_pSprite->SetTransform(&matWorld);
 
-	
 
-	RECT rcSrc =  *(mapSprite[spriteName]->GetFrameRect(frame));
-
+	RECT rcSrc = *(mapSprite[spriteName]->GetFrameRect(frame));
 	D3DXVECTOR3 vecCenter = *(mapSprite[spriteName]->GetCenter());
-	m_pSprite->Draw(m_pTexture, &rcSrc, &vecCenter,
-		&(m_pGameInfo->vecPos), DEFAULT_COLOR);
 
-	m_pSprite->SetTransform(&matWorld);
-	
+	int x = pGameInfo->vecPos.x;
+	int y = pGameInfo->vecPos.y;
+	D3DXVECTOR3 vecPos = { (float)x,(float)y,0 };
+
+	m_pSprite->Draw(m_pTexture,&rcSrc, &vecCenter,
+		&vecPos, DEFAULT_COLOR);
+
+	DrawJudgeLine(spriteName, pGameInfo,&m_matWorld);
+
+
 }
 
-void CTexture::DrawWholeTexture(ObjectInfo* pGameInfo)
+void CTexture::DrawWholeTexture(RenderInfo* pGameInfo)
 {
-	m_pGameInfo = pGameInfo;
-	UpdateMat();
-	m_pSprite->SetTransform(&matWorld);
 
-	m_pSprite->Draw(m_pTexture, NULL, &(m_vecSize / 2), &(m_pGameInfo->vecPos), DEFAULT_COLOR);
-	D3DXMatrixIdentity(&matWorld);
+	UpdateMat(pGameInfo);
+	m_pSprite->SetTransform(&m_matWorld);
 
-	m_pSprite->SetTransform(&matWorld);
+	m_pSprite->Draw(m_pTexture, NULL, &(m_vecSize / 2), &(pGameInfo->vecPos), DEFAULT_COLOR);
+	D3DXMatrixIdentity(&m_matWorld);
+
+	m_pSprite->SetTransform(&m_matWorld);
+}
+
+void CTexture::DrawJudgeLine(wstring spriteName, RenderInfo* pGameInfo, D3DXMATRIX* pMatrix)
+{
+	D3DXVECTOR3 vecSize = GetSpriteSize(spriteName);
+	vecSize /= 2.f;
+
+	D3DXVECTOR2 line[5] = { {pGameInfo->vecPos.x - vecSize.x,
+		pGameInfo->vecPos.y - vecSize.y},
+
+		{pGameInfo->vecPos.x + vecSize.x,
+		pGameInfo->vecPos.y - vecSize.y},
+
+		{pGameInfo->vecPos.x + vecSize.x,
+		pGameInfo->vecPos.y + vecSize.y},
+
+		{pGameInfo->vecPos.x - vecSize.x,
+		pGameInfo->vecPos.y + vecSize.y},
+
+		{pGameInfo->vecPos.x - vecSize.x,
+		pGameInfo->vecPos.y - vecSize.y}
+	};
+	D3DXVECTOR4 vec4Result[5];
+
+	for (int i = 0; i < 5; i++)
+	{
+		D3DXVec2Transform(&vec4Result[i], &line[i], pMatrix);
+		
+		line[i] = {vec4Result[i].x,vec4Result[i].y};
+	}
+	JudgeLine->Begin();
+	JudgeLine->Draw(line, 5,  D3DCOLOR_XRGB(255, 0, 0));
+	
+	JudgeLine->End();
 }
 
 void CTexture::Release()
 {
 	if(m_pTexture)
 		m_pTexture->Release();
+
+	if (JudgeLine)
+		JudgeLine->Release();
 }
 
 CTexture::CTexture()
 {
 	
+	HRESULT hr =D3DXCreateLine(CDirect::GetInstance()->GetDevice(), &JudgeLine);
 	
 
 	bMultiFrame = false;
@@ -208,3 +253,4 @@ void CTexture::SetDevice(wstring fileName, D3DCOLOR color)
 
 	m_pSprite = CDirect::GetInstance()->GetSprite();
 }
+

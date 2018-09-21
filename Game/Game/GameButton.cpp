@@ -84,13 +84,8 @@ bool CGameButton::ButtonClicked()
 
 CGameButton::CGameButton()
 {
-	m_vecImage.push_back(CMainGame::GetInstance()->
-		GetSpriteResource()->GetTextureInfo(L"Button"));
-
-	m_vecImage.push_back(CMainGame::GetInstance()->
-		GetSpriteResource()->GetTextureInfo(L"Button2"));
+	m_GameInfo.vecSize = CMainGame::GetInstance()->GetSpriteResource()->GetTextureSize(L"Button");
 	
-	SetInfoToTexture();
 
 	pText = new CText;
 	pText->Init();

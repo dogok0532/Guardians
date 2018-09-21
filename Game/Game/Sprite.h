@@ -36,6 +36,8 @@ public:
 
 	void SetSpriteInfo(spriteInfo* SpriteInfo);
 
+	D3DXVECTOR3 GetSize();
+
 public:
 	CSprite();
 	CSprite(wstring name, int XBegin, int YBegin, int isLine,int XFrame,int YFrame,int XSize, int YSize);

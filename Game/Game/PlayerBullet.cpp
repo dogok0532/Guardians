@@ -3,6 +3,7 @@
 #include <math.h>
 #include <D3dx9math.h>
 #include "MainGame.h"
+#include "GameObject.h"
 
 void CPlayerBullet::Update(float deltaTime)
 {
@@ -10,7 +11,7 @@ void CPlayerBullet::Update(float deltaTime)
 	
 	//--MoveMent의 기본속도를 100으로 맞추고 각도에 따라 이동벡터 변환
 	D3DXMATRIX mat;
-	D3DXMatrixRotationZ(&mat, m_GameInfo.fDirection * DEGREE_TO_RADIAN);
+	D3DXMatrixRotationZ(&mat, m_GameInfo.fRenderDirection * DEGREE_TO_RADIAN);
 	D3DXVec3TransformCoord(&MoveMent, &MoveMent, &mat);
 
 
@@ -22,8 +23,8 @@ void CPlayerBullet::Update(float deltaTime)
 
 void CPlayerBullet::Render()
 {
-	CMainGame::GetInstance()->GetSpriteResource()->Render(L"Player", L"Bullet_1",0,&m_GameInfo );
-	//m_vecImage[0]->Draw();
+	Draw(L"Player", L"Bullet_1",0 );
+	
 }
 
 
@@ -45,11 +46,9 @@ bool CPlayerBullet::Destroy()
 CPlayerBullet::CPlayerBullet()
 {
 
-	m_vecImage.push_back(CMainGame::GetInstance()->
-		GetSpriteResource()->GetTextureInfo(L"User_Missile"));
-
 	
-	SetInfoToTexture();
+	m_GameInfo.vecSize = { 5,5,0 };
+
 	m_fSpeed = 1000;
 }
 

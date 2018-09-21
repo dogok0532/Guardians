@@ -9,12 +9,8 @@ public:
 	virtual void Update(float deltaTime);
 
 
-	virtual void Render();
+	virtual void Render()=0;
 
-
-	virtual bool Destroy() =0;
-
-	//virtual void Attack()=0;
 
 };
 
