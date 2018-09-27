@@ -7,6 +7,5 @@ public class player {
 	}
 	public static void setXY(String xy) {
 		player.xy = xy;   
-		//hi
 	}
 }
