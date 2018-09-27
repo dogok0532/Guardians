@@ -31,8 +31,7 @@ public class console_server {
     }
  }
 }
-
-
+//test
 class receiverthread extends Thread {
  Socket socket; // 정보를 받을 소켓 하나 대기 
 
