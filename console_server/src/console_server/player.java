@@ -6,6 +6,7 @@ public class player {
 		return xy;
 	}
 	public static void setXY(String xy) {
-		player.xy = xy;    
+		player.xy = xy;   
+		//hi
 	}
 }
