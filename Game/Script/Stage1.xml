@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<List>   <!--기본게임 사이즈 600*800-->
+  
+  <Enemy>
+    <Type>Fighter</Type>       <!--생성되는 적 타입-->
+    <Time>30</Time>     <!--생성시간 시간단위:0.1초 -->
+    <Coordinate>        <!--생성좌표-->
+      <X>500</X>
+      <Y>-100</Y>
+    </Coordinate>
+    
+    <RenderDirection>0</RenderDirection>        <!--텍스처를 그릴 회전각도-->
+    <MoveByBackground>0</MoveByBackground>     <!--배경을 따라 움직이는지-->
+    
+    <Speed>500</Speed>
+    <MoveDirection>100</MoveDirection>             <!-- 시작할때 진행방향각도 -->
+
+    <Pattern>0</Pattern> <!--인트값에 따라 클래스에서 결정, 공란시 랜덤-->
+    
+    
+  </Enemy>
+
+  <Item>
+    <Type>PowerUp</Type>
+    <Time>30</Time>    
+    <Coordinate>
+      <X>-100</X>
+      <Y>-100</Y>
+    </Coordinate>
+    
+    <RenderDirection>0</RenderDirection>
+    <MoveByBackground>0</MoveByBackground>
+    
+    <Speed>300</Speed>
+    <MoveDirection>100</MoveDirection>
+    
+    <Pattern>0</Pattern>
+    <!--0일경우 일정패턴에따라 움직임, 1일경우 배경따라 움직임-->
+
+
+  </Item>
+
+  
+</List>

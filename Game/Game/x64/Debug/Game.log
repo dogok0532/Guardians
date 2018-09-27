@@ -1,0 +1,20 @@
+﻿SoundResource.obj : error LNK2019: "__declspec(dllimport) class irrklang::ISoundEngine * __cdecl irrklang::createIrrKlangDevice(enum irrklang::E_SOUND_OUTPUT_DRIVER,int,char const *,char const *)" (__imp_?createIrrKlangDevice@irrklang@@YAPEAVISoundEngine@1@W4E_SOUND_OUTPUT_DRIVER@1@HPEBD1@Z) 외부 기호(참조 위치: "public: void __cdecl CSoundResource::Init(void)" (?Init@CSoundResource@@QEAAXXZ) 함수)에서 확인하지 못했습니다.
+PlayerBullet.obj : error LNK2019: D3DXVec3TransformCoord 외부 기호(참조 위치: "private: virtual void __cdecl CPlayerBullet::Update(float)" (?Update@CPlayerBullet@@EEAAXM@Z) 함수)에서 확인하지 못했습니다.
+PlayerBullet.obj : error LNK2019: D3DXMatrixRotationZ 외부 기호(참조 위치: "private: virtual void __cdecl CPlayerBullet::Update(float)" (?Update@CPlayerBullet@@EEAAXM@Z) 함수)에서 확인하지 못했습니다.
+Texture.obj : error LNK2001: D3DXMatrixRotationZ 외부 기호를 확인할 수 없습니다.
+Direct.obj : error LNK2019: Direct3DCreate9 외부 기호(참조 위치: "public: long __cdecl CDirect::InitD3D(struct HWND__ *)" (?InitD3D@CDirect@@QEAAJPEAUHWND__@@@Z) 함수)에서 확인하지 못했습니다.
+Direct.obj : error LNK2019: D3DXCreateSprite 외부 기호(참조 위치: "public: long __cdecl CDirect::InitD3D(struct HWND__ *)" (?InitD3D@CDirect@@QEAAJPEAUHWND__@@@Z) 함수)에서 확인하지 못했습니다.
+Text.obj : error LNK2019: D3DXCreateFontIndirectW 외부 기호(참조 위치: "public: void __cdecl CText::Init(void)" (?Init@CText@@QEAAXXZ) 함수)에서 확인하지 못했습니다.
+Texture.obj : error LNK2019: D3DXMatrixMultiply 외부 기호(참조 위치: "public: struct D3DXMATRIX __cdecl D3DXMATRIX::operator*(struct D3DXMATRIX const &)const " (??DD3DXMATRIX@@QEBA?AU0@AEBU0@@Z) 함수)에서 확인하지 못했습니다.
+Texture.obj : error LNK2019: D3DXMatrixScaling 외부 기호(참조 위치: "public: void __cdecl Texture::Update(void)" (?Update@Texture@@QEAAXXZ) 함수)에서 확인하지 못했습니다.
+Texture.obj : error LNK2019: D3DXMatrixTranslation 외부 기호(참조 위치: "public: void __cdecl Texture::Update(void)" (?Update@Texture@@QEAAXXZ) 함수)에서 확인하지 못했습니다.
+Texture.obj : error LNK2019: D3DXGetImageInfoFromFileW 외부 기호(참조 위치: "private: void __cdecl Texture::SetDevice(class std::basic_string<wchar_t,struct std::char_traits<wchar_t>,class std::allocator<wchar_t> >)" (?SetDevice@Texture@@AEAAXV?$basic_string@_WU?$char_traits@_W@std@@V?$allocator@_W@2@@std@@@Z) 함수)에서 확인하지 못했습니다.
+Texture.obj : error LNK2019: D3DXCreateTextureFromFileExW 외부 기호(참조 위치: "private: void __cdecl Texture::SetDevice(class std::basic_string<wchar_t,struct std::char_traits<wchar_t>,class std::allocator<wchar_t> >)" (?SetDevice@Texture@@AEAAXV?$basic_string@_WU?$char_traits@_W@std@@V?$allocator@_W@2@@std@@@Z) 함수)에서 확인하지 못했습니다.
+..\\DirectX\\Lib\x86\d2d1.lib : warning LNK4272: 'x86' 라이브러리 컴퓨터 종류가 'x64' 대상 컴퓨터 종류와 충돌합니다.
+..\\DirectX\\Lib\x86\Dwrite.lib : warning LNK4272: 'x86' 라이브러리 컴퓨터 종류가 'x64' 대상 컴퓨터 종류와 충돌합니다.
+..\\DirectX\\Lib\x86\D3d9.lib : warning LNK4272: 'x86' 라이브러리 컴퓨터 종류가 'x64' 대상 컴퓨터 종류와 충돌합니다.
+..\\DirectX\\Lib\x86\D3dx9.lib : warning LNK4272: 'x86' 라이브러리 컴퓨터 종류가 'x64' 대상 컴퓨터 종류와 충돌합니다.
+..\\DirectX\\Lib\x86\dsound.lib : warning LNK4272: 'x86' 라이브러리 컴퓨터 종류가 'x64' 대상 컴퓨터 종류와 충돌합니다.
+..\\DirectX\\Lib\x86\dxguid.lib : warning LNK4272: 'x86' 라이브러리 컴퓨터 종류가 'x64' 대상 컴퓨터 종류와 충돌합니다.
+..\\Sound\lib\irrKlang.lib : warning LNK4272: 'x86' 라이브러리 컴퓨터 종류가 'x64' 대상 컴퓨터 종류와 충돌합니다.
+D:\GitHub\Game\x64\Debug\Game.exe : fatal error LNK1120: 11개의 확인할 수 없는 외부 참조입니다.

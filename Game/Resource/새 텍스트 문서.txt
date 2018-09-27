@@ -1,0 +1,16 @@
+
+Default Path	../\Sprite\
+
+Format: png
+
+NameList:
+	Enemy_Bullet
+		Key°ª,
+	Enemy_Helicpoter_Clear
+	Enemy_Helicpoter_Crushed
+	Enemy_SpaceShip_Clear
+	Enemy_SpaceShip_Crushed
+	Enemy_Tank_Clear
+	Enemy_Tank_Crushed
+	Stage_Land
+

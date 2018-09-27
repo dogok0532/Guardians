@@ -1,0 +1,751 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<TextureList>
+  <Texture>
+    <Name>Background_Ocean</Name>
+    <Path>../\Resource\Sprite\Background_Ocean.png</Path>
+    <BackgroundRGB/>
+    <!--배경RGB값,없을경우 투명-->
+    <Sprite/>
+    <!--Sprite가 빈값일경우 Texture = Sprite = Frame -->
+  </Texture>
+
+
+  <Texture>
+    <Name>Background_Space</Name>
+    <Path>../\Resource\Sprite\Background_Space.png</Path>
+    <BackgroundRGB/>
+    <Sprite/>
+  </Texture>
+
+  <Texture>
+    <Name>Button</Name>
+    <Path>../\Resource\Sprite\Button.png</Path>
+    <BackgroundRGB/>
+    <Sprite/>
+  </Texture>
+
+  <Texture>
+    <Name>Button2</Name>
+    <Path>../\Resource\Sprite\Button2.png</Path>
+    <BackgroundRGB/>
+    <Sprite/>
+  </Texture>
+
+
+
+  <Texture>
+    <Name>Enemy_BattleShip</Name>
+    <Path>../\Resource\Sprite\Enemy_BattleShip.png</Path>
+    <BackgroundRGB>
+      <R>255</R>
+      <G>255</G>
+      <B>255</B>
+    </BackgroundRGB>
+    <Sprite>
+      <!--SetSprite-->
+      <Name>Body</Name>
+      <XBegin>13</XBegin>
+      <YBegin>26</YBegin>
+      <isLine>0</isLine>
+      <FrameCount>1</FrameCount>
+      <XFrame>1</XFrame>
+      <YFrame>1</YFrame>
+      <XSize>150</XSize>
+      <YSize>678</YSize>
+    </Sprite>
+    <Sprite>
+      <Name>DestroyedBody</Name>
+      <XBegin>172</XBegin>
+      <YBegin>323</YBegin>
+      <isLine>0</isLine>
+      <FrameCount>1</FrameCount>
+      <XFrame>1</XFrame>
+      <YFrame>1</YFrame>
+      <XSize>150</XSize>
+      <YSize>381</YSize>
+    </Sprite>
+  </Texture>
+
+  <Texture>
+    <Name>Effect</Name>
+    <Path>../\Resource\Sprite\Effect.png</Path>
+    <BackgroundRGB>
+      <R>0</R>
+      <G>248</G>
+      <B>0</B>
+    </BackgroundRGB>
+    <Sprite>
+      <Name>Effect1</Name>
+      <XBegin>0</XBegin>
+      <YBegin>0</YBegin>
+      <isLine>1</isLine>
+      <FrameCount>17</FrameCount>
+      <XFrame>17</XFrame>
+      <YFrame>1</YFrame>
+      <XSize>16</XSize>
+      <YSize>48</YSize>
+    </Sprite>
+
+    <Sprite>
+      <Name>Effect2</Name>
+      <XBegin>0</XBegin>
+      <YBegin>51</YBegin>
+      <isLine>1</isLine>
+      <FrameCount>15</FrameCount>
+      <XFrame>4</XFrame>
+      <YFrame>4</YFrame>
+      <XSize>64</XSize>
+      <YSize>64</YSize>
+    </Sprite>
+
+    <Sprite>
+      <Name>Effect3</Name>
+      <XBegin>0</XBegin>
+      <YBegin>183</YBegin>
+      <isLine>1</isLine>
+      <FrameCount>15</FrameCount>
+      <XFrame>4</XFrame>
+      <YFrame>4</YFrame>
+      <XSize>128</XSize>
+      <YSize>104</YSize>
+    </Sprite>
+
+    <Sprite>
+      <Name>Effect4</Name>
+      <XBegin>0</XBegin>
+      <YBegin>605</YBegin>
+      <isLine>1</isLine>
+      <FrameCount>15</FrameCount>
+      <XFrame>4</XFrame>
+      <YFrame>5</YFrame>
+      <XSize>128</XSize>
+      <YSize>128</YSize>
+    </Sprite>
+
+    <Sprite>
+      <Name>Effect5</Name>
+      <XBegin>0</XBegin>
+      <YBegin>1252</YBegin>
+      <isLine>1</isLine>
+      <FrameCount>16</FrameCount>
+      <XFrame>8</XFrame>
+      <YFrame>2</YFrame>
+      <XSize>64</XSize>
+      <YSize>64</YSize>
+    </Sprite>
+
+    <Sprite>
+      <Name>Effect6</Name>
+      <XBegin>0</XBegin>
+      <YBegin>1384</YBegin>
+      <isLine>1</isLine>
+      <FrameCount>10</FrameCount>
+      <XFrame>10</XFrame>
+      <YFrame>1</YFrame>
+      <XSize>16</XSize>
+      <YSize>16</YSize>
+    </Sprite>
+
+    <Sprite>
+      <Name>Effect7</Name>
+      <XBegin>172</XBegin>
+      <YBegin>1384</YBegin>
+      <isLine>1</isLine>
+      <FrameCount>12</FrameCount>
+      <XFrame>12</XFrame>
+      <YFrame>1</YFrame>
+      <XSize>16</XSize>
+      <YSize>16</YSize>
+    </Sprite>
+
+    <Sprite>
+      <Name>Effect8</Name>
+      <XBegin>0</XBegin>
+      <YBegin>1403</YBegin>
+      <isLine>1</isLine>
+      <FrameCount>12</FrameCount>
+      <XFrame>12</XFrame>
+      <YFrame>1</YFrame>
+      <XSize>48</XSize>
+      <YSize>48</YSize>
+    </Sprite>
+
+
+    <Sprite>
+      <Name>Effect9</Name>
+      <XBegin>0</XBegin>
+      <YBegin>1454</YBegin>
+      <isLine>1</isLine>
+      <FrameCount>14</FrameCount>
+      <XFrame>14</XFrame>
+      <YFrame>1</YFrame>
+      <XSize>32</XSize>
+      <YSize>32</YSize>
+    </Sprite>
+
+    <Sprite>
+      <Name>Effect10</Name>
+      <XBegin>0</XBegin>
+      <YBegin>1403</YBegin>
+      <isLine>1</isLine>
+      <FrameCount>14</FrameCount>
+      <XFrame>14</XFrame>
+      <YFrame>1</YFrame>
+      <XSize>32</XSize>
+      <YSize>56</YSize>
+    </Sprite>
+
+    <Sprite>
+      <Name>Effect11</Name>
+      <XBegin>0</XBegin>
+      <YBegin>1548</YBegin>
+      <isLine>1</isLine>
+      <FrameCount>16</FrameCount>
+      <XFrame>8</XFrame>
+      <YFrame>2</YFrame>
+      <XSize>56</XSize>
+      <YSize>32</YSize>
+    </Sprite>
+
+    <Sprite>
+      <Name>Effect12</Name>
+      <XBegin>0</XBegin>
+      <YBegin>1616</YBegin>
+      <isLine>1</isLine>
+      <FrameCount>8</FrameCount>
+      <XFrame>8</XFrame>
+      <YFrame>1</YFrame>
+      <XSize>48</XSize>
+      <YSize>48</YSize>
+    </Sprite>
+
+    <Sprite>
+      <Name>Effect13</Name>
+      <XBegin>0</XBegin>
+      <YBegin>1667</YBegin>
+      <isLine>1</isLine>
+      <FrameCount>8</FrameCount>
+      <XFrame>8</XFrame>
+      <YFrame>1</YFrame>
+      <XSize>32</XSize>
+      <YSize>32</YSize>
+    </Sprite>
+
+    <Sprite>
+      <Name>Effect14</Name>
+      <XBegin>0</XBegin>
+      <YBegin>1702</YBegin>
+      <isLine>1</isLine>
+      <FrameCount>8</FrameCount>
+      <XFrame>8</XFrame>
+      <YFrame>1</YFrame>
+      <XSize>32</XSize>
+      <YSize>32</YSize>
+    </Sprite>
+
+    <Sprite>
+      <Name>Effect15</Name>
+      <XBegin>0</XBegin>
+      <YBegin>1737</YBegin>
+      <isLine>1</isLine>
+      <FrameCount>10</FrameCount>
+      <XFrame>10</XFrame>
+      <YFrame>1</YFrame>
+      <XSize>16</XSize>
+      <YSize>16</YSize>
+    </Sprite>
+
+    <Sprite>
+      <Name>Effect16</Name>
+      <XBegin>0</XBegin>
+      <YBegin>1756</YBegin>
+      <isLine>1</isLine>
+      <FrameCount>12</FrameCount>
+      <XFrame>12</XFrame>
+      <YFrame>1</YFrame>
+      <XSize>24</XSize>
+      <YSize>24</YSize>
+    </Sprite>
+
+    <Sprite>
+      <Name>Effect17</Name>
+      <XBegin>0</XBegin>
+      <YBegin>1783</YBegin>
+      <isLine>1</isLine>
+      <FrameCount>12</FrameCount>
+      <XFrame>12</XFrame>
+      <YFrame>1</YFrame>
+      <XSize>32</XSize>
+      <YSize>32</YSize>
+    </Sprite>
+
+    <Sprite>
+      <Name>Effect18</Name>
+      <XBegin>0</XBegin>
+      <YBegin>1837</YBegin>
+      <isLine>1</isLine>
+      <FrameCount>12</FrameCount>
+      <XFrame>12</XFrame>
+      <YFrame>1</YFrame>
+      <XSize>24</XSize>
+      <YSize>24</YSize>
+    </Sprite>
+
+    <Sprite>
+      <Name>Effect19</Name>
+      <XBegin>0</XBegin>
+      <YBegin>1864</YBegin>
+      <isLine>1</isLine>
+      <FrameCount>12</FrameCount>
+      <XFrame>12</XFrame>
+      <YFrame>1</YFrame>
+      <XSize>32</XSize>
+      <YSize>32</YSize>
+    </Sprite>
+
+    <Sprite>
+      <Name>Effect20</Name>
+      <XBegin>0</XBegin>
+      <YBegin>1899</YBegin>
+      <isLine>1</isLine>
+      <FrameCount>12</FrameCount>
+      <XFrame>12</XFrame>
+      <YFrame>1</YFrame>
+      <XSize>32</XSize>
+      <YSize>32</YSize>
+    </Sprite>
+
+    <Sprite>
+      <Name>Effect21</Name>
+      <XBegin>0</XBegin>
+      <YBegin>1934</YBegin>
+      <isLine>1</isLine>
+      <FrameCount>12</FrameCount>
+      <XFrame>12</XFrame>
+      <YFrame>1</YFrame>
+      <XSize>24</XSize>
+      <YSize>24</YSize>
+    </Sprite>
+
+    <Sprite>
+      <Name>Effect22</Name>
+      <XBegin>0</XBegin>
+      <YBegin>1960</YBegin>
+      <isLine>1</isLine>
+      <FrameCount>12</FrameCount>
+      <XFrame>12</XFrame>
+      <YFrame>1</YFrame>
+      <XSize>24</XSize>
+      <YSize>22</YSize>
+    </Sprite>
+
+    <Sprite>
+      <Name>Effect23</Name>
+      <XBegin>0</XBegin>
+      <YBegin>1986</YBegin>
+      <isLine>1</isLine>
+      <FrameCount>12</FrameCount>
+      <XFrame>12</XFrame>
+      <YFrame>1</YFrame>
+      <XSize>32</XSize>
+      <YSize>32</YSize>
+    </Sprite>
+
+    <Sprite>
+      <Name>Effect24</Name>
+      <XBegin>0</XBegin>
+      <YBegin>2021</YBegin>
+      <isLine>1</isLine>
+      <FrameCount>12</FrameCount>
+      <XFrame>12</XFrame>
+      <YFrame>1</YFrame>
+      <XSize>32</XSize>
+      <YSize>32</YSize>
+    </Sprite>
+
+    <Sprite>
+      <Name>Effect25</Name>
+      <XBegin>0</XBegin>
+      <YBegin>2056</YBegin>
+      <isLine>1</isLine>
+      <FrameCount>12</FrameCount>
+      <XFrame>12</XFrame>
+      <YFrame>1</YFrame>
+      <XSize>16</XSize>
+      <YSize>16</YSize>
+    </Sprite>
+
+    <Sprite>
+      <Name>Effect26</Name>
+      <XBegin>0</XBegin>
+      <YBegin>2075</YBegin>
+      <isLine>1</isLine>
+      <FrameCount>12</FrameCount>
+      <XFrame>12</XFrame>
+      <YFrame>1</YFrame>
+      <XSize>24</XSize>
+      <YSize>24</YSize>
+    </Sprite>
+
+    <Sprite>
+      <Name>Effect27</Name>
+      <XBegin>0</XBegin>
+      <YBegin>2102</YBegin>
+      <isLine>1</isLine>
+      <FrameCount>12</FrameCount>
+      <XFrame>12</XFrame>
+      <YFrame>1</YFrame>
+      <XSize>32</XSize>
+      <YSize>32</YSize>
+    </Sprite>
+
+    <Sprite>
+      <Name>Effect28</Name>
+      <XBegin>0</XBegin>
+      <YBegin>2137</YBegin>
+      <isLine>1</isLine>
+      <FrameCount>12</FrameCount>
+      <XFrame>12</XFrame>
+      <YFrame>1</YFrame>
+      <XSize>32</XSize>
+      <YSize>32</YSize>
+    </Sprite>
+
+    <Sprite>
+      <Name>Effect29</Name>
+      <XBegin>0</XBegin>
+      <YBegin>2172</YBegin>
+      <isLine>1</isLine>
+      <FrameCount>12</FrameCount>
+      <XFrame>12</XFrame>
+      <YFrame>1</YFrame>
+      <XSize>48</XSize>
+      <YSize>48</YSize>
+    </Sprite>
+
+    <Sprite>
+      <Name>Effect30</Name>
+      <XBegin>0</XBegin>
+      <YBegin>2223</YBegin>
+      <isLine>1</isLine>
+      <FrameCount>12</FrameCount>
+      <XFrame>6</XFrame>
+      <YFrame>2</YFrame>
+      <XSize>64</XSize>
+      <YSize>64</YSize>
+    </Sprite>
+
+    <Sprite>
+      <Name>Effect31</Name>
+      <XBegin>0</XBegin>
+      <YBegin>2355</YBegin>
+      <isLine>1</isLine>
+      <FrameCount>10</FrameCount>
+      <XFrame>4</XFrame>
+      <YFrame>3</YFrame>
+      <XSize>128</XSize>
+      <YSize>128</YSize>
+    </Sprite>
+
+    <Sprite>
+      <Name>Effect32</Name>
+      <XBegin>0</XBegin>
+      <YBegin>2744</YBegin>
+      <isLine>1</isLine>
+      <FrameCount>12</FrameCount>
+      <XFrame>2</XFrame>
+      <YFrame>6</YFrame>
+      <XSize>256</XSize>
+      <YSize>256</YSize>
+    </Sprite>
+
+    <Sprite>
+      <Name>Effect33</Name>
+      <XBegin>0</XBegin>
+      <YBegin>4286</YBegin>
+      <isLine>1</isLine>
+      <FrameCount>12</FrameCount>
+      <XFrame>4</XFrame>
+      <YFrame>4</YFrame>
+      <XSize>128</XSize>
+      <YSize>128</YSize>
+    </Sprite>
+
+    <Sprite>
+      <Name>Effect34</Name>
+      <XBegin>0</XBegin>
+      <YBegin>4675</YBegin>
+      <isLine>1</isLine>
+      <FrameCount>32</FrameCount>
+      <XFrame>8</XFrame>
+      <YFrame>4</YFrame>
+      <XSize>72</XSize>
+      <YSize>72</YSize>
+    </Sprite>
+
+    <Sprite>
+      <Name>Effect35</Name>
+      <XBegin>0</XBegin>
+      <YBegin>5553</YBegin>
+      <isLine>1</isLine>
+      <FrameCount>16</FrameCount>
+      <XFrame>3</XFrame>
+      <YFrame>6</YFrame>
+      <XSize>224</XSize>
+      <YSize>320</YSize>
+    </Sprite>
+  </Texture>
+
+
+  <Texture>
+    <Name>Enemy_Tank</Name>
+    <Path>../\Resource\Sprite\Enemy_Tank.png</Path>
+  </Texture>
+
+
+  <Texture>
+    <Name>Enemy_Bomber</Name>
+    <Path>../\Resource\Sprite\Enemy_Bomber.png</Path>
+  </Texture>
+
+
+  -<Texture>
+    <Name>Enemy_Bullet</Name>
+    <Path>../\Resource\Sprite\Enemy_Bullet.png</Path>
+  </Texture>
+
+
+  <Texture>
+    <Name>Enemy_Fighter</Name>
+    <Path>../\Resource\Sprite\Enemy_Fighter.png</Path>
+    <BackgroundRGB>
+      <R>0</R>
+      <G>57</G>
+      <B>74</B>
+    </BackgroundRGB>
+
+    <Sprite>
+      <Name>F_18</Name>
+      <XBegin>0</XBegin>
+      <YBegin>16</YBegin>
+      <isLine>0</isLine>
+      <FrameCount>5</FrameCount>
+      <XFrame>5</XFrame>
+      <YFrame>1</YFrame>
+      <XSize>32</XSize>
+      <YSize>30</YSize>
+    </Sprite>
+  </Texture>
+
+
+  <Texture>
+    <Name>Enemy_Helicopter</Name>
+    <Path>../\Resource\Sprite\Enemy_Helicopter.png</Path>
+    <BackgroundRGB>
+      <R>156</R>
+      <G>140</G>
+      <B>107</B>
+    </BackgroundRGB>
+    <Sprite>
+      <Name>Body</Name>
+      <XBegin>0</XBegin>
+      <YBegin>0</YBegin>
+      <isLine>0</isLine>
+      <FrameCount>5</FrameCount>
+      <XFrame>5</XFrame>
+      <YFrame>0</YFrame>
+      <XSize>32</XSize>
+      <YSize>36</YSize>
+    </Sprite>
+    <Sprite>
+      <Name>Rotor</Name>
+      <XBegin>160</XBegin>
+      <YBegin>0</YBegin>
+      <isLine>0</isLine>
+      <FrameCount>3</FrameCount>
+      <XFrame>3</XFrame>
+      <YFrame>1</YFrame>
+      <XSize>30</XSize>
+      <YSize>36</YSize>
+    </Sprite>
+  </Texture>
+
+
+  <Texture>
+    <Name>Enemy_Missile</Name>
+    <Path>..\Resource\Sprite\Enemy_Missile.png</Path>
+  </Texture>
+
+
+  <Texture>
+    <Name>Enemy_Stealth</Name>
+    <Path>../\Resource\Sprite\Enemy_Stealth.png</Path>
+  </Texture>
+
+
+  <Texture>
+    <Name>Player</Name>
+    <Path>../\Resource\Sprite\Player.png</Path>
+    <BackgroundRGB>
+      <R>248</R>
+      <G>0</G>
+      <B>248</B>
+    </BackgroundRGB>
+    <Sprite>
+      <Name>Boost</Name>
+      <XBegin>0</XBegin>
+      <YBegin>0</YBegin>
+      <isLine>0</isLine>
+      <FrameCount>7</FrameCount>
+      <XFrame>7</XFrame>
+      <YFrame>1</YFrame>
+      <XSize>31</XSize>
+      <YSize>48</YSize>
+    </Sprite>
+    <Sprite>
+      <Name>Normal</Name>
+      <XBegin>0</XBegin>
+      <YBegin>51</YBegin>
+      <isLine>0</isLine>
+      <FrameCount>7</FrameCount>
+      <XFrame>7</XFrame>
+      <YFrame>1</YFrame>
+      <XSize>31</XSize>
+      <YSize>48</YSize>
+    </Sprite>
+
+    <Sprite>
+      <Name>Boost_Turbo</Name>
+      <XBegin>0</XBegin>
+      <YBegin>103</YBegin>
+      <isLine>0</isLine>
+      <FrameCount>11</FrameCount>
+      <XFrame>11</XFrame>
+      <YFrame>1</YFrame>
+      <XSize>31</XSize>
+      <YSize>107</YSize>
+    </Sprite>
+
+    <Sprite>
+      <Name>Normal_Bomb</Name>
+      <XBegin>0</XBegin>
+      <YBegin>232</YBegin>
+      <isLine>0</isLine>
+      <FrameCount>47</FrameCount>
+      <XFrame>5</XFrame>
+      <YFrame>10</YFrame>
+      <XSize>90</XSize>
+      <YSize>198</YSize>
+    </Sprite>
+
+    <Sprite>
+      <Name>Normal_Spin</Name>
+      <XBegin>0</XBegin>
+      <YBegin>3211</YBegin>
+      <isLine>0</isLine>
+      <FrameCount>45</FrameCount>
+      <XFrame>3</XFrame>
+      <YFrame>15</YFrame>
+      <XSize>167</XSize>
+      <YSize>75</YSize>
+    </Sprite>
+    <Sprite>
+      <Name>Bullet_1</Name>
+      <XBegin>0</XBegin>
+      <YBegin>2226</YBegin>
+      <isLine>0</isLine>
+      <FrameCount>4</FrameCount>
+      <XFrame>4</XFrame>
+      <YFrame>1</YFrame>
+      <XSize>23</XSize>
+      <YSize>39</YSize>
+    </Sprite>
+    <Sprite>
+      <Name>Bullet_2</Name>
+      <XBegin>93</XBegin>
+      <YBegin>2226</YBegin>
+      <isLine>0</isLine>
+      <FrameCount>4</FrameCount>
+      <XFrame>4</XFrame>
+      <YFrame>1</YFrame>
+      <XSize>23</XSize>
+      <YSize>39</YSize>
+    </Sprite>
+    <Sprite>
+      <Name>Bullet_3</Name>
+      <XBegin>186</XBegin>
+      <YBegin>2226</YBegin>
+      <isLine>0</isLine>
+      <FrameCount>4</FrameCount>
+      <XFrame>4</XFrame>
+      <YFrame>1</YFrame>
+      <XSize>23</XSize>
+      <YSize>39</YSize>
+    </Sprite>
+    <Sprite>
+      <Name>Bullet_4</Name>
+      <XBegin>279</XBegin>
+      <YBegin>2226</YBegin>
+      <isLine>0</isLine>
+      <FrameCount>4</FrameCount>
+      <XFrame>4</XFrame>
+      <YFrame>1</YFrame>
+      <XSize>23</XSize>
+      <YSize>39</YSize>
+    </Sprite>
+
+    <Sprite>
+      <Name>Bullet_5</Name>
+      <XBegin>0</XBegin>
+      <YBegin>2268</YBegin>
+      <isLine>0</isLine>
+      <FrameCount>4</FrameCount>
+      <XFrame>4</XFrame>
+      <YFrame>1</YFrame>
+      <XSize>23</XSize>
+      <YSize>39</YSize>
+    </Sprite>
+    <Sprite>
+      <Name>Bullet_6</Name>
+      <XBegin>93</XBegin>
+      <YBegin>2268</YBegin>
+      <isLine>0</isLine>
+      <FrameCount>4</FrameCount>
+      <XFrame>4</XFrame>
+      <YFrame>1</YFrame>
+      <XSize>23</XSize>
+      <YSize>39</YSize>
+    </Sprite>
+
+    <Sprite>
+      <Name>Bullet_7</Name>
+      <XBegin>186</XBegin>
+      <YBegin>2268</YBegin>
+      <isLine>0</isLine>
+      <FrameCount>4</FrameCount>
+      <XFrame>4</XFrame>
+      <YFrame>1</YFrame>
+      <XSize>23</XSize>
+      <YSize>39</YSize>
+    </Sprite>
+    <Sprite>
+      <Name>Bullet_8</Name>
+      <XBegin>279</XBegin>
+      <YBegin>2268</YBegin>
+      <isLine>0</isLine>
+      <FrameCount>4</FrameCount>
+      <XFrame>4</XFrame>
+      <YFrame>1</YFrame>
+      <XSize>23</XSize>
+      <YSize>39</YSize>
+    </Sprite>
+  </Texture>
+
+
+  <Texture>
+    <Name>Player2</Name>
+    <Path>../\Resource\Sprite\Player2.png</Path>
+  </Texture>
+
+</TextureList>
