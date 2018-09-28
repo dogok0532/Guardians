@@ -68,7 +68,7 @@ DWORD CSpriteParser::GetBackgroundRGB()
 {
 	if (XmlBackground == NULL || XmlBackground->NoChildren())
 	{
-		return D3DCOLOR_XRGB( 0, 0, 0);
+		return D3DCOLOR_ARGB( 255,255, 255, 255);
 	}
 	string r = XmlBackground->FirstChildElement("R")->GetText();
 	string g = XmlBackground->FirstChildElement("G")->GetText();

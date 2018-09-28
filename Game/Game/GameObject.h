@@ -15,11 +15,11 @@ class CGameObject
 protected:
 	RenderInfo m_GameInfo;
 
-	
+
 
 	wstring m_strTextureName;
 	wstring m_strSpriteName;
-	int m_iFrame = 0;
+	
 
 	float m_fSpeed=0;
 	float m_fMovingDirection=0;
@@ -30,6 +30,10 @@ protected:
 	void Draw(int iFrame);
 	void Draw();
 	void DrawWholeTexture(wstring textureName);
+
+public:
+	int m_iFrame = 0;
+
 public:
 	void SetSizeAsSprite(wstring textureName, wstring spriteName);
 	void SetSizeAsSprite();

@@ -4,10 +4,8 @@
   <Texture>
     <Name>Background_Ocean</Name>
     <Path>../\Resource\Sprite\Background_Ocean.png</Path>
-    <BackgroundRGB/>
-    <!--배경RGB값,없을경우 투명-->
-    <Sprite/>
-    <!--Sprite가 빈값일경우 Texture = Sprite = Frame -->
+    <BackgroundRGB/>   <!--배경RGB값,없을경우 투명-->
+    <Sprite/>       <!--Sprite가 빈값일경우 Texture = Sprite = Frame -->
   </Texture>
 
 
@@ -32,12 +30,10 @@
     <Sprite/>
   </Texture>
 
-
-
   <Texture>
     <Name>Enemy_BattleShip</Name>
     <Path>../\Resource\Sprite\Enemy_BattleShip.png</Path>
-    <BackgroundRGB>
+    <BackgroundRGB>  
       <R>255</R>
       <G>255</G>
       <B>255</B>
@@ -52,7 +48,7 @@
       <XFrame>1</XFrame>
       <YFrame>1</YFrame>
       <XSize>150</XSize>
-      <YSize>678</YSize>
+      <YSize>678</YSize> 
     </Sprite>
     <Sprite>
       <Name>DestroyedBody</Name>
@@ -62,11 +58,11 @@
       <FrameCount>1</FrameCount>
       <XFrame>1</XFrame>
       <YFrame>1</YFrame>
-      <XSize>150</XSize>
+      <XSize>150</XSize> 
       <YSize>381</YSize>
     </Sprite>
   </Texture>
-
+  
   <Texture>
     <Name>Effect</Name>
     <Path>../\Resource\Sprite\Effect.png</Path>
@@ -87,7 +83,7 @@
       <YSize>48</YSize>
     </Sprite>
 
-    <Sprite>
+	<Sprite>
       <Name>Effect2</Name>
       <XBegin>0</XBegin>
       <YBegin>51</YBegin>
@@ -98,8 +94,8 @@
       <XSize>64</XSize>
       <YSize>64</YSize>
     </Sprite>
-
-    <Sprite>
+	
+	<Sprite>
       <Name>Effect3</Name>
       <XBegin>0</XBegin>
       <YBegin>183</YBegin>
@@ -110,8 +106,8 @@
       <XSize>128</XSize>
       <YSize>104</YSize>
     </Sprite>
-
-    <Sprite>
+	
+	<Sprite>
       <Name>Effect4</Name>
       <XBegin>0</XBegin>
       <YBegin>605</YBegin>
@@ -122,8 +118,8 @@
       <XSize>128</XSize>
       <YSize>128</YSize>
     </Sprite>
-
-    <Sprite>
+	
+	<Sprite>
       <Name>Effect5</Name>
       <XBegin>0</XBegin>
       <YBegin>1252</YBegin>
@@ -134,8 +130,8 @@
       <XSize>64</XSize>
       <YSize>64</YSize>
     </Sprite>
-
-    <Sprite>
+	
+	<Sprite>
       <Name>Effect6</Name>
       <XBegin>0</XBegin>
       <YBegin>1384</YBegin>
@@ -146,8 +142,8 @@
       <XSize>16</XSize>
       <YSize>16</YSize>
     </Sprite>
-
-    <Sprite>
+	
+	<Sprite>
       <Name>Effect7</Name>
       <XBegin>172</XBegin>
       <YBegin>1384</YBegin>
@@ -158,8 +154,8 @@
       <XSize>16</XSize>
       <YSize>16</YSize>
     </Sprite>
-
-    <Sprite>
+		
+	<Sprite>
       <Name>Effect8</Name>
       <XBegin>0</XBegin>
       <YBegin>1403</YBegin>
@@ -170,9 +166,9 @@
       <XSize>48</XSize>
       <YSize>48</YSize>
     </Sprite>
-
-
-    <Sprite>
+	
+			
+	<Sprite>
       <Name>Effect9</Name>
       <XBegin>0</XBegin>
       <YBegin>1454</YBegin>
@@ -183,20 +179,20 @@
       <XSize>32</XSize>
       <YSize>32</YSize>
     </Sprite>
-
-    <Sprite>
+		
+	<Sprite>
       <Name>Effect10</Name>
       <XBegin>0</XBegin>
-      <YBegin>1403</YBegin>
+      <YBegin>1489</YBegin>
       <isLine>1</isLine>
-      <FrameCount>14</FrameCount>
-      <XFrame>14</XFrame>
+      <FrameCount>16</FrameCount>
+      <XFrame>16</XFrame>
       <YFrame>1</YFrame>
       <XSize>32</XSize>
       <YSize>56</YSize>
     </Sprite>
-
-    <Sprite>
+			
+	<Sprite>
       <Name>Effect11</Name>
       <XBegin>0</XBegin>
       <YBegin>1548</YBegin>
@@ -207,8 +203,8 @@
       <XSize>56</XSize>
       <YSize>32</YSize>
     </Sprite>
-
-    <Sprite>
+			
+	<Sprite>
       <Name>Effect12</Name>
       <XBegin>0</XBegin>
       <YBegin>1616</YBegin>
@@ -219,8 +215,8 @@
       <XSize>48</XSize>
       <YSize>48</YSize>
     </Sprite>
-
-    <Sprite>
+			
+	<Sprite>
       <Name>Effect13</Name>
       <XBegin>0</XBegin>
       <YBegin>1667</YBegin>
@@ -230,9 +226,9 @@
       <YFrame>1</YFrame>
       <XSize>32</XSize>
       <YSize>32</YSize>
-    </Sprite>
-
-    <Sprite>
+    </Sprite>		
+	
+	<Sprite>
       <Name>Effect14</Name>
       <XBegin>0</XBegin>
       <YBegin>1702</YBegin>
@@ -243,8 +239,8 @@
       <XSize>32</XSize>
       <YSize>32</YSize>
     </Sprite>
-
-    <Sprite>
+				
+	<Sprite>
       <Name>Effect15</Name>
       <XBegin>0</XBegin>
       <YBegin>1737</YBegin>
@@ -255,8 +251,8 @@
       <XSize>16</XSize>
       <YSize>16</YSize>
     </Sprite>
-
-    <Sprite>
+					
+	<Sprite>
       <Name>Effect16</Name>
       <XBegin>0</XBegin>
       <YBegin>1756</YBegin>
@@ -267,8 +263,8 @@
       <XSize>24</XSize>
       <YSize>24</YSize>
     </Sprite>
-
-    <Sprite>
+					
+	<Sprite>
       <Name>Effect17</Name>
       <XBegin>0</XBegin>
       <YBegin>1783</YBegin>
@@ -279,8 +275,8 @@
       <XSize>32</XSize>
       <YSize>32</YSize>
     </Sprite>
-
-    <Sprite>
+					
+	<Sprite>
       <Name>Effect18</Name>
       <XBegin>0</XBegin>
       <YBegin>1837</YBegin>
@@ -501,18 +497,138 @@
   <Texture>
     <Name>Enemy_Tank</Name>
     <Path>../\Resource\Sprite\Enemy_Tank.png</Path>
+	<BackgroundRGB>  
+      <R>0</R>
+      <G>104</G>
+      <B>88</B>
+    </BackgroundRGB>
+    <Sprite>
+      <Name>Body</Name>
+      <XBegin>0</XBegin>
+      <YBegin>0</YBegin>
+      <isLine>0</isLine>
+      <FrameCount>16</FrameCount>
+      <XFrame>8</XFrame>
+      <YFrame>2</YFrame>
+      <XSize>96</XSize>
+      <YSize>96</YSize> 
+    </Sprite>
+	<Sprite>
+      <Name>Barrel</Name>
+      <XBegin>0</XBegin>
+      <YBegin>190</YBegin>
+      <isLine>0</isLine>
+      <FrameCount>16</FrameCount>
+      <XFrame>8</XFrame>
+      <YFrame>2</YFrame>
+      <XSize>96</XSize>
+      <YSize>96</YSize> 
+    </Sprite>
+	<Sprite>
+      <Name>DestroyedBody</Name>
+      <XBegin>0</XBegin>
+      <YBegin>385</YBegin>
+      <isLine>0</isLine>
+      <FrameCount>16</FrameCount>
+      <XFrame>8</XFrame>
+      <YFrame>2</YFrame>
+      <XSize>64</XSize>
+      <YSize>64</YSize> 
+    </Sprite>
+	<Sprite>
+      <Name>DestroyedBarrel</Name>
+      <XBegin>0</XBegin>
+      <YBegin>510</YBegin>
+      <isLine>0</isLine>
+      <FrameCount>16</FrameCount>
+      <XFrame>8</XFrame>
+      <YFrame>2</YFrame>
+      <XSize>64</XSize>
+      <YSize>64</YSize> 
+    </Sprite>
   </Texture>
 
 
   <Texture>
     <Name>Enemy_Bomber</Name>
     <Path>../\Resource\Sprite\Enemy_Bomber.png</Path>
+	<BackgroundRGB>  
+      <R>136</R>
+      <G>255</G>
+      <B>0</B>
+    </BackgroundRGB>
+	<Sprite>
+      <Name>Bomber_1</Name>
+      <XBegin>0</XBegin>
+      <YBegin>0</YBegin>
+      <isLine>0</isLine>
+      <FrameCount>1</FrameCount>
+      <XFrame>1</XFrame>
+      <YFrame>1</YFrame>
+      <XSize>245</XSize>
+      <YSize>150</YSize> 
+    </Sprite>
+	<Sprite>
+      <Name>Bomber_2</Name>
+      <XBegin>249</XBegin>
+      <YBegin>0</YBegin>
+      <isLine>0</isLine>
+      <FrameCount>1</FrameCount>
+      <XFrame>1</XFrame>
+      <YFrame>1</YFrame>
+      <XSize>245</XSize>
+      <YSize>150</YSize> 
+    </Sprite>	
+	<Sprite>
+      <Name>Bomber_3</Name>
+      <XBegin>0</XBegin>
+      <YBegin>140</YBegin>
+      <isLine>0</isLine>
+      <FrameCount>1</FrameCount>
+      <XFrame>1</XFrame>
+      <YFrame>1</YFrame>
+      <XSize>234</XSize>
+      <YSize>150</YSize> 
+    </Sprite>	
+	<Sprite>
+      <Name>BomberProp</Name>
+      <XBegin>267</XBegin>
+      <YBegin>158</YBegin>
+      <isLine>0</isLine>
+      <FrameCount>2</FrameCount>
+      <XFrame>2</XFrame>
+      <YFrame>1</YFrame>
+      <XSize>20</XSize>
+      <YSize>20</YSize> 
+    </Sprite>
+	<Sprite>
+      <Name>BomberGun</Name>
+      <XBegin>314</XBegin>
+      <YBegin>158</YBegin>
+      <isLine>0</isLine>
+      <FrameCount>16</FrameCount>
+      <XFrame>8</XFrame>
+      <YFrame>2</YFrame>
+      <XSize>17</XSize>
+      <YSize>17</YSize> 
+    </Sprite>	
   </Texture>
 
 
   -<Texture>
     <Name>Enemy_Bullet</Name>
     <Path>../\Resource\Sprite\Enemy_Bullet.png</Path>
+	<Sprite>
+      <Name>Bullet</Name>
+      <XBegin>0</XBegin>
+      <YBegin>0</YBegin>
+      <isLine>0</isLine>
+      <FrameCount>8</FrameCount>
+      <XFrame>4</XFrame>
+      <YFrame>2</YFrame>
+      <XSize>27</XSize>
+      <YSize>37</YSize> 
+    </Sprite>	
   </Texture>
 
 
@@ -566,7 +682,7 @@
       <FrameCount>3</FrameCount>
       <XFrame>3</XFrame>
       <YFrame>1</YFrame>
-      <XSize>30</XSize>
+      <XSize>32</XSize>
       <YSize>36</YSize>
     </Sprite>
   </Texture>
@@ -575,12 +691,74 @@
   <Texture>
     <Name>Enemy_Missile</Name>
     <Path>..\Resource\Sprite\Enemy_Missile.png</Path>
+    <Sprite>
+      <Name>Missile</Name>
+      <XBegin>0</XBegin>
+      <YBegin>0</YBegin>
+      <isLine>0</isLine>
+      <FrameCount>1</FrameCount>
+      <XFrame>1</XFrame>
+      <YFrame>1</YFrame>
+      <XSize>4</XSize>
+      <YSize>20</YSize>
+    </Sprite>	
   </Texture>
 
 
   <Texture>
     <Name>Enemy_Stealth</Name>
     <Path>../\Resource\Sprite\Enemy_Stealth.png</Path>
+	<BackgroundRGB>  
+      <R>0</R>
+      <G>104</G>
+      <B>88</B>
+    </BackgroundRGB>
+    <Sprite>
+      <Name>Body</Name>
+      <XBegin>0</XBegin>
+      <YBegin>0</YBegin>
+      <isLine>0</isLine>
+      <FrameCount>1</FrameCount>
+      <XFrame>1</XFrame>
+      <YFrame>1</YFrame>
+      <XSize>224</XSize>
+      <YSize>84</YSize>
+    </Sprite>	
+    <Sprite>
+      <Name>DestroyedBody</Name>
+      <XBegin>224</XBegin>
+      <YBegin>0</YBegin>
+      <isLine>0</isLine>
+      <FrameCount>1</FrameCount>
+      <XFrame>1</XFrame>
+      <YFrame>1</YFrame>
+      <XSize>224</XSize>
+      <YSize>84</YSize>
+    </Sprite>
+    <Sprite>
+      <Name>LeftWing</Name>
+      <XBegin>0</XBegin>
+      <YBegin>80</YBegin>
+      <isLine>0</isLine>
+      <FrameCount>19</FrameCount>
+      <XFrame>7</XFrame>
+      <YFrame>3</YFrame>
+      <XSize>64</XSize>
+      <YSize>48</YSize>
+    </Sprite>	
+    <Sprite>
+      <Name>RightWing</Name>
+      <XBegin>0</XBegin>
+      <YBegin>223</YBegin>
+      <isLine>0</isLine>
+      <FrameCount>19</FrameCount>
+      <XFrame>7</XFrame>
+      <YFrame>3</YFrame>
+      <XSize>64</XSize>
+      <YSize>48</YSize>
+    </Sprite>	
+		
+	
   </Texture>
 
 
@@ -626,7 +804,7 @@
       <XSize>31</XSize>
       <YSize>107</YSize>
     </Sprite>
-
+    
     <Sprite>
       <Name>Normal_Bomb</Name>
       <XBegin>0</XBegin>
@@ -717,7 +895,7 @@
       <XSize>23</XSize>
       <YSize>39</YSize>
     </Sprite>
-
+    
     <Sprite>
       <Name>Bullet_7</Name>
       <XBegin>186</XBegin>
@@ -746,6 +924,187 @@
   <Texture>
     <Name>Player2</Name>
     <Path>../\Resource\Sprite\Player2.png</Path>
+    <BackgroundRGB>
+      <R>0</R>
+      <G>248</G>
+      <B>0</B>
+    </BackgroundRGB>
+    <Sprite>
+      <Name>Normal</Name>
+      <XBegin>0</XBegin>
+      <YBegin>0</YBegin>
+      <isLine>1</isLine>
+      <FrameCount>14</FrameCount>
+      <XFrame>7</XFrame>
+      <YFrame>2</YFrame>
+      <XSize>31</XSize>
+      <YSize>40</YSize>
+    </Sprite>
+    <Sprite>
+      <Name>Boost</Name>
+      <XBegin>0</XBegin>
+      <YBegin>84</YBegin>
+      <isLine>1</isLine>
+      <FrameCount>11</FrameCount>
+      <XFrame>11</XFrame>
+      <YFrame>1</YFrame>
+      <XSize>31</XSize>
+      <YSize>120</YSize>
+    </Sprite>
+    <Sprite>
+      <Name>Spin</Name>
+      <XBegin>0</XBegin>
+      <YBegin>207</YBegin>
+      <isLine>1</isLine>
+      <FrameCount>47</FrameCount>
+      <XFrame>5</XFrame>
+      <YFrame>10</YFrame>
+      <XSize>96</XSize>
+      <YSize>143</YSize>
+    </Sprite>
+    <Sprite>
+      <Name>Phantom</Name>
+      <XBegin>0</XBegin>
+      <YBegin>1649</YBegin>
+      <isLine>1</isLine>
+      <FrameCount>8</FrameCount>
+      <XFrame>5</XFrame>
+      <YFrame>2</YFrame>
+      <XSize>96</XSize>
+      <YSize>134</YSize>
+    </Sprite>
+    <Sprite>
+      <Name>PhantomTrail</Name>
+      <XBegin>293</XBegin>
+      <YBegin>1842</YBegin>
+      <isLine>1</isLine>
+      <FrameCount>7</FrameCount>
+      <XFrame>7</XFrame>
+      <YFrame>1</YFrame>
+      <XSize>15</XSize>
+      <YSize>15</YSize>
+    </Sprite>
+    <Sprite>
+      <Name>Bullet_1</Name>
+      <XBegin>0</XBegin>
+      <YBegin>1922</YBegin>
+      <isLine>1</isLine>
+      <FrameCount>4</FrameCount>
+      <XFrame>4</XFrame>
+      <YFrame>1</YFrame>
+      <XSize>16</XSize>
+      <YSize>48</YSize>
+    </Sprite>
+    <Sprite>
+      <Name>Bullet_2</Name>
+      <XBegin>70</XBegin>
+      <YBegin>1922</YBegin>
+      <isLine>1</isLine>
+      <FrameCount>8</FrameCount>
+      <XFrame>8</XFrame>
+      <YFrame>1</YFrame>
+      <XSize>16</XSize>
+      <YSize>48</YSize>
+    </Sprite>
+	<Sprite>
+      <Name>Bullet_3</Name>
+      <XBegin>208</XBegin>
+      <YBegin>1922</YBegin>
+      <isLine>1</isLine>
+      <FrameCount>8</FrameCount>
+      <XFrame>8</XFrame>
+      <YFrame>1</YFrame>
+      <XSize>16</XSize>
+      <YSize>48</YSize>
+    </Sprite>
+	<Sprite>
+      <Name>Bullet_4</Name>
+      <XBegin>346</XBegin>
+      <YBegin>1922</YBegin>
+      <isLine>1</isLine>
+      <FrameCount>12</FrameCount>
+      <XFrame>12</XFrame>
+      <YFrame>1</YFrame>
+      <XSize>16</XSize>
+      <YSize>48</YSize>
+    </Sprite>
+	<Sprite>
+      <Name>Bomb_1</Name>
+      <XBegin>0</XBegin>
+      <YBegin>1973</YBegin>
+      <isLine>1</isLine>
+      <FrameCount>8</FrameCount>
+      <XFrame>8</XFrame>
+      <YFrame>1</YFrame>
+      <XSize>16</XSize>
+      <YSize>16</YSize>
+    </Sprite>
+	<Sprite>
+      <Name>Bomb_2</Name>
+      <XBegin>0</XBegin>
+      <YBegin>1992</YBegin>
+      <isLine>1</isLine>
+      <FrameCount>8</FrameCount>
+      <XFrame>8</XFrame>
+      <YFrame>1</YFrame>
+      <XSize>16</XSize>
+      <YSize>16</YSize>
+    </Sprite>
+	<Sprite>
+      <Name>F_4Spin</Name>
+      <XBegin>0</XBegin>
+      <YBegin>2213</YBegin>
+      <isLine>1</isLine>
+      <FrameCount>45</FrameCount>
+      <XFrame>3</XFrame>
+      <YFrame>15</YFrame>
+      <XSize>176</XSize>
+      <YSize>96</YSize>
+    </Sprite>
+	<Sprite>
+      <Name>F_4String</Name>
+      <XBegin>0</XBegin>
+      <YBegin>3670</YBegin>
+      <isLine>1</isLine>
+      <FrameCount>2</FrameCount>
+      <XFrame>1</XFrame>
+      <YFrame>2</YFrame>
+      <XSize>113</XSize>
+      <YSize>27</YSize>
+    </Sprite>
+	<Sprite>
+      <Name>F_4Spec</Name>
+      <XBegin>194</XBegin>
+      <YBegin>3670</YBegin>
+      <isLine>1</isLine>
+      <FrameCount>1</FrameCount>
+      <XFrame>1</XFrame>
+      <YFrame>1</YFrame>
+      <XSize>110</XSize>
+      <YSize>35</YSize>
+    </Sprite>
+	<Sprite>
+      <Name>F_4Name_1</Name>
+      <XBegin>194</XBegin>
+      <YBegin>3707</YBegin>
+      <isLine>1</isLine>
+      <FrameCount>1</FrameCount>
+      <XFrame>1</XFrame>
+      <YFrame>1</YFrame>
+      <XSize>40</XSize>
+      <YSize>20</YSize>
+    </Sprite>
+	<Sprite>
+      <Name>F_4Name_2</Name>
+      <XBegin>237</XBegin>
+      <YBegin>3707</YBegin>
+      <isLine>1</isLine>
+      <FrameCount>1</FrameCount>
+      <XFrame>1</XFrame>
+      <YFrame>1</YFrame>
+      <XSize>22</XSize>
+      <YSize>13</YSize>
+    </Sprite>
   </Texture>
 
 </TextureList>

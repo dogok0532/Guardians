@@ -20,5 +20,5 @@ void CPowerUp::Update(float deltaTime)
 
 void CPowerUp::Render()
 {
-	Draw();
+ 	Draw();
 }

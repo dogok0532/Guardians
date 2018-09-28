@@ -1,0 +1,10 @@
+D:\졸프\리포지토리\Guardians\Game\ImageTest\bin\Debug\ImageTest.exe.config
+D:\졸프\리포지토리\Guardians\Game\ImageTest\bin\Debug\ImageTest.exe
+D:\졸프\리포지토리\Guardians\Game\ImageTest\bin\Debug\ImageTest.pdb
+D:\졸프\리포지토리\Guardians\Game\ImageTest\obj\Debug\ImageTest.csprojAssemblyReference.cache
+D:\졸프\리포지토리\Guardians\Game\ImageTest\obj\Debug\ImageTest.ImageTestClient.resources
+D:\졸프\리포지토리\Guardians\Game\ImageTest\obj\Debug\ImageTest.Properties.Resources.resources
+D:\졸프\리포지토리\Guardians\Game\ImageTest\obj\Debug\ImageTest.csproj.GenerateResource.cache
+D:\졸프\리포지토리\Guardians\Game\ImageTest\obj\Debug\ImageTest.csproj.CoreCompileInputs.cache
+D:\졸프\리포지토리\Guardians\Game\ImageTest\obj\Debug\ImageTest.exe
+D:\졸프\리포지토리\Guardians\Game\ImageTest\obj\Debug\ImageTest.pdb

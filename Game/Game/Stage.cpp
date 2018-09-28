@@ -13,6 +13,8 @@
 #include "GameFlowParser.h"
 #include "EnemyFighter.h"
 
+#include "PowerUp.h"
+
 void CStage::DestroyCheck()
 {
 	
@@ -133,7 +135,11 @@ void CStage::Update(float deltaTime)
 
 void CStage::Render()
 {
-	
+	CPowerUp PowerUp;
+
+	PowerUp.SetPos(500, 500);
+	PowerUp.m_iFrame = fTimePassed;
+	PowerUp.Render();
 	
 
 	RenderIngame();
