@@ -9,9 +9,18 @@ namespace ImageTest._02.Parser._01.Texture
     class CTexture
     {
         string Name;
+
+
+
+
+
         string ImageRoute;
+       
+
 
         Dictionary<string, CSprite> mapTexture = new Dictionary<string, CSprite>();
+
+       
 
         public void SetName(string name)
         {
@@ -21,10 +30,22 @@ namespace ImageTest._02.Parser._01.Texture
         {
             ImageRoute = imageRoute;
         }
+        public string GetRoute()
+        {
+            return ImageRoute;
+        }
 
         public void AddSprite(string name,CSprite sprite)
         {
             mapTexture.Add(name, sprite);
         }
+
+        public CSprite GetSprite(string sprite)
+        {
+            CSprite value;
+           mapTexture.TryGetValue(sprite,out value);
+            return value;
+        }
+        
     }
 }

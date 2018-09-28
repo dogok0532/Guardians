@@ -46,19 +46,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="01.Main\ImageTestForm.cs">
+    <Compile Include="01.Main\ImageBox.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="01.Main\ImageTestForm.Designer.cs">
-      <DependentUpon>ImageTestForm.cs</DependentUpon>
+    <Compile Include="01.Main\ImageBox.Designer.cs">
+      <DependentUpon>ImageBox.cs</DependentUpon>
     </Compile>
     <Compile Include="01.Main\ImageTest.cs" />
     <Compile Include="02.Parser\CSprite.cs" />
     <Compile Include="02.Parser\CTexture.cs" />
     <Compile Include="02.Parser\CImageParser.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="01.Main\ImageTestForm.resx">
-      <DependentUpon>ImageTestForm.cs</DependentUpon>
+    <EmbeddedResource Include="01.Main\ImageBox.resx">
+      <DependentUpon>ImageBox.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
