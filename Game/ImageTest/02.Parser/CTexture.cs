@@ -47,5 +47,9 @@ namespace ImageTest._02.Parser._01.Texture
             return value;
         }
         
+        public string[] GetSpriteNameList()
+        {
+            return mapTexture.Keys.ToArray();
+        }
     }
 }

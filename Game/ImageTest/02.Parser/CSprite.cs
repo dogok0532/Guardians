@@ -30,16 +30,19 @@ namespace ImageTest._02.Parser._01.Texture
 
             int EndY = StartY + m_SpriteInfo.iYSize;
 
-            Rectangle rc=new Rectangle(StartX,StartY,m_SpriteInfo.iXSize,m_SpriteInfo.iYSize);    //프레임, 좌표값에 따라 출력할 범위 설정
+            Rectangle rc=new Rectangle(StartX,StartY,m_SpriteInfo.iXSize-1,m_SpriteInfo.iYSize-1);    //프레임, 좌표값에 따라 출력할 범위 설정
 
 
            
 
             return rc;
         }
-      
-            
-            
+
+        public Rectangle GetFrameSize()
+        {
+            return new Rectangle(0, 0, m_SpriteInfo.iXSize, m_SpriteInfo.iYSize);
+        }
+
 
     }
 

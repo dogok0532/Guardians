@@ -34,6 +34,8 @@ namespace ImageTest._02.Parser
         Dictionary<string, CTexture> mapTexture = new Dictionary<string, CTexture>();
         Image currentImage;
         Rectangle frameRect;
+        Rectangle frameSize;
+        int iCurrentFrame;
 
         public CImageParser()
         {
@@ -54,7 +56,7 @@ namespace ImageTest._02.Parser
 
                 CTexture Texture = new CTexture();
                 Texture.SetName(strName);
-                Texture.SetRoute("../../"+strPath);
+                Texture.SetRoute("../../" + strPath);
                 XmlNodeList SpriteList = TextureNode.SelectNodes("Sprite");
 
 
@@ -89,23 +91,49 @@ namespace ImageTest._02.Parser
         {
             CTexture value;
             mapTexture.TryGetValue(Texture, out value);
+            if (value == null)
+                return;
             currentImage = Image.FromFile(value.GetRoute());
             CSprite sprite = value.GetSprite(strSprite);
-            frameRect= sprite.GetFrameRect(0);
-           
-           
-           
+
+            if (sprite == null)
+            {
+                frameRect = new Rectangle(0, 0, 0, 0);
+                return;
+            }
+            frameRect = sprite.GetFrameRect(iCurrentFrame);
+            frameSize = sprite.GetFrameSize();
+            
         }
         public Image GetImage()
         {
-            SetImage("Effect","Effect1");
             return currentImage;
         }
         public Rectangle GetFrameRect()
         {
             return frameRect;
         }
-       
 
+        public string[] GetTextureList()
+        {
+          
+           string[] TextureArray = mapTexture.Keys.ToArray();
+           return TextureArray;
+        }
+
+        public string[] GetSpriteList(string TextureName)
+        {
+           return mapTexture[TextureName].GetSpriteNameList();
+        }
+
+        public void AddFrame()
+        {
+            iCurrentFrame++;
+        }
+
+        public Rectangle GetFrameSize()
+        {
+            return frameSize;
+        }
     }
 }
