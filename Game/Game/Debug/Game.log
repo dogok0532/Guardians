@@ -1,1 +1,80 @@
-﻿  Game.vcxproj -> D:\졸프\리포지토리\Guardians\Game\Debug\Game.exe
+﻿  AntiAir.cpp
+  CBackground.cpp
+  Bomb.cpp
+  CEnemyBomber.cpp
+  CDirectInput.cpp
+  d:\졸프\리포지토리\guardians\game\directx\include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+  GoldBar.cpp
+  EnemyBullet.cpp
+  GameFlowParser.cpp
+d:\졸프\리포지토리\guardians\game\game\gameflowparser.cpp(41): warning C4244: '인수': 'int'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\졸프\리포지토리\guardians\game\game\gameflowparser.cpp(78): warning C4244: '인수': 'int'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  Item.cpp
+  PowerUp.cpp
+  SpriteParser.cpp
+  Setting.cpp
+  Sprite.cpp
+d:\졸프\리포지토리\guardians\game\game\sprite.cpp(40): warning C4244: '인수': 'int'에서 'FLOAT'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  Enemy.cpp
+  EnemyFighter.cpp
+d:\졸프\리포지토리\guardians\game\game\enemyfighter.cpp(12): warning C4244: '인수': 'double'에서 'FLOAT'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  GameButton.cpp
+d:\졸프\리포지토리\guardians\game\game\gamebutton.cpp(14): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\졸프\리포지토리\guardians\game\game\gamebutton.cpp(13): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\졸프\리포지토리\guardians\game\game\gamebutton.cpp(12): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\졸프\리포지토리\guardians\game\game\gamebutton.cpp(11): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\졸프\리포지토리\guardians\game\game\gamebutton.cpp(50): warning C4244: '=': 'float'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\졸프\리포지토리\guardians\game\game\gamebutton.cpp(51): warning C4244: '=': 'float'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\졸프\리포지토리\guardians\game\game\gamebutton.cpp(52): warning C4244: '=': 'float'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\졸프\리포지토리\guardians\game\game\gamebutton.cpp(53): warning C4244: '=': 'float'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  Clock.cpp
+d:\졸프\리포지토리\guardians\game\game\clock.cpp(21): warning C4244: '초기화 중': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\졸프\리포지토리\guardians\game\game\clock.cpp(25): warning C4244: 'return': 'double'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  MainGame.cpp
+  MainMenu.cpp
+d:\졸프\리포지토리\guardians\game\game\mainmenu.cpp(11): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+d:\졸프\리포지토리\guardians\game\game\mainmenu.cpp(30): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+d:\졸프\리포지토리\guardians\game\game\mainmenu.cpp(67): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+  Mouse.cpp
+d:\졸프\리포지토리\guardians\game\game\mouse.cpp(14): warning C4244: '=': 'LONG'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\졸프\리포지토리\guardians\game\game\mouse.cpp(15): warning C4244: '=': 'LONG'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  코드를 생성하고 있습니다...
+d:\졸프\리포지토리\guardians\game\game\sprite.cpp(24): warning C4172: 지역 변수 또는 임시: rc의 주소를 반환하고 있습니다.
+d:\졸프\리포지토리\guardians\game\game\sprite.cpp(29): warning C4172: 지역 변수 또는 임시의 주소를 반환하고 있습니다.
+  컴파일하고 있습니다...
+  SoundResource.cpp
+  PlayerBullet.cpp
+d:\졸프\리포지토리\guardians\game\game\playerbullet.cpp(14): warning C4244: '인수': 'double'에서 'FLOAT'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  Direct.cpp
+d:\졸프\리포지토리\guardians\game\game\direct.cpp(92): warning C4838: 'LONG'에서 'float'(으)로의 변환에는 축소 변환이 필요합니다.
+d:\졸프\리포지토리\guardians\game\game\direct.cpp(88): warning C4244: '초기화 중': 'LONG'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\졸프\리포지토리\guardians\game\game\direct.cpp(89): warning C4244: '초기화 중': 'LONG'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\졸프\리포지토리\guardians\game\game\direct.cpp(90): warning C4244: '초기화 중': 'LONG'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\졸프\리포지토리\guardians\game\game\direct.cpp(91): warning C4244: '초기화 중': 'LONG'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  GameInfo.cpp
+  GameObject.cpp
+d:\졸프\리포지토리\guardians\game\game\gameobject.cpp(84): warning C4838: 'float'에서 'LONG'(으)로의 변환에는 축소 변환이 필요합니다.
+d:\졸프\리포지토리\guardians\game\game\gameobject.cpp(81): warning C4244: '초기화 중': 'float'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\졸프\리포지토리\guardians\game\game\gameobject.cpp(82): warning C4244: '초기화 중': 'float'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\졸프\리포지토리\guardians\game\game\gameobject.cpp(83): warning C4244: '초기화 중': 'float'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\졸프\리포지토리\guardians\game\game\gameobject.cpp(84): warning C4244: '초기화 중': 'float'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  Main.cpp
+  d:\졸프\리포지토리\guardians\game\directx\include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+  Stage.cpp
+d:\졸프\리포지토리\guardians\game\game\stage.cpp(141): warning C4244: '=': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\졸프\리포지토리\guardians\game\game\stage.cpp(237): warning C4244: '인수': 'int'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  Player.cpp
+  Scene.cpp
+  SpriteResource.cpp
+  Text.cpp
+  CTexture.cpp
+d:\졸프\리포지토리\guardians\game\game\ctexture.cpp(67): warning C4244: '인수': 'double'에서 'FLOAT'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\졸프\리포지토리\guardians\game\game\ctexture.cpp(112): warning C4244: '초기화 중': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\졸프\리포지토리\guardians\game\game\ctexture.cpp(113): warning C4244: '초기화 중': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  tinystr.cpp
+  tinyxml.cpp
+  tinyxmlerror.cpp
+  tinyxmlparser.cpp
+  UI.cpp
+  코드를 생성하고 있습니다...
+  Game.vcxproj -> D:\졸프\리포지토리\Guardians\Game\Debug\Game.exe

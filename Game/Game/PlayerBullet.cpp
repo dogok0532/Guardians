@@ -7,9 +7,9 @@
 
 void CPlayerBullet::Update(float deltaTime)
 {
-	D3DXVECTOR3 MoveMent = {0,-100,0};
+	D3DXVECTOR3 MoveMent = {0,-1000,0};
 	
-	//--MoveMent의 기본속도를 100으로 맞추고 각도에 따라 이동벡터 변환
+	//--MoveMent의 기본속도를 1000으로 맞추고 각도에 따라 이동벡터 변환
 	D3DXMATRIX mat;
 	D3DXMatrixRotationZ(&mat, m_GameInfo.fRenderDirection * DEGREE_TO_RADIAN);
 	D3DXVec3TransformCoord(&MoveMent, &MoveMent, &mat);

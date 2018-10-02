@@ -17,8 +17,6 @@
     <MoveDirection>100</MoveDirection>             <!-- 시작할때 진행방향각도 -->
 
     <Pattern>0</Pattern> <!--인트값에 따라 클래스에서 결정, 공란시 랜덤-->
-    
-    
   </Enemy>
 
   <Item>

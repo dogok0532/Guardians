@@ -5,11 +5,9 @@ VisualStudioVersion = 15.0.27428.2043
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Game", "Game\Game.vcxproj", "{5D50D534-FF27-425F-AB81-35B7EB1B3DA0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ImageTest", "ImageTest\ImageTest.csproj", "{BC1202C4-C494-42E8-81AC-8DF4C3CC7FDC}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GameEditor", "ImageTest\GameEditor.csproj", "{BC1202C4-C494-42E8-81AC-8DF4C3CC7FDC}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{89413A01-4459-460E-A079-0D506B92A9FF}"
-EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Client", "Client\Client.vcxproj", "{39AB67CD-C3CA-422F-898E-370BBAE34646}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Client", "Network\Client\Client.vcxproj", "{39AB67CD-C3CA-422F-898E-370BBAE34646}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

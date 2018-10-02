@@ -1,4 +1,5 @@
-﻿using ImageTest._02.Parser;
+﻿using ImageEditor._01.Main;
+using ImageEditor._02.Parser;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,7 +14,7 @@ struct RECT
     public long bottom;
 }
 
-namespace ImageTest
+namespace ImageEditor
 {
     static class Program
     {
@@ -29,7 +30,7 @@ namespace ImageTest
 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new ImageTestClient());
+            Application.Run(new GameEditor());
 
             
           
