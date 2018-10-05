@@ -47,7 +47,7 @@ public:
 
 
 
-	void SetPos(D3DXVECTOR3 vecPos);	//Bullet이 생성될때 좌표지정
+	void SetPos(D3DXVECTOR3 vecPos);	
 	void SetPos(float x, float y, float z=0);
 	D3DXVECTOR3 GetPos();
 	

@@ -3,29 +3,28 @@
 #include <windows.h>
 #include <stdio.h>
 
-float CClock::UpdateGame()
+float CClock::GetDelta()
 {
 	QueryPerformanceCounter((LARGE_INTEGER*)&m_iCurrentTime);
 	__int64 DeltaCount = m_iCurrentTime - m_iPrevTime;
 
-	if (m_dSPF <= (double)DeltaCount / (double)m_iPerformance)
-	{
-		m_dDeltaTime += (double)DeltaCount / (double)m_iPerformance;
+	
+	
+	m_dDeltaTime += (double)DeltaCount / (double)m_iPerformance;
 
-		double DeltaTime=m_dDeltaTime;
+	double DeltaTime = m_dDeltaTime;
 
-		m_dDeltaTime = 0;
-		m_iPrevTime = m_iCurrentTime;
-
-
-		int fps = (int)1.f / DeltaTime;
-		//printf("%d\n", fps);
+	m_dDeltaTime = 0;
+	m_iPrevTime = m_iCurrentTime;
 
 
-		return DeltaTime;
-	}
-	else
-		return false;
+	int fps = (int)1.f / DeltaTime;
+	//printf("%d\n", fps);
+
+
+	return DeltaTime;
+
+
 
 }
 

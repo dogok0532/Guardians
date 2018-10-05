@@ -13,7 +13,7 @@ private:
 	double m_dDeltaTime;
 
 public:
-	float UpdateGame();
+	float GetDelta();
 
 	
 
