@@ -107,7 +107,7 @@ void CTexture::Draw(wstring spriteName, int frame, RenderInfo* pGameInfo)	//차후
 
 
 	RECT rcSrc = *(mapSprite[spriteName]->GetFrameRect(frame));
-	D3DXVECTOR3 vecCenter = *(mapSprite[spriteName]->GetCenter());
+	D3DXVECTOR3 vecCenter = *(mapSprite[spriteName]->GetFrameCenter());
 
 	int x = pGameInfo->vecPos.x;
 	int y = pGameInfo->vecPos.y;
@@ -119,6 +119,22 @@ void CTexture::Draw(wstring spriteName, int frame, RenderInfo* pGameInfo)	//차후
 	DrawJudgeLine(spriteName, pGameInfo,&m_matWorld);
 
 
+}
+
+void CTexture::DrawWholeSprite(wstring spriteName, RenderInfo* pGameInfo)
+{
+
+	UpdateMat(pGameInfo);
+	m_pSprite->SetTransform(&m_matWorld);
+
+
+	RECT rcSrc = *(mapSprite[spriteName]->GetSpriteRect());
+	D3DXVECTOR3 vecCenter = *(mapSprite[spriteName]->GetSpriteCenter());
+
+	m_pSprite->Draw(m_pTexture, &rcSrc, &(m_vecSize / 2), &(pGameInfo->vecPos), DEFAULT_COLOR);
+	D3DXMatrixIdentity(&m_matWorld);
+
+	m_pSprite->SetTransform(&m_matWorld);
 }
 
 void CTexture::DrawWholeTexture(RenderInfo* pGameInfo)

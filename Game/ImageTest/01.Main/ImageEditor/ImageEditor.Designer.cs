@@ -9,7 +9,7 @@ namespace ImageEditor
         /// </summary>
         private System.ComponentModel.IContainer components = null;
 
-        private CImageParser parser;
+       
         
 
         /// <summary>
@@ -35,10 +35,11 @@ namespace ImageEditor
         {
             this.TextureName = new System.Windows.Forms.ComboBox();
             this.SpriteName = new System.Windows.Forms.ComboBox();
-            this.DrawButton = new System.Windows.Forms.Button();
+            this.ResetButton = new System.Windows.Forms.Button();
             this.ImageBox = new System.Windows.Forms.PictureBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.FrameBar = new System.Windows.Forms.TrackBar();
             ((System.ComponentModel.ISupportInitialize)(this.ImageBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.FrameBar)).BeginInit();
             this.SuspendLayout();
             // 
             // TextureName
@@ -59,15 +60,15 @@ namespace ImageEditor
             this.SpriteName.TabIndex = 2;
             this.SpriteName.SelectedIndexChanged += new System.EventHandler(this.SpriteName_SelectedIndexChanged);
             // 
-            // DrawButton
+            // ResetButton
             // 
-            this.DrawButton.Location = new System.Drawing.Point(554, 328);
-            this.DrawButton.Name = "DrawButton";
-            this.DrawButton.Size = new System.Drawing.Size(99, 51);
-            this.DrawButton.TabIndex = 7;
-            this.DrawButton.Text = "Draw";
-            this.DrawButton.UseVisualStyleBackColor = true;
-            this.DrawButton.Click += new System.EventHandler(this.DrawButton_Click);
+            this.ResetButton.Location = new System.Drawing.Point(554, 328);
+            this.ResetButton.Name = "ResetButton";
+            this.ResetButton.Size = new System.Drawing.Size(99, 51);
+            this.ResetButton.TabIndex = 7;
+            this.ResetButton.Text = "Reset";
+            this.ResetButton.UseVisualStyleBackColor = true;
+            this.ResetButton.Click += new System.EventHandler(this.ResetButton_Click);
             // 
             // ImageBox
             // 
@@ -76,25 +77,24 @@ namespace ImageEditor
             this.ImageBox.Size = new System.Drawing.Size(317, 290);
             this.ImageBox.TabIndex = 5;
             this.ImageBox.TabStop = false;
-            this.ImageBox.Paint += new System.Windows.Forms.PaintEventHandler(this.ImageBox_Paint);
             // 
-            // button1
+            // FrameBar
             // 
-            this.button1.Location = new System.Drawing.Point(554, 244);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(99, 56);
-            this.button1.TabIndex = 8;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.Reset_Click);
+            this.FrameBar.AutoSize = false;
+            this.FrameBar.Location = new System.Drawing.Point(339, 12);
+            this.FrameBar.Name = "FrameBar";
+            this.FrameBar.Size = new System.Drawing.Size(296, 40);
+            this.FrameBar.TabIndex = 9;
+            this.FrameBar.Value = 2;
+            this.FrameBar.Scroll += new System.EventHandler(this.FrameBar_Scroll);
             // 
             // ImageEditor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.DrawButton);
+            this.Controls.Add(this.FrameBar);
+            this.Controls.Add(this.ResetButton);
             this.Controls.Add(this.ImageBox);
             this.Controls.Add(this.SpriteName);
             this.Controls.Add(this.TextureName);
@@ -102,6 +102,7 @@ namespace ImageEditor
             this.Text = "ImageEditor";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.ImageEditor_FormClosing);
             ((System.ComponentModel.ISupportInitialize)(this.ImageBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.FrameBar)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -109,9 +110,9 @@ namespace ImageEditor
         #endregion
         private System.Windows.Forms.ComboBox TextureName;
         private System.Windows.Forms.ComboBox SpriteName;
-        private System.Windows.Forms.Button DrawButton;
+        private System.Windows.Forms.Button ResetButton;
         private System.Windows.Forms.PictureBox ImageBox;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TrackBar FrameBar;
     }
 }
 

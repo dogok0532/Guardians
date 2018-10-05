@@ -8,30 +8,19 @@
 
 
 
-void CGameObject::Draw(wstring textureName, wstring spriteName, int Frame)
-{
-	CMainGame::GetInstance()->GetSpriteResource()->Render(textureName,spriteName, Frame,&m_GameInfo);
-}
-
-void CGameObject::Draw(wstring textureName, wstring spriteName)
-{
-	CMainGame::GetInstance()->GetSpriteResource()->Render(textureName, spriteName, m_iFrame, &m_GameInfo);
-
-}
-
-void CGameObject::Draw(int iFrame)
+void CGameObject::DrawFrame()
 {
 	CMainGame::GetInstance()->GetSpriteResource()->Render(m_strTextureName, m_strSpriteName, m_iFrame, &m_GameInfo);
 }
 
-void CGameObject::Draw()
+void CGameObject::DrawSprite()
 {
-	CMainGame::GetInstance()->GetSpriteResource()->Render(m_strTextureName, m_strSpriteName, m_iFrame, &m_GameInfo);
+	CMainGame::GetInstance()->GetSpriteResource()->RenderWholeSprite(m_strTextureName, m_strSpriteName,&m_GameInfo);
 }
 
-void CGameObject::DrawWholeTexture(wstring textureName)
+void CGameObject::DrawTexture()
 {
-	CMainGame::GetInstance()->GetSpriteResource()->RenderWholeTexture(textureName, &m_GameInfo);
+	CMainGame::GetInstance()->GetSpriteResource()->RenderWholeTexture(m_strTextureName, &m_GameInfo);
 }
 
 
@@ -55,8 +44,10 @@ void CGameObject::Update(float deltaTime)
 }
 
 
-
-
+void CGameObject::Render()
+{
+	DrawFrame();
+}
 
 void CGameObject::SetPos(D3DXVECTOR3 vecPos)
 {
@@ -91,46 +82,13 @@ void CGameObject::SetAngle(float Angle)
 	m_GameInfo.fRenderDirection = Angle;
 }
 
-bool CGameObject::isOutOfScreen()
-{
-
-	if (m_GameInfo.vecPos.x < -200 || m_GameInfo.vecPos.y <-200 || m_GameInfo.vecPos.x > WINCX + 200 || m_GameInfo.vecPos.y > WINCY + 200)
-		return true;
-	else
-		return false;
-}
-
-void CGameObject::SetAdjustIngame()
-{
-	m_GameInfo.vecPos.x += (WINCX - GAMESIZE_X) / 2;
-} 
-
-void CGameObject::ResetAdjustIngame()
-{
-	m_GameInfo.vecPos.x -= (WINCX - GAMESIZE_X) / 2;
-}
-
-bool CGameObject::Spawn(float fTimePassed)
-{
-	if (m_fSpawnTime <= fTimePassed * 10)
-	{
-		return true;
-	}
-	return false;
-}
 
 
 
 
-void CGameObject::SetSpawnInformation(float fX, float fY, float SpawnTime, float fRenderDirection, float fMovingDirection, int iPattern, float fSpeed, bool bMoveByGround)
-{
-	m_GameInfo.vecPos = { fX,fY,0 };
-	m_fSpawnTime = m_fSpawnTime;
-	m_fMovingDirection = fMovingDirection;
-	m_fSpeed = fSpeed;
-	m_bMoveByBackground = bMoveByGround;
-	m_GameInfo.fRenderDirection = fRenderDirection;
-}
+
+
+
 
 CGameObject::CGameObject()
 {

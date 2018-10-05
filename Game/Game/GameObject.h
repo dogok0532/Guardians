@@ -12,27 +12,19 @@ using namespace std;
 class CGameObject
 {
 
-protected:
+protected:  // Render 정보
 	RenderInfo m_GameInfo;
-
-
 
 	wstring m_strTextureName;
 	wstring m_strSpriteName;
-	
+	int m_iFrame = 0;
 
-	float m_fSpeed=0;
-	float m_fMovingDirection=0;
-
-
-	void Draw(wstring textureName, wstring spriteName, int iFrame);
-	void Draw(wstring textureName, wstring spriteName);
-	void Draw(int iFrame);
-	void Draw();
-	void DrawWholeTexture(wstring textureName);
+	void DrawFrame();
+	void DrawSprite();
+	void DrawTexture();
 
 public:
-	int m_iFrame = 0;
+	
 
 public:
 	void SetSizeAsSprite(wstring textureName, wstring spriteName);
@@ -43,7 +35,7 @@ public:
 
 
 	virtual void Update(float deltaTime);
-	virtual void Render()=0;
+	virtual void Render();
 
 
 
@@ -57,28 +49,6 @@ public:
 
 	void SetAngle(float Angle);
 
-
-	bool isOutOfScreen();	//화면에서 벗어났는지 판정
-
-	void SetAdjustIngame();
-	void ResetAdjustIngame();
-
-
-
-
-
-
-
-
-
-private:
-	float m_fSpawnTime;
-	bool m_bMoveByBackground;
-	int iPattern;
-
-public:
-	bool Spawn(float fTimePassed);
-	void SetSpawnInformation(float fX, float fY, float SpawnTime,float fRenderDirection, float fMoveDirection, int iPattern, float fSpeed, bool bMoveByGround);
 
 
 

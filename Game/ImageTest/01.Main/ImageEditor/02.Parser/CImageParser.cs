@@ -26,22 +26,24 @@ struct spriteInfo
 
 namespace ImageEditor._02.Parser
 {
-
-
     class CImageParser
     {
         XmlDocument xml;
-        Dictionary<string, CTexture> mapTexture = new Dictionary<string, CTexture>();
-        Image currentImage;
-        Rectangle frameRect;
-        Rectangle frameSize;
-        int iCurrentFrame;
 
         public CImageParser()
         {
+            
+            
+        }
+        public Dictionary<string, CTexture> GetParsedData()
+        {
             xml = new XmlDocument();
             xml.Load("../../../Script/TextureList.xml");
+
+            Dictionary<string, CTexture> mapTexture = new Dictionary<string, CTexture>();
+
             XmlNodeList TextureList = xml.SelectNodes("/TextureList/Texture");
+
             foreach (XmlNode TextureNode in TextureList)   //Texture 수만큼 루프
             {
                 string strName = TextureNode["Name"].InnerText;
@@ -76,64 +78,17 @@ namespace ImageEditor._02.Parser
                         SpriteInfo.iXSize = Int32.Parse(SpriteNode["XSize"].InnerText);
                         SpriteInfo.iYSize = Int32.Parse(SpriteNode["YSize"].InnerText);
                         CSprite Sprite = new CSprite(SpriteInfo);
-
                         Texture.AddSprite(SpriteName, Sprite);
-
                     }
                 }
 
                 mapTexture.Add(strName, Texture);
             }
-
+            return mapTexture;
         }
 
-        public void SetImage(string Texture, string strSprite)
-        {
-            CTexture value;
-            mapTexture.TryGetValue(Texture, out value);
-            if (value == null)
-                return;
-            currentImage = Image.FromFile(value.GetRoute());
-            CSprite sprite = value.GetSprite (strSprite);
 
-            if (sprite == null)
-            {
-                frameRect = new Rectangle(0, 0, 0, 0);
-                return;
-            }
-            frameRect = sprite.GetFrameRect(iCurrentFrame);
-            frameSize = sprite.GetFrameSize();
-            
-        }
-        public Image GetImage()
-        {
-            return currentImage;
-        }
-        public Rectangle GetFrameRect()
-        {
-            return frameRect;
-        }
 
-        public string[] GetTextureList()
-        {
-          
-           string[] TextureArray = mapTexture.Keys.ToArray();
-           return TextureArray;
-        }
 
-        public string[] GetSpriteList(string TextureName)
-        {
-           return mapTexture[TextureName].GetSpriteNameList();
-        }
-
-        public void AddFrame()
-        {
-            iCurrentFrame++;
-        }
-
-        public Rectangle GetFrameSize()
-        {
-            return frameSize;
-        }
     }
 }

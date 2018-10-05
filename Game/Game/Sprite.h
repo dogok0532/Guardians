@@ -25,14 +25,14 @@ private:
 
 	spriteInfo m_SpriteInfo;
 
-	
-
-
-
 public:	
 
 	const RECT* GetFrameRect(int Frame);
-	const D3DXVECTOR3* GetCenter();
+	const RECT* GetSpriteRect();
+
+	const D3DXVECTOR3* GetFrameCenter();
+	const D3DXVECTOR3* GetSpriteCenter();
+
 
 	void SetSpriteInfo(spriteInfo* SpriteInfo);
 

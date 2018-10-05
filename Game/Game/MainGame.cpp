@@ -4,10 +4,9 @@
 #include "Defines.h"
 #include "Stage.h"
 #include <windows.h>
-#include "Observer.h"
+
 #include "Text.h"
 #include "SoundResource.h"
-#include "Setting.h"
 #include "SpriteResource.h"
 #include <stdio.h>
 
@@ -18,22 +17,11 @@ void CMainGame::ChangeScene(int Scene)
 {
 	switch (Scene)
 	{
-	case 0:
-		SAFE_DELETE(m_pCurrentScene);			
-		m_pCurrentScene = new CStage;
-		break;
-	
-	case 1:
-	SAFE_DELETE(m_pCurrentScene);
-	m_pCurrentScene = new CSetting;
-		break;
 
 	case 2:
 
-
-
-	if (MessageBox(g_hWnd, L"게임을 종료하시겠습니까?", L"", MB_OKCANCEL)== IDOK)
-		ExitProcess(0);
+		if (MessageBox(g_hWnd, L"게임을 종료하시겠습니까?", L"", MB_OKCANCEL) == IDOK)
+			ExitProcess(0);
 	else
 	{
 		SAFE_DELETE(m_pCurrentScene);

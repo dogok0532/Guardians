@@ -28,23 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.StageDesignerButton = new System.Windows.Forms.Button();
             this.ImageEditorButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // StageDesignerButton
-            // 
-            this.StageDesignerButton.Location = new System.Drawing.Point(194, 213);
-            this.StageDesignerButton.Name = "StageDesignerButton";
-            this.StageDesignerButton.Size = new System.Drawing.Size(130, 63);
-            this.StageDesignerButton.TabIndex = 0;
-            this.StageDesignerButton.Text = "StageDesigner";
-            this.StageDesignerButton.UseVisualStyleBackColor = true;
-            this.StageDesignerButton.Click += new System.EventHandler(this.StageDesigner_Click);
-            // 
             // ImageEditorButton
             // 
-            this.ImageEditorButton.Location = new System.Drawing.Point(409, 213);
+            this.ImageEditorButton.Location = new System.Drawing.Point(241, 209);
             this.ImageEditorButton.Name = "ImageEditorButton";
             this.ImageEditorButton.Size = new System.Drawing.Size(133, 63);
             this.ImageEditorButton.TabIndex = 1;
@@ -58,7 +47,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(794, 470);
             this.Controls.Add(this.ImageEditorButton);
-            this.Controls.Add(this.StageDesignerButton);
             this.Name = "GameEditor";
             this.Text = "GameEditor";
             this.ResumeLayout(false);
@@ -66,8 +54,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Button StageDesignerButton;
         private System.Windows.Forms.Button ImageEditorButton;
     }
 }

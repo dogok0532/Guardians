@@ -162,34 +162,15 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="AntiAir.cpp" />
-    <ClCompile Include="CBackground.cpp" />
-    <ClCompile Include="Bomb.cpp" />
-    <ClCompile Include="CEnemyBomber.cpp" />
-    <ClCompile Include="CDirectInput.cpp" />
-    <ClCompile Include="GoldBar.cpp" />
-    <ClCompile Include="EnemyBullet.cpp" />
-    <ClCompile Include="GameFlowParser.cpp" />
-    <ClCompile Include="Item.cpp" />
-    <ClCompile Include="PowerUp.cpp" />
     <ClCompile Include="SpriteParser.cpp" />
-    <ClCompile Include="Setting.cpp" />
     <ClCompile Include="Sprite.cpp" />
-    <ClCompile Include="Enemy.cpp" />
-    <ClCompile Include="EnemyFighter.cpp" />
-    <ClCompile Include="GameButton.cpp" />
     <ClCompile Include="Clock.cpp" />
     <ClCompile Include="MainGame.cpp" />
     <ClCompile Include="MainMenu.cpp" />
-    <ClCompile Include="Mouse.cpp" />
     <ClCompile Include="SoundResource.cpp" />
-    <ClCompile Include="PlayerBullet.cpp" />
     <ClCompile Include="Direct.cpp" />
-    <ClCompile Include="GameInfo.cpp" />
     <ClCompile Include="GameObject.cpp" />
     <ClCompile Include="Main.cpp" />
-    <ClCompile Include="Stage.cpp" />
-    <ClCompile Include="Player.cpp" />
     <ClCompile Include="Scene.cpp" />
     <ClCompile Include="SpriteResource.cpp" />
     <ClCompile Include="Text.cpp" />
@@ -198,51 +179,28 @@
     <ClCompile Include="tinyxml.cpp" />
     <ClCompile Include="tinyxmlerror.cpp" />
     <ClCompile Include="tinyxmlparser.cpp" />
-    <ClCompile Include="UI.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="AntiAir.h" />
-    <ClInclude Include="CBackground.h" />
-    <ClInclude Include="Bomb.h" />
-    <ClInclude Include="CEnemyBomber.h" />
-    <ClInclude Include="CDirectInput.h" />
-    <ClInclude Include="GoldBar.h" />
-    <ClInclude Include="EnemyBullet.h" />
-    <ClInclude Include="GameFlowParser.h" />
-    <ClInclude Include="Item.h" />
-    <ClInclude Include="PowerUp.h" />
     <ClInclude Include="SpriteParser.h" />
     <ClInclude Include="Scene.h" />
-    <ClInclude Include="Setting.h" />
     <ClInclude Include="Sprite.h" />
-    <ClInclude Include="Enemy.h" />
-    <ClInclude Include="EnemyFighter.h" />
-    <ClInclude Include="GameButton.h" />
     <ClInclude Include="Clock.h" />
     <ClInclude Include="MainGame.h" />
     <ClInclude Include="MainMenu.h" />
-    <ClInclude Include="Mouse.h" />
     <ClInclude Include="SoundResource.h" />
-    <ClInclude Include="PlayerBullet.h" />
     <ClInclude Include="Defines.h" />
     <ClInclude Include="DirectHeader.h" />
-    <ClInclude Include="GameInfo.h" />
     <ClInclude Include="GameObject.h" />
-    <ClInclude Include="Stage.h" />
-    <ClInclude Include="Player.h" />
     <ClInclude Include="SpriteResource.h" />
     <ClInclude Include="direct.h" />
     <ClInclude Include="Text.h" />
     <ClInclude Include="CTexture.h" />
     <ClInclude Include="tinystr.h" />
     <ClInclude Include="tinyxml.h" />
-    <ClInclude Include="UI.h" />
     <ClInclude Include="UserFunction.h" />
   </ItemGroup>
   <ItemGroup>
-    <Xml Include="..\Script\Stage1.xml">
-      <SubType>Designer</SubType>
-    </Xml>
+    <Xml Include="..\Script\GameClientOption.xml" />
     <Xml Include="..\Script\TextureList.xml">
       <SubType>Designer</SubType>
     </Xml>

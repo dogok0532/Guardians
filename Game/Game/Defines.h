@@ -5,21 +5,11 @@
 #define UP 0x000000004
 #define DOWN 0x00000008
 
-#define A_KEY 0x00000010
-#define B_KEY 0x00000020
-
 //버튼 키값 정의
-
-#define WINCX 1200
-#define WINCY 800
-
-
-#define GAMESIZE_X 600
-#define GAMESIZE_Y 800
 
 //가로 세로 크기 정의
 
-#define STR_MAX 256
+#define STR_DEFAULT 256
 
 #define DEFAULT_COLOR D3DCOLOR_ARGB(255,255,255,255)
 

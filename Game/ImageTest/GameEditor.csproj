@@ -62,21 +62,12 @@
     <Compile Include="01.Main\ImageEditor\02.Parser\CSprite.cs" />
     <Compile Include="01.Main\ImageEditor\02.Parser\CTexture.cs" />
     <Compile Include="01.Main\ImageEditor\02.Parser\CImageParser.cs" />
-    <Compile Include="01.Main\StageDesigner\StageDesigner.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="01.Main\StageDesigner\StageDesigner.Designer.cs">
-      <DependentUpon>StageDesigner.cs</DependentUpon>
-    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="01.Main\GameEditor.resx">
       <DependentUpon>GameEditor.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="01.Main\ImageEditor\ImageEditor.resx">
       <DependentUpon>ImageEditor.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="01.Main\StageDesigner\StageDesigner.resx">
-      <DependentUpon>StageDesigner.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

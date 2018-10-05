@@ -20,6 +20,11 @@ void CSpriteResource::Render(wstring Texture, wstring Sprite, int Frame, RenderI
 		mapTextureFix[Texture]->Draw(Sprite, Frame,pGameInfo);
 }
 
+void CSpriteResource::RenderWholeSprite(wstring Texture, wstring Sprite, RenderInfo* pGameInfo)
+{
+	mapTextureFix[Texture]->DrawWholeSprite(Sprite,pGameInfo);
+}
+
 void CSpriteResource::RenderWholeTexture(wstring Texture, RenderInfo* pGameInfo)
 {
 	mapTextureFix[Texture]->DrawWholeTexture(pGameInfo);

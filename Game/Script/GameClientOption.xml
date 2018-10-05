@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<GameClientOption>
+
+  <isWindow>1</isWindow>
+  <Width>1200</Width>
+  <Height>800</Height>
+  <MouseLocked>0</MouseLocked>
+
+</GameClientOption>

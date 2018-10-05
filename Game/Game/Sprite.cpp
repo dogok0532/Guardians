@@ -24,9 +24,24 @@ const RECT* CSprite::GetFrameRect(int Frame)
 	return &rc;
 }
 
-const D3DXVECTOR3* CSprite::GetCenter()
+const RECT* CSprite::GetSpriteRect()
+{
+	RECT rc = {m_SpriteInfo.iXBegin, m_SpriteInfo.iYBegin,
+	m_SpriteInfo.iXBegin + m_SpriteInfo.iXSize*m_SpriteInfo.iXFrame,
+		m_SpriteInfo.iYBegin + m_SpriteInfo.iYSize*m_SpriteInfo.iYFrame };
+	return &rc;
+}
+
+const D3DXVECTOR3* CSprite::GetFrameCenter()
 {
 	return &D3DXVECTOR3((LONG)m_SpriteInfo.iXSize / 2.f, (LONG)m_SpriteInfo.iYSize / 2.f, 0);
+
+}
+
+const D3DXVECTOR3* CSprite::GetSpriteCenter()
+{
+	return &D3DXVECTOR3((LONG)(m_SpriteInfo.iXSize *m_SpriteInfo.iXFrame / 2.f), (long)(m_SpriteInfo.iYSize *m_SpriteInfo.iYFrame / 2.f), 0);
+
 }
 
 void CSprite::SetSpriteInfo(spriteInfo* SpriteInfo)

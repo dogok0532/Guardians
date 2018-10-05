@@ -38,6 +38,7 @@ public:
 
 	//-----차후 아랫걸로 교체-----//
 	void Draw(wstring spriteName, int frame, RenderInfo* pGameInfo);
+	void DrawWholeSprite(wstring spriteName, RenderInfo* pGameInfo);
 	void DrawWholeTexture(RenderInfo* pGameInfo);
 	void DrawJudgeLine(wstring spriteName, RenderInfo* pGameInfo,D3DXMATRIX* pMatrix);
 

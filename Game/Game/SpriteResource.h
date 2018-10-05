@@ -17,6 +17,7 @@ private:
 public:
 
 	void Render(wstring Texture, wstring Sprite, int Frame, RenderInfo* pGameInfo);
+	void RenderWholeSprite(wstring Texture, wstring Sprite, RenderInfo* pGameInfo);
 	void RenderWholeTexture(wstring Texture, RenderInfo* pGameInfo);
 
 	D3DXVECTOR3 GetTextureSize(wstring Texture);

@@ -13,8 +13,8 @@ void CSoundResource::Init()
 
 void CSoundResource::Play(wstring fileName)
 {
-	char cFileName[STR_MAX];
-	wcstombs_s(NULL, cFileName, sizeof(cFileName), fileName.c_str(), STR_MAX);
+	char cFileName[STR_DEFAULT];
+	wcstombs_s(NULL, cFileName, sizeof(cFileName), fileName.c_str(), STR_DEFAULT);
 
 	m_pEngine->play2D(cFileName,true,false,false, ESM_AUTO_DETECT,true);
 }
