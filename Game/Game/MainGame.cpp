@@ -18,7 +18,7 @@ void CMainGame::ChangeScene(int Scene)
 	switch (Scene)
 	{
 
-	case 2:
+	case 100:
 
 		if (MessageBox(g_hWnd, L"게임을 종료하시겠습니까?", L"", MB_OKCANCEL) == IDOK)
 			ExitProcess(0);
@@ -35,16 +35,10 @@ void CMainGame::ChangeScene(int Scene)
 
 void CMainGame::Init()
 {
-
 	pSoundResource = new CSoundResource;
 	pSoundResource->Init();
-
 	pSpriteResource = new CSpriteResource;
-
-
 	m_pCurrentScene = new CMainMenu;
-
-
 }
 
 void CMainGame::Update(float deltaTime)
@@ -88,7 +82,7 @@ CMainGame::CMainGame()
 CMainGame::~CMainGame()
 {
 	
-	;
+	
 	delete pSoundResource;
 
 	delete pSpriteResource;

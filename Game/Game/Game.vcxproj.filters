@@ -55,21 +55,6 @@
     <Filter Include="99.Default\06.Parser\02.SoundParser">
       <UniqueIdentifier>{80f844e0-c8f7-46c3-a8ea-8abd17aaa2ae}</UniqueIdentifier>
     </Filter>
-    <Filter Include="99.Default\03.ImageResource">
-      <UniqueIdentifier>{c625f279-9950-4605-9912-17d9f0ca4025}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="99.Default\03.ImageResource\SpriteResource">
-      <UniqueIdentifier>{52265d57-dbd0-4858-b793-61593e7dc5d1}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="99.Default\03.ImageResource\SpriteResource\Texture">
-      <UniqueIdentifier>{abc19d4f-dc7b-4947-886c-ccbc11b3bdc9}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="99.Default\03.ImageResource\SpriteResource\Texture\Sprite">
-      <UniqueIdentifier>{fe13d826-2ab7-416d-a428-e4a5bc78aff5}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="99.Default\04.SoundResource">
-      <UniqueIdentifier>{4816ec79-4b83-43f4-ae2c-4a660f74df83}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Component">
       <UniqueIdentifier>{d8a42f76-f07e-48de-b199-db6adee706c6}</UniqueIdentifier>
     </Filter>
@@ -97,7 +82,28 @@
     <Filter Include="Component\필수요소\02.TextComponent">
       <UniqueIdentifier>{20f0b9e7-c58e-4a67-8ffb-a9423015e903}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Component\선택요소">
+    <Filter Include="99.Default\03.Resource">
+      <UniqueIdentifier>{e7e7b0d6-9aa3-4252-80a9-f250c648f149}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="99.Default\03.Resource\03.Image">
+      <UniqueIdentifier>{c625f279-9950-4605-9912-17d9f0ca4025}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="99.Default\03.Resource\03.Image\SpriteResource">
+      <UniqueIdentifier>{52265d57-dbd0-4858-b793-61593e7dc5d1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="99.Default\03.Resource\03.Image\SpriteResource\Texture">
+      <UniqueIdentifier>{abc19d4f-dc7b-4947-886c-ccbc11b3bdc9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="99.Default\03.Resource\03.Image\SpriteResource\Texture\Sprite">
+      <UniqueIdentifier>{fe13d826-2ab7-416d-a428-e4a5bc78aff5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="99.Default\03.Resource\04.Sound">
+      <UniqueIdentifier>{4816ec79-4b83-43f4-ae2c-4a660f74df83}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="99.Default\06.Parser\03.WindowParser">
+      <UniqueIdentifier>{4a5c8db7-862d-4dd6-86e9-5e799863d6e0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Component\게임선택요소">
       <UniqueIdentifier>{97c55c61-85d9-40a1-ad77-892ae462fe94}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
@@ -115,7 +121,7 @@
       <Filter>99.Default\00.Main</Filter>
     </ClCompile>
     <ClCompile Include="SoundResource.cpp">
-      <Filter>99.Default\04.SoundResource</Filter>
+      <Filter>99.Default\03.Resource\04.Sound</Filter>
     </ClCompile>
     <ClCompile Include="MainMenu.cpp">
       <Filter>01.Scene\00.MainMenu</Filter>
@@ -127,7 +133,7 @@
       <Filter>99.Default\05.TextManager</Filter>
     </ClCompile>
     <ClCompile Include="Sprite.cpp">
-      <Filter>99.Default\03.ImageResource\SpriteResource\Texture\Sprite</Filter>
+      <Filter>99.Default\03.Resource\03.Image\SpriteResource\Texture\Sprite</Filter>
     </ClCompile>
     <ClCompile Include="tinystr.cpp">
       <Filter>99.Default\06.Parser\00.Default</Filter>
@@ -145,10 +151,10 @@
       <Filter>99.Default\06.Parser\01.SpriteParser</Filter>
     </ClCompile>
     <ClCompile Include="SpriteResource.cpp">
-      <Filter>99.Default\03.ImageResource\SpriteResource</Filter>
+      <Filter>99.Default\03.Resource\03.Image\SpriteResource</Filter>
     </ClCompile>
     <ClCompile Include="CTexture.cpp">
-      <Filter>99.Default\03.ImageResource\SpriteResource\Texture</Filter>
+      <Filter>99.Default\03.Resource\03.Image\SpriteResource\Texture</Filter>
     </ClCompile>
     <ClCompile Include="IComponent.cpp">
       <Filter>Component</Filter>
@@ -183,7 +189,7 @@
       <Filter>99.Default\00.Main</Filter>
     </ClInclude>
     <ClInclude Include="SoundResource.h">
-      <Filter>99.Default\04.SoundResource</Filter>
+      <Filter>99.Default\03.Resource\04.Sound</Filter>
     </ClInclude>
     <ClInclude Include="MainMenu.h">
       <Filter>01.Scene\00.MainMenu</Filter>
@@ -195,7 +201,7 @@
       <Filter>99.Default\05.TextManager</Filter>
     </ClInclude>
     <ClInclude Include="Sprite.h">
-      <Filter>99.Default\03.ImageResource\SpriteResource\Texture\Sprite</Filter>
+      <Filter>99.Default\03.Resource\03.Image\SpriteResource\Texture\Sprite</Filter>
     </ClInclude>
     <ClInclude Include="tinystr.h">
       <Filter>99.Default\06.Parser\00.Default</Filter>
@@ -210,10 +216,10 @@
       <Filter>99.Default\06.Parser\01.SpriteParser</Filter>
     </ClInclude>
     <ClInclude Include="SpriteResource.h">
-      <Filter>99.Default\03.ImageResource\SpriteResource</Filter>
+      <Filter>99.Default\03.Resource\03.Image\SpriteResource</Filter>
     </ClInclude>
     <ClInclude Include="CTexture.h">
-      <Filter>99.Default\03.ImageResource\SpriteResource\Texture</Filter>
+      <Filter>99.Default\03.Resource\03.Image\SpriteResource\Texture</Filter>
     </ClInclude>
     <ClInclude Include="IComponent.h">
       <Filter>Component</Filter>

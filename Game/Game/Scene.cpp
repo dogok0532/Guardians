@@ -1,11 +1,10 @@
 
 
 #include "Scene.h"
-#include "CGameObject.h"
+#include "GameObject.h"
 
 int CScene::GetSceneChange()
 {
-	m_iStageChange;
 
 
 	return m_iStageChange;
