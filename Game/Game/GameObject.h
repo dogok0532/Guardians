@@ -8,46 +8,22 @@
 using namespace std;
 
 
-
+class IComponent;
 class CGameObject
 {
 
 protected:  // Render Á¤º¸
-	RenderInfo m_GameInfo;
 
-	wstring m_strTextureName;
-	wstring m_strSpriteName;
-	int m_iFrame = 0;
 
-	void DrawFrame();
-	void DrawSprite();
-	void DrawTexture();
-
-public:
-	
-
-public:
-	void SetSizeAsSprite(wstring textureName, wstring spriteName);
-	void SetSizeAsSprite();
+	wstring m_strGameObjectID;
+	map<wstring, IComponent*> m_mapComponent;
 
 
 public:
 
 
 	virtual void Update(float deltaTime);
-	virtual void Render();
 
-
-
-	void SetPos(D3DXVECTOR3 vecPos);	
-	void SetPos(float x, float y, float z=0);
-	D3DXVECTOR3 GetPos();
-	
-
-	RECT GetRect();
-
-
-	void SetAngle(float Angle);
 
 
 

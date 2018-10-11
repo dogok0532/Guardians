@@ -1,7 +1,7 @@
 
 
 #include "Scene.h"
-#include "GameObject.h"
+#include "CGameObject.h"
 
 int CScene::GetSceneChange()
 {

@@ -1,5 +1,6 @@
 #pragma once
 #include "DirectHeader.h"
+#include "GameObject.h"
 
 void SafeDelete(void** ptr)
 {
@@ -47,3 +48,35 @@ bool CheckHit(RECT* rcSrc,RECT* rcDes)
 }
 
 
+bool CheckGameObjectCollision(CGameObject* pGameObjSrc, CGameObject* pGameObjDes)
+{
+	if (1 )	// 실체가 없는 Object일경우 반환
+	{
+		return 0;
+	}
+	
+	if (1)//Circle&& Circle
+	{
+		if (1)	//충돌할경우
+		{
+			return 1;
+		}
+		else    //충돌하지 않을경우
+		{
+
+		}
+			return 0;
+	}
+	
+
+
+}
+
+void CollisionAdjust(CGameObject* pGameObjSrc, CGameObject* pGameObjDes)
+//움직이는 물체     , 고정물체
+{
+	if (CheckGameObjectCollision(pGameObjSrc, pGameObjDes) == 1)	//실체가 있는 객체끼리 부딛칠때
+	{
+		
+	}
+}

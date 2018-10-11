@@ -70,6 +70,36 @@
     <Filter Include="99.Default\04.SoundResource">
       <UniqueIdentifier>{4816ec79-4b83-43f4-ae2c-4a660f74df83}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Component">
+      <UniqueIdentifier>{d8a42f76-f07e-48de-b199-db6adee706c6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Component\필수요소">
+      <UniqueIdentifier>{cd306eb0-471b-4f4b-8c02-f110ca8afa1d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Component\필수요소\03.SoundComponent">
+      <UniqueIdentifier>{fa002209-2337-48f3-b657-58b758a7f8cc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Component\필수요소\00.SpriteComponent">
+      <UniqueIdentifier>{cd5d1790-7577-43db-b9cd-cdfac0416f9c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Component\필수요소\01.SubstantialComponent">
+      <UniqueIdentifier>{eeedc187-1539-4eb2-a18c-2d66edaa379b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Component\필수요소\01.SubstantialComponent\01.Rectangle">
+      <UniqueIdentifier>{5174c223-4a12-4051-b418-ed25cd343b6a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Component\필수요소\01.SubstantialComponent\02.Circle">
+      <UniqueIdentifier>{5946a5c7-08b5-4961-954b-50a5671820ab}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Component\필수요소\01.SubstantialComponent\03.Custom">
+      <UniqueIdentifier>{d9e484a6-d10d-41fb-86a5-efcd26c249f6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Component\필수요소\02.TextComponent">
+      <UniqueIdentifier>{20f0b9e7-c58e-4a67-8ffb-a9423015e903}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Component\선택요소">
+      <UniqueIdentifier>{97c55c61-85d9-40a1-ad77-892ae462fe94}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Scene.cpp">
@@ -80,9 +110,6 @@
     </ClCompile>
     <ClCompile Include="Clock.cpp">
       <Filter>99.Default\02.Clock</Filter>
-    </ClCompile>
-    <ClCompile Include="GameObject.cpp">
-      <Filter>03.GameObject</Filter>
     </ClCompile>
     <ClCompile Include="Main.cpp">
       <Filter>99.Default\00.Main</Filter>
@@ -123,6 +150,21 @@
     <ClCompile Include="CTexture.cpp">
       <Filter>99.Default\03.ImageResource\SpriteResource\Texture</Filter>
     </ClCompile>
+    <ClCompile Include="IComponent.cpp">
+      <Filter>Component</Filter>
+    </ClCompile>
+    <ClCompile Include="2DSpriteComponent.cpp">
+      <Filter>Component\필수요소\00.SpriteComponent</Filter>
+    </ClCompile>
+    <ClCompile Include="SubstantialComponent.cpp">
+      <Filter>Component\필수요소\01.SubstantialComponent</Filter>
+    </ClCompile>
+    <ClCompile Include="GameObject.cpp">
+      <Filter>03.GameObject</Filter>
+    </ClCompile>
+    <ClCompile Include="RectangleComponent.cpp">
+      <Filter>Component\필수요소\01.SubstantialComponent\01.Rectangle</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="direct.h">
@@ -130,9 +172,6 @@
     </ClInclude>
     <ClInclude Include="Clock.h">
       <Filter>99.Default\02.Clock</Filter>
-    </ClInclude>
-    <ClInclude Include="GameObject.h">
-      <Filter>03.GameObject</Filter>
     </ClInclude>
     <ClInclude Include="Defines.h">
       <Filter>99.Default\00.Main</Filter>
@@ -175,6 +214,21 @@
     </ClInclude>
     <ClInclude Include="CTexture.h">
       <Filter>99.Default\03.ImageResource\SpriteResource\Texture</Filter>
+    </ClInclude>
+    <ClInclude Include="IComponent.h">
+      <Filter>Component</Filter>
+    </ClInclude>
+    <ClInclude Include="2DSpriteComponent.h">
+      <Filter>Component\필수요소\00.SpriteComponent</Filter>
+    </ClInclude>
+    <ClInclude Include="SubstantialComponent.h">
+      <Filter>Component\필수요소\01.SubstantialComponent</Filter>
+    </ClInclude>
+    <ClInclude Include="GameObject.h">
+      <Filter>03.GameObject</Filter>
+    </ClInclude>
+    <ClInclude Include="RectangleComponent.h">
+      <Filter>Component\필수요소\01.SubstantialComponent\01.Rectangle</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

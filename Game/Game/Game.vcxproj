@@ -162,6 +162,10 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="2DSpriteComponent.cpp" />
+    <ClCompile Include="RectangleComponent.cpp" />
+    <ClCompile Include="SubstantialComponent.cpp" />
+    <ClCompile Include="IComponent.cpp" />
     <ClCompile Include="SpriteParser.cpp" />
     <ClCompile Include="Sprite.cpp" />
     <ClCompile Include="Clock.cpp" />
@@ -181,6 +185,10 @@
     <ClCompile Include="tinyxmlparser.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="2DSpriteComponent.h" />
+    <ClInclude Include="RectangleComponent.h" />
+    <ClInclude Include="SubstantialComponent.h" />
+    <ClInclude Include="IComponent.h" />
     <ClInclude Include="SpriteParser.h" />
     <ClInclude Include="Scene.h" />
     <ClInclude Include="Sprite.h" />

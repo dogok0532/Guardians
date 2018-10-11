@@ -1,7 +1,7 @@
 #include "CTexture.h"
 
 #include "direct.h"
-#include "GameObject.h"
+#include "CGameObject.h"
 
 #define D3D_DEBUG_INFO
 
