@@ -163,6 +163,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="2DSpriteComponent.cpp" />
+    <ClCompile Include="Message.cpp" />
     <ClCompile Include="RectangleComponent.cpp" />
     <ClCompile Include="SubstantialComponent.cpp" />
     <ClCompile Include="IComponent.cpp" />
@@ -186,6 +187,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="2DSpriteComponent.h" />
+    <ClInclude Include="Message.h" />
     <ClInclude Include="RectangleComponent.h" />
     <ClInclude Include="SubstantialComponent.h" />
     <ClInclude Include="IComponent.h" />

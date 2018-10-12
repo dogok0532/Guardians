@@ -2,7 +2,7 @@
 #include "DirectHeader.h"
 #include <vector>
 #include "SpriteResource.h"
-#include <map>
+#include <unordered_map>
 #include "Sprite.h"
 
 using namespace std;
@@ -16,14 +16,22 @@ protected:  // Render 정보
 
 
 	wstring m_strGameObjectID;
-	map<wstring, IComponent*> m_mapComponent;
+	unordered_map<wstring, IComponent*> m_mapComponent;
 
 
 public:
 
 
 	virtual void Update(float deltaTime);
+	
+	void HandleMessage();
+	
+	void Add_Component(IComponent* pComponent); // 컴포넌트 추가
+	void Remove_Component(wstring componentName); // 컴포넌트 삭제
 
+
+
+	
 
 
 
