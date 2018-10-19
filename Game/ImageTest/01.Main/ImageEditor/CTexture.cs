@@ -1,9 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ImageEditor._02.Parser._01.Texture
 {
@@ -11,7 +8,7 @@ namespace ImageEditor._02.Parser._01.Texture
     {
         string Name;
         string ImageRoute;
-       
+
 
         Dictionary<string, CSprite> mapTexture = new Dictionary<string, CSprite>();
 

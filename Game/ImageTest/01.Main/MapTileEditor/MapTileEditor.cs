@@ -1,4 +1,4 @@
-﻿using Microsoft.DirectX.Direct3D;
+﻿
 using System;
 using System.ComponentModel;
 using System.Drawing;
@@ -73,7 +73,7 @@ namespace ImageTest._01.Main.MapTileEditor
                 e.Graphics.DrawLine(pen, point[0], point[1]);
             }
 
-            tileSelector.DrawSelected(e);
+            tileSelector.DrawSelected(e.Graphics);
         }
 
 

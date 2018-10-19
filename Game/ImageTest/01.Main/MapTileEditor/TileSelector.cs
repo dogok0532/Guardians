@@ -58,7 +58,7 @@ namespace ImageTest._01.Main.MapTileEditor
                 beginY = endY;
             }
         }
-            public void DrawSelected(PaintEventArgs e)
+            public void DrawSelected(Graphics g)
         {
             Pen pen = new Pen(Color.Red, 2);
 
@@ -67,10 +67,10 @@ namespace ImageTest._01.Main.MapTileEditor
             endX *= Constant.Pixel;
             endY *= Constant.Pixel;
 
-            e.Graphics.DrawLine(pen, beginX, beginY, beginX, endY);
-            e.Graphics.DrawLine(pen, beginX, endY, endX, endY);
-            e.Graphics.DrawLine(pen, endX, endY, endX, beginY);
-            e.Graphics.DrawLine(pen, endX, beginY, beginX, beginY);
+            g.DrawLine(pen, beginX, beginY, beginX, endY);
+            g.DrawLine(pen, beginX, endY, endX, endY);
+            g.DrawLine(pen, endX, endY, endX, beginY);
+            g.DrawLine(pen, endX, beginY, beginX, beginY);
 
             beginX /= Constant.Pixel;
             beginY /= Constant.Pixel;
