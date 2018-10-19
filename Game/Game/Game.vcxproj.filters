@@ -247,14 +247,6 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <Text Include="Text.txt">
-      <Filter>소스 파일</Filter>
-    </Text>
-  </ItemGroup>
-  <ItemGroup>
-    <Xml Include="..\Script\TextureList.xml">
-      <Filter>소스 파일</Filter>
-    </Xml>
     <Xml Include="..\Script\GameClientOption.xml">
       <Filter>소스 파일</Filter>
     </Xml>

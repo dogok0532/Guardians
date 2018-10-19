@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using ImageEditor;
+using ImageTest._01.Main.MapTileEditor;
+
 
 namespace ImageEditor._01.Main
 {
@@ -38,7 +40,10 @@ namespace ImageEditor._01.Main
             this.Hide();
         }
 
-        
-        
+        private void MapTileEditor_Click(object sender, EventArgs e)
+        {
+            new MapTileEditor().Show(this);
+            this.Hide();
+        }
     }
 }

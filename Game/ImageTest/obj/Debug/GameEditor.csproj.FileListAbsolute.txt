@@ -9,3 +9,16 @@ D:\졸프\리포지토리\Guardians\Game\ImageTest\obj\Debug\GameEditor.csproj.C
 D:\졸프\리포지토리\Guardians\Game\ImageTest\obj\Debug\ImageTest.exe
 D:\졸프\리포지토리\Guardians\Game\ImageTest\obj\Debug\ImageTest.pdb
 D:\졸프\리포지토리\Guardians\Game\ImageTest\obj\Debug\GameEditor.csprojAssemblyReference.cache
+D:\졸프\리포지토리\Guardians\Game\ImageTest\obj\Debug\ImageTest._01.Main.MapTileEditor.MapTileEditor.resources
+D:\졸프\리포지토리\Guardians\Game\ImageTest\obj\Debug\ImageTest._01.Main.MapTileEditor.CreateMap.resources
+D:\졸프\리포지토리\Guardians\Game\ImageTest\bin\Debug\Microsoft.DirectX.AudioVideoPlayback.dll
+D:\졸프\리포지토리\Guardians\Game\ImageTest\bin\Debug\Microsoft.DirectX.Diagnostics.dll
+D:\졸프\리포지토리\Guardians\Game\ImageTest\bin\Debug\Microsoft.DirectX.Direct3D.dll
+D:\졸프\리포지토리\Guardians\Game\ImageTest\bin\Debug\Microsoft.DirectX.Direct3DX.dll
+D:\졸프\리포지토리\Guardians\Game\ImageTest\bin\Debug\Microsoft.DirectX.dll
+D:\졸프\리포지토리\Guardians\Game\ImageTest\bin\Debug\Microsoft.DirectX.AudioVideoPlayback.xml
+D:\졸프\리포지토리\Guardians\Game\ImageTest\bin\Debug\Microsoft.DirectX.Diagnostics.xml
+D:\졸프\리포지토리\Guardians\Game\ImageTest\bin\Debug\Microsoft.DirectX.Direct3D.xml
+D:\졸프\리포지토리\Guardians\Game\ImageTest\bin\Debug\Microsoft.DirectX.Direct3DX.xml
+D:\졸프\리포지토리\Guardians\Game\ImageTest\bin\Debug\Microsoft.DirectX.xml
+D:\졸프\리포지토리\Guardians\Game\ImageTest\obj\Debug\GameEditor.csproj.CopyComplete

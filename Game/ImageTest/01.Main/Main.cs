@@ -6,12 +6,10 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-struct RECT
+
+static class Constant
 {
-    public long left;
-    public long top;
-    public long right;
-    public long bottom;
+    public const int Pixel = 16;
 }
 
 namespace ImageEditor
@@ -32,7 +30,7 @@ namespace ImageEditor
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new GameEditor());
 
-            
+           
           
         }
     }

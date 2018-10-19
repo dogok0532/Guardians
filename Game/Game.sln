@@ -7,7 +7,14 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Game", "Game\Game.vcxproj",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GameEditor", "ImageTest\GameEditor.csproj", "{BC1202C4-C494-42E8-81AC-8DF4C3CC7FDC}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Client", "Network\Client\Client.vcxproj", "{39AB67CD-C3CA-422F-898E-370BBAE34646}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Server", "Network\Client\Client.vcxproj", "{39AB67CD-C3CA-422F-898E-370BBAE34646}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "공용", "공용", "{E3439928-1972-4148-BF5A-1734ECA991AE}"
+	ProjectSection(SolutionItems) = preProject
+		Game\Text.txt = Game\Text.txt
+		Script\TextureList.xml = Script\TextureList.xml
+		Script\TileList.xml = Script\TileList.xml
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

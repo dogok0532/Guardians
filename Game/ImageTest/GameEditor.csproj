@@ -33,8 +33,28 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.DirectX.AudioVideoPlayback, Version=1.0.2902.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Windows\Microsoft.NET\DirectX for Managed Code\1.0.2902.0\Microsoft.DirectX.AudioVideoPlayback.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.DirectX.Diagnostics, Version=1.0.2902.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Windows\Microsoft.NET\DirectX for Managed Code\1.0.2902.0\Microsoft.DirectX.Diagnostics.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.DirectX.Direct3D, Version=1.0.2902.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Windows\Microsoft.NET\DirectX for Managed Code\1.0.2902.0\Microsoft.DirectX.Direct3D.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.DirectX.Direct3DX, Version=1.0.2902.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Windows\Microsoft.NET\DirectX for Managed Code\1.0.2911.0\Microsoft.DirectX.Direct3DX.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualC" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Xaml" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -44,6 +64,7 @@
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="01.Main\GameEditor.cs">
@@ -59,15 +80,38 @@
       <DependentUpon>ImageEditor.cs</DependentUpon>
     </Compile>
     <Compile Include="01.Main\Main.cs" />
-    <Compile Include="01.Main\ImageEditor\02.Parser\CSprite.cs" />
-    <Compile Include="01.Main\ImageEditor\02.Parser\CTexture.cs" />
-    <Compile Include="01.Main\ImageEditor\02.Parser\CImageParser.cs" />
+    <Compile Include="01.Main\ImageEditor\CSprite.cs" />
+    <Compile Include="01.Main\ImageEditor\CTexture.cs" />
+    <Compile Include="01.Main\ImageEditor\CImageParser.cs" />
+    <Compile Include="01.Main\MapTileEditor\CreateMap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="01.Main\MapTileEditor\CreateMap.Designer.cs">
+      <DependentUpon>CreateMap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="01.Main\MapTileEditor\MapTilEditor.Menu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="01.Main\MapTileEditor\MapTileEditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="01.Main\MapTileEditor\MapTileEditor.Designer.cs">
+      <DependentUpon>MapTileEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="01.Main\MapTileEditor\TileSelector.cs" />
+    <Compile Include="01.Main\MapTileEditor\TileParser.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="01.Main\GameEditor.resx">
       <DependentUpon>GameEditor.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="01.Main\ImageEditor\ImageEditor.resx">
       <DependentUpon>ImageEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="01.Main\MapTileEditor\CreateMap.resx">
+      <DependentUpon>CreateMap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="01.Main\MapTileEditor\MapTileEditor.resx">
+      <DependentUpon>MapTileEditor.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -91,6 +135,5 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
