@@ -5,26 +5,20 @@ using System.Drawing;
 using System.Windows.Forms;
 
 
-
 namespace ImageTest._01.Main.MapTileEditor
 {
-
-
-
-
     public partial class MapTileEditor : Form
     {
         TileSelector tileSelector = new TileSelector();
-
+        private StageMap map;
+        Graphics g;
+        
 
         public MapTileEditor()
         {
             InitializeComponent();
-
-
-
-
-
+            g = pictureBox2.CreateGraphics();
+           
         }
        
         private void MapTileEditor_FormClosing(object sender, FormClosingEventArgs e)
@@ -34,57 +28,19 @@ namespace ImageTest._01.Main.MapTileEditor
 
         
 
-        internal void CreateMap(decimal X, decimal Y)
+        public void CreateMap(decimal X, decimal Y)
         {
             int x=Convert.ToInt32(X);
             int y=Convert.ToInt32(Y);
-        }
 
-        private void tilePictureBox_Paint(object sender, PaintEventArgs e)
-        {
-            if (tilePictureBox.Image == null)
-                return;
-            int X = tilePictureBox.Image.Width / Constant.Pixel;
-            int Y = tilePictureBox.Image.Height / Constant.Pixel;
-
-
-            Point[] point = new Point[2];
-
-
-
-            Pen pen = new Pen(Color.Black, 1);
-
-            for (int i = 0; i < X; i++)
+            string[] tileRoute = new String[tileListBox.Items.Count];
+            for (int i = 0;i< tileListBox.Items.Count; i++)
             {
-                for (int j = 0; j < Y; j++)
-                {
-                    point[0].X = 0;
-                    point[0].Y = j * 16;
-                    point[1].X = tilePanel.Width;
-                    point[1].Y = j * 16;
-
-                    e.Graphics.DrawLine(pen, point[0], point[1]);
-                }
-                point[0].X = i * 16;
-                point[0].Y = 0;
-                point[1].X = i * 16;
-                point[1].Y = tilePanel.Height;
-
-                e.Graphics.DrawLine(pen, point[0], point[1]);
+                tileRoute[i] = (string)tileListBox.Items[i];
             }
-
-            tileSelector.DrawSelected(e.Graphics);
+            map = new StageMap(x, y, tileRoute);
         }
 
-
-        private void tilePictureBox_MouseClick(object sender, MouseEventArgs e)
-        {
-
-
-
-            tilePictureBox.Refresh();
-
-        }
 
         private void tileSplitContainer_Resize(object sender, EventArgs e)
         {
@@ -93,62 +49,7 @@ namespace ImageTest._01.Main.MapTileEditor
 
         }
 
-        private void tileSplitContainer_SplitterMoved(object sender, SplitterEventArgs e)
-        {
 
-
-            tilePanel.Width = e.X;
-            tileListBox.Width = e.X;
-
-
-        }
-
-        private void tileListBox_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            if (tileListBox.SelectedItem != null)
-            {
-                Bitmap bit = new Bitmap( (string)tileListBox.SelectedItem);
-
-                tilePictureBox.Image = bit;
-
-
-                
-            }
-
-
-        }
-
-        private void tilePictureBox_MouseDown(object sender, MouseEventArgs e)
-        {
-            if (tileSelector.bDragging == false)
-            {
-                tileSelector.SelectBegin(e.Location);
-                tileSelector.bDragging = true;
-
-            }
-
-
-            tilePictureBox.Refresh();
-        }
-
-        private void tilePictureBox_MouseUp(object sender, MouseEventArgs e)
-        {
-            if (tileSelector.bDragging == true)
-            {
-                tileSelector.SelectEnd(e.Location);
-                tileSelector.bDragging = false;
-            }
-
-            tilePictureBox.Refresh();
-        }
-
-        private void tilePictureBox_MouseMove(object sender, MouseEventArgs e)
-        {
-            if (tileSelector.bDragging == true)
-                tilePictureBox.Refresh();
-
-           
-        }
 
         private void 새지도ToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -158,7 +59,9 @@ namespace ImageTest._01.Main.MapTileEditor
 
         public void CreateMap(int x,int y)
         {
+            
 
+            
         }
 
         public string GetRelativePath(string src, string des)
@@ -280,5 +183,16 @@ namespace ImageTest._01.Main.MapTileEditor
 
         }
 
+        private void pictureBox2_Paint(object sender, PaintEventArgs e)
+        {
+           
+
+            if (map != null)
+            {
+                pictureBox2.Width = map.GetWidth();
+                pictureBox2.Height = map.GetHeight();
+               map.Draw(ref g);
+            }
+        }
     }
 }

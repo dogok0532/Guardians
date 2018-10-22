@@ -67,18 +67,20 @@
     <Compile Include="01.Main\ImageEditor\CSprite.cs" />
     <Compile Include="01.Main\ImageEditor\CTexture.cs" />
     <Compile Include="01.Main\ImageEditor\CImageParser.cs" />
-    <Compile Include="01.Main\MapTileEditor\CreateMap.cs">
+    <Compile Include="01.Main\MapTileEditor\CreateMap\CreateMap.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="01.Main\MapTileEditor\CreateMap.Designer.cs">
+    <Compile Include="01.Main\MapTileEditor\CreateMap\CreateMap.Designer.cs">
       <DependentUpon>CreateMap.cs</DependentUpon>
     </Compile>
+    <Compile Include="01.Main\MapTileEditor\StageMap\StageMap.cs" />
     <Compile Include="01.Main\MapTileEditor\MapTileEditor.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="01.Main\MapTileEditor\MapTileEditor.Designer.cs">
       <DependentUpon>MapTileEditor.cs</DependentUpon>
     </Compile>
+    <Compile Include="01.Main\MapTileEditor\StageMap\Tile.cs" />
     <Compile Include="01.Main\MapTileEditor\TileSelector.cs" />
     <Compile Include="01.Main\MapTileEditor\TileParser.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -88,7 +90,7 @@
     <EmbeddedResource Include="01.Main\ImageEditor\ImageEditor.resx">
       <DependentUpon>ImageEditor.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="01.Main\MapTileEditor\CreateMap.resx">
+    <EmbeddedResource Include="01.Main\MapTileEditor\CreateMap\CreateMap.resx">
       <DependentUpon>CreateMap.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="01.Main\MapTileEditor\MapTileEditor.resx">
@@ -113,5 +115,6 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

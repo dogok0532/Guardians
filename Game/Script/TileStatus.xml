@@ -1,0 +1,6 @@
+<TileStatusList>
+<Default>00</Default>           모든타일의 디폴트값은 0이다.
+	<TileTextureID>03   <!-ID: 03 X: 12 Y: 1F 타일은 기본적으로 05의 상태값을가진다->
+	<TileX>12
+	<TileY>1F
+	<Status>05

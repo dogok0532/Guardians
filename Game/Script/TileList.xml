@@ -1,6 +1,8 @@
-<TileList>
+<TileTextureList>
+<TileSize>16
+<TileType>TopView
 	<Tile>
-		<ID>0x0001
 		<Name>
+		<TileID>0x00
 		<Route>
 		
