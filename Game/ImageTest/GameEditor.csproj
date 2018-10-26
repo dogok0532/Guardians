@@ -73,6 +73,7 @@
     <Compile Include="01.Main\MapTileEditor\CreateMap\CreateMap.Designer.cs">
       <DependentUpon>CreateMap.cs</DependentUpon>
     </Compile>
+    <Compile Include="01.Main\MapTileEditor\MapTileEditor.Menu.cs" />
     <Compile Include="01.Main\MapTileEditor\StageMap\StageMap.cs" />
     <Compile Include="01.Main\MapTileEditor\MapTileEditor.cs">
       <SubType>Form</SubType>
@@ -81,8 +82,7 @@
       <DependentUpon>MapTileEditor.cs</DependentUpon>
     </Compile>
     <Compile Include="01.Main\MapTileEditor\StageMap\Tile.cs" />
-    <Compile Include="01.Main\MapTileEditor\TileSelector.cs" />
-    <Compile Include="01.Main\MapTileEditor\TileParser.cs" />
+    <Compile Include="01.Main\MapTileEditor\TileInfo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="01.Main\GameEditor.resx">
       <DependentUpon>GameEditor.cs</DependentUpon>

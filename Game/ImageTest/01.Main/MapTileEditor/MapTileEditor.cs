@@ -9,7 +9,7 @@ namespace ImageTest._01.Main.MapTileEditor
 {
     public partial class MapTileEditor : Form
     {
-        TileSelector tileSelector = new TileSelector();
+       
         private StageMap map;
         Graphics g;
         
@@ -17,7 +17,11 @@ namespace ImageTest._01.Main.MapTileEditor
         public MapTileEditor()
         {
             InitializeComponent();
-            g = pictureBox2.CreateGraphics();
+            g = mapPictureBox.CreateGraphics();
+
+
+            tileListBox.DisplayMember = "fileName";
+            
            
         }
        
@@ -50,13 +54,6 @@ namespace ImageTest._01.Main.MapTileEditor
         }
 
 
-
-        private void 새지도ToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            new CreateMap().Show(this);
-            this.Enabled = false;
-        }
-
         public void CreateMap(int x,int y)
         {
             
@@ -64,135 +61,96 @@ namespace ImageTest._01.Main.MapTileEditor
             
         }
 
-        public string GetRelativePath(string src, string des)
+
+
+        private void mapPictureBox_Paint(object sender, PaintEventArgs e)
         {
-            string str_1;
-            string str_2;
-            string str = null;
-            string[] a1 = new string[100];
-            string[] a2 = new string[100];
-            int cnt = 0;
-            int i = 0;
-            bool check = true;
-      
-            str_1 = src;
-            str_2 = des;
+            BufferedGraphicsContext currentContext;
+            BufferedGraphics myBuffer;
+            currentContext = BufferedGraphicsManager.Current;
+            myBuffer = currentContext.Allocate(e.Graphics, e.ClipRectangle);
 
-            a1 = str_1.Split('\\');
-            a2 = str_2.Split('\\');
-            while (true)
-            {
-                try
-                {
-                    if (a1[i] == null)
-                    {
-                        break;
-                    }
-                }
-                catch (Exception e)
-                {
-                    break;
-                }
-                
-                if ( a1[i].Equals(a2[i]))
-                {
-                    i++;
-                    continue;
-                }
-                else
-                {
-                    if (check) { cnt = i; check = false; }
-                    break;
-                }
-            }
-            i = 0;
-            while (true){
-                try { if (a2[i] == null) break; }
-                catch(Exception e)
-                {
-                    i--;
-                    break;
-                }
-                    i++;
-            }
-            for (int k = 1; k < cnt-1; k++)
-            {
-                a2[k] = "..";
-            }
-            for (int k = 1; k < cnt-1; k++)
-            {
-               
-                   str += a2[k] + "/";
-               
-            }
-            for (int k = cnt; k <= i; k++)
-            {
-               
-                str += a2[k] ;
-
-                if(k != i)
-                    str +="\\";
-            }
-
-            return str;
-        }
-
-        private void 타일열기ToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-
-        }
-        private void 타일목록저장ToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            TilesaveFileDialog = new SaveFileDialog();
-            TilesaveFileDialog.AddExtension = true;
-            TilesaveFileDialog.DefaultExt = "txt";
-
-            TilesaveFileDialog.ShowDialog();
-
-
-            for (int i = 0; i < tileListBox.Items.Count; i++)
-            {
-
-            }
-
-
-
-        }
-
-        private void 타일추가ToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            TileopenFileDialog = new OpenFileDialog();
-            TileopenFileDialog.Multiselect = true;
-            TileopenFileDialog.ShowDialog();
-            string[] fileNames = TileopenFileDialog.FileNames;
-
-            foreach (string fileName in fileNames)
-            {
-                string relativePath
-                 = GetRelativePath(System.Windows.Forms.Application.StartupPath, fileName);
-                tileListBox.Items.Add(relativePath);
-            }
-
-
-            //tileListBox.
-        }
-
-        private void TileopenFileDialog_FileOk(object sender, CancelEventArgs e)
-        {
-
-        }
-
-        private void pictureBox2_Paint(object sender, PaintEventArgs e)
-        {
-           
+            myBuffer.Graphics.Clear(Form.DefaultBackColor);
 
             if (map != null)
             {
-                pictureBox2.Width = map.GetWidth();
-                pictureBox2.Height = map.GetHeight();
-               map.Draw(ref g);
+                myBuffer.Graphics.Clear(Color.White);
+                mapPictureBox.Width = map.GetWidth();
+                mapPictureBox.Height = map.GetHeight();
+               map.Draw(myBuffer.Graphics);
             }
+
+            myBuffer.Render();
+            myBuffer.Render(e.Graphics);
+            myBuffer.Dispose();
+            
         }
+
+        private void tileListBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            Bitmap bit = new Bitmap(((TileInfo)tileListBox.SelectedItem).tileImage);
+            tilePictureBox.Image = bit;
+            tilePictureBox.Height = bit.Height;
+            tilePictureBox.Width = bit.Width;
+        }
+
+        private void tileSeperateBlockPicture_Paint(object sender, PaintEventArgs e)
+        {
+            Pen redPen = new Pen(Color.Red,2);
+            Pen blackPen = new Pen(Color.Black, 1);
+            Pen pen;
+
+            int width = tileSeperateBlockPicture.Width-1;
+            int height = tileSeperateBlockPicture.Height-1;
+
+            if (checkBox_LeftUp.Checked)
+                pen = redPen;
+            else
+                pen = blackPen;
+            e.Graphics.DrawLine(pen,width/2,0,0,height/2);
+
+            if (checkBox_LeftDown.Checked)
+                pen = redPen;
+            else
+                pen = blackPen;
+            e.Graphics.DrawLine(pen,0,height/2,width/2,height );
+
+
+            if (checkBox_RightDown.Checked)
+                pen = redPen;
+            else
+                pen = blackPen;
+
+            e.Graphics.DrawLine(pen,width/2,height,width,height/2);
+
+            if (checkBox_RightUp.Checked)
+                pen = redPen;
+            else
+                pen = blackPen;
+            e.Graphics.DrawLine(pen,width,height/2,width/2,0);
+
+        }
+
+        private void checkBox_LeftTop_CheckedChanged(object sender, EventArgs e)
+        {
+            tileSeperateBlockPicture.Refresh();
+        }
+
+        private void checkBox_RightTop_CheckedChanged(object sender, EventArgs e)
+        {
+            tileSeperateBlockPicture.Refresh();
+        }
+
+        private void checkBox_LeftDown_CheckedChanged(object sender, EventArgs e)
+        {
+            tileSeperateBlockPicture.Refresh();
+        }
+
+        private void checkBox_RightDown_CheckedChanged(object sender, EventArgs e)
+        {
+            tileSeperateBlockPicture.Refresh();
+        }
+
+       
     }
 }

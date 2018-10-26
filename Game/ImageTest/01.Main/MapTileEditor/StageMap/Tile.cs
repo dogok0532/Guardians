@@ -12,7 +12,11 @@ namespace ImageTest._01.Main.MapTileEditor
         Bitmap TileBitMap;
         int indexX;
         int indexY;
-       
+
+        public Tile(string file)
+        {
+        }
+
         public void SetTileImage(ref Bitmap bit)
         {
             TileBitMap = bit;

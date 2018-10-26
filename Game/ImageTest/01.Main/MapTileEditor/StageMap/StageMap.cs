@@ -56,15 +56,21 @@ namespace ImageTest._01.Main.MapTileEditor
 
             for(int i=0;i<XSize+1;i++)
             {
-                for(int j=0;j<YSize+1;j++)
-                {
-                    g.DrawLine(pen, i * TileWidth + TileWidth / 2, j * TileHeight / 2, TileWidth / 2 - XSize * TileWidth, YSize * TileHeight / 2);
 
-                }
+                g.DrawLine(pen, GetWidth() / 2 - i * TileWidth / 2,
+                            i * TileHeight / 2,
+                            GetWidth() - i * TileWidth / 2,
+                            GetHeight() / 2 + i * TileHeight / 2);
+
+                g.DrawLine(pen, GetWidth() / 2 + i * TileWidth / 2,
+                           i * TileHeight / 2,
+                           i * TileWidth / 2,
+                           GetHeight() / 2 + i * TileHeight / 2);
+
             }
         }
 
-        public void Draw(ref Graphics g)
+        public void Draw(Graphics g)
         {
             DrawLine(ref g);
             foreach (Tile tile in vTile)
