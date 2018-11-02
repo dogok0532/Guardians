@@ -1,0 +1,65 @@
+<Root>
+  <TileList>
+    <Tile>
+      <Name>droid_ne.png</Name>
+      <Route>../../../Resource/sprites.atlas/droid_ne.png</Route>
+      <Status />
+    </Tile>
+    <Tile>
+      <Name>droid_ne@2x.png</Name>
+      <Route>../../../Resource/sprites.atlas/droid_ne@2x.png</Route>
+      <Status />
+    </Tile>
+    <Tile>
+      <Name>droid_nw.png</Name>
+      <Route>../../../Resource/sprites.atlas/droid_nw.png</Route>
+      <Status />
+    </Tile>
+    <Tile>
+      <Name>droid_nw@2x.png</Name>
+      <Route>../../../Resource/sprites.atlas/droid_nw@2x.png</Route>
+      <Status />
+    </Tile>
+    <Tile>
+      <Name>droid_s@2x.png</Name>
+      <Route>../../../Resource/sprites.atlas/droid_s@2x.png</Route>
+      <Status />
+    </Tile>
+    <Tile>
+      <Name>droid_se.png</Name>
+      <Route>../../../Resource/sprites.atlas/droid_se.png</Route>
+      <Status />
+    </Tile>
+    <Tile>
+      <Name>droid_se@2x.png</Name>
+      <Route>../../../Resource/sprites.atlas/droid_se@2x.png</Route>
+      <Status />
+    </Tile>
+    <Tile>
+      <Name>droid_sw.png</Name>
+      <Route>../../../Resource/sprites.atlas/droid_sw.png</Route>
+      <Status />
+    </Tile>
+    <Tile>
+      <Name>droid_sw@2x.png</Name>
+      <Route>../../../Resource/sprites.atlas/droid_sw@2x.png</Route>
+      <Status />
+    </Tile>
+    <Tile>
+      <Name>droid_w.png</Name>
+      <Route>../../../Resource/sprites.atlas/droid_w.png</Route>
+      <Status />
+    </Tile>
+    <Tile>
+      <Name>iso_3d_ground.png</Name>
+      <Route>../../../Resource/sprites.atlas/iso_3d_ground.png</Route>
+      <Status />
+    </Tile>
+  </TileList>
+  <MapData>
+    <XSize>10</XSize>
+    <YSize>10</YSize>
+    <Data>
+    </Data>
+  </MapData>
+</Root>

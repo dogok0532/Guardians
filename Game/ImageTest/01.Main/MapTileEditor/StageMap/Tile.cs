@@ -4,27 +4,63 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Drawing;
+using System.Drawing.Drawing2D;
 
 namespace ImageTest._01.Main.MapTileEditor
 {
     class Tile
     {
-        Bitmap TileBitMap;
+       
         int indexX;
         int indexY;
 
-        public Tile(string file)
+        private TileInfo tileInfo;
+        public int tileCode=-1;
+
+        public Tile(int indexX, int indexY)
         {
+            this.indexX = indexX;
+            this.indexY = indexY;
+            
         }
 
-        public void SetTileImage(ref Bitmap bit)
+
+        public void Draw(ref Graphics g , StageMap stageMap)
         {
-            TileBitMap = bit;
+            if (tileInfo != null)
+            {
+
+
+
+
+                int yAdjust =
+                   stageMap.TileHeight - tileInfo.tileImage.Height - stageMap.TileHeight / 2;
+
+
+
+
+
+                g.DrawImage(tileInfo.tileImage,
+             stageMap.TileWidth * (indexX + indexY) / 2,
+             stageMap.TileHeight * (-indexX + indexY) / 2 + stageMap.GetHeight() / 2 + yAdjust);
+
+
+
+
+
+
+
+
+
+            }
         }
 
-        public void Draw(ref Graphics g)
+
+
+
+        public void ChangeTileInfo(TileInfo tileInfo, int tileCode)
         {
-            g.DrawImage(TileBitMap, -indexX / 2 * StageMap.TileWidth, indexY / 2 * StageMap.TileHeight);
+            this.tileInfo = tileInfo;
         }
     }
 }

@@ -20,6 +20,7 @@ namespace ImageTest._01.Main.MapTileEditor
         private void okButton_Click(object sender, EventArgs e)
         {
             ((MapTileEditor)Owner).CreateMap(xNum.Value,yNum.Value);
+            
 
 
             this.Close();

@@ -13,6 +13,11 @@
 IMPLEMENT_SINGLETON(CMainGame)
 
 
+typedef struct Node
+{
+	int a;
+}*pNode;
+
 void CMainGame::ChangeScene(int Scene)
 {
 	switch (Scene)

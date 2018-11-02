@@ -12,7 +12,7 @@ namespace ImageTest._01.Main.MapTileEditor
        
         private StageMap map;
         Graphics g;
-        
+
 
         public MapTileEditor()
         {
@@ -22,7 +22,6 @@ namespace ImageTest._01.Main.MapTileEditor
 
             tileListBox.DisplayMember = "fileName";
             
-           
         }
        
         private void MapTileEditor_FormClosing(object sender, FormClosingEventArgs e)
@@ -40,26 +39,25 @@ namespace ImageTest._01.Main.MapTileEditor
             string[] tileRoute = new String[tileListBox.Items.Count];
             for (int i = 0;i< tileListBox.Items.Count; i++)
             {
-                tileRoute[i] = (string)tileListBox.Items[i];
+                tileRoute[i] = ((TileInfo)(tileListBox.Items[i])).filePath;
             }
-            map = new StageMap(x, y, tileRoute);
+            map = new StageMap(x, y);
+            
+            
+
+            mapPictureBox.Refresh();
         }
 
 
         private void tileSplitContainer_Resize(object sender, EventArgs e)
         {
-
+            tileSplitContainer.Panel1.Width = tileSplitContainer.Width;
 
 
         }
 
 
-        public void CreateMap(int x,int y)
-        {
-            
-
-            
-        }
+     
 
 
 
@@ -77,7 +75,7 @@ namespace ImageTest._01.Main.MapTileEditor
                 myBuffer.Graphics.Clear(Color.White);
                 mapPictureBox.Width = map.GetWidth();
                 mapPictureBox.Height = map.GetHeight();
-               map.Draw(myBuffer.Graphics);
+               map.Draw(myBuffer.Graphics,tileListBox);
             }
 
             myBuffer.Render();
@@ -88,10 +86,34 @@ namespace ImageTest._01.Main.MapTileEditor
 
         private void tileListBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-            Bitmap bit = new Bitmap(((TileInfo)tileListBox.SelectedItem).tileImage);
-            tilePictureBox.Image = bit;
-            tilePictureBox.Height = bit.Height;
-            tilePictureBox.Width = bit.Width;
+
+            blockedRadioButton.Checked = false;
+            stairRadioButton.Checked = false;
+            floorRadioButton.Checked = false;
+
+            if (tileListBox.SelectedItem != null)
+            {
+                Bitmap bit = new Bitmap(((TileInfo)tileListBox.SelectedItem).tileImage);
+                tilePictureBox.Image = bit;
+                tilePictureBox.Height = bit.Height;
+                tilePictureBox.Width = bit.Width;
+
+
+
+                if (((TileInfo)tileListBox.SelectedItem).tileType == eTileType.BLOCKED)
+                {
+                    blockedRadioButton.Checked = true;
+
+                }
+                if (((TileInfo)tileListBox.SelectedItem).tileType == eTileType.STAIR)
+                {
+                    stairRadioButton.Checked = true;
+                }
+                if (((TileInfo)tileListBox.SelectedItem).tileType == eTileType.FLOOR)
+                {
+                    floorRadioButton.Checked = true;
+                }
+            }
         }
 
         private void tileSeperateBlockPicture_Paint(object sender, PaintEventArgs e)
@@ -151,6 +173,73 @@ namespace ImageTest._01.Main.MapTileEditor
             tileSeperateBlockPicture.Refresh();
         }
 
-       
+        private void blockedRadioButton_CheckedChanged(object sender, EventArgs e)
+        {
+            if (blockedRadioButton.Checked)
+            {
+                ((TileInfo)(tileListBox.SelectedItem)).tileType = eTileType.BLOCKED;
+            }
+        }
+
+        private void floorRadioButton_CheckedChanged(object sender, EventArgs e)
+        {
+            if (floorRadioButton.Checked)
+            {
+                ((TileInfo)(tileListBox.SelectedItem)).tileType = eTileType.FLOOR;
+            }
+        }
+
+        private void stairRadioButton_CheckedChanged(object sender, EventArgs e)
+        {
+            if (stairRadioButton.Checked)
+            {
+                
+                ((TileInfo)(tileListBox.SelectedItem)).tileType = eTileType.STAIR;
+            }
+        }
+
+        private void floorComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            ((TileInfo)(tileListBox.SelectedItem)).floor = Int32.Parse((string) floorComboBox.SelectedItem);
+
+        }
+
+        private void stairComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if( (string)stairComboBox.SelectedItem == "↖")
+            {
+                ((TileInfo)(tileListBox.SelectedItem)).way = eWay.LEFT_UP;
+            }
+
+            if ((string)stairComboBox.SelectedItem == "↙")
+            {
+                ((TileInfo)(tileListBox.SelectedItem)).way = eWay.LEFT_DOWN;
+            }
+
+            if ((string)stairComboBox.SelectedItem == "↘")
+            {
+                ((TileInfo)(tileListBox.SelectedItem)).way = eWay.RIGHT_DOWN;
+            }
+
+            if ((string)stairComboBox.SelectedItem == "↗")
+            {
+                ((TileInfo)(tileListBox.SelectedItem)).way = eWay.RIGHT_UP;
+            }
+        }
+
+        private void removeTIleButton_Click(object sender, EventArgs e)
+        {
+            if (tileListBox.SelectedItem != null)
+            { tileListBox.Items.RemoveAt(tileListBox.SelectedIndex);
+
+                ResetTile(tileListBox.SelectedIndex);
+            }
+         
+        }
+
+        void ResetTile(int removedTile)
+        {
+            map.ResetTile(removedTile);
+        }
     }
 }

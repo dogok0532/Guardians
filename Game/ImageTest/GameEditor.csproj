@@ -73,7 +73,8 @@
     <Compile Include="01.Main\MapTileEditor\CreateMap\CreateMap.Designer.cs">
       <DependentUpon>CreateMap.cs</DependentUpon>
     </Compile>
-    <Compile Include="01.Main\MapTileEditor\MapTileEditor.Menu.cs" />
+    <Compile Include="01.Main\MapTileEditor\MapTileEditor.Menu.Tile.cs" />
+    <Compile Include="01.Main\MapTileEditor\MapTileEditor.Map.cs" />
     <Compile Include="01.Main\MapTileEditor\StageMap\StageMap.cs" />
     <Compile Include="01.Main\MapTileEditor\MapTileEditor.cs">
       <SubType>Form</SubType>
@@ -95,6 +96,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="01.Main\MapTileEditor\MapTileEditor.resx">
       <DependentUpon>MapTileEditor.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -105,6 +107,7 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Include="01.Main\MapTileEditor\MapTileEditor.Menu.Map.cs" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
