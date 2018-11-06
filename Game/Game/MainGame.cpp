@@ -8,15 +8,25 @@
 #include "Text.h"
 #include "SoundResource.h"
 #include "SpriteResource.h"
+#include "Message.h"
 #include <stdio.h>
+
 
 IMPLEMENT_SINGLETON(CMainGame)
 
 
-typedef struct Node
+
+
+void CMainGame::UpdateMessage(CMessage* msg)
 {
-	int a;
-}*pNode;
+	msgQue.push(msg);
+}
+
+void CMainGame::ProcessMessage()
+{
+	//msgQue.front()->m_receiver->SendMessage()
+	//msgQue.pop();
+}
 
 void CMainGame::ChangeScene(int Scene)
 {
@@ -43,14 +53,24 @@ void CMainGame::Init()
 	pSoundResource = new CSoundResource;
 	pSoundResource->Init();
 	pSpriteResource = new CSpriteResource;
-	m_pCurrentScene = new CMainMenu;
+	m_pCurrentScene = new CStage;
 }
 
 void CMainGame::Update(float deltaTime)
 {
 	m_pCurrentScene->Update(deltaTime);
 
-	ChangeScene(m_pCurrentScene->GetSceneChange());
+
+	while (!msgQue.empty())
+	{
+		CMessage* msg;
+		msg = msgQue.front();
+		//msg->SendMsg();
+		msgQue.pop();
+	}
+
+
+	
 }
 
 void CMainGame::Render()
@@ -71,11 +91,8 @@ CMainGame::CMainGame()
 	FILE* pFile;
 
 	freopen_s(&pFile,"CONOUT$", "a", stderr); 
-
 	freopen_s(&pFile, "CONOUT$", "a", stdout);
-
 	freopen_s(&pFile, "CONIN$", "r", stdin);
-
 	SetConsoleTitleA("Test v.1.0");
 
 
@@ -89,8 +106,6 @@ CMainGame::~CMainGame()
 	
 	
 	delete pSoundResource;
-
 	delete pSpriteResource;
-	
 	delete m_pCurrentScene;
 }

@@ -1,7 +1,7 @@
 #include "CTexture.h"
 
 #include "direct.h"
-#include "CGameObject.h"
+#include "GameObject.h"
 
 #define D3D_DEBUG_INFO
 
@@ -34,7 +34,7 @@ D3DXVECTOR3 CTexture::GetSize()
 D3DXVECTOR3 CTexture::GetSpriteSize(wstring name)
 {
 	
-	if(NULL!=mapSprite[name])
+	if(name !=L"" && NULL!=mapSprite[name])
 		return mapSprite[name]->GetSize();
 
 	return D3DXVECTOR3(0, 0, 0);

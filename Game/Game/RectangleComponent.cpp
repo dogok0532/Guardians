@@ -24,7 +24,7 @@ CRectangleComponent::~CRectangleComponent()
 void CRectangleComponent::Set(RECT rc)
 {
 	m_rc = rc;
-	UpdateFromRECT;
+	UpdateFromRECT();
 }
 
 void CRectangleComponent::Set(float x, float y, float width, float height)
@@ -70,14 +70,16 @@ const std::wstring CRectangleComponent::GetComponentID()
 	return L"Rectangle";
 }
 
-bool CRectangleComponent::CheckCollision(RECT rc)
+bool CRectangleComponent::CheckCollision(CRectangleComponent rc)
 {
+	RECT temp;
 
+	return IntersectRect(&temp,&m_rc,& rc.m_rc);
 }
 
 bool CRectangleComponent::CheckCollisionCircle(float fRadius, float fX, float fY)
 {
-
+	return false;
 }
 
 void CRectangleComponent::UpdateFromRECT()

@@ -4,6 +4,7 @@
 #include "SpriteResource.h"
 #include <unordered_map>
 #include "Sprite.h"
+#include "Message.h"
 
 using namespace std;
 
@@ -23,21 +24,21 @@ public:
 
 
 	virtual void Update(float deltaTime);
+	virtual void Render();
 	
-	void HandleMessage();
 	
 	void Add_Component(IComponent* pComponent); // 컴포넌트 추가
 	void Remove_Component(wstring componentName); // 컴포넌트 삭제
-
-
-
+	IComponent* GetComponent(wstring ComponentID);
+	
+	
 	
 
 
 
 
 public:
-	CGameObject();
+	CGameObject(wstring m_strGameObjectID);
 	virtual ~CGameObject();
 };
 

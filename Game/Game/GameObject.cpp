@@ -19,6 +19,14 @@ void CGameObject::Update(float deltaTime)
 
 
 
+void CGameObject::Render()
+{
+	for (auto iter = m_mapComponent.begin(); iter != m_mapComponent.end(); iter++)
+	{
+		iter->second->Render();
+	}
+}
+
 void CGameObject::Add_Component(IComponent* pComponent)
 {
 	pComponent->SetOwner(this);
@@ -32,11 +40,18 @@ void CGameObject::Remove_Component(wstring componentName)
 
 }
 
-CGameObject::CGameObject()
+
+
+
+IComponent* CGameObject::GetComponent(wstring ComponentID)
 {
-	
+	return m_mapComponent[ComponentID];
 }
 
+CGameObject::CGameObject(wstring strGameObjectID)
+{
+	m_strGameObjectID = strGameObjectID;
+}
 
 CGameObject::~CGameObject()
 {

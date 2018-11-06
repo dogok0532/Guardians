@@ -33,22 +33,22 @@ void C2DSpriteComponent::SetAngle(float fAngle)
 
 void C2DSpriteComponent::SetPos(D3DXVECTOR3 vecPos)
 {
-
+	m_RenderInfo.vecPos = vecPos;
 }
 
 void C2DSpriteComponent::SetPos(float x, float y, float z /*= 0*/)
 {
-
+	m_RenderInfo.vecPos = D3DXVECTOR3(x, y, z);
 }
 
 void C2DSpriteComponent::SetRatio(float XRatio, float YRatio)
 {
-
+	m_RenderInfo.vecRenderRatio = D3DXVECTOR3(XRatio, YRatio, 1);
 }
 
 void C2DSpriteComponent::SetSize(float width, float height)
 {
-
+	m_RenderInfo.vecSize = D3DXVECTOR3(width, height, 0);
 }
 
 void C2DSpriteComponent::DrawFrame()
@@ -70,12 +70,12 @@ void C2DSpriteComponent::DrawTexture()
 
 const std::wstring C2DSpriteComponent::GetComponentID()
 {
-	throw std::logic_error("The method or operation is not implemented.");
+	return L"2DSprite";
 }
 
 const std::wstring C2DSpriteComponent::GetFamilyID()
 {
-	throw std::logic_error("The method or operation is not implemented.");
+	return L"Substantial";
 }
 
 C2DSpriteComponent::C2DSpriteComponent()

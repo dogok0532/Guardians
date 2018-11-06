@@ -5,12 +5,14 @@
 
 using namespace std;
 
+
+
 class C2DSpriteComponent :
 	public IComponent
 {
 private:
 	RenderInfo m_RenderInfo;
-
+	friend CGameObject;
 
 	wstring m_strTextureName;
 	wstring m_strSpriteName;
@@ -24,7 +26,7 @@ public:	//그릴 그림 설정
 	void SetFrame(int frame);
 
 
-public: //그림을  Otoke 그릴지 설정
+public: //그림을  Auto K 그릴지 설정
 	void SetAngle(float fAngle);
 	void SetPos(D3DXVECTOR3 vecPos);
 	void SetPos(float x, float y, float z = 0);

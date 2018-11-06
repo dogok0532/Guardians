@@ -164,7 +164,9 @@
   <ItemGroup>
     <ClCompile Include="2DSpriteComponent.cpp" />
     <ClCompile Include="Message.cpp" />
+    <ClCompile Include="PlayerComponent.cpp" />
     <ClCompile Include="RectangleComponent.cpp" />
+    <ClCompile Include="Stage.cpp" />
     <ClCompile Include="SubstantialComponent.cpp" />
     <ClCompile Include="IComponent.cpp" />
     <ClCompile Include="SpriteParser.cpp" />
@@ -188,7 +190,9 @@
   <ItemGroup>
     <ClInclude Include="2DSpriteComponent.h" />
     <ClInclude Include="Message.h" />
+    <ClInclude Include="PlayerComponent.h" />
     <ClInclude Include="RectangleComponent.h" />
+    <ClInclude Include="Stage.h" />
     <ClInclude Include="SubstantialComponent.h" />
     <ClInclude Include="IComponent.h" />
     <ClInclude Include="SpriteParser.h" />

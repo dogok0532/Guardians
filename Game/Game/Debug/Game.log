@@ -1,13 +1,2 @@
-﻿  RectangleComponent.cpp
-d:\졸프\리포지토리\guardians\game\game\rectanglecomponent.cpp(27): error C3867: 'CRectangleComponent::UpdateFromRECT': 비표준 구문입니다. '&'를 사용하여 멤버 포인터를 만드세요.
-d:\졸프\리포지토리\guardians\game\game\rectanglecomponent.cpp(85): warning C4244: '=': 'LONG'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-d:\졸프\리포지토리\guardians\game\game\rectanglecomponent.cpp(86): warning C4244: '=': 'LONG'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-d:\졸프\리포지토리\guardians\game\game\rectanglecomponent.cpp(91): warning C4244: '=': 'float'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-d:\졸프\리포지토리\guardians\game\game\rectanglecomponent.cpp(92): warning C4244: '=': 'float'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-d:\졸프\리포지토리\guardians\game\game\rectanglecomponent.cpp(93): warning C4244: '=': 'float'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-d:\졸프\리포지토리\guardians\game\game\rectanglecomponent.cpp(94): warning C4244: '=': 'float'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-  SpriteResource.cpp
-d:\졸프\리포지토리\guardians\game\game\spriteresource.cpp(5): fatal error C1083: 포함 파일을 열 수 없습니다. 'CGameObject.h': No such file or directory
-  CTexture.cpp
-d:\졸프\리포지토리\guardians\game\game\ctexture.cpp(4): fatal error C1083: 포함 파일을 열 수 없습니다. 'CGameObject.h': No such file or directory
-  코드를 생성하고 있습니다...
+﻿  PlayerComponent.cpp
+  Game.vcxproj -> D:\졸프\리포지토리\Guardians\Game\Debug\Game.exe

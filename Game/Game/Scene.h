@@ -1,14 +1,20 @@
 #pragma once
-#include <vector>
+#include <list>
+using namespace std;
+
 class CGameObject;
 class CMouse;
 class CScene
 {
+
 protected:
-	CMouse* m_pMouse;
-	std::vector<CGameObject*> m_pVecUI;
+	list<CGameObject*> m_pGaneObjectList;
+
 	
 	int m_iStageChange = -1;
+
+public:
+	void ProcessMessage();
 
 public:
 	int GetSceneChange();

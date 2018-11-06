@@ -106,8 +106,17 @@
     <Filter Include="01.Scene\01.MainMenu">
       <UniqueIdentifier>{fda6fa0e-0a90-4e59-ab5a-98f8a1d5c32e}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Component\사용자 지정요소">
+    <Filter Include="Component\Actor">
       <UniqueIdentifier>{97c55c61-85d9-40a1-ad77-892ae462fe94}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="01.Scene\02.Stage">
+      <UniqueIdentifier>{4aa5f5a7-d834-4537-9e52-957287ae2419}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Component\Actor\Player">
+      <UniqueIdentifier>{07d80c34-3a6e-4802-a86a-b71cd00e16c3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Component\Actor\Enemy">
+      <UniqueIdentifier>{29f9105b-36fb-40a4-8f79-fc6c49ab70a3}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -177,6 +186,12 @@
     <ClCompile Include="Message.cpp">
       <Filter>Component</Filter>
     </ClCompile>
+    <ClCompile Include="Stage.cpp">
+      <Filter>01.Scene\02.Stage</Filter>
+    </ClCompile>
+    <ClCompile Include="PlayerComponent.cpp">
+      <Filter>Component\Actor\Player</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="direct.h">
@@ -244,6 +259,12 @@
     </ClInclude>
     <ClInclude Include="Message.h">
       <Filter>Component</Filter>
+    </ClInclude>
+    <ClInclude Include="Stage.h">
+      <Filter>01.Scene\02.Stage</Filter>
+    </ClInclude>
+    <ClInclude Include="PlayerComponent.h">
+      <Filter>Component\Actor\Player</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

@@ -2,7 +2,7 @@
 #include "SpriteResource.h"
 #include "direct.h"
 #include "CTexture.h"
-#include "CGameObject.h"
+#include "GameObject.h"
 
 #include "tinyxml.h"
 #include "SpriteParser.h"

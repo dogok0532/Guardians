@@ -2,6 +2,8 @@
 #include <iostream>
 #include <vector>
 #include "Defines.h"
+#include <queue>
+
 using namespace std;
 
 
@@ -12,6 +14,7 @@ class CGameObject;
 class CSoundResource;
 class CSpriteResource;
 
+class CMessage;
 
 class CMainGame
 {
@@ -20,8 +23,11 @@ class CMainGame
 private:
 	CScene * m_pCurrentScene = NULL;
 
-
-	
+private:
+	queue<CMessage*> msgQue;
+public:
+	void UpdateMessage(CMessage* msg);
+	void ProcessMessage();
 
 
 

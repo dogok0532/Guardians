@@ -29,10 +29,15 @@ public:
 	void SetWidth(float width);
 	void SetHeight(float height);
 
+	float GetX(){ return m_fX; }
+	float GetY() { return m_fY; }
+	float GetWidth() { return m_fWidth; }
+	float GetHeight() { return m_fHeight; }
+
 	virtual void Update(float deltaTime) override;
 	virtual const wstring GetComponentID() override;
 
-	bool CheckCollision(RECT rc);
+	bool CheckCollision(CRectangleComponent rc);
 	bool CheckCollisionCircle(float fRadius,float fX,float fY);
 	
 };
