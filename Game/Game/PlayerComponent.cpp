@@ -31,8 +31,6 @@ void CPlayerComponent::SetSprite()
 
 void CPlayerComponent::Update(float deltaTime)
 {
-
-
 	C2DSpriteComponent* com = dynamic_cast<C2DSpriteComponent*>(m_pOwner->GetComponent(L"2DSprite"));
 	com->SetTexture(L"Enemy_BattleShip");
 	com->SetSprite(L"Body");

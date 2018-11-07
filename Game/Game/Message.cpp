@@ -6,7 +6,8 @@
 
 CMessage::CMessage(IComponent* sender , 
 	wstring receiverObjectId, wstring receiverComponentID,
-	wstring receiverFamilyID, IComponent* receiver)
+	wstring receiverFamilyID, IComponent* receiver,
+	wstring messageType)
 {
 	m_sender = sender;
 

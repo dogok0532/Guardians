@@ -11,7 +11,6 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Server", "Network\Client\Cl
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "공용", "공용", "{E3439928-1972-4148-BF5A-1734ECA991AE}"
 	ProjectSection(SolutionItems) = preProject
-		..\..\..\..\cocos2d-x-3.17\build\cocos2d-win32.sln = ..\..\..\..\cocos2d-x-3.17\build\cocos2d-win32.sln
 		Game\Text.txt = Game\Text.txt
 		Script\TextureList.xml = Script\TextureList.xml
 		Script\TileList.xml = Script\TileList.xml
