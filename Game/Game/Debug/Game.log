@@ -1,1 +1,11 @@
-﻿  Game.vcxproj -> D:\졸프\리포지토리\Guardians\Game\Debug\Game.exe
+﻿  CTexture.cpp
+d:\졸프\리포지토리\guardians\game\game\ctexture.cpp(67): warning C4244: '인수': 'double'에서 'FLOAT'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\졸프\리포지토리\guardians\game\game\ctexture.cpp(112): warning C4244: '초기화 중': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\졸프\리포지토리\guardians\game\game\ctexture.cpp(113): warning C4244: '초기화 중': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  GameObject.cpp
+  PlayerComponent.cpp
+  Scene.cpp
+  SpriteResource.cpp
+  Stage.cpp
+  코드를 생성하고 있습니다...
+  Game.vcxproj -> D:\졸프\리포지토리\Guardians\Game\Debug\Game.exe

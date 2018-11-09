@@ -68,15 +68,8 @@ void C2DSpriteComponent::DrawTexture()
 	CMainGame::GetInstance()->GetSpriteResource()->RenderWholeTexture(m_strTextureName, &m_RenderInfo);
 }
 
-const std::wstring C2DSpriteComponent::GetComponentID()
-{
-	return L"2DSprite";
-}
 
-const std::wstring C2DSpriteComponent::GetFamilyID()
-{
-	return L"Substantial";
-}
+
 
 C2DSpriteComponent::C2DSpriteComponent()
 {

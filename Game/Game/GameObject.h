@@ -1,11 +1,10 @@
 #pragma once
-#include "DirectHeader.h"
-#include <vector>
-#include "SpriteResource.h"
-#include <unordered_map>
-#include "Sprite.h"
-#include "Message.h"
 
+#include <list>
+
+
+#include "Message.h"
+#include "IComponent.h"
 using namespace std;
 
 
@@ -13,12 +12,12 @@ class IComponent;
 class CGameObject
 {
 
-protected:  // Render 정보
+protected:  
+	ComponentArray componentArray;
+	ComponentBitSet componentBitSet;
+	GroupBitset groupBitSet;
 
-
-	wstring m_strGameObjectID;
-	unordered_map<wstring, IComponent*> m_mapComponent;
-
+	
 
 public:
 
@@ -26,19 +25,38 @@ public:
 	virtual void Update(float deltaTime);
 	virtual void Render();
 	
+	void AddGroup(GROUP group);
+	void RemoveGroup(GROUP group);
+
 	
-	void Add_Component(IComponent* pComponent); // 컴포넌트 추가
-	void Remove_Component(wstring componentName); // 컴포넌트 삭제
-	IComponent* GetComponent(wstring ComponentID);
-	
-	
+	template <typename T> 
+	T& AddComponent()
+	{
+		T* newComponent = new T();
+		newComponent->SetOwner(this);
+		componentArray[getComponentID<T>()] = newComponent;
+		componentBitSet[getComponentID<T>()]=true;
+
+		return *newComponent;
+	}
+
+	template <typename T> void removeComponent()
+	{
+		delete componentArray[getComponentID <T>() ];
+		componentArray[getComponentID <T>()] = NULL;
+		componentBitSet[getComponentID <T>() ] = false;
+	}
 	
 
-
+	template<typename T> T* getComponent() const
+	{
+		auto ptr = componentArray[getComponentID<T>()];
+		return static_cast<T*>(ptr);
+	}
 
 
 public:
-	CGameObject(wstring m_strGameObjectID);
+	CGameObject();
 	virtual ~CGameObject();
 };
 

@@ -10,10 +10,8 @@ class CStage :
 public:
 
 
-	virtual void Update(float fDeltaTime) override;
 
 
-	virtual void Render() override;
 
 public:
 	CStage();

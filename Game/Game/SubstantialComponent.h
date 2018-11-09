@@ -13,7 +13,7 @@ public:
 	virtual const wstring GetComponentID()=0;
 
 
-	virtual const wstring GetFamilyID() override;
+	
 
 };
 

@@ -1,5 +1,8 @@
 #pragma once
 #include <list>
+#include <vector>
+#include <array>
+#include "IComponent.h"
 using namespace std;
 
 class CGameObject;
@@ -8,7 +11,8 @@ class CScene
 {
 
 protected:
-	list<CGameObject*> m_pGaneObjectList;
+	list <CGameObject*> objectList;
+	array<list<CGameObject*>, maxGroups> groupObjectList;
 
 	
 	int m_iStageChange = -1;
@@ -18,8 +22,8 @@ public:
 
 public:
 	int GetSceneChange();
-	virtual void Update(float fDeltaTime) = 0;
-	virtual void Render()=0;
+	void Update(float fDeltaTime);
+	void Render();
 	CScene();
 	~CScene();
 };

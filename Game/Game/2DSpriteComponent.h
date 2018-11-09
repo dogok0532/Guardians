@@ -22,7 +22,7 @@ private:
 
 public:	//그릴 그림 설정
 	void SetTexture(wstring texture);
-	void SetSprite(wstring sprite);
+	void SetSprite(wstring sprite);   
 	void SetFrame(int frame);
 
 
@@ -40,8 +40,7 @@ public:
 	void DrawTexture();
 
 
-	virtual const wstring GetComponentID() override;
-	virtual const wstring GetFamilyID() override;
+
 
 public:
 	C2DSpriteComponent();

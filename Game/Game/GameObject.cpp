@@ -8,12 +8,7 @@
 
 void CGameObject::Update(float deltaTime)
 {
-	unordered_map<wstring, IComponent*>::iterator iter = m_mapComponent.begin();
-
-	for (; iter != m_mapComponent.end(); iter++)
-	{
-		iter->second->Update(deltaTime);
-	}
+	
 	
 }
 
@@ -21,36 +16,34 @@ void CGameObject::Update(float deltaTime)
 
 void CGameObject::Render()
 {
-	for (auto iter = m_mapComponent.begin(); iter != m_mapComponent.end(); iter++)
-	{
-		iter->second->Render();
-	}
-}
 
-void CGameObject::Add_Component(IComponent* pComponent)
-{
-	pComponent->SetOwner(this);
-	m_mapComponent.insert(make_pair(pComponent->GetComponentID(), pComponent));
-}
-
-void CGameObject::Remove_Component(wstring componentName)
-{
-	SAFE_DELETE(m_mapComponent[componentName]);
-	m_mapComponent.erase(componentName);
-
+	
 }
 
 
-
-
-IComponent* CGameObject::GetComponent(wstring ComponentID)
+void CGameObject::AddGroup(GROUP group)
 {
-	return m_mapComponent[ComponentID];
+
+	groupBitSet[group] = true;
 }
 
-CGameObject::CGameObject(wstring strGameObjectID)
+void CGameObject::RemoveGroup(GROUP group)
 {
-	m_strGameObjectID = strGameObjectID;
+	groupBitSet[group] = false;
+	
+}
+
+
+
+
+
+
+
+
+
+CGameObject::CGameObject()
+{
+	componentArray.fill(NULL);
 }
 
 CGameObject::~CGameObject()
