@@ -12,7 +12,7 @@ void IComponent::Render()
 
 }
 
-void IComponent::SetOwner(const CGameObject* pGameObject)
+void IComponent::SetOwner( CGameObject* const pGameObject)
 {
 	m_pOwner = pGameObject;
 }

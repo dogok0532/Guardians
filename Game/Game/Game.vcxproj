@@ -163,7 +163,12 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="2DSpriteComponent.cpp" />
-    <ClCompile Include="Message.cpp" />
+    <ClCompile Include="BulletComponent.cpp" />
+    <ClCompile Include="ButtonComponent.cpp" />
+    <ClCompile Include="CharacterComponent.cpp" />
+    <ClCompile Include="CharacterRenderComponent.cpp" />
+    <ClCompile Include="CircleComponent.cpp" />
+    <ClCompile Include="EnemyComponent.cpp" />
     <ClCompile Include="PlayerComponent.cpp" />
     <ClCompile Include="RectangleComponent.cpp" />
     <ClCompile Include="Stage.cpp" />
@@ -189,7 +194,13 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="2DSpriteComponent.h" />
-    <ClInclude Include="Message.h" />
+    <ClInclude Include="BulletComponent.h" />
+    <ClInclude Include="ButtonComponent.h" />
+    <ClInclude Include="CharacterComponent.h" />
+    <ClInclude Include="CharacterEnum.h" />
+    <ClInclude Include="CharacterRenderComponent.h" />
+    <ClInclude Include="CircleComponent.h" />
+    <ClInclude Include="EnemyComponent.h" />
     <ClInclude Include="PlayerComponent.h" />
     <ClInclude Include="RectangleComponent.h" />
     <ClInclude Include="Stage.h" />
@@ -212,9 +223,6 @@
     <ClInclude Include="tinystr.h" />
     <ClInclude Include="tinyxml.h" />
     <ClInclude Include="UserFunction.h" />
-  </ItemGroup>
-  <ItemGroup>
-    <Xml Include="..\Script\GameClientOption.xml" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

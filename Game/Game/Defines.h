@@ -41,3 +41,4 @@ X* X::GetInstance(){if(pInstance == nullptr){ pInstance = new X();} return pInst
 #include <windows.h>
 
 extern HWND g_hWnd;
+

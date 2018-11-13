@@ -23,12 +23,6 @@ class CMainGame
 private:
 	CScene * m_pCurrentScene = NULL;
 
-private:
-	queue<CMessage*> msgQue;
-public:
-	void UpdateMessage(CMessage* msg);	//컴포넌트로 메세지 전송
-	void ProcessMessage();				//컴포넌트로부터 메세지 수신
-
 
 
 
@@ -48,6 +42,9 @@ public:
 	void Update(float deltaTime);	//	Update루프
 	void Render();					//	Render루프
 	void ResetSprite();				// 스프라이트 리소스 해제
+
+
+	void CreateObject(CGameObject* pGameObject);
 
 	DECLARE_SINGLETON(CMainGame)		//싱글톤 선인
 };

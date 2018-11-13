@@ -12,7 +12,7 @@ class C2DSpriteComponent :
 {
 private:
 	RenderInfo m_RenderInfo;
-	friend CGameObject;
+
 
 	wstring m_strTextureName;
 	wstring m_strSpriteName;

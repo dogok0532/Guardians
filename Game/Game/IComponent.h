@@ -5,10 +5,11 @@
 using namespace std;
 
 
-#include "Message.h"
 #include <bitset>
 #include <array>
 
+
+class IComponent;
 
 using ComponentID = std::size_t;
 using GROUP = std::size_t;
@@ -27,8 +28,9 @@ template <typename T> inline ComponentID getComponentID() noexcept
 	return typeID;
 }
 
-const std::size_t maxComponents = 32;
+const std::size_t maxComponents = 256;
 const std::size_t maxGroups = 32;
+
 
 using ComponentBitSet = std::bitset<maxComponents>;
 using GroupBitset = std::bitset<maxGroups>;
@@ -43,14 +45,14 @@ class IComponent
 	
 
 protected:
-	const CGameObject* m_pOwner;
+	 CGameObject* m_pOwner;
 	
 
 public:
 	virtual void Update(float deltaTime);
 	virtual void Render();
 
-	void SetOwner(const CGameObject* pGameObject);
+	void SetOwner( CGameObject* const pGameObject);
 	const CGameObject* GetOwner();
 
 

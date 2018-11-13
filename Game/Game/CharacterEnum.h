@@ -1,0 +1,45 @@
+#pragma once
+
+
+
+#define	KEY_DOWN  0x01
+#define KEY_RIGHT  0x02
+#define	KEY_UP  0x04
+#define	KEY_LEFT  0x08
+
+enum eWay
+{
+	WAY_RIGHT,
+	WAY_RIGHT_DOWN,
+	WAY_DOWN,
+	WAY_LEFT_DOWN,
+	WAY_LEFT,
+	WAY_LEFT_UP,
+	WAY_UP,
+	WAY_RIGHT_UP,
+	WAY_END,
+};
+
+enum eStatus
+{
+	
+	STOP_IDLE,
+	STOP_AIM,
+	STOP_FIRE,
+
+	CROUCH,
+	CROUCH_AIM,
+	CROUCH_FIRE,
+	
+
+	WALK,
+	WALK_AIM,
+	WALK_FIRE,
+
+
+	THROW_GRANADE,
+
+	HIT,
+	HIT_BLOOD,
+	HIT_EXPLODE,
+};

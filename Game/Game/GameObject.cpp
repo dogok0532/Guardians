@@ -6,40 +6,42 @@
 #include "IComponent.h"
 
 
-void CGameObject::Update(float deltaTime)
+CGameObject* CGameObject::CreateObject()
 {
-	
-	
+	return new CGameObject;
 }
 
-
+void CGameObject::Update(float deltaTime)
+{
+	for ( auto iter = componentArray.begin(); iter != componentArray.end() ;iter++)
+	{
+		if(*iter)
+			(*iter)->Update(deltaTime);
+	}
+}
 
 void CGameObject::Render()
 {
+	for (auto iter = componentArray.begin(); iter != componentArray.end(); iter++)
+	{
+		if (*iter)
+			(*iter)->Render();
+	}
 
 	
 }
 
 
-void CGameObject::AddGroup(GROUP group)
-{
 
-	groupBitSet[group] = true;
+bool CGameObject::isDead()
+{
+	return m_isDead;
 }
 
-void CGameObject::RemoveGroup(GROUP group)
+void CGameObject::SetDead()
 {
-	groupBitSet[group] = false;
-	
+	m_isDead = true;
 }
-
-
-
-
-
-
-
-
 
 CGameObject::CGameObject()
 {

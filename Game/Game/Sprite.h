@@ -27,11 +27,11 @@ private:
 
 public:	
 
-	const RECT* GetFrameRect(int Frame);
-	const RECT* GetSpriteRect();
+	RECT GetFrameRect(int Frame);
+	RECT GetSpriteRect();
 
-	const D3DXVECTOR3* GetFrameCenter();
-	const D3DXVECTOR3* GetSpriteCenter();
+	D3DXVECTOR3 GetFrameCenter();
+	D3DXVECTOR3 GetSpriteCenter();
 
 
 	void SetSpriteInfo(spriteInfo* SpriteInfo);

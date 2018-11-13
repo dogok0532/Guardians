@@ -8,6 +8,7 @@ class CStage :
 
 
 public:
+	virtual void Update(float fDeltaTime);
 
 
 

@@ -3,7 +3,6 @@
 #include <list>
 
 
-#include "Message.h"
 #include "IComponent.h"
 using namespace std;
 
@@ -15,18 +14,14 @@ class CGameObject
 protected:  
 	ComponentArray componentArray;
 	ComponentBitSet componentBitSet;
-	GroupBitset groupBitSet;
 
 	
 
 public:
-
+	CGameObject* CreateObject();
 
 	virtual void Update(float deltaTime);
 	virtual void Render();
-	
-	void AddGroup(GROUP group);
-	void RemoveGroup(GROUP group);
 
 	
 	template <typename T> 
@@ -48,12 +43,18 @@ public:
 	}
 	
 
-	template<typename T> T* getComponent() const
+	template<typename T> T* getComponent() const //has기능도 가능
 	{
 		auto ptr = componentArray[getComponentID<T>()];
 		return static_cast<T*>(ptr);
 	}
 
+
+private:
+	bool m_isDead = false;
+public:
+	bool isDead();
+	void SetDead();
 
 public:
 	CGameObject();

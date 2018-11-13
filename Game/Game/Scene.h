@@ -12,18 +12,18 @@ class CScene
 
 protected:
 	list <CGameObject*> objectList;
-	array<list<CGameObject*>, maxGroups> groupObjectList;
+
 
 	
 	int m_iStageChange = -1;
 
 public:
-	void ProcessMessage();
 
+	void CreateObject(CGameObject* pGameObject);
 public:
 	int GetSceneChange();
-	void Update(float fDeltaTime);
-	void Render();
+	virtual void Update(float fDeltaTime);
+	virtual void Render();
 	CScene();
 	~CScene();
 };

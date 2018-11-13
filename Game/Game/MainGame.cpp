@@ -8,7 +8,6 @@
 #include "Text.h"
 #include "SoundResource.h"
 #include "SpriteResource.h"
-#include "Message.h"
 #include <stdio.h>
 
 
@@ -17,16 +16,7 @@ IMPLEMENT_SINGLETON(CMainGame)
 
 
 
-void CMainGame::UpdateMessage(CMessage* msg)
-{
-	msgQue.push(msg);
-}
 
-void CMainGame::ProcessMessage()
-{
-	//msgQue.front()->m_receiver->SendMessage()
-	//msgQue.pop();
-}
 
 void CMainGame::ChangeScene(int Scene)
 {
@@ -61,13 +51,7 @@ void CMainGame::Update(float deltaTime)
 	m_pCurrentScene->Update(deltaTime);
 
 
-	while (!msgQue.empty())
-	{
-		CMessage* msg;
-		msg = msgQue.front();
-		//msg->SendMsg();
-		msgQue.pop();
-	}
+
 
 
 	
@@ -84,8 +68,14 @@ void CMainGame::ResetSprite()
 	pSpriteResource = new CSpriteResource;
 }
 
+void CMainGame::CreateObject(CGameObject* pGameObject)
+{
+	m_pCurrentScene->CreateObject(pGameObject);
+}
+
 CMainGame::CMainGame()
 {
+	/*
 	AllocConsole();                 
 
 	FILE* pFile;
@@ -96,7 +86,7 @@ CMainGame::CMainGame()
 	SetConsoleTitleA("Test v.1.0");
 
 
-
+	*/
 
 }
 
