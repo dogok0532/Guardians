@@ -208,6 +208,9 @@
     <ClCompile Include="EnemyComponent.cpp">
       <Filter>Component\Actor\Character\Enemy</Filter>
     </ClCompile>
+    <ClCompile Include="SoundComponent.cpp">
+      <Filter>Component\필수요소\03.SoundComponent</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="direct.h">
@@ -299,6 +302,9 @@
     </ClInclude>
     <ClInclude Include="EnemyComponent.h">
       <Filter>Component\Actor\Character\Enemy</Filter>
+    </ClInclude>
+    <ClInclude Include="SoundComponent.h">
+      <Filter>Component\필수요소\03.SoundComponent</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

@@ -15,5 +15,6 @@ public:
 	virtual void Render() override;
 
 	void Move();
+	void SetWay();
 };
 

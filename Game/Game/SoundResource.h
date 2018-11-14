@@ -28,12 +28,12 @@ class CSoundResource
 public:
 	CSoundResource();
 	~CSoundResource();
-
 private:
 	ISoundEngine* m_pEngine;
 
 public:
 	void Init();
-	void Play(wstring fileName);
+
+
 
 };

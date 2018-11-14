@@ -13,7 +13,8 @@
   <TextureList>
     <Texture>
       <Status>Stop Idle</Status>
-      <Frame>1</Frame>
+      <Frame>3</Frame>
+      <TurnBack>1</TurnBack>
     </Texture>
 
     <Texture>
@@ -48,32 +49,32 @@
 
     <Texture>
       <Status>Walk Aim</Status>
-      <Frame>1</Frame>
+      <Frame>6</Frame>
     </Texture>
 
     <Texture>
       <Status>Walk Fire</Status>
-      <Frame>1</Frame>
+      <Frame>6</Frame>
     </Texture>
 
     <Texture>
       <Status>Throw Granade</Status>
-      <Frame>1</Frame>
+      <Frame>5</Frame>
     </Texture>
 
     <Texture>
       <Status>Hit 0</Status>
-        <Frame>1</Frame>
+        <Frame>3</Frame>
     </Texture>
 
     <Texture>
       <Status>Hit Blood 0</Status>
-      <Frame>1</Frame>
+      <Frame>3</Frame>
     </Texture>
 
     <Texture>
       <Status>Hit Explo Blood</Status>
-        <Frame>1</Frame>
+        <Frame>4</Frame>
     </Texture>
 
 

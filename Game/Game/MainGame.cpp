@@ -44,6 +44,8 @@ void CMainGame::Init()
 	pSoundResource->Init();
 	pSpriteResource = new CSpriteResource;
 	m_pCurrentScene = new CStage;
+
+	
 }
 
 void CMainGame::Update(float deltaTime)

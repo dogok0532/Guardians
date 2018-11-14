@@ -35,6 +35,8 @@ public:
 
 
 	void Move(eWay way, float fDistance);
+	void SetWay(eWay way);
+	void SetStatus(eStatus status) { m_Status = status; }
 	void CreateBullet();
 
 	

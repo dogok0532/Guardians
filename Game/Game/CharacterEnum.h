@@ -9,7 +9,7 @@
 
 enum eWay
 {
-	WAY_RIGHT,
+	WAY_RIGHT=0,
 	WAY_RIGHT_DOWN,
 	WAY_DOWN,
 	WAY_LEFT_DOWN,
@@ -22,24 +22,24 @@ enum eWay
 
 enum eStatus
 {
-	
-	STOP_IDLE,
-	STOP_AIM,
-	STOP_FIRE,
-
-	CROUCH,
-	CROUCH_AIM,
-	CROUCH_FIRE,
-	
-
-	WALK,
-	WALK_AIM,
-	WALK_FIRE,
-
-
-	THROW_GRANADE,
-
-	HIT,
-	HIT_BLOOD,
-	HIT_EXPLODE,
+					//	반복	직진형	다음Sprite가 있음
+	STOP_IDLE,		//	O		X		-
+	STOP_AIM,		//	O		-		-
+	STOP_FIRE,		//	O		-		O
+					//
+	CROUCH,			//	-		-		X
+	CROUCH_AIM,		//	-		-		X
+	CROUCH_FIRE,	//	-		-		O
+					//
+					//
+	WALK,			//	O		O		X
+	WALK_AIM,		//	O		O		X
+	WALK_FIRE,		//	O		O		O
+					//
+					//
+	THROW_GRANADE,	//	X		O		O
+					//
+	HIT,			//	X		O		X
+	HIT_BLOOD,		//	X		O		X
+	HIT_EXPLODE,	//	X		O		X
 };

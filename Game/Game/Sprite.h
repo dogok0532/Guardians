@@ -38,6 +38,8 @@ public:
 
 	D3DXVECTOR3 GetSize();
 
+
+	int GetFrameCount() { return m_SpriteInfo.iFrameCount; }
 public:
 	CSprite();
 	CSprite(wstring name, int XBegin, int YBegin, int isLine,int XFrame,int YFrame,int XSize, int YSize);
