@@ -33,6 +33,7 @@ public:
 	float GetY() { return m_fY; }
 	float GetWidth() { return m_fWidth; }
 	float GetHeight() { return m_fHeight; }
+	RECT GetRect() { return m_rc; }
 
 	virtual void Update(float deltaTime) override;
 	virtual const wstring GetComponentID() override;

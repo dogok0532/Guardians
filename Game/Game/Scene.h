@@ -11,6 +11,7 @@ class CScene
 {
 
 protected:
+	
 	list <CGameObject*> objectList;
 
 

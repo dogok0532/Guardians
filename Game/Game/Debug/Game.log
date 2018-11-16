@@ -1,1 +1,10 @@
-﻿  Game.vcxproj -> D:\졸프\리포지토리\Guardians\Game\Debug\Game.exe
+﻿  CharacterComponent.cpp
+d:\졸프\리포지토리\guardians\game\game\charactercomponent.cpp(97): warning C4244: '+=': 'double'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\졸프\리포지토리\guardians\game\game\charactercomponent.cpp(98): warning C4244: '+=': 'double'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\졸프\리포지토리\guardians\game\game\charactercomponent.cpp(104): warning C4244: '-=': 'double'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\졸프\리포지토리\guardians\game\game\charactercomponent.cpp(105): warning C4244: '+=': 'double'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\졸프\리포지토리\guardians\game\game\charactercomponent.cpp(108): warning C4244: '-=': 'double'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\졸프\리포지토리\guardians\game\game\charactercomponent.cpp(109): warning C4244: '-=': 'double'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\졸프\리포지토리\guardians\game\game\charactercomponent.cpp(115): warning C4244: '+=': 'double'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+d:\졸프\리포지토리\guardians\game\game\charactercomponent.cpp(116): warning C4244: '-=': 'double'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  Game.vcxproj -> D:\졸프\리포지토리\Guardians\Game\Debug\Game.exe

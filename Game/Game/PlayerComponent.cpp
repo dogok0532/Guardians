@@ -6,6 +6,8 @@
 #include <math.h>
 #include <D3DX10math.h>
 #include "Defines.h"
+#include "MainGame.h"
+#include "SoundResource.h"
  
 CPlayerComponent::CPlayerComponent()
 {
@@ -20,9 +22,18 @@ void CPlayerComponent::Update(float deltaTime)
 {
 	if (m_pCharacterComponent)
 	{
-		if (GetAsyncKeyState(VK_SPACE))
+		fCurrentTime += deltaTime;
+
+		if (GetAsyncKeyState(VK_LBUTTON))
 		{
-			m_pCharacterComponent->CreateBullet();
+
+			
+			if(fCurrentTime >= fBulletCycle)
+			{	
+				m_pCharacterComponent->CreateBullet();
+				CMainGame::GetInstance()->GetSound()->PlayEffect(L"9mm");
+				fCurrentTime = 0;
+			}
 		}
 
 		SetWay();
@@ -33,6 +44,7 @@ void CPlayerComponent::Update(float deltaTime)
 	else
 	{
 		m_pCharacterComponent = m_pOwner->getComponent<CCharacterComponent>();
+		
 	}
 
 }
@@ -103,10 +115,14 @@ void CPlayerComponent::SetWay()
 	vecMouse.x = MousePos.x;
 	vecMouse.y = MousePos.y;
 	vecMouse.z = 0;
+
+
 	
-	D3DXVECTOR3 vecCenter = { 600,450,0 };
+
+	D3DXVECTOR3 vecCenter = m_pCharacterComponent->GetPos();
 
 	D3DXVECTOR3 vecWay = vecMouse - vecCenter;
+
 
 	float fDegree = D3DXToDegree(atan(vecWay.y / vecWay.x));
 	

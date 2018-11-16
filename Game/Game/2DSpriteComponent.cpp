@@ -71,6 +71,22 @@ void C2DSpriteComponent::DrawTexture()
 
 
 
+void C2DSpriteComponent::Render()
+{
+	switch (m_iDrawState)
+	{
+	case 1:
+		DrawFrame();
+		break;
+	case 2:
+		DrawSprite();
+		break;
+	case 3:
+		DrawTexture();
+		break;
+	}
+}
+
 C2DSpriteComponent::C2DSpriteComponent()
 {
 	SetSizeAsFrame();

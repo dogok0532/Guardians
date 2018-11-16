@@ -15,7 +15,7 @@ CBulletComponent::~CBulletComponent()
 void CBulletComponent::Render()
 {
 	if(m_pSpriteComonent)
-		m_pSpriteComonent->DrawFrame();
+		m_pSpriteComonent->SetDrawFrame();
 }
 
 void CBulletComponent::Update(float deltaTime)
@@ -28,12 +28,15 @@ void CBulletComponent::Update(float deltaTime)
 
 	m_vecPos += vecMovement;
 	m_fCurrentDistance +=D3DXVec3Length(&vecMovement);
-	if (m_fCurrentDistance > m_fMaxDistance)
+
+	//발사방향에 따른 속도/벡터 조정 및 좌표 최신화
+
+	if (m_fCurrentDistance > m_fMaxDistance)		//최대사거리에 도달할경우
 	{
-		m_pOwner->SetDead();
+		m_pOwner->SetDead();	
 	}
 
-	if (m_pSpriteComonent)
+	if (m_pSpriteComonent)						
 	{
 		m_pSpriteComonent->SetPos(m_vecPos);
 		m_pSpriteComonent->SetFrame(0);

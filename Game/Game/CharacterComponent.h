@@ -1,6 +1,8 @@
 #pragma once
 #include "IComponent.h"
 #include "CharacterEnum.h"
+#include "DirectHeader.h"
+
 
 class CRectangleComponent;
 class CCharacterRenderComponent;
@@ -11,6 +13,10 @@ private:
 	CCharacterRenderComponent* m_pRenderComponent=nullptr;
 	IComponent* m_pTextComponent=nullptr;
 	CRectangleComponent* m_pRectangleComponent=nullptr;
+
+private:
+	float m_fPrevX;
+	float m_fPrevY;
 
 private:
 	float m_fX;
@@ -28,7 +34,6 @@ public:
 	
 
 
-
 	virtual void Update(float deltaTime) override;
 	virtual void Render() override;
 	void UpdateStatus();
@@ -40,7 +45,7 @@ public:
 	void CreateBullet();
 
 	
-
+	D3DXVECTOR3 GetPos() { return D3DXVECTOR3(m_fX,m_fY,1); }
 
 	
 };

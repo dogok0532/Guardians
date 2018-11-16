@@ -178,10 +178,12 @@ void CTexture::DrawJudgeLine(wstring spriteName, RenderInfo* pGameInfo, D3DXMATR
 		
 		line[i] = {vec4Result[i].x,vec4Result[i].y};
 	}
-	JudgeLine->Begin();
+	
+	m_pSprite->End();
+
 	JudgeLine->Draw(line, 5,  D3DCOLOR_XRGB(255, 0, 0));
 	
-	JudgeLine->End();
+	m_pSprite->Begin(D3DXSPRITE_ALPHABLEND);
 }
 
 void CTexture::Release()
@@ -195,7 +197,6 @@ void CTexture::Release()
 
 CTexture::CTexture()
 {
-	
 	HRESULT hr =D3DXCreateLine(CDirect::GetInstance()->GetDevice(), &JudgeLine);
 	
 

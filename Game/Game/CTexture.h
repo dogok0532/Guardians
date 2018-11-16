@@ -20,7 +20,6 @@ private:
 	D3DCOLOR m_ColorKey;
 
 
-
 private:
 	LPD3DXLINE JudgeLine;
 

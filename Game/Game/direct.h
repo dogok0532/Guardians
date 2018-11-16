@@ -26,6 +26,7 @@ public:
 
 	void DrawRectangle(RECT rc);
 
+	void DrawLine(int a, int b, int x, int y);
 	LPDIRECT3DDEVICE9 GetDevice();
 	LPD3DXSPRITE GetSprite();
 };

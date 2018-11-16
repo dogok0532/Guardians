@@ -9,14 +9,17 @@
 void CCharacterRenderComponent::Update(float deltaTime)
 {
 	UpdateStatusToString();
+
+	
 	m_iMaxFrame = m_pTexture[m_CurrentWay][m_strCurrentStatus]->sprite.GetFrameCount();
 	if (m_iCurrentFrame >= m_iMaxFrame)
-		m_iCurrentFrame % m_iMaxFrame;
+		m_iCurrentFrame %= m_iMaxFrame;
 	
 
 	m_fPassedTime += deltaTime;
 	
-	if (m_CurrentStatus == STOP_IDLE )
+	
+	if (m_CurrentStatus == STOP_IDLE)
 	{
 		UpdateFrameTurnBack();
 	}
@@ -25,7 +28,8 @@ void CCharacterRenderComponent::Update(float deltaTime)
 	{
 		UpdateFrameStraight();
 	}
-	
+
+
 	
 }
 
@@ -40,7 +44,7 @@ void CCharacterRenderComponent::Render()
 			&m_vecFrameCenter,
 			&m_vecPos,
 			DEFAULT_COLOR);
-		int i = 0;
+	
 	}
 }
 
@@ -79,6 +83,12 @@ void CCharacterRenderComponent::UpdateFrameTurnBack()
 		}
 		m_fPassedTime = 0;
 	}
+}
+
+void CCharacterRenderComponent::ResetFrame()
+{
+	m_isTurned = false;
+	m_iCurrentFrame = 0;
 }
 
 void CCharacterRenderComponent::UpdateStatusToString()

@@ -55,7 +55,7 @@ void CMainGame::Update(float deltaTime)
 
 
 
-
+	pSoundResource->PlayMusic(L"233");
 	
 }
 

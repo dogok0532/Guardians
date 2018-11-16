@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+
+<SoundList>
+  <Route>../Resource/Sound/</Route>
+
+  <Sound>
+    <Type>Music</Type>
+    <Name>233</Name>
+    <Format>mp3</Format>
+  </Sound>
+
+  <Sound>
+    <Type>Effect</Type>
+    <Name>9mm</Name>
+    <Format>mp3</Format>
+  </Sound>
+    
+
+</SoundList>

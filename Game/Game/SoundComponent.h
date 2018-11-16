@@ -3,6 +3,9 @@
 class CSoundComponent :
 	public IComponent
 {
+private:
+
+
 public:
 	CSoundComponent();
 	virtual ~CSoundComponent();

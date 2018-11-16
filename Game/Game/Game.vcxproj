@@ -188,6 +188,7 @@
     <ClCompile Include="SpriteResource.cpp" />
     <ClCompile Include="Text.cpp" />
     <ClCompile Include="CTexture.cpp" />
+    <ClCompile Include="TileComponent.cpp" />
     <ClCompile Include="tinystr.cpp" />
     <ClCompile Include="tinyxml.cpp" />
     <ClCompile Include="tinyxmlerror.cpp" />
@@ -222,6 +223,7 @@
     <ClInclude Include="direct.h" />
     <ClInclude Include="Text.h" />
     <ClInclude Include="CTexture.h" />
+    <ClInclude Include="TileComponent.h" />
     <ClInclude Include="tinystr.h" />
     <ClInclude Include="tinyxml.h" />
     <ClInclude Include="UserFunction.h" />

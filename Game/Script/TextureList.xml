@@ -1107,4 +1107,11 @@
     </Sprite>
   </Texture>
 
+  <Texture>
+    <Name>Tile</Name>
+    <Path>../\Resource\Sprite\tile.png</Path>
+    <BackgroundRGB/>
+    <Sprite/>
+  </Texture>
+
 </TextureList>

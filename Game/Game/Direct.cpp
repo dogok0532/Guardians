@@ -83,7 +83,7 @@ void CDirect::DrawRectangle(RECT rc)
 	HRESULT hr = CDirect::GetInstance()->GetDevice()->SetFVF(D3DFVF_XYZRHW | D3DFVF_DIFFUSE);
 	struct Vertex {
 		float x, y, z, w; // D3DFVF_XYZRHW À§Ä¡Á¤º¸
-		D3DCOLOR color = D3DCOLOR_ARGB(255,0,0,0); // D3DFVF_DIFFUSE »ö±ò
+		D3DCOLOR color = D3DCOLOR_ARGB(255,120,120,120); // D3DFVF_DIFFUSE »ö±ò
 	};
 	Vertex v[4] = { { rc.left, rc.top, 1.f},
 	{ rc.right, rc.top, 1.f },
@@ -103,6 +103,19 @@ void CDirect::DrawRectangle(RECT rc)
 
 
 		
+}
+
+void CDirect::DrawLine(int a,int b,int x,int y)
+{
+	struct Vertex {
+		float x, y;
+		D3DCOLOR color = D3DCOLOR_ARGB(255, 120, 120, 120);
+	};
+
+	Vertex v[2] = { { a,b }, { x,y } };
+
+	
+	HRESULT hr = CDirect::GetInstance()->GetDevice()->DrawPrimitiveUP(D3DPT_LINELIST, 2, v, 20);
 }
 
 LPDIRECT3DDEVICE9 CDirect::GetDevice()

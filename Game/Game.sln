@@ -12,7 +12,10 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "공용", "공용", "{E3439928-1972-4148-BF5A-1734ECA991AE}"
 	ProjectSection(SolutionItems) = preProject
 		Script\GameClientOption.xml = Script\GameClientOption.xml
+		Script\MapStage1.csv = Script\MapStage1.csv
+		Script\MapTextureList.xml = Script\MapTextureList.xml
 		Script\PlayerTexture.xml = Script\PlayerTexture.xml
+		Script\SoundList.xml = Script\SoundList.xml
 		Game\Text.txt = Game\Text.txt
 		Script\TextureList.xml = Script\TextureList.xml
 	EndProjectSection

@@ -24,10 +24,7 @@ void CScene::Update(float fDeltaTime)
 	for (auto iter = objectList.begin(); iter != objectList.end();)
 	{
 		
-
 		(*iter)->Update(fDeltaTime);
-
-
 		if ((*iter)->isDead())
 		{
 			delete(*iter);

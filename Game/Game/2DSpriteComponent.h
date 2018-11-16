@@ -18,6 +18,8 @@ private:
 	wstring m_strSpriteName;
 	int m_iFrame = 0;
 
+	int m_iDrawState = 0;
+
 	void SetSizeAsFrame();
 
 public:	//그릴 그림 설정
@@ -29,16 +31,23 @@ public:	//그릴 그림 설정
 public: //그림을  Auto K 그릴지 설정
 	void SetAngle(float fAngle);
 	void SetPos(D3DXVECTOR3 vecPos);
-	void SetPos(float x, float y, float z = 0);
+	void SetPos(float x, float y, float z = 1);
 	void SetRatio(float XRatio, float YRatio);
 	void SetSize(float width, float height);
 
 
-public:
+
+private:
 	void DrawFrame();
 	void DrawSprite();
 	void DrawTexture();
 
+public:
+	virtual void Render();
+	void SetDrawNothing() { m_iDrawState = 0; }
+	void SetDrawFrame() { m_iDrawState = 1; }
+	void SetDrawSprite() { m_iDrawState = 2; }
+	void SetDrawTexture() { m_iDrawState = 3; }
 
 
 

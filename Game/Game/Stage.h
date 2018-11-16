@@ -5,11 +5,12 @@ using namespace std;
 class CStage :
 	public CScene
 {
-
+private:
+	vector<vector<CGameObject*>> vecTile;
 
 public:
 	virtual void Update(float fDeltaTime);
-
+	virtual void Render();
 
 
 

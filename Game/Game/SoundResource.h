@@ -25,15 +25,34 @@ using namespace std;
 
 class CSoundResource
 {
+
+private:
+	ISoundEngine* m_pEffectSoundEngine;
+	ISoundEngine* m_pMusicSoundEngine;
+
+private:
+	ISound* m_pCurrentMusic=nullptr;
+	wstring m_strCurrentMusic;
+
+
+public:
+	void PlayMusic(wstring wFileName);
+	void StopMusic();
+
+	void PlayEffect(wstring wFileName);
+	
+
+
+	
+
+
+public:
+
+	void Init();
+	void AddSound();
+
 public:
 	CSoundResource();
 	~CSoundResource();
-private:
-	ISoundEngine* m_pEngine;
-
-public:
-	void Init();
-
-
 
 };

@@ -9,6 +9,9 @@
 #include "CircleComponent.h"
 
 
+
+#define GetFriend(X) m_pOwner->getComponent<X>();
+
 CCharacterComponent::CCharacterComponent()
 {
 	m_fX = 300;
@@ -30,16 +33,14 @@ void CCharacterComponent::Update(float deltaTime)
 	{
 		UpdateStatus();
 
-		
-
-		
 	}
 	else
 	{
-		m_pRenderComponent = m_pOwner->getComponent<CCharacterRenderComponent>();
+		m_pRenderComponent = GetFriend(CCharacterRenderComponent);
+		m_pRectangleComponent = GetFriend(CRectangleComponent);
 	}
 
-
+	
 	
 }
 
@@ -74,7 +75,18 @@ void CCharacterComponent::UpdateStatus()
 
 void CCharacterComponent::Move(eWay way, float fDistance)
 {
+	m_fPrevX=m_fX;
+	m_fPrevY=m_fY;
+
+	if (m_Status || WALK && m_Status || WALK_AIM || m_Status != WALK_FIRE)
+		m_pRenderComponent->ResetFrame();
+	
+	
+
+
 	m_Status = WALK;
+
+
 	switch (way)
 	{
 	case WAY_LEFT:
@@ -115,5 +127,10 @@ void CCharacterComponent::Move(eWay way, float fDistance)
 
 void CCharacterComponent::SetWay(eWay way)
 {
+	if (way != m_CurrentWay)
+	{
+		m_pRenderComponent->ResetFrame();
+	}
+
 	m_CurrentWay = way;
 }

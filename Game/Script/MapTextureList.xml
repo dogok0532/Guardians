@@ -1,0 +1,7 @@
+<TileList>
+    <Route>../Resource/</Route>
+    <Tile>
+      <Name>iso_3d_ground</Name>
+      <Format>png</Format>
+    </Tile>
+</TileList>

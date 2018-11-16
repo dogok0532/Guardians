@@ -119,6 +119,9 @@
     <Filter Include="Component\Actor\Button">
       <UniqueIdentifier>{4e93191a-30ae-4bc8-b768-8d1e0c76435e}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Component\Tile">
+      <UniqueIdentifier>{5b29ea82-414b-4595-a417-7101a6025e21}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Scene.cpp">
@@ -210,6 +213,9 @@
     </ClCompile>
     <ClCompile Include="SoundComponent.cpp">
       <Filter>Component\필수요소\03.SoundComponent</Filter>
+    </ClCompile>
+    <ClCompile Include="TileComponent.cpp">
+      <Filter>Component\Tile</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -305,6 +311,9 @@
     </ClInclude>
     <ClInclude Include="SoundComponent.h">
       <Filter>Component\필수요소\03.SoundComponent</Filter>
+    </ClInclude>
+    <ClInclude Include="TileComponent.h">
+      <Filter>Component\Tile</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

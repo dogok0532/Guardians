@@ -7,6 +7,10 @@ class CPlayerComponent :
 private:
 	CCharacterComponent* m_pCharacterComponent= nullptr;
 
+
+	float fBulletCycle=0.1;
+	float fCurrentTime = 0;
+
 public:
 	CPlayerComponent();
 	virtual ~CPlayerComponent();

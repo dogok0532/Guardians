@@ -31,8 +31,8 @@ private: //웬만하면 고정될 값
 
 
 private:
-	int m_iCurrentFrame = 0;
-	int m_iMaxFrame;
+	unsigned int m_iCurrentFrame = 0;
+	unsigned int m_iMaxFrame;
 	float m_fPassedTime;
 	float m_fFrameRate = 0.5;		//프레임 관련
 
@@ -58,6 +58,8 @@ private:
 public:
 	void UpdateFrameStraight();
 	void UpdateFrameTurnBack();
+
+	void ResetFrame();
 
 public:
 	virtual void Update(float deltaTime) override;

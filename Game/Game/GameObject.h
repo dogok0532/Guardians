@@ -7,7 +7,6 @@
 using namespace std;
 
 
-class IComponent;
 class CGameObject
 {
 
@@ -15,7 +14,6 @@ protected:
 	ComponentArray componentArray;
 	ComponentBitSet componentBitSet;
 
-	
 
 public:
 	CGameObject* CreateObject();
@@ -24,13 +22,13 @@ public:
 	virtual void Render();
 
 	
-	template <typename T> 
-	T& AddComponent()
+	template <typename T,typename ...args>
+	T& AddComponent(args...additional)
 	{
-		T* newComponent = new T();
+		T* newComponent = new T(additional...);
 		newComponent->SetOwner(this);
 		componentArray[getComponentID<T>()] = newComponent;
-		componentBitSet[getComponentID<T>()]=true;
+		componentBitSet[getComponentID<T>()]=true; 
 
 		return *newComponent;
 	}
@@ -46,7 +44,7 @@ public:
 	template<typename T> T* getComponent() const //has기능도 가능
 	{
 		auto ptr = componentArray[getComponentID<T>()];
-		return static_cast<T*>(ptr);
+		return (static_cast<T*>(ptr));
 	}
 
 

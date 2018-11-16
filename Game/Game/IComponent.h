@@ -8,7 +8,6 @@ using namespace std;
 #include <bitset>
 #include <array>
 
-
 class IComponent;
 
 using ComponentID = std::size_t;
@@ -36,6 +35,8 @@ using ComponentBitSet = std::bitset<maxComponents>;
 using GroupBitset = std::bitset<maxGroups>;
 using ComponentArray = std::array<IComponent*, maxComponents>;
 
+#include "GameObject.h"
+
 
 
 
@@ -48,12 +49,15 @@ protected:
 	 CGameObject* m_pOwner;
 	
 
+
 public:
 	virtual void Update(float deltaTime);
 	virtual void Render();
+	void SetOwner(CGameObject* const pGameObject);
 
-	void SetOwner( CGameObject* const pGameObject);
 	const CGameObject* GetOwner();
+
+
 
 
 
